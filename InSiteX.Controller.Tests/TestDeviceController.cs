@@ -9,6 +9,9 @@ using System.Linq;
 
 namespace InSiteX.Controller.Tests
 {
+    /// <summary>
+    /// Test Method
+    /// </summary>
     [TestClass]
     public class TestDeviceController
     {
