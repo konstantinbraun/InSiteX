@@ -1,0 +1,163 @@
+﻿CREATE TABLE [dbo].[Master_Companies] (
+    [SystemID]         INT            NOT NULL,
+    [BpID]             INT            NOT NULL,
+    [CompanyID]        INT            IDENTITY (1, 1) NOT NULL,
+    [CompanyCentralID] INT NOT NULL DEFAULT 0, 
+    [NameVisible]      NVARCHAR (50)  NULL,
+    [NameAdditional]      NVARCHAR (50)  NULL,
+    [Description] NVARCHAR (2000) NULL,
+    [AddressID] INT NOT NULL DEFAULT 0, 
+    [ParentID] INT NOT NULL DEFAULT 0, 
+    [IsVisible] BIT NOT NULL DEFAULT 1, 
+    [IsValid] BIT NOT NULL DEFAULT 1, 
+    [TradeAssociation] NVARCHAR(200) NULL, 
+    [BlnSOKA] BIT NOT NULL DEFAULT 0, 
+    [IsPartner] BIT NOT NULL DEFAULT 0, 
+    [RiskAssessment] BIT NOT NULL DEFAULT 0, 
+    [MinWageAttestation] BIT NOT NULL DEFAULT 0, 
+    [MinWageAccessRelevance] BIT NOT NULL DEFAULT 0, 
+    [LockSubContractors] BIT NOT NULL DEFAULT 0, 
+    [UserString1] NVARCHAR(50) NULL, 
+    [UserString2] NVARCHAR(50) NULL, 
+    [UserString3] NVARCHAR(50) NULL, 
+    [UserString4] NVARCHAR(50) NULL, 
+    [UserBit1] BIT NOT NULL DEFAULT 0, 
+    [UserBit2] BIT NOT NULL DEFAULT 0, 
+    [UserBit3] BIT NOT NULL DEFAULT 0, 
+    [UserBit4] BIT NOT NULL DEFAULT 0, 
+    [RegistrationCode] NVARCHAR(20) NULL, 
+    [CodeValidUntil] DATETIME NULL, 
+	[StatusID] INT NOT NULL DEFAULT 0,
+    [PassBudget] DECIMAL(12, 4) NOT NULL DEFAULT 0, 
+    [AllowSubcontractorEdit] BIT NOT NULL DEFAULT 0, 
+    [RequestFrom] NVARCHAR(50) NULL, 
+    [RequestOn] DATETIME NULL , 
+    [ReleaseFrom] NVARCHAR(50) NULL, 
+    [ReleaseOn] DATETIME NULL , 
+    [LockedFrom] NVARCHAR(50) NULL, 
+    [LockedOn] DATETIME NULL , 
+    [CreatedFrom]      NVARCHAR (50)  NULL,
+    [CreatedOn]        DATETIME       DEFAULT (sysdatetime()) NOT NULL,
+    [EditFrom]         NVARCHAR (50)  NULL,
+    [EditOn]           DATETIME       DEFAULT (sysdatetime()) NOT NULL,
+    CONSTRAINT [PK_Master_Companies] PRIMARY KEY CLUSTERED ([SystemID] ASC, [BpID] ASC, [CompanyID] ASC)
+);
+
+
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'ID des Systems',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'Master_Companies',
+    @level2type = N'COLUMN',
+    @level2name = N'SystemID'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'ID des Bauvorhabens',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'Master_Companies',
+    @level2type = N'COLUMN',
+    @level2name = N'BpID'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'ID der Firma',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'Master_Companies',
+    @level2type = N'COLUMN',
+    @level2name = N'CompanyID'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'Bezeichnung',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'Master_Companies',
+    @level2type = N'COLUMN',
+    @level2name = N'NameVisible'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'Beschreibung',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'Master_Companies',
+    @level2type = N'COLUMN',
+    @level2name = 'Description'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'Erstellt von',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'Master_Companies',
+    @level2type = N'COLUMN',
+    @level2name = N'CreatedFrom'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'Erstellt am',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'Master_Companies',
+    @level2type = N'COLUMN',
+    @level2name = N'CreatedOn'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'Geändert am',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'Master_Companies',
+    @level2type = N'COLUMN',
+    @level2name = N'EditFrom'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'Geändert von',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'Master_Companies',
+    @level2type = N'COLUMN',
+    @level2name = N'EditOn'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'ID der Adresse',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'Master_Companies',
+    @level2type = N'COLUMN',
+    @level2name = N'AddressID'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'Wird angezeigt',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'Master_Companies',
+    @level2type = N'COLUMN',
+    @level2name = N'IsVisible'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'Ist Gültig',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'Master_Companies',
+    @level2type = N'COLUMN',
+    @level2name = N'IsValid'
+GO
+EXEC sp_addextendedproperty @name = N'MS_Description',
+    @value = N'Verknüpfung auf übergeordnete Firma',
+    @level0type = N'SCHEMA',
+    @level0name = N'dbo',
+    @level1type = N'TABLE',
+    @level1name = N'Master_Companies',
+    @level2type = N'COLUMN',
+    @level2name = 'ParentID'

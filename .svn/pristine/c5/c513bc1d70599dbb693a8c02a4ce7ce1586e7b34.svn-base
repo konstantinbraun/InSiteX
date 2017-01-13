@@ -1,0 +1,7 @@
+#port=8080
+#ssl-port=8443
+use-ssl
+#use-ssl=only
+#reader-name=Identive CLOUD 4710 F Contactless Reader 0
+#reverse=false
+#path=chipcard

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/InsiteServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/InsiteServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://zrd-sw-iri/InsiteServices/AdminService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="System_Jobs">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BpID" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedFrom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateBegin" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateEnd" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DayOfMonth" type="xs:int" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EditFrom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EditOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Frequency" type="xs:int" />
+      <xs:element minOccurs="0" name="JobID" type="xs:int" />
+      <xs:element minOccurs="0" name="JobLanguage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JobParameter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JobType" type="xs:int" />
+      <xs:element minOccurs="0" name="JobUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NameVisible" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NextStart" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Receiver" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RepeatEvery" type="xs:int" />
+      <xs:element minOccurs="0" name="StartTime" nillable="true" type="ser:duration" />
+      <xs:element minOccurs="0" name="Started" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StatusID" type="xs:int" />
+      <xs:element minOccurs="0" name="SystemID" type="xs:int" />
+      <xs:element minOccurs="0" name="Terminated" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TerminationMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="ValidDays" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="System_Jobs" nillable="true" type="tns:System_Jobs" />
+  <xs:complexType name="ArrayOfSystem_Jobs">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="System_Jobs" nillable="true" type="tns:System_Jobs" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSystem_Jobs" nillable="true" type="tns:ArrayOfSystem_Jobs" />
+</xs:schema>

@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>InSiteDatabase</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{9f443948-1348-4ad4-8048-0b4f70d4c60d}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Insite.Database</RootNamespace>
+    <AssemblyName>InsiteDatabase</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <DefaultCollation>Latin1_General_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <GenerateCreateScript>True</GenerateCreateScript>
+    <NonTransactedFileStreamAccess>FULL</NonTransactedFileStreamAccess>
+    <TargetDatabase>InSiteDatabase</TargetDatabase>
+    <DacApplicationName>Insite_Dev</DacApplicationName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <SqlTargetName>insite_dev</SqlTargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <SqlTargetName>Insite_Dev</SqlTargetName>
+  </PropertyGroup>
+  <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- Default to the v10.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Test|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <SqlTargetName>Insite_Dev</SqlTargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Prod|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <SqlTargetName>insite_dev</SqlTargetName>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Triggers" />
+    <Folder Include="dbo\Views" />
+    <Folder Include="dbo\Stored Procedures" />
+    <Folder Include="dbo\Types" />
+    <Folder Include="dbo\Tables\Data" />
+    <Folder Include="dbo\Tables\History" />
+    <Folder Include="dbo\Tables\Master" />
+    <Folder Include="dbo\Tables\System" />
+    <Folder Include="dbo\Functions" />
+    <Folder Include="Snapshots" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Security\TB_smi.sql" />
+    <None Include="Security\TB_smi_1.sql" />
+    <None Include="Security\TB_olbix.sql" />
+    <None Include="Security\TB_olbix_1.sql" />
+    <None Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Stored Procedures\ActivatePass.sql" />
+    <Build Include="dbo\Stored Procedures\AppendLog.sql" />
+    <Build Include="dbo\Stored Procedures\CopyBuildingProject.sql" />
+    <Build Include="dbo\Stored Procedures\CreateAlternateTranslations.sql" />
+    <Build Include="dbo\Stored Procedures\CreateFieldsTranslations.sql" />
+    <Build Include="dbo\Stored Procedures\CreateRightsHierarchy.sql" />
+    <Build Include="dbo\Stored Procedures\DeactivatePass.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteViewState.sql" />
+    <Build Include="dbo\Stored Procedures\GetAccessAreaEvents.sql" />
+    <Build Include="dbo\Stored Procedures\GetAccessRightEvents.sql" />
+    <Build Include="dbo\Stored Procedures\GetAccessRightEventsExtended.sql" />
+    <Build Include="dbo\Stored Procedures\GetAppliedRule.sql" />
+    <Build Include="dbo\Stored Procedures\GetCompanyAdminUser.sql" />
+    <Build Include="dbo\Stored Procedures\GetCompanyAdminUserWithBP.sql" />
+    <Build Include="dbo\Stored Procedures\GetCompanyStatistics.sql" />
+    <Build Include="dbo\Stored Procedures\GetEmployeeAccessAreas.sql" />
+    <Build Include="dbo\Stored Procedures\GetEmployeeRelevantDocuments.sql" />
+    <Build Include="dbo\Stored Procedures\GetEmployeeRelevantDocumentsToAdd.sql" />
+    <Build Include="dbo\Stored Procedures\GetEmployees.sql" />
+    <Build Include="dbo\Stored Procedures\GetEmployeesWithCountry.sql" />
+    <Build Include="dbo\Stored Procedures\GetEmployeesWithEmploymentStatus.sql" />
+    <Build Include="dbo\Stored Procedures\GetEmployeesWithRelevantDocument.sql" />
+    <Build Include="dbo\Stored Procedures\GetEmployeesWithTimeSlot.sql" />
+    <Build Include="dbo\Stored Procedures\GetFieldsConfig.sql" />
+    <Build Include="dbo\Stored Procedures\GetLockedMainContractor.sql" />
+    <Build Include="dbo\Stored Procedures\GetNextID.sql" />
+    <Build Include="dbo\Stored Procedures\GetParentCustomers.sql" />
+    <Build Include="dbo\Stored Procedures\GetPassPrintData.sql" />
+    <Build Include="dbo\Stored Procedures\GetRelevantDocuments.sql" />
+    <Build Include="dbo\Stored Procedures\GetShortTermPasses.sql" />
+    <Build Include="dbo\Stored Procedures\GetShortTermPassPrintData.sql" />
+    <Build Include="dbo\Stored Procedures\GetSubContractors.sql" />
+    <Build Include="dbo\Stored Procedures\GetViewState.sql" />
+    <Build Include="dbo\Stored Procedures\GetVisitorAccessAreas.sql" />
+    <Build Include="dbo\Stored Procedures\HasValidDocumentRelevantFor.sql" />
+    <Build Include="dbo\Stored Procedures\InsertViewState.sql" />
+    <Build Include="dbo\Stored Procedures\LockPass.sql" />
+    <Build Include="dbo\Stored Procedures\LockSubContractors.sql" />
+    <Build Include="dbo\Stored Procedures\MoveCompanyAttribute.sql" />
+    <Build Include="dbo\Stored Procedures\MoveCompanyTrade.sql" />
+    <Build Include="dbo\Stored Procedures\MoveEmployeeAccessArea.sql" />
+    <Build Include="dbo\Stored Procedures\MoveEmployeeQualification.sql" />
+    <Build Include="dbo\Stored Procedures\MoveShortTermAccessArea.sql" />
+    <Build Include="dbo\Stored Procedures\PrintPass.sql" />
+    <Build Include="dbo\Stored Procedures\ResetAccessRights.sql" />
+    <Build Include="dbo\Stored Procedures\SetAccessRight.sql" />
+    <Build Include="dbo\Tables\ViewStateData.sql" />
+    <Build Include="dbo\Types\FieldsConfigType.sql" />
+    <Build Include="dbo\Stored Procedures\SaveControlStateToDB.sql" />
+    <Build Include="dbo\Stored Procedures\GetEmployeePassStatus.sql" />
+    <Build Include="dbo\Stored Procedures\GetProcessUsers.sql" />
+    <Build Include="dbo\Stored Procedures\TreeItemHasActiveChildItems.sql" />
+    <Build Include="dbo\Stored Procedures\GetShortTermVisitors.sql" />
+    <Build Include="dbo\Tables\Data\Data_AccessAreaEvents.sql" />
+    <Build Include="dbo\Tables\Data\Data_AccessEvents.sql" />
+    <Build Include="dbo\Tables\Data\Data_AccessRightEvents.sql" />
+    <Build Include="dbo\Tables\Data\Data_EmployeeAccessLog.sql" />
+    <Build Include="dbo\Tables\Data\Data_Logging.sql" />
+    <Build Include="dbo\Tables\Data\Data_PassHistory.sql" />
+    <Build Include="dbo\Tables\Data\Data_ProcessEvents.sql" />
+    <Build Include="dbo\Tables\Data\Data_ShortTermAccessAreas.sql" />
+    <Build Include="dbo\Tables\Data\Data_ShortTermPasses.sql" />
+    <Build Include="dbo\Tables\Data\Data_ShortTermVisitors.sql" />
+    <Build Include="dbo\Tables\Data\Data_UserControlStates.sql" />
+    <Build Include="dbo\Tables\History\History_AccessAreas.sql" />
+    <Build Include="dbo\Tables\History\History_Actions_Fields.sql" />
+    <Build Include="dbo\Tables\History\History_Addresses.sql" />
+    <Build Include="dbo\Tables\History\History_AllowedLanguages.sql" />
+    <Build Include="dbo\Tables\History\History_BuildingProjects.sql" />
+    <Build Include="dbo\Tables\History\History_Countries.sql" />
+    <Build Include="dbo\Tables\History\History_CountryGroups.sql" />
+    <Build Include="dbo\Tables\History\History_Dialogs_Actions.sql" />
+    <Build Include="dbo\Tables\History\History_DocumentCheckingRules.sql" />
+    <Build Include="dbo\Tables\History\History_DocumentRules.sql" />
+    <Build Include="dbo\Tables\History\History_Employees.sql" />
+    <Build Include="dbo\Tables\History\History_EmploymentStatus.sql" />
+    <Build Include="dbo\Tables\History\History_FirstAiders.sql" />
+    <Build Include="dbo\Tables\History\History_Companies.sql" />
+    <Build Include="dbo\Tables\History\History_TariffContracts.sql" />
+    <Build Include="dbo\Tables\History\History_RelevantDocuments.sql" />
+    <Build Include="dbo\Tables\History\History_ReplacementPassCases.sql" />
+    <Build Include="dbo\Tables\History\History_Roles.sql" />
+    <Build Include="dbo\Tables\History\History_Roles_Dialogs.sql" />
+    <Build Include="dbo\Tables\History\History_S_Addresses.sql" />
+    <Build Include="dbo\Tables\History\History_S_Companies.sql" />
+    <Build Include="dbo\Tables\History\History_S_TariffContracts.sql" />
+    <Build Include="dbo\Tables\History\History_ShortTermPassTypes.sql" />
+    <Build Include="dbo\Tables\History\History_StaffRoles.sql" />
+    <Build Include="dbo\Tables\History\History_TariffData.sql" />
+    <Build Include="dbo\Tables\History\History_TimeSlotGroups.sql" />
+    <Build Include="dbo\Tables\History\History_TimeSlots.sql" />
+    <Build Include="dbo\Tables\History\History_TradeGroups.sql" />
+    <Build Include="dbo\Tables\History\History_Trades.sql" />
+    <Build Include="dbo\Tables\History\History_Translations.sql" />
+    <Build Include="dbo\Tables\History\History_Users.sql" />
+    <Build Include="dbo\Tables\Master\Master_AccessAreas.sql" />
+    <Build Include="dbo\Tables\Master\Master_AccessSystems.sql" />
+    <Build Include="dbo\Tables\Master\Master_Actions_Fields.sql" />
+    <Build Include="dbo\Tables\Master\Master_Addresses.sql" />
+    <Build Include="dbo\Tables\Master\Master_AllowedLanguages.sql" />
+    <Build Include="dbo\Tables\Master\Master_AttributesBuildingProject.sql" />
+    <Build Include="dbo\Tables\Master\Master_AttributesCompany.sql" />
+    <Build Include="dbo\Tables\Master\Master_BuildingProjects.sql" />
+    <Build Include="dbo\Tables\Master\Master_Companies.sql" />
+    <Build Include="dbo\Tables\Master\Master_CompanyAdditions.sql" />
+    <Build Include="dbo\Tables\Master\Master_CompanyContacts.sql" />
+    <Build Include="dbo\Tables\Master\Master_CompanyTariffs.sql" />
+    <Build Include="dbo\Tables\Master\Master_CompanyTrades.sql" />
+    <Build Include="dbo\Tables\Master\Master_ConcatActions.sql" />
+    <Build Include="dbo\Tables\Master\Master_Countries.sql" />
+    <Build Include="dbo\Tables\Master\Master_CountryGroups.sql" />
+    <Build Include="dbo\Tables\Master\Master_Dialogs_Actions.sql" />
+    <Build Include="dbo\Tables\Master\Master_DocumentCheckingRules.sql" />
+    <Build Include="dbo\Tables\Master\Master_DocumentRules.sql" />
+    <Build Include="dbo\Tables\Master\Master_EmployeeAccessAreas.sql" />
+    <Build Include="dbo\Tables\Master\Master_EmployeeMinWageAttestation.sql" />
+    <Build Include="dbo\Tables\Master\Master_EmployeeQualification.sql" />
+    <Build Include="dbo\Tables\Master\Master_EmployeeRelevantDocuments.sql" />
+    <Build Include="dbo\Tables\Master\Master_Employees.sql" />
+    <Build Include="dbo\Tables\Master\Master_EmployeeWageGroupAssignment.sql" />
+    <Build Include="dbo\Tables\Master\Master_EmploymentStatus.sql" />
+    <Build Include="dbo\Tables\Master\Master_FirstAiders.sql" />
+    <Build Include="dbo\Tables\Master\Master_Passes.sql" />
+    <Build Include="dbo\Tables\Master\Master_RelevantDocuments.sql" />
+    <Build Include="dbo\Tables\Master\Master_ReplacementPassCases.sql" />
+    <Build Include="dbo\Tables\Master\Master_Rights.sql" />
+    <Build Include="dbo\Tables\Master\Master_Roles.sql" />
+    <Build Include="dbo\Tables\Master\Master_Roles_Dialogs.sql" />
+    <Build Include="dbo\Tables\Master\Master_Roles_Rights.sql" />
+    <Build Include="dbo\Tables\Master\Master_Roles_Users.sql" />
+    <Build Include="dbo\Tables\Master\Master_ShortTermPassTypes.sql" />
+    <Build Include="dbo\Tables\Master\Master_StaffRoles.sql" />
+    <Build Include="dbo\Tables\Master\Master_States.sql" />
+    <Build Include="dbo\Tables\Master\Master_TariffContracts.sql" />
+    <Build Include="dbo\Tables\Master\Master_TariffData.sql" />
+    <Build Include="dbo\Tables\Master\Master_Templates.sql" />
+    <Build Include="dbo\Tables\Master\Master_TimeSlotGroups.sql" />
+    <Build Include="dbo\Tables\Master\Master_TimeSlots.sql" />
+    <Build Include="dbo\Tables\Master\Master_TradeGroups.sql" />
+    <Build Include="dbo\Tables\Master\Master_Trades.sql" />
+    <Build Include="dbo\Tables\Master\Master_Translations.sql" />
+    <Build Include="dbo\Tables\Master\Master_TreeNodes.sql" />
+    <Build Include="dbo\Tables\Master\Master_UserBuildingProjects.sql" />
+    <Build Include="dbo\Stored Procedures\ProcessEventDone.sql" />
+    <Build Include="dbo\Tables\System\Master_Users.sql" />
+    <Build Include="dbo\Tables\System\System_Actions.sql" />
+    <Build Include="dbo\Tables\System\System_Addresses.sql" />
+    <Build Include="dbo\Tables\System\System_Companies.sql" />
+    <Build Include="dbo\Tables\System\System_CompanyTariffs.sql" />
+    <Build Include="dbo\Tables\System\System_CostLocations.sql" />
+    <Build Include="dbo\Tables\System\System_Dialogs.sql" />
+    <Build Include="dbo\Tables\System\System_Documents.sql" />
+    <Build Include="dbo\Tables\System\System_Fields.sql" />
+    <Build Include="dbo\Tables\System\System_Images.sql" />
+    <Build Include="dbo\Tables\System\System_JobTable.sql" />
+    <Build Include="dbo\Tables\System\System_KeyTable.sql" />
+    <Build Include="dbo\Tables\System\System_Languages.sql" />
+    <Build Include="dbo\Tables\System\System_MailAttachment.sql" />
+    <Build Include="dbo\Tables\System\System_Mailbox.sql" />
+    <Build Include="dbo\Tables\System\System_RelevantFor.sql" />
+    <Build Include="dbo\Tables\System\System_Salutations.sql" />
+    <Build Include="dbo\Tables\System\System_StateDefaults.sql" />
+    <Build Include="dbo\Tables\System\System_Status.sql" />
+    <Build Include="dbo\Tables\System\System_Systems.sql" />
+    <Build Include="dbo\Tables\History\History_S_Tariffs.sql" />
+    <Build Include="dbo\Tables\History\History_S_TariffScopes.sql" />
+    <Build Include="dbo\Tables\History\History_S_TariffWageGroups.sql" />
+    <Build Include="dbo\Tables\History\History_S_TariffWages.sql" />
+    <Build Include="dbo\Tables\History\History_S_TradeGroupsStatistical.sql" />
+    <Build Include="dbo\Tables\History\History_S_TradesStatistical.sql" />
+    <Build Include="dbo\Tables\History\History_S_CostLocations.sql" />
+    <Build Include="dbo\Tables\System_Tables_Columns.sql" />
+    <Build Include="dbo\Tables\System_Tables.sql" />
+    <Build Include="dbo\Stored Procedures\CreateTablesColumnsCatalog.sql" />
+    <Build Include="dbo\Stored Procedures\GetPresentPersonsCount.sql" />
+    <Build Include="dbo\Stored Procedures\GetPassBillings.sql" />
+    <Build Include="dbo\Stored Procedures\GetTariffData.sql" />
+    <Build Include="dbo\Tables\Data\Data_PresenceCompany.sql" />
+    <Build Include="dbo\Tables\Data\Data_PresenceEmployee.sql" />
+    <Build Include="dbo\Stored Procedures\CompressPresenceData_Old.sql" />
+    <Build Include="dbo\Tables\Data\Data_PresenceAccessEvents.sql" />
+    <Build Include="dbo\Stored Procedures\GetPresenceData.sql" />
+    <Build Include="dbo\Functions\HasSubcontractors.sql" />
+    <Build Include="dbo\Stored Procedures\GetPresenceDataNow.sql" />
+    <Build Include="dbo\Stored Procedures\GetTradeReportData.sql" />
+    <Build Include="dbo\Stored Procedures\GetTemplates.sql" />
+    <Build Include="dbo\Stored Procedures\GetCompanyTariff.sql" />
+    <Build Include="dbo\Tables\Data\Data_EmployeeMinWage.sql" />
+    <Build Include="dbo\Stored Procedures\CreateEmployeeMinWage.sql" />
+    <Build Include="dbo\Stored Procedures\GetReportMinWageData.sql" />
+    <Build Include="dbo\Stored Procedures\GetReportMinWageEmployeeData.sql" />
+    <Build Include="dbo\Stored Procedures\GetCompanyInfo.sql" />
+    <Build Include="dbo\Tables\Data\Data_MWAttestationRequest.sql" />
+    <Build Include="dbo\Stored Procedures\GetMWAttestationRequests.sql" />
+    <Build Include="dbo\Stored Procedures\GetReportMWAttestationRequestHeaders.sql" />
+    <Build Include="dbo\Stored Procedures\GetReportMWAttestationRequestDetails.sql" />
+    <Build Include="dbo\Stored Procedures\GetReportTariffContractHistory.sql" />
+    <Build Include="dbo\Tables\Data\Data_ShortTermPassesPrint.sql" />
+    <Build Include="dbo\Stored Procedures\GetEmployeeTariff.sql" />
+    <Build Include="dbo\Stored Procedures\GetShortTermPassTemplate.sql" />
+    <Build Include="dbo\Stored Procedures\GetEmployeePassTemplate.sql" />
+    <Build Include="dbo\Stored Procedures\GetPresentPersonsPerAccessArea.sql" />
+    <Build Include="dbo\Stored Procedures\GetMissingFirstAiders.sql" />
+    <Build Include="dbo\Stored Procedures\GetBpCompaniesWithLevel.sql" />
+    <Build Include="dbo\Stored Procedures\GetPassInfo.sql" />
+    <Build Include="dbo\Functions\BestTariffScope.sql" />
+    <Build Include="dbo\Tables\System\System_Jobs.sql" />
+    <Build Include="dbo\Stored Procedures\GetPresenceData000.sql" />
+    <Build Include="dbo\Functions\GetPresenceWithSubcontractors.sql" />
+    <Build Include="dbo\Functions\GetCountWithSubcontractors.sql" />
+    <Build Include="dbo\Stored Procedures\CompressPresenceData.sql" />
+    <Build Include="dbo\Views\View_MasterCompanies_Data_PresenceCompany.sql" />
+    <Build Include="dbo\Functions\HasLockedMainContractor.sql" />
+    <Build Include="dbo\Tables\System\System_Help.sql" />
+    <Build Include="dbo\Stored Procedures\GetAccessEvents.sql" />
+    <Build Include="dbo\Functions\IsFirstAider.sql" />
+    <Build Include="dbo\Stored Procedures\GetPresenceCountTrend.sql" />
+    <Build Include="dbo\Stored Procedures\GetExpiringTariffs.sql" />
+    <Build Include="dbo\Stored Procedures\CompressPresenceDataLoop.sql" />
+    <Build Include="dbo\Tables\System\System_SessionLog.sql" />
+    <Build Include="dbo\Functions\IsOnline.sql" />
+    <Build Include="dbo\Functions\EmployeePresentState.sql" />
+    <Build Include="dbo\Functions\EmployeeAccessAreaPresentState.sql" />
+    <Build Include="dbo\Stored Procedures\GetEmployeeContainerManagement.sql" />
+    <Build Include="dbo\Stored Procedures\GetCompanyContainerManagement.sql" />
+    <Build Include="dbo\Stored Procedures\GetTradeContainerManagement.sql" />
+    <Build Include="dbo\Stored Procedures\GetAccessHistory.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteBuildingProject.sql" />
+    <Build Include="dbo\Functions\GetPassType.sql" />
+    <Build Include="dbo\Functions\ShortTermPresentState.sql" />
+    <Build Include="dbo\Functions\ShortTermAccessAreaPresentState.sql" />
+    <Build Include="dbo\Functions\GetReplacementPassCaseName.sql" />
+    <Build Include="dbo\Stored Procedures\GetParentContractors.sql" />
+    <Build Include="dbo\Stored Procedures\GetPhoto.sql" />
+    <Build Include="dbo\Views\View_Languages.sql" />
+    <Build Include="dbo\Views\View_Countries.sql" />
+    <Build Include="dbo\Views\View_Cultures.sql" />
+    <Build Include="dbo\Stored Procedures\GetCompaniesSubcontractors.sql" />
+    <Build Include="dbo\Stored Procedures\GetCompaniesData.sql" />
+    <Build Include="dbo\Functions\SoundexGer.sql" />
+    <Build Include="dbo\Stored Procedures\GetCompaniesCentralNotAddedToBp.sql" />
+    <Build Include="dbo\Stored Procedures\GetUserInfo.sql" />
+    <Build Include="dbo\Stored Procedures\CompressPresenceData_000.sql" />
+    <Build Include="dbo\Stored Procedures\AccessDataConsistency.sql" />
+    <Build Include="dbo\Stored Procedures\DeleteSystemCompany.sql" />
+    <Build Include="dbo\Stored Procedures\GetUserDuplicates.sql" />
+    <Build Include="dbo\Stored Procedures\GetCompanyCentralDuplicates.sql" />
+    <Build Include="dbo\Stored Procedures\GetEmployeeDuplicates.sql" />
+    <Build Include="dbo\Tables\System\System_ReturnCodes.sql" />
+    <Build Include="dbo\Stored Procedures\GetCompaniesSelection.sql" />
+    <Build Include="dbo\Stored Procedures\GetAccessHistoryEmployee.sql" />
+    <Build Include="dbo\Stored Procedures\GetEmployeesDropDown.sql" />
+    <None Include="dbo\Stored Procedures\GetTariffWageGroupData.sql" />
+    <Build Include="dbo\Tables\Data\Data_TerminalStatus.sql" />
+    <Build Include="dbo\Tables\Master\Master_Terminal.sql" />
+    <Build Include="dbo\Stored Procedures\AccessEventConsistency.sql" />
+    <Build Include="dbo\Stored Procedures\ResetDateRange.sql" />
+    <Build Include="dbo\Stored Procedures\GetMWLackTriggerOverdue.sql" />
+    <Build Include="dbo\Stored Procedures\GetMWLackTriggerOverdueEmployee.sql" />
+    <Build Include="dbo\Stored Procedures\CleanupProcessEvents.sql" />
+    <Build Include="dbo\Tables\Data\Data_Statistics.sql" />
+    <Build Include="dbo\Stored Procedures\GetEmployeeWageGroups.sql" />
+    <Build Include="dbo\Functions\GetCountWithSubcontractorsCL.sql" />
+    <Build Include="dbo\Functions\GetPresenceWithSubcontractorsCL.sql" />
+    <Build Include="dbo\Types\SelectedCompanies.sql" />
+    <Build Include="dbo\Stored Procedures\GetPresentFirstAiders.sql" />
+    <Build Include="dbo\Tables\Master\Master_Bp_Contact.sql" />
+    <Build Include="dbo\Stored Procedures\GetUsersData.sql" />
+    <Build Include="dbo\Functions\GetTemplateNameFromParams.sql" />
+    <Build Include="dbo\Stored Procedures\SwitchTariffScopeEastToWest.sql" />
+    <Build Include="dbo\Stored Procedures\GetStatistics.sql" />
+    <Build Include="dbo\Stored Procedures\GetStatisticsAccessEvents.sql" />
+    <Build Include="dbo\Stored Procedures\GetStatisticsTerminals.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateStatistics.sql" />
+    <Build Include="dbo\Tables\Data\Data_StatisticsTerminals.sql" />
+    <Build Include="dbo\Tables\Data\Data_StatisticsAccessEvents.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Insite.Database.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\System\System_TariffContracts.sql" />
+    <Build Include="dbo\Tables\System\System_Tariffs.sql" />
+    <Build Include="dbo\Tables\System\System_TariffScopes.sql" />
+    <Build Include="dbo\Tables\System\System_TariffWageGroups.sql" />
+    <Build Include="dbo\Tables\System\System_TariffWages.sql" />
+    <Build Include="dbo\Tables\System\System_TradeGroupsStatistical.sql" />
+    <Build Include="dbo\Tables\System\System_TradesStatistical.sql" />
+    <Build Include="dbo\Tables\System\System_Variables.sql" />
+    <Build Include="dbo\StreifFileGroup.sql" />
+    <Build Include="dbo\Functions\BeginOfMonth.sql" />
+    <Build Include="dbo\Functions\EndOfMonth.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateEmployeeMwStatus.sql" />
+    <Build Include="dbo\Stored Procedures\GetPresentEmployeesCustoms.sql" />
+    <Build Include="dbo\Tables\System\System_Reports.sql" />
+    <Build Include="dbo\Tables\System\System_ReportToProject.sql" />
+    <Build Include="dbo\Tables\System\System_ReportToRole.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UpdateLanguageID.sql" />
+    <None Include="UpdateSoundex.sql" />
+    <None Include="ResetManualAccessEvents.sql" />
+    <None Include="UpdateData_AccessEvents.sql" />
+    <None Include="UpdateMaster_Roles_Dialogs.sql" />
+    <None Include="UpdateEmployeesReleaseStatus.sql" />
+    <None Include="UpdateUsersReleaseStatus.sql" />
+    <None Include="Update_Data_ProcessEvents.sql" />
+    <None Include="DeleteManualEvents.sql" />
+    <None Include="AppendCompanyTariffs.sql" />
+    <None Include="InconsistencyRUB.sql" />
+    <None Include="Insite.Test.publish.xml" />
+    <None Include="Snapshots\Insite.Database_20160923_10-41-25.dacpac" />
+    <None Include="insite_dev.local.publish.xml" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,1 @@
+java -Dlog4j.configuration=CardServer.lcf -Dorg.eclipse.jetty.server.Server.LEVEL=WARN -jar CardServer.jar

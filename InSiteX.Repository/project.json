@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "InSiteX.Entity": "1.0.0-*",
+    "Microsoft.EntityFrameworkCore": "1.1.0"
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  },
+
+  "runtimes": {
+    "win7-x64": {}
+  }
+}

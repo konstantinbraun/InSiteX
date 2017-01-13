@@ -1,0 +1,82 @@
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
+using InSiteX.Entity;
+using InSiteX.Services;
+
+namespace InSiteX.Controllers.Api
+{
+    [Produces("application/json")]
+    [Route("api/Devices")]
+    public class DevicesController : Controller
+    {
+        IDeviceService _deviceService;
+        public DevicesController(IDeviceService deviceService)
+        {
+            _deviceService = deviceService;
+        }
+
+        // GET: api/Device
+        [HttpGet]
+        public IEnumerable<Device> Get()
+        {
+            return _deviceService.GetAll();
+        }
+
+        // GET: api/Device/5
+        [HttpGet("{id}", Name = "GetDevice")]
+        public IActionResult Get(int id)
+        {
+            var item = _deviceService.GetById(id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(item);
+        }
+
+        // POST: api/Device
+        [HttpPost]
+        public IActionResult Create([FromBody]Device item)
+        {
+            if (item == null)
+            {
+                return BadRequest();
+            }
+            _deviceService.Create(item);
+            return CreatedAtRoute("GetDevice", new { id = item.Id}, item);
+        }
+
+        // PUT: api/Device/5
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, [FromBody]Device item)
+        {
+            if (item == null || item.Id != id)
+            {
+                return BadRequest();
+            }
+
+            var device = _deviceService.GetById(id);
+            if (device == null)
+            {
+                return NotFound();
+            }
+
+            _deviceService.Update(item);
+            return new NoContentResult();
+        }
+
+        // DELETE: api/Devices/5
+        //[HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            var device = _deviceService.GetById(id);
+            if (device == null)
+            {
+                return NotFound();
+            }
+
+            _deviceService.Delete(device);
+            return new NoContentResult();
+        }
+    }
+}

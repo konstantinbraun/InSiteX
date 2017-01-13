@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="InsiteServices.AccessService" CodeBehind="AccessService.svc.cs" %>

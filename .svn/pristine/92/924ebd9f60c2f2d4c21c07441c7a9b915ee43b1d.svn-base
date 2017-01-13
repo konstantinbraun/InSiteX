@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace InSiteX.Repository.Common
+{
+    public class UnitOfWorkMock : IUnitOfWork
+    {
+        public int Commit()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<int> CommitAsync()
+        {
+            return new Task<int>(Commit);
+        }
+
+        public void Dispose()
+        {
+            
+        }
+    }
+}

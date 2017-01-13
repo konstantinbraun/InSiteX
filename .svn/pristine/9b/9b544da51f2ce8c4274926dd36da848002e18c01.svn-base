@@ -1,0 +1,3030 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DBC9B7C5-898E-477E-8601-16556C4C3939}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InSite.App</RootNamespace>
+    <AssemblyName>InSiteApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UpgradeBackupLocation />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.1.0\lib\net40\EPPlus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Client, Version=2.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.2.1\lib\net45\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2016.2.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Report.Web, Version=2016.2.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Report.WebDesign, Version=2016.2.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.Spreadsheet">
+      <HintPath>..\lib\RCAJAX\2016.2.607.45\AdditionalLibraries\Bin45\Telerik.Web.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2016.2.607.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2016.2.607.45\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2016.2.607.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2016.2.607.45\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2016.2.421.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2016.2.607.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2016.2.421.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2016.2.607.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Fixed.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow, Version=2016.2.421.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2016.2.607.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow.FormatProviders.Pdf, Version=2016.2.421.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2016.2.607.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2016.2.421.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2016.2.607.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2016.2.421.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2016.2.607.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf, Version=2016.2.421.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2016.2.607.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2016.2.421.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2016.2.607.45\AdditionalLibraries\Bin45\Telerik.Windows.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="zxing">
+      <HintPath>..\packages\ZXing.Net.0.14.0.1\lib\net40\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation">
+      <HintPath>..\packages\ZXing.Net.0.14.0.1\lib\net40\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessControl.cs" />
+    <Compile Include="AccessServiceInterface.cs" />
+    <Compile Include="App_GlobalResources\AccessMessages.de.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccessMessages.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\AccessMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccessMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadAsyncUpload.de.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadAsyncUpload.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadAsyncUpload.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadAsyncUpload.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadCalendar.Main.de.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadCalendar.Main.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadCalendar.Main.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadCalendar.Main.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadDataPager.Main.de.designer.cs">
+      <DependentUpon>RadDataPager.Main.de.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadDataPager.Main.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadDataPager.Main.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadDatePicker.Main.de.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadDatePicker.Main.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadDatePicker.Main.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadDatePicker.Main.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadDateTimePicker.Main.de.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadDateTimePicker.Main.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadDateTimePicker.Main.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadDateTimePicker.Main.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Dialogs.de.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Dialogs.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Dialogs.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Dialogs.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Dialogs.fr.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Dialogs.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Main.de.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Main.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Main.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Main.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Main.fr.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Main.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Modules.de.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Modules.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Modules.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Modules.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Modules.fr.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Modules.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Tools.de.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Tools.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Tools.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Tools.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Tools.fr.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Tools.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadGrid.Main.de.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadGrid.Main.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadGrid.Main.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadGrid.Main.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadImageEditor.Dialogs.de.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadImageEditor.Dialogs.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadImageEditor.Dialogs.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadImageEditor.Dialogs.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadImageEditor.Dialogs.fr.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadImageEditor.Dialogs.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadImageEditor.Main.de.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadImageEditor.Main.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadImageEditor.Main.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadImageEditor.Main.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadImageEditor.Main.fr.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadImageEditor.Main.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadListBox.de.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadListBox.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadListBox.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadListBox.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadMonthYearPicker.Main.de.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadMonthYearPicker.Main.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadMonthYearPicker.Main.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadMonthYearPicker.Main.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadWindow.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadWindow.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadWindow.de.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadWindow.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Resource.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Barcoder.cs" />
+    <Compile Include="BasePagePopUp.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BLL\dtoAccessArea.cs" />
+    <Compile Include="BLL\dtoAccessEvent.cs" />
+    <Compile Include="BLL\dtoBpContact.cs" />
+    <Compile Include="BLL\dtoBuildingProject.cs" />
+    <Compile Include="BLL\dtoReport.cs" />
+    <Compile Include="ControlStateDBItem.cs" />
+    <Compile Include="Controls\CompanyDetails.ascx.cs">
+      <DependentUpon>CompanyDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CompanyDetails.ascx.designer.cs">
+      <DependentUpon>CompanyDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EmployeeDetails.ascx.cs">
+      <DependentUpon>EmployeeDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EmployeeDetails.ascx.designer.cs">
+      <DependentUpon>EmployeeDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RelevantDocumentPopUp.ascx.cs">
+      <DependentUpon>RelevantDocumentPopUp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RelevantDocumentPopUp.ascx.designer.cs">
+      <DependentUpon>RelevantDocumentPopUp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ImagePopUp.ascx.cs">
+      <DependentUpon>ImagePopUp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ImagePopUp.ascx.designer.cs">
+      <DependentUpon>ImagePopUp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlStateDBStorageProvider.cs" />
+    <Compile Include="Constants\JobFrequency.cs" />
+    <Compile Include="Constants\JobType.cs" />
+    <Compile Include="Constants\PassStatus.cs" />
+    <Compile Include="CustomControls\wcBpContact.ascx.cs">
+      <DependentUpon>wcBpContact.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\wcBpContact.ascx.designer.cs">
+      <DependentUpon>wcBpContact.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\wcBpSwitcher.ascx.cs">
+      <DependentUpon>wcBpSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\wcBpSwitcher.ascx.designer.cs">
+      <DependentUpon>wcBpSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\wcShortTermPassAccess.ascx.cs">
+      <DependentUpon>wcShortTermPassAccess.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomControls\wcShortTermPassAccess.ascx.designer.cs">
+      <DependentUpon>wcShortTermPassAccess.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Dynamic.cs" />
+    <Compile Include="Models\BaseSwitcher.cs" />
+    <Compile Include="Models\BuildingProjectSwitcher.cs" />
+    <Compile Include="Models\clsAccessEvent.cs" />
+    <Compile Include="Models\clsBpContact.cs" />
+    <Compile Include="Models\clsReport.cs" />
+    <Compile Include="Models\Extensions\EnumExtension.cs" />
+    <Compile Include="Models\Interfaces\ISwitcher.cs" />
+    <Compile Include="Models\RoleSwitcher.cs" />
+    <Compile Include="ReportServerCredentials.cs" />
+    <Compile Include="Service References\AccessServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AdminServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CMServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ReportServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Constants\SessionState.cs" />
+    <Compile Include="Constants\Status.cs" />
+    <Compile Include="Constants\Actions.cs" />
+    <Compile Include="App_GlobalResources\RadFilter.Main.de.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadFilter.Main.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadFilter.Main.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadFilter.Main.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadTreeList.Main.de.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadTreeList.Main.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadTreeList.Main.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadTreeList.Main.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Resource.de.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyFileVersion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssemblyFileVersion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AccessAreasToolTip.ascx.cs">
+      <DependentUpon>AccessAreasToolTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AccessAreasToolTip.ascx.designer.cs">
+      <DependentUpon>AccessAreasToolTip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ActionsToolTip.ascx.cs">
+      <DependentUpon>ActionsToolTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ActionsToolTip.ascx.designer.cs">
+      <DependentUpon>ActionsToolTip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BuildingProjectsToolTip.ascx.cs">
+      <DependentUpon>BuildingProjectsToolTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BuildingProjectsToolTip.ascx.designer.cs">
+      <DependentUpon>BuildingProjectsToolTip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DialogsToolTip.ascx.cs">
+      <DependentUpon>DialogsToolTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\DialogsToolTip.ascx.designer.cs">
+      <DependentUpon>DialogsToolTip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EmploymentStatusToolTip.ascx.cs">
+      <DependentUpon>EmploymentStatusToolTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EmploymentStatusToolTip.ascx.designer.cs">
+      <DependentUpon>EmploymentStatusToolTip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FieldsToolTip.ascx.cs">
+      <DependentUpon>FieldsToolTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FieldsToolTip.ascx.designer.cs">
+      <DependentUpon>FieldsToolTip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FirstAidersToolTip.ascx.cs">
+      <DependentUpon>FirstAidersToolTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FirstAidersToolTip.ascx.designer.cs">
+      <DependentUpon>FirstAidersToolTip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RelevantDocumentsToolTip.ascx.cs">
+      <DependentUpon>RelevantDocumentsToolTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RelevantDocumentsToolTip.ascx.designer.cs">
+      <DependentUpon>RelevantDocumentsToolTip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RolesToolTip.ascx.cs">
+      <DependentUpon>RolesToolTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RolesToolTip.ascx.designer.cs">
+      <DependentUpon>RolesToolTip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StaffRolesToolTip.ascx.cs">
+      <DependentUpon>StaffRolesToolTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\StaffRolesToolTip.ascx.designer.cs">
+      <DependentUpon>StaffRolesToolTip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TranslationsToolTip.ascx.cs">
+      <DependentUpon>TranslationsToolTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TranslationsToolTip.ascx.designer.cs">
+      <DependentUpon>TranslationsToolTip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UsersToolTip.ascx.cs">
+      <DependentUpon>UsersToolTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UsersToolTip.ascx.designer.cs">
+      <DependentUpon>UsersToolTip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers.cs" />
+    <Compile Include="Service References\UserServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SessionStorageProvider.cs" />
+    <Compile Include="ViewStatePersister\CompressedStateFormatter.cs" />
+    <Compile Include="ViewStatePersister\CustomPageAdapter.cs" />
+    <Compile Include="ViewStatePersister\CustomPageStatePersister.cs" />
+    <Compile Include="ViewStatePersister\CustomPageStatePersisterConfiguration.cs" />
+    <Compile Include="ViewStatePersister\CustomViewState.cs" />
+    <Compile Include="ViewStatePersister\ICustomStatePersistedPage.cs" />
+    <Compile Include="ViewStatePersister\SessionPageStateAdapter.cs" />
+    <Compile Include="ViewStatePersister\SessionPageStatePersister.cs" />
+    <Compile Include="Views\Central\BpContact.aspx.cs">
+      <DependentUpon>BpContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Central\BpContact.aspx.designer.cs">
+      <DependentUpon>BpContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Central\HistoryTables.aspx.cs">
+      <DependentUpon>HistoryTables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Central\HistoryTables.aspx.designer.cs">
+      <DependentUpon>HistoryTables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Central\RegisterToBp.aspx.cs">
+      <DependentUpon>RegisterToBp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Central\RegisterToBp.aspx.designer.cs">
+      <DependentUpon>RegisterToBp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Central\ReportConfiguration.aspx.cs">
+      <DependentUpon>ReportConfiguration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Central\ReportConfiguration.aspx.designer.cs">
+      <DependentUpon>ReportConfiguration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Central\ReportDesigner.aspx.cs">
+      <DependentUpon>ReportDesigner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Central\ReportDesigner.aspx.designer.cs">
+      <DependentUpon>ReportDesigner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configuration\AccessAreas.aspx.cs">
+      <DependentUpon>AccessAreas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configuration\AccessAreas.aspx.designer.cs">
+      <DependentUpon>AccessAreas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Central\AddressesCentral.aspx.cs">
+      <DependentUpon>AddressesCentral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Central\AddressesCentral.aspx.designer.cs">
+      <DependentUpon>AddressesCentral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configuration\AllowedLanguages.aspx.cs">
+      <DependentUpon>AllowedLanguages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configuration\AllowedLanguages.aspx.designer.cs">
+      <DependentUpon>AllowedLanguages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configuration\Attributes.aspx.cs">
+      <DependentUpon>Attributes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configuration\Attributes.aspx.designer.cs">
+      <DependentUpon>Attributes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configuration\BuildingProjectInfo.aspx.cs">
+      <DependentUpon>BuildingProjectInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configuration\BuildingProjectInfo.aspx.designer.cs">
+      <DependentUpon>BuildingProjectInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Central\BuildingProjects.aspx.cs">
+      <DependentUpon>BuildingProjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Central\BuildingProjects.aspx.designer.cs">
+      <DependentUpon>BuildingProjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BuildingProjectsSelect.aspx.cs">
+      <DependentUpon>BuildingProjectsSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\BuildingProjectsSelect.aspx.designer.cs">
+      <DependentUpon>BuildingProjectsSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Central\CompaniesCentral.aspx.cs">
+      <DependentUpon>CompaniesCentral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Central\CompaniesCentral.aspx.designer.cs">
+      <DependentUpon>CompaniesCentral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Central\CostLocations.aspx.cs">
+      <DependentUpon>CostLocations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Central\CostLocations.aspx.designer.cs">
+      <DependentUpon>CostLocations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configuration\Countries.aspx.cs">
+      <DependentUpon>Countries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configuration\Countries.aspx.designer.cs">
+      <DependentUpon>Countries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configuration\DialogsFields.aspx.cs">
+      <DependentUpon>DialogsFields.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configuration\DialogsFields.aspx.designer.cs">
+      <DependentUpon>DialogsFields.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configuration\DocumentCheckingRules.aspx.cs">
+      <DependentUpon>DocumentCheckingRules.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configuration\DocumentCheckingRules.aspx.designer.cs">
+      <DependentUpon>DocumentCheckingRules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configuration\DocumentRules.aspx.cs">
+      <DependentUpon>DocumentRules.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configuration\DocumentRules.aspx.designer.cs">
+      <DependentUpon>DocumentRules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configuration\EmploymentStatus.aspx.cs">
+      <DependentUpon>EmploymentStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configuration\EmploymentStatus.aspx.designer.cs">
+      <DependentUpon>EmploymentStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configuration\FirstAiders.aspx.cs">
+      <DependentUpon>FirstAiders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configuration\FirstAiders.aspx.designer.cs">
+      <DependentUpon>FirstAiders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configuration\TimeSlots.aspx.cs">
+      <DependentUpon>TimeSlots.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configuration\TimeSlots.aspx.designer.cs">
+      <DependentUpon>TimeSlots.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Central\UserChangePassword.aspx.cs">
+      <DependentUpon>UserChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Central\UserChangePassword.aspx.designer.cs">
+      <DependentUpon>UserChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Costumization\ContainerManagement.aspx.cs">
+      <DependentUpon>ContainerManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Costumization\ContainerManagement.aspx.designer.cs">
+      <DependentUpon>ContainerManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Costumization\Hasher.aspx.cs">
+      <DependentUpon>Hasher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Costumization\Hasher.aspx.designer.cs">
+      <DependentUpon>Hasher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Costumization\LogViewer.aspx.cs">
+      <DependentUpon>LogViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Costumization\LogViewer.aspx.designer.cs">
+      <DependentUpon>LogViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Help\Info.aspx.cs">
+      <DependentUpon>Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Help\Info.aspx.designer.cs">
+      <DependentUpon>Info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Help\Support.aspx.cs">
+      <DependentUpon>Support.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Help\Support.aspx.designer.cs">
+      <DependentUpon>Support.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HtmlViewer.aspx.cs">
+      <DependentUpon>HtmlViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\HtmlViewer.aspx.designer.cs">
+      <DependentUpon>HtmlViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MailBox\MailBox.aspx.cs">
+      <DependentUpon>MailBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MailBox\MailBox.aspx.designer.cs">
+      <DependentUpon>MailBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\AccessHistory.aspx.cs">
+      <DependentUpon>AccessHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Main\AccessHistory.aspx.designer.cs">
+      <DependentUpon>AccessHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\EmployeeAccessRightInfo.aspx.cs">
+      <DependentUpon>EmployeeAccessRightInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Main\EmployeeAccessRightInfo.aspx.designer.cs">
+      <DependentUpon>EmployeeAccessRightInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\EmployeeMinWage.aspx.cs">
+      <DependentUpon>EmployeeMinWage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Main\EmployeeMinWage.aspx.designer.cs">
+      <DependentUpon>EmployeeMinWage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\Employees.aspx.cs">
+      <DependentUpon>Employees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Main\Employees.aspx.designer.cs">
+      <DependentUpon>Employees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Costumization\Password.aspx.cs">
+      <DependentUpon>Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Costumization\Password.aspx.designer.cs">
+      <DependentUpon>Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AppDefaults.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppDefaults.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SessionData.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Main\Companies.aspx.cs">
+      <DependentUpon>Companies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Main\Companies.aspx.designer.cs">
+      <DependentUpon>Companies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Costumization\Languages.aspx.cs">
+      <DependentUpon>Languages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Costumization\Languages.aspx.designer.cs">
+      <DependentUpon>Languages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Costumization\Layout.aspx.cs">
+      <DependentUpon>Layout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Costumization\Layout.aspx.designer.cs">
+      <DependentUpon>Layout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configuration\RelevantDocuments.aspx.cs">
+      <DependentUpon>RelevantDocuments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configuration\RelevantDocuments.aspx.designer.cs">
+      <DependentUpon>RelevantDocuments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configuration\ReplacementPassCases.aspx.cs">
+      <DependentUpon>ReplacementPassCases.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configuration\ReplacementPassCases.aspx.designer.cs">
+      <DependentUpon>ReplacementPassCases.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configuration\RolesRights.aspx.cs">
+      <DependentUpon>RolesRights.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configuration\RolesRights.aspx.designer.cs">
+      <DependentUpon>RolesRights.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configuration\ShortTermPassTypes.aspx.cs">
+      <DependentUpon>ShortTermPassTypes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configuration\ShortTermPassTypes.aspx.designer.cs">
+      <DependentUpon>ShortTermPassTypes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configuration\StaffRoles.aspx.cs">
+      <DependentUpon>StaffRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configuration\StaffRoles.aspx.designer.cs">
+      <DependentUpon>StaffRoles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Central\StatisticTradeGroups.aspx.cs">
+      <DependentUpon>StatisticTradeGroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Central\StatisticTradeGroups.aspx.designer.cs">
+      <DependentUpon>StatisticTradeGroups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configuration\TariffContracts.aspx.cs">
+      <DependentUpon>TariffContracts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configuration\TariffContracts.aspx.designer.cs">
+      <DependentUpon>TariffContracts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Central\Tariffs.aspx.cs">
+      <DependentUpon>Tariffs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Central\Tariffs.aspx.designer.cs">
+      <DependentUpon>Tariffs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configuration\Templates.aspx.cs">
+      <DependentUpon>Templates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configuration\Templates.aspx.designer.cs">
+      <DependentUpon>Templates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Configuration\TradeGroups.aspx.cs">
+      <DependentUpon>TradeGroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Configuration\TradeGroups.aspx.designer.cs">
+      <DependentUpon>TradeGroups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Central\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Central\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\JobManagement.aspx.cs">
+      <DependentUpon>JobManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Main\JobManagement.aspx.designer.cs">
+      <DependentUpon>JobManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\ProcessEvents.aspx.cs">
+      <DependentUpon>ProcessEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Main\ProcessEvents.aspx.designer.cs">
+      <DependentUpon>ProcessEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\StiReportViewer.aspx.cs">
+      <DependentUpon>StiReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Main\StiReportViewer.aspx.designer.cs">
+      <DependentUpon>StiReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\ShortTermPassActions.aspx.cs">
+      <DependentUpon>ShortTermPassActions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Main\ShortTermPassActions.aspx.designer.cs">
+      <DependentUpon>ShortTermPassActions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\PassActions.aspx.cs">
+      <DependentUpon>PassActions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Main\PassActions.aspx.designer.cs">
+      <DependentUpon>PassActions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\ShortTermPasses.aspx.cs">
+      <DependentUpon>ShortTermPasses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Main\ShortTermPasses.aspx.designer.cs">
+      <DependentUpon>ShortTermPasses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\Speedy.aspx.cs">
+      <DependentUpon>Speedy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Main\Speedy.aspx.designer.cs">
+      <DependentUpon>Speedy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\WebCamTest.aspx.cs">
+      <DependentUpon>WebCamTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Main\WebCamTest.aspx.designer.cs">
+      <DependentUpon>WebCamTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegisterCompanyCentral.aspx.cs">
+      <DependentUpon>RegisterCompanyCentral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\RegisterCompanyCentral.aspx.designer.cs">
+      <DependentUpon>RegisterCompanyCentral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegisterCompanyCentralVerify.aspx.cs">
+      <DependentUpon>RegisterCompanyCentralVerify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\RegisterCompanyCentralVerify.aspx.designer.cs">
+      <DependentUpon>RegisterCompanyCentralVerify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegisterEmployee.aspx.cs">
+      <DependentUpon>RegisterEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\RegisterEmployee.aspx.designer.cs">
+      <DependentUpon>RegisterEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\MinWageAttestationRequest.aspx.cs">
+      <DependentUpon>MinWageAttestationRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\MinWageAttestationRequest.aspx.designer.cs">
+      <DependentUpon>MinWageAttestationRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\MinWageReport.aspx.cs">
+      <DependentUpon>MinWageReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\MinWageReport.aspx.designer.cs">
+      <DependentUpon>MinWageReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\MinWageReportEmployee.aspx.cs">
+      <DependentUpon>MinWageReportEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\MinWageReportEmployee.aspx.designer.cs">
+      <DependentUpon>MinWageReportEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\PassBilling.aspx.cs">
+      <DependentUpon>PassBilling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\PassBilling.aspx.designer.cs">
+      <DependentUpon>PassBilling.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\PresenceCount.aspx.cs">
+      <DependentUpon>PresenceCount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\PresenceCount.aspx.designer.cs">
+      <DependentUpon>PresenceCount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\PresenceReport.aspx.cs">
+      <DependentUpon>PresenceReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\PresenceReport.aspx.designer.cs">
+      <DependentUpon>PresenceReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\SystemOverview.aspx.cs">
+      <DependentUpon>SystemOverview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\SystemOverview.aspx.designer.cs">
+      <DependentUpon>SystemOverview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\TariffData.aspx.cs">
+      <DependentUpon>TariffData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\TariffData.aspx.designer.cs">
+      <DependentUpon>TariffData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\TradesReport.aspx.cs">
+      <DependentUpon>TradesReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\TradesReport.aspx.designer.cs">
+      <DependentUpon>TradesReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webservices.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\RadCaptcha\0.wav" />
+    <Content Include="App_Data\RadCaptcha\1.wav" />
+    <Content Include="App_Data\RadCaptcha\2.wav" />
+    <Content Include="App_Data\RadCaptcha\3.wav" />
+    <Content Include="App_Data\RadCaptcha\4.wav" />
+    <Content Include="App_Data\RadCaptcha\5.wav" />
+    <Content Include="App_Data\RadCaptcha\6.wav" />
+    <Content Include="App_Data\RadCaptcha\7.wav" />
+    <Content Include="App_Data\RadCaptcha\8.wav" />
+    <Content Include="App_Data\RadCaptcha\9.wav" />
+    <Content Include="App_Data\RadCaptcha\A.wav" />
+    <Content Include="App_Data\RadCaptcha\B.wav" />
+    <Content Include="App_Data\RadCaptcha\C.wav" />
+    <Content Include="App_Data\RadCaptcha\D.wav" />
+    <Content Include="App_Data\RadCaptcha\E.wav" />
+    <Content Include="App_Data\RadCaptcha\F.wav" />
+    <Content Include="App_Data\RadCaptcha\Captcha.fr\0.wav" />
+    <Content Include="App_Data\RadCaptcha\Captcha.fr\1.wav" />
+    <Content Include="App_Data\RadCaptcha\Captcha.fr\2.wav" />
+    <Content Include="App_Data\RadCaptcha\Captcha.fr\3.wav" />
+    <Content Include="App_Data\RadCaptcha\Captcha.fr\4.wav" />
+    <Content Include="App_Data\RadCaptcha\Captcha.fr\5.wav" />
+    <Content Include="App_Data\RadCaptcha\Captcha.fr\6.wav" />
+    <Content Include="App_Data\RadCaptcha\Captcha.fr\7.wav" />
+    <Content Include="App_Data\RadCaptcha\Captcha.fr\8.wav" />
+    <Content Include="App_Data\RadCaptcha\Captcha.fr\9.wav" />
+    <Content Include="App_Data\RadCaptcha\G.wav" />
+    <Content Include="App_Data\RadCaptcha\Captcha.de\0.wav" />
+    <Content Include="App_Data\RadCaptcha\Captcha.de\1.wav" />
+    <Content Include="App_Data\RadCaptcha\Captcha.de\2.wav" />
+    <Content Include="App_Data\RadCaptcha\Captcha.de\3.wav" />
+    <Content Include="App_Data\RadCaptcha\Captcha.de\4.wav" />
+    <Content Include="App_Data\RadCaptcha\Captcha.de\5.wav" />
+    <Content Include="App_Data\RadCaptcha\Captcha.de\6.wav" />
+    <Content Include="App_Data\RadCaptcha\Captcha.de\7.wav" />
+    <Content Include="App_Data\RadCaptcha\Captcha.de\8.wav" />
+    <Content Include="App_Data\RadCaptcha\Captcha.de\9.wav" />
+    <Content Include="App_Data\RadCaptcha\H.wav" />
+    <Content Include="App_Data\RadCaptcha\I.wav" />
+    <Content Include="App_Data\RadCaptcha\J.wav" />
+    <Content Include="App_Data\RadCaptcha\K.wav" />
+    <Content Include="App_Data\RadCaptcha\L.wav" />
+    <Content Include="App_Data\RadCaptcha\M.wav" />
+    <Content Include="App_Data\RadCaptcha\N.wav" />
+    <Content Include="App_Data\RadCaptcha\O.wav" />
+    <Content Include="App_Data\RadCaptcha\P.wav" />
+    <Content Include="App_Data\RadCaptcha\Q.wav" />
+    <Content Include="App_Data\RadCaptcha\R.wav" />
+    <Content Include="App_Data\RadCaptcha\S.wav" />
+    <Content Include="App_Data\RadCaptcha\T.wav" />
+    <Content Include="App_Data\RadCaptcha\U.wav" />
+    <Content Include="App_Data\RadCaptcha\V.wav" />
+    <Content Include="App_Data\RadCaptcha\W.wav" />
+    <Content Include="App_Data\RadCaptcha\X.wav" />
+    <Content Include="App_Data\RadCaptcha\Y.wav" />
+    <Content Include="App_Data\RadCaptcha\Z.wav" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Controls\AccessAreasToolTip.ascx" />
+    <Content Include="Controls\ActionsToolTip.ascx" />
+    <Content Include="Controls\BuildingProjectsToolTip.ascx" />
+    <Content Include="Controls\CompanyDetails.ascx" />
+    <Content Include="Controls\DialogsToolTip.ascx" />
+    <Content Include="Controls\EmployeeDetails.ascx" />
+    <Content Include="Controls\EmploymentStatusToolTip.ascx" />
+    <Content Include="Controls\FieldsToolTip.ascx" />
+    <Content Include="Controls\FirstAidersToolTip.ascx" />
+    <Content Include="Controls\RelevantDocumentPopUp.ascx" />
+    <Content Include="Controls\ImagePopUp.ascx" />
+    <Content Include="Controls\InSite3Reader.jar" />
+    <Content Include="Controls\RelevantDocumentsToolTip.ascx" />
+    <Content Include="Controls\RolesToolTip.ascx" />
+    <Content Include="Controls\StaffRolesToolTip.ascx" />
+    <Content Include="Controls\TranslationsToolTip.ascx" />
+    <Content Include="Controls\UsersToolTip.ascx" />
+    <Content Include="CustomControls\wcBpContact.ascx" />
+    <Content Include="CustomControls\wcBpSwitcher.ascx" />
+    <Content Include="CustomControls\wcShortTermPassAccess.ascx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image001.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image002.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image003.gif" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image004.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image005.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image006.gif" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image007.gif" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image008.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image009.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image010.gif" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image011.gif" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image012.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image013.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image014.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image015.gif" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image016.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image017.gif" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image018.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image019.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image020.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image021.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image022.gif" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image023.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image024.gif" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image025.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image026.gif" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image027.gif" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image028.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image029.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image030.gif" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image031.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image032.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image033.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image034.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image035.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung-Dateien\image036.jpg" />
+    <Content Include="Help\Beschreibung_Selbstregistrierung.htm" />
+    <Content Include="Reports\Localization\ar.xml" />
+    <Content Include="Reports\Localization\be.xml" />
+    <Content Include="Reports\Localization\bg.xml" />
+    <Content Include="Reports\Localization\ca-ES.xml" />
+    <Content Include="Reports\Localization\cs.xml" />
+    <Content Include="Reports\Localization\de.ext.xml" />
+    <Content Include="Reports\Localization\de.xml" />
+    <Content Include="Reports\Localization\el-GR.xml" />
+    <Content Include="Reports\Localization\en-GB.xml" />
+    <Content Include="Reports\Localization\en.ext.xml" />
+    <Content Include="Reports\Localization\en.xml" />
+    <Content Include="Reports\Localization\es.xml" />
+    <Content Include="Reports\Localization\eu-ES.xml" />
+    <Content Include="Reports\Localization\fa.xml" />
+    <Content Include="Reports\Localization\fr.ext.xml" />
+    <Content Include="Reports\Localization\fr.xml" />
+    <Content Include="Reports\Localization\gl-ES.xml" />
+    <Content Include="Reports\Localization\hr.xml" />
+    <Content Include="Reports\Localization\hu.xml" />
+    <Content Include="Reports\Localization\id.xml" />
+    <Content Include="Reports\Localization\it.xml" />
+    <Content Include="Reports\Localization\ka.xml" />
+    <Content Include="Reports\Localization\Lt-sr-SP.xml" />
+    <Content Include="Reports\Localization\lt.xml" />
+    <Content Include="Reports\Localization\nb-NO.xml" />
+    <Content Include="Reports\Localization\nl.xml" />
+    <Content Include="Reports\Localization\pl.xml" />
+    <Content Include="Reports\Localization\pt-BR.xml" />
+    <Content Include="Reports\Localization\pt.xml" />
+    <Content Include="Reports\Localization\ro.xml" />
+    <Content Include="Reports\Localization\ru.ext.xml" />
+    <Content Include="Reports\Localization\ru.xml" />
+    <Content Include="Reports\Localization\sk.xml" />
+    <Content Include="Reports\Localization\sv.ext.xml" />
+    <Content Include="Reports\Localization\sv.xml" />
+    <Content Include="Reports\Localization\tr.xml" />
+    <Content Include="Reports\Localization\uk.xml" />
+    <Content Include="Reports\Localization\zh-CHS.xml" />
+    <Content Include="Reports\Localization\zh-CHT.xml" />
+    <Content Include="Reports\ReportTemplate.mrt" />
+    <Content Include="Resources\Icons\accessories-date.png" />
+    <Content Include="Resources\Icons\accessories-date_16.png" />
+    <Content Include="Resources\Icons\AddRecord.gif" />
+    <Content Include="Resources\Icons\camera_16.png" />
+    <Content Include="Resources\Icons\camera_24.png" />
+    <Content Include="Resources\Icons\Cancel.gif" />
+    <Content Include="Resources\Icons\color-palette.png" />
+    <Content Include="Resources\Icons\Contract_16.png" />
+    <Content Include="Resources\Icons\criteria.png" />
+    <Content Include="Resources\Icons\Delete.gif" />
+    <Content Include="Resources\Icons\dialog-information-4.png" />
+    <Content Include="Resources\Icons\DocumentRules.png" />
+    <Content Include="Resources\Icons\dot_green_16.png" />
+    <Content Include="Resources\Icons\dot_red_16.png" />
+    <Content Include="Resources\Icons\Edit.gif" />
+    <Content Include="Resources\Icons\enter-16.png" />
+    <Content Include="Resources\Icons\enter-24.png" />
+    <Content Include="Resources\Icons\exit-16.png" />
+    <Content Include="Resources\Icons\exit-24.png" />
+    <Content Include="Resources\Icons\export_csv_16.png" />
+    <Content Include="Resources\Icons\export_csv_22.png" />
+    <Content Include="Resources\Icons\export_docx_16.png" />
+    <Content Include="Resources\Icons\export_docx_22.png" />
+    <Content Include="Resources\Icons\export_pdf_16.png" />
+    <Content Include="Resources\Icons\export_pdf_22.png" />
+    <Content Include="Resources\Icons\export_xlsx_16.png" />
+    <Content Include="Resources\Icons\export_xlsx_22.png" />
+    <Content Include="Resources\Icons\export_xml_16.png" />
+    <Content Include="Resources\Icons\export_xml_22.png" />
+    <Content Include="Resources\Icons\Flags\flag-bq.png" />
+    <Content Include="Resources\Icons\Flags\flag-cb.png" />
+    <Content Include="Resources\Icons\Flags\flag-cw.png" />
+    <Content Include="Resources\Icons\Flags\flag-sp.png" />
+    <Content Include="Resources\Icons\Flags\flag-ss.png" />
+    <Content Include="Resources\Icons\Flags\flag-sx.png" />
+    <Content Include="Resources\Icons\Flags\flag-yt.png" />
+    <Content Include="Resources\Icons\go-down.png" />
+    <Content Include="Resources\Icons\go-down_16.png" />
+    <Content Include="Resources\Icons\go_16.png" />
+    <Content Include="Resources\Icons\go_22.png" />
+    <Content Include="Resources\Icons\Green.png" />
+    <Content Include="Resources\Icons\Help_16.png" />
+    <Content Include="Resources\Icons\Help_22.png" />
+    <Content Include="Resources\Icons\hourglass_16.png" />
+    <Content Include="Resources\Icons\hourglass_22.png" />
+    <Content Include="Resources\Icons\important-icon.png" />
+    <Content Include="Resources\Icons\info.png" />
+    <Content Include="Resources\Icons\info_16.png" />
+    <Content Include="Resources\Icons\Insert.gif" />
+    <Content Include="Resources\Icons\locked.png" />
+    <Content Include="Resources\Icons\locked_16.png" />
+    <Content Include="Resources\Icons\Locked_AG.png" />
+    <Content Include="Resources\Icons\Locked_NU.png" />
+    <Content Include="Resources\Icons\log_in.png" />
+    <Content Include="Resources\Icons\mail-attachment-2.png" />
+    <Content Include="Resources\Icons\mail-mark-read-2.png" />
+    <Content Include="Resources\Icons\mail-message-new-4.png" />
+    <Content Include="Resources\Icons\mail-message-new_16.png" />
+    <Content Include="Resources\Icons\mail-read-2.png" />
+    <Content Include="Resources\Icons\mail-read-2_16.png" />
+    <Content Include="Resources\Icons\mail-reply-sender-2.png" />
+    <Content Include="Resources\Icons\mail-reply.png" />
+    <Content Include="Resources\Icons\mail-unread-new.png" />
+    <Content Include="Resources\Icons\mail-unread-new_128.png" />
+    <Content Include="Resources\Icons\mail-unread-new_16.png" />
+    <Content Include="Resources\Icons\minwage_16.png" />
+    <Content Include="Resources\Icons\minwage_22.png" />
+    <Content Include="Resources\Icons\Money.png" />
+    <Content Include="Resources\Icons\never-24.png" />
+    <Content Include="Resources\Icons\Offline_16.png" />
+    <Content Include="Resources\Icons\Offline_24.png" />
+    <Content Include="Resources\Icons\Online_16.png" />
+    <Content Include="Resources\Icons\Online_24.png" />
+    <Content Include="Resources\Icons\params_22.png" />
+    <Content Include="Resources\Icons\PassBilling.png" />
+    <Content Include="Resources\Icons\PassBilling_16.png" />
+    <Content Include="Resources\Icons\pie_chart_22.png" />
+    <Content Include="Resources\Icons\preferences-system-4.png" />
+    <Content Include="Resources\Icons\PresenceCount_16.png" />
+    <Content Include="Resources\Icons\PresenceCount_22.png" />
+    <Content Include="Resources\Icons\printer.png" />
+    <Content Include="Resources\Icons\process.png" />
+    <Content Include="Resources\Icons\Red-X.png" />
+    <Content Include="Resources\Icons\Red.png" />
+    <Content Include="Resources\Icons\Refresh.gif" />
+    <Content Include="Resources\Icons\release.png" />
+    <Content Include="Resources\Icons\request.png" />
+    <Content Include="Resources\Icons\requestBP.png" />
+    <Content Include="Resources\Icons\requestCC.png" />
+    <Content Include="Resources\Icons\RolesUsersRights.png" />
+    <Content Include="Reports\EmployeePass.rdl">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\RadSpell\de-DE.tdf" />
+    <Content Include="App_Data\RadSpell\en-US.tdf" />
+    <Content Include="App_Data\RadSpell\fr-FR.tdf" />
+    <Content Include="AssemblyFileVersion.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AssemblyFileVersion.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\AccessMessages.de.resx">
+      <SubType>Designer</SubType>
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>AccessMessages.de.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadMonthYearPicker.Main.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadMonthYearPicker.Main.de.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadMonthYearPicker.Main.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadMonthYearPicker.Main.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadImageEditor.Dialogs.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadImageEditor.Dialogs.de.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadImageEditor.Dialogs.fr.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadImageEditor.Dialogs.fr.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadImageEditor.Dialogs.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadImageEditor.Dialogs.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadImageEditor.Main.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadImageEditor.Main.de.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadImageEditor.Main.fr.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadImageEditor.Main.fr.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadImageEditor.Main.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadImageEditor.Main.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadCalendar.Main.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadCalendar.Main.de.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadCalendar.Main.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadCalendar.Main.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadDatePicker.Main.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadDatePicker.Main.de.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadDatePicker.Main.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadDatePicker.Main.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadDateTimePicker.Main.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadDateTimePicker.Main.de.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadDateTimePicker.Main.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadDateTimePicker.Main.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadGrid.Main.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadGrid.Main.de.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadGrid.Main.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadGrid.Main.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadDataPager.Main.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadDataPager.Main.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadDataPager.Main.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadDataPager.Main.de.designer.cs</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="App_GlobalResources\RadWindow.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RadWindow.de.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <Content Include="Properties\DataSources\System.Net.HttpWebResponse.datasource" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="InSiteApp.wpp.targets">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Properties\PublishProfiles\InSiteApp Entwicklungssystem.pubxml" />
+    <Content Include="Reports\ShortTermPass.rdl" />
+    <Content Include="Resources\Icons\rules-icon.png" />
+    <Content Include="Resources\Icons\schedule_16.png" />
+    <Content Include="Resources\Icons\schedule_22.png" />
+    <Content Include="Resources\Icons\Staff_16.png" />
+    <Content Include="Resources\Icons\stats_16.png" />
+    <Content Include="Resources\Icons\stats_24.png" />
+    <Content Include="Resources\Icons\TerminalsOffline_24.png" />
+    <Content Include="Resources\Icons\TerminalsOnline_24.png" />
+    <Content Include="Resources\Icons\undefined-24.png" />
+    <Content Include="Resources\Icons\Update.gif" />
+    <Content Include="Resources\Icons\view-refresh-3.png" />
+    <Content Include="Resources\Icons\view-refresh-3_128.png" />
+    <Content Include="Resources\Icons\viewdetails.png" />
+    <Content Include="Resources\Images\Header.png" />
+    <Content Include="Resources\Images\logo_pco.png" />
+    <Content Include="Resources\Images\signal_3_green_24.png" />
+    <Content Include="Resources\Images\signal_3_red_24.png" />
+    <Content Include="Resources\Images\signal_3_yellow_24.png" />
+    <Content Include="Resources\Images\signal_green_60.png" />
+    <Content Include="Resources\Images\signal_red_60.png" />
+    <Content Include="Resources\Images\signal_yellow_60.png" />
+    <Content Include="Resources\Images\Speedy_3_transparent_300.png" />
+    <Content Include="Resources\Images\speedy_green.jpg" />
+    <Content Include="Resources\Images\speedy_red.jpg" />
+    <Content Include="Resources\Images\speedy_white.jpg" />
+    <Content Include="Resources\Images\TBLogo_50.png" />
+    <Content Include="Resources\Images\TBSupport.png" />
+    <Content Include="Resources\Images\zeppelin_logo_150x56.png" />
+    <Content Include="Resources\Images\zeppelin_logo_transparent_150x56.png" />
+    <None Include="Properties\PublishProfiles\Prod.pubxml" />
+    <None Include="Properties\PublishProfiles\Test.pubxml" />
+    <None Include="Scripts\jquery-3.1.0.intellisense.js" />
+    <Content Include="Resources\Images\zeppelin_logo_weiss.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\CardSocket.js" />
+    <Content Include="Scripts\jquery-3.1.0.js" />
+    <Content Include="Scripts\jquery-3.1.0.min.js" />
+    <Content Include="Scripts\jquery-3.1.0.slim.js" />
+    <Content Include="Scripts\jquery-3.1.0.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\jquery.signalR-2.0.3.js" />
+    <Content Include="Scripts\jquery-3.1.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.0.min.map" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <None Include="Service References\AccessServices\AccessService.disco" />
+    <Content Include="Service References\AccessServices\InSite.App.AccessServices.AccessEvent.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AccessServices\InSite.App.AccessServices.AccessRight.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AccessServices\AccessService.wsdl" />
+    <None Include="Service References\AccessServices\AccessService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccessServices\AccessService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccessServices\AccessService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccessServices\configuration91.svcinfo" />
+    <None Include="Service References\AccessServices\configuration.svcinfo" />
+    <None Include="Service References\AccessServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AdminServices\AdminService1.disco" />
+    <Content Include="Service References\AdminServices\InSite.App.AdminServices.System_Jobs.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AdminServices\AdminService1.wsdl" />
+    <None Include="Service References\AdminServices\AdminService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdminServices\AdminService31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AdminServices\AdminService32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CMServices\ContainerManagement1.wsdl" />
+    <None Include="Service References\CMServices\ContainerManagement2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CMServices\ContainerManagement21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReportServices\configuration91.svcinfo" />
+    <None Include="Service References\ReportServices\configuration.svcinfo" />
+    <None Include="Service References\AdminServices\configuration91.svcinfo" />
+    <None Include="Service References\AdminServices\configuration.svcinfo" />
+    <None Include="Service References\AdminServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CMServices\configuration91.svcinfo" />
+    <None Include="Service References\CMServices\configuration.svcinfo" />
+    <None Include="Service References\CMServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CMServices\ContainerManagement1.disco" />
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ActiveState.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.CacheRefreshPlan.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.CacheRefreshPlanState.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.CancelJobResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.CatalogItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ChangeSubscriptionOwnerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.CreateCacheRefreshPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.CreateCatalogItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.CreateDataDrivenSubscriptionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.CreateDataSourceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.CreateFolderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.CreateItemHistorySnapshotResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.CreateLinkedItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.CreateReportEditSessionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.CreateRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.CreateScheduleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.CreateSubscriptionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.DataRetrievalPlan.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.DataSetDefinition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.DataSource.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.DataSourceDefinition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.DataSourcePrompt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.DeleteCacheRefreshPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.DeleteItemHistorySnapshotResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.DeleteItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.DeleteRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.DeleteScheduleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.DeleteSubscriptionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.DisableDataSourceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.EnableDataSourceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.Event.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ExpirationDefinition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.Extension.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ExtensionParameter.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ExtensionSettings.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.FindItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.FireEventResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.FlushCacheResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GenerateModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetCacheOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetCacheRefreshPlanPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetDataDrivenSubscriptionPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetDataSourceContentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetExecutionOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetExtensionSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetItemDataSourcePromptsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetItemDataSourcesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetItemDefinitionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetItemHistoryLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetItemHistoryOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetItemLinkResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetItemParametersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetItemReferencesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetItemTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetModelItemPermissionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetModelItemPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetPermissionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetReportServerConfigInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetRolePropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetSchedulePropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetSubscriptionPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetSystemPermissionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetSystemPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetSystemPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.GetUserModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.InheritModelItemParentSecurityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.InheritParentSecurityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.IsSSLRequiredResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ItemHistorySnapshot.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ItemParameter.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ItemReferenceData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.Job.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListCacheRefreshPlansResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListChildrenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListDatabaseCredentialRetrievalOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListDependentItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListEventsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListExecutionSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListExtensionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListExtensionTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListItemHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListItemTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListJobActionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListJobsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListJobStatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListJobTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListModelDrillthroughReportsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListModelItemChildrenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListModelItemTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListModelPerspectivesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListMySubscriptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListParameterStatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListParameterTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListParentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListRolesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListScheduledItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListSchedulesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListScheduleStatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListSecurityScopesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListSubscriptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListSubscriptionsUsingDataSourceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ListTasksResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.LogoffResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.LogonUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ModelCatalogItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ModelDrillthroughReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ModelItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.MoveItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ParameterValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ParameterValueOrFieldReference.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.PauseScheduleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.Policy.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.PrepareQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.Property.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.RegenerateModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.RemoveAllModelItemPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ResumeScheduleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.Role.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.Schedule.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ScheduleDefinitionOrReference.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ServerInfoHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetCacheOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetCacheRefreshPlanPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetDataDrivenSubscriptionPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetDataSourceContentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetExecutionOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetItemDataSourcesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetItemDefinitionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetItemHistoryLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetItemHistoryOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetItemLinkResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetItemParametersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetItemReferencesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetModelDrillthroughReportsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetModelItemPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetRolePropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetSchedulePropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetSubscriptionPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetSystemPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.SetSystemPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.Subscription.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.Task.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.TestConnectForDataSourceDefinitionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.TestConnectForItemDataSourceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.UpdateItemExecutionSnapshotResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.ValidateExtensionSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportServices\InSite.App.ReportServices.Warning.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ReportServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.Data_AccessEvents.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.Document.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.EmployeeRegistrationData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetAccessAreaEvents_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetAccessRightEvents_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetCompanyAdminUserWithBP_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetCompanyAdminUser_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetCompanyCentralDuplicates_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetCompanyInfo_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetCompanyStatistics_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetCompanyTariff_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetEmployeeAccessAreas_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetEmployeeDuplicates_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetEmployeeRelevantDocumentsToAdd_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetEmployeeRelevantDocuments_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetEmployeesWithRelevantDocument_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetEmployeesWithTimeSlot_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetEmployees_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetExpiringTariffs_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetFieldsConfig_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetLockedMainContractor_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetMissingFirstAiders_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetMWAttestationRequests_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetPassBillings_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetPassInfo_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetPresenceDataNow_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetPresenceData_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetPresentFirstAiders_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetPresentPersonsCount_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetPresentPersonsPerAccessArea_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetRelevantDocuments_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetReportMinWageData_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetShortTermPasses_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetShortTermVisitors_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetSubContractors_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetTariffData_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetTemplates_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetTradeReportData_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetUserDuplicates_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.GetVisitorAccessAreas_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.HasValidDocumentRelevantFor_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.Master_AccessAreas.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.Master_AccessSystems.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.Master_BuildingProjects.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.Master_CompanyContacts.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.Master_Passes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.Master_Roles.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.Master_Templates.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.Master_TimeSlotGroups.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.Master_Translations.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.Master_Users.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.Pass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.PrintPass_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.ShortTermPass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.ShortTermPassPrint.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.System_Companies.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.System_Dialogs.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.System_Help.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.System_Tables.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.System_Variables.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UserServices\InSite.App.UserServices.UserAssignments.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UserServices\configuration91.svcinfo" />
+    <None Include="Service References\UserServices\configuration.svcinfo" />
+    <None Include="Service References\UserServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UserServices\UserService1.disco" />
+    <Content Include="Styles\DragDropStyleSheet.css" />
+    <Content Include="UserFiles\Images\favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Central\BpContact.aspx" />
+    <Content Include="Views\Central\HistoryTables.aspx" />
+    <Content Include="Views\Central\RegisterToBp.aspx" />
+    <Content Include="Views\Central\ReportConfiguration.aspx" />
+    <Content Include="Views\Central\ReportDesigner.aspx" />
+    <Content Include="Views\Configuration\Attributes.aspx" />
+    <Content Include="Views\Configuration\DocumentCheckingRules.aspx" />
+    <Content Include="Views\Configuration\TimeSlots.aspx" />
+    <Content Include="Views\Central\UserChangePassword.aspx" />
+    <Content Include="Views\Costumization\ContainerManagement.aspx" />
+    <Content Include="Help\Bauvorhaben-Dateien\image001.png" />
+    <Content Include="Help\Bauvorhaben-Dateien\image002.jpg" />
+    <Content Include="Help\Bauvorhaben.htm" />
+    <Content Include="Help\Bauvorhaben_Beauftragter-Dateien\image001.png" />
+    <Content Include="Help\Bauvorhaben_Beauftragter-Dateien\image002.png" />
+    <Content Include="Help\Bauvorhaben_Beauftragter-Dateien\image003.png" />
+    <Content Include="Help\Bauvorhaben_Beauftragter.htm" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image001.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image002.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image003.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image004.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image005.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image006.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image007.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image008.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image009.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image010.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image011.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image012.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image013.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image014.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image015.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image016.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image017.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image018.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image019.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image020.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image021.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image022.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image023.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image024.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image025.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image026.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image027.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image028.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image029.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image030.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image031.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image032.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image033.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image034.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image035.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image036.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image037.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image038.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image039.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image040.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image041.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image042.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image043.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image044.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image045.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image046.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image047.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image048.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image049.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image050.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image051.jpg" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image052.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image053.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image054.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image055.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image056.png" />
+    <Content Include="Help\Bedienungsoberfläche-Dateien\image057.png" />
+    <Content Include="Help\Bedienungsoberfläche.htm" />
+    <Content Include="Help\Firmenbeauftragter-Dateien\image001.png" />
+    <Content Include="Help\Firmenbeauftragter-Dateien\image002.png" />
+    <Content Include="Help\Firmenbeauftragter-Dateien\image003.jpg" />
+    <Content Include="Help\Firmenbeauftragter-Dateien\image004.jpg" />
+    <Content Include="Help\Firmenbeauftragter-Dateien\image005.jpg" />
+    <Content Include="Help\Firmenbeauftragter-Dateien\image006.png" />
+    <Content Include="Help\Firmenbeauftragter-Dateien\image007.png" />
+    <Content Include="Help\Firmenbeauftragter-Dateien\image008.jpg" />
+    <Content Include="Help\Firmenbeauftragter-Dateien\image009.png" />
+    <Content Include="Help\Firmenbeauftragter-Dateien\image010.jpg" />
+    <Content Include="Help\Firmenbeauftragter-Dateien\image011.png" />
+    <Content Include="Help\Firmenbeauftragter-Dateien\image012.png" />
+    <Content Include="Help\Firmenbeauftragter-Dateien\image013.png" />
+    <Content Include="Help\Firmenbeauftragter.htm" />
+    <Content Include="Help\Firmenstamm.htm" />
+    <Content Include="Help\Firmenstamm-Dateien\image001.jpg" />
+    <Content Include="Help\Firmenstamm-Dateien\image002.png" />
+    <Content Include="Help\Firmenstamm-Dateien\image003.png" />
+    <Content Include="Help\Firmenstamm-Dateien\image004.png" />
+    <Content Include="Help\Firmenstamm-Dateien\image005.jpg" />
+    <Content Include="Help\Firmenstamm-Dateien\image006.jpg" />
+    <Content Include="Help\Firmenstamm-Dateien\image007.jpg" />
+    <Content Include="Help\Firmenstamm-Dateien\image007.png" />
+    <Content Include="Help\Firmenstamm-Dateien\image008.jpg" />
+    <Content Include="Help\Firmenstamm-Dateien\image008.png" />
+    <Content Include="Help\Firmenstamm-Dateien\image009.jpg" />
+    <Content Include="Help\Firmenstamm-Dateien\image010.jpg" />
+    <Content Include="Help\Firmenstamm-Dateien\image010.png" />
+    <Content Include="Help\Firmenstamm-Dateien\image011.png" />
+    <Content Include="Help\Firmenstamm-Dateien\image012.jpg" />
+    <Content Include="Help\Firmenstamm-Dateien\image012.png" />
+    <Content Include="Help\Firmenstamm-Dateien\image013.jpg" />
+    <Content Include="Help\Firmenstamm-Dateien\image014.jpg" />
+    <Content Include="Help\Firmenstamm-Dateien\image015.jpg" />
+    <Content Include="Help\Firmenstamm-Dateien\image016.jpg" />
+    <Content Include="Views\Help\Info.aspx" />
+    <Content Include="Help\Kurzzeitausweise-Dateien\image001.png" />
+    <Content Include="Help\Kurzzeitausweise-Dateien\image002.png" />
+    <Content Include="Help\Kurzzeitausweise-Dateien\image003.png" />
+    <Content Include="Help\Kurzzeitausweise-Dateien\image004.jpg" />
+    <Content Include="Help\Kurzzeitausweise-Dateien\image005.jpg" />
+    <Content Include="Help\Kurzzeitausweise-Dateien\image006.jpg" />
+    <Content Include="Help\Kurzzeitausweise-Dateien\image007.png" />
+    <Content Include="Help\Kurzzeitausweise-Dateien\image008.png" />
+    <Content Include="Help\Kurzzeitausweise-Dateien\image009.png" />
+    <Content Include="Help\Kurzzeitausweise-Dateien\image010.png" />
+    <Content Include="Help\Kurzzeitausweise-Dateien\image011.png" />
+    <Content Include="Help\Kurzzeitausweise-Dateien\image012.png" />
+    <Content Include="Help\Kurzzeitausweise-Dateien\image013.png" />
+    <Content Include="Help\Kurzzeitausweise-Dateien\image014.jpg" />
+    <Content Include="Help\Kurzzeitausweise.htm" />
+    <Content Include="Help\Mitarbeiterstamm-Dateien\image001.jpg" />
+    <Content Include="Help\Mitarbeiterstamm-Dateien\image002.jpg" />
+    <Content Include="Help\Mitarbeiterstamm-Dateien\image003.jpg" />
+    <Content Include="Help\Mitarbeiterstamm-Dateien\image004.jpg" />
+    <Content Include="Help\Mitarbeiterstamm-Dateien\image005.jpg" />
+    <Content Include="Help\Mitarbeiterstamm-Dateien\image006.png" />
+    <Content Include="Help\Mitarbeiterstamm-Dateien\image007.png" />
+    <Content Include="Help\Mitarbeiterstamm-Dateien\image008.png" />
+    <Content Include="Help\Mitarbeiterstamm-Dateien\image009.jpg" />
+    <Content Include="Help\Mitarbeiterstamm-Dateien\image010.png" />
+    <Content Include="Help\Mitarbeiterstamm-Dateien\image011.png" />
+    <Content Include="Help\Mitarbeiterstamm-Dateien\image012.png" />
+    <Content Include="Help\Mitarbeiterstamm-Dateien\image013.png" />
+    <Content Include="Help\Mitarbeiterstamm-Dateien\image014.jpg" />
+    <Content Include="Help\Mitarbeiterstamm-Dateien\image015.jpg" />
+    <Content Include="Help\Mitarbeiterstamm-Dateien\image016.jpg" />
+    <Content Include="Help\Mitarbeiterstamm-Dateien\image017.jpg" />
+    <Content Include="Help\Mitarbeiterstamm-Dateien\image018.jpg" />
+    <Content Include="Help\Mitarbeiterstamm-Dateien\image019.jpg" />
+    <Content Include="Help\Mitarbeiterstamm-Dateien\image020.jpg" />
+    <Content Include="Help\Mitarbeiterstamm.htm" />
+    <Content Include="Help\Mitarbeiter_registrieren-Dateien\image001.png" />
+    <Content Include="Help\Mitarbeiter_registrieren-Dateien\image002.png" />
+    <Content Include="Help\Mitarbeiter_registrieren-Dateien\image003.jpg" />
+    <Content Include="Help\Mitarbeiter_registrieren-Dateien\image004.jpg" />
+    <Content Include="Help\Mitarbeiter_registrieren.htm" />
+    <Content Include="Help\Nachrichtenverwaltung-Dateien\image001.png" />
+    <Content Include="Help\Nachrichtenverwaltung-Dateien\image002.png" />
+    <Content Include="Help\Nachrichtenverwaltung-Dateien\image003.jpg" />
+    <Content Include="Help\Nachrichtenverwaltung-Dateien\image004.png" />
+    <Content Include="Help\Nachrichtenverwaltung-Dateien\image005.jpg" />
+    <Content Include="Help\Nachrichtenverwaltung-Dateien\image006.png" />
+    <Content Include="Help\Nachrichtenverwaltung-Dateien\image007.png" />
+    <Content Include="Help\Nachrichtenverwaltung-Dateien\image008.png" />
+    <Content Include="Help\Nachrichtenverwaltung-Dateien\image009.png" />
+    <Content Include="Help\Nachrichtenverwaltung-Dateien\image010.png" />
+    <Content Include="Help\Nachrichtenverwaltung-Dateien\image011.png" />
+    <Content Include="Help\Nachrichtenverwaltung.htm" />
+    <Content Include="Help\Statistische_Gewerke-Dateien\image001.png" />
+    <Content Include="Help\Statistische_Gewerke-Dateien\image002.png" />
+    <Content Include="Help\Statistische_Gewerke.htm" />
+    <Content Include="Views\Help\Support.aspx" />
+    <Content Include="Help\Tarife-Dateien\image001.jpg" />
+    <Content Include="Help\Tarife-Dateien\image002.png" />
+    <Content Include="Help\Tarife-Dateien\image003.png" />
+    <Content Include="Help\Tarife-Dateien\image004.png" />
+    <Content Include="Help\Tarife-Dateien\image005.png" />
+    <Content Include="Help\Tarife-Dateien\image006.png" />
+    <Content Include="Help\Tarife.htm" />
+    <Content Include="Help\Vorgangsverwaltung-Dateien\image001.png" />
+    <Content Include="Help\Vorgangsverwaltung-Dateien\image002.jpg" />
+    <Content Include="Help\Vorgangsverwaltung-Dateien\image003.jpg" />
+    <Content Include="Help\Vorgangsverwaltung-Dateien\image004.png" />
+    <Content Include="Help\Vorgangsverwaltung-Dateien\image005.png" />
+    <Content Include="Help\Vorgangsverwaltung.htm" />
+    <Content Include="Help\Zeitgruppen_Zeitfenster-Dateien\image001.png" />
+    <Content Include="Help\Zeitgruppen_Zeitfenster-Dateien\image002.png" />
+    <Content Include="Help\Zeitgruppen_Zeitfenster-Dateien\image003.jpg" />
+    <Content Include="Help\Zeitgruppen_Zeitfenster-Dateien\image004.png" />
+    <Content Include="Help\Zeitgruppen_Zeitfenster-Dateien\image005.png" />
+    <Content Include="Help\Zeitgruppen_Zeitfenster-Dateien\image006.jpg" />
+    <Content Include="Help\Zeitgruppen_Zeitfenster-Dateien\image007.jpg" />
+    <Content Include="Help\Zeitgruppen_Zeitfenster.htm" />
+    <Content Include="Help\Zentraler_Firmenstamm-Dateien\image001.jpg" />
+    <Content Include="Help\Zentraler_Firmenstamm-Dateien\image002.jpg" />
+    <Content Include="Help\Zentraler_Firmenstamm-Dateien\image003.jpg" />
+    <Content Include="Help\Zentraler_Firmenstamm-Dateien\image004.jpg" />
+    <Content Include="Help\Zentraler_Firmenstamm-Dateien\image005.jpg" />
+    <Content Include="Help\Zentraler_Firmenstamm-Dateien\image006.png" />
+    <Content Include="Help\Zentraler_Firmenstamm-Dateien\image007.png" />
+    <Content Include="Help\Zentraler_Firmenstamm-Dateien\image008.png" />
+    <Content Include="Help\Zentraler_Firmenstamm-Dateien\image009.jpg" />
+    <Content Include="Help\Zentraler_Firmenstamm-Dateien\image010.jpg" />
+    <Content Include="Help\Zentraler_Firmenstamm-Dateien\image011.jpg" />
+    <Content Include="Help\Zentraler_Firmenstamm-Dateien\image012.jpg" />
+    <Content Include="Help\Zentraler_Firmenstamm-Dateien\image013.png" />
+    <Content Include="Help\Zentraler_Firmenstamm-Dateien\image014.jpg" />
+    <Content Include="Help\Zentraler_Firmenstamm.htm" />
+    <Content Include="Views\HtmlViewer.aspx" />
+    <Content Include="Views\MailBox\MailBox.aspx" />
+    <Content Include="Views\Main\AccessHistory.aspx" />
+    <Content Include="Views\Main\EmployeeAccessRightInfo.aspx" />
+    <Content Include="Views\Main\EmployeeMinWage.aspx" />
+    <Content Include="Views\Main\Employees.aspx" />
+    <Content Include="Views\Central\Tariffs.aspx" />
+    <Content Include="RadTreeListScript.js" />
+    <Content Include="Views\Main\JobManagement.aspx" />
+    <Content Include="Views\Main\ProcessEvents.aspx" />
+    <Content Include="Views\Main\StiReportViewer.aspx" />
+    <Content Include="Views\Main\ShortTermPassActions.aspx" />
+    <Content Include="Views\Main\PassActions.aspx" />
+    <Content Include="Views\Main\ScriptCam.swf" />
+    <Content Include="Views\Main\ScriptCam\jquery.min.js" />
+    <Content Include="Views\Main\ScriptCam\jquery.swfobject.1-1-1.min.js" />
+    <Content Include="Views\Main\ScriptCam\scriptcam.js" />
+    <Content Include="Views\Main\ShortTermPasses.aspx" />
+    <Content Include="Views\Main\Speedy.aspx" />
+    <Content Include="Views\Main\WebCamTest.aspx" />
+    <Content Include="Views\RegisterCompanyCentral.aspx" />
+    <Content Include="Views\RegisterCompanyCentralVerify.aspx" />
+    <Content Include="Views\RegisterEmployee.aspx" />
+    <Content Include="Views\Reports\MinWageAttestationRequest.aspx" />
+    <Content Include="Views\Reports\MinWageReport.aspx" />
+    <Content Include="Views\Reports\MinWageReportEmployee.aspx" />
+    <Content Include="Views\Reports\PassBilling.aspx" />
+    <Content Include="Views\Reports\PresenceCount.aspx" />
+    <Content Include="Views\Reports\PresenceReport.aspx" />
+    <Content Include="Views\Reports\SystemOverview.aspx" />
+    <Content Include="Views\Reports\TariffData.aspx" />
+    <Content Include="Views\Reports\TradesReport.aspx" />
+    <Content Include="__Default.html" />
+    <Content Include="Global.asax" />
+    <Content Include="Resources\Icons\Access.png" />
+    <Content Include="Resources\Icons\address.png" />
+    <Content Include="Resources\Icons\AllowedLanguages.png" />
+    <Content Include="Resources\Icons\applications-engineering-3.png" />
+    <Content Include="Resources\Icons\applications-office-4.png" />
+    <Content Include="Resources\Icons\arrow-right-double-2.png" />
+    <Content Include="Resources\Icons\Contract.png" />
+    <Content Include="Resources\Icons\Countries.png" />
+    <Content Include="Resources\Icons\CountryGroups.png" />
+    <Content Include="Resources\Icons\dialog-warning-2.png" />
+    <Content Include="Resources\Icons\document-properties-2.png" />
+    <Content Include="Resources\Icons\edit-3.png" />
+    <Content Include="Resources\Icons\edit-add.png" />
+    <Content Include="Resources\Icons\edit-copy-3.png" />
+    <Content Include="Resources\Icons\edit-cut-3.png" />
+    <Content Include="Resources\Icons\edit-delete-6.png" />
+    <Content Include="Resources\Icons\edit-paste-2.png" />
+    <Content Include="Resources\Icons\emblem-development.png" />
+    <Content Include="Resources\Icons\emblem-money.png" />
+    <Content Include="Resources\Icons\emblem-paragraph.png" />
+    <Content Include="Resources\Icons\factory.png" />
+    <Content Include="Resources\Icons\FirstAid.png" />
+    <Content Include="Resources\Icons\klatin.png" />
+    <Content Include="Resources\Icons\list-add-5.png" />
+    <Content Include="Resources\Icons\Pass.png" />
+    <Content Include="Resources\Icons\ShortTermPass.png" />
+    <Content Include="Resources\Icons\Staff.png" />
+    <Content Include="Resources\Icons\system-switch-user.png" />
+    <Content Include="Resources\Icons\Templates.png" />
+    <Content Include="Resources\Icons\TitleIcon.png" />
+    <Content Include="Resources\Images\bluegradient.gif" />
+    <Content Include="scripts.js" />
+    <Content Include="Views\Configuration\AccessAreas.aspx" />
+    <Content Include="Views\Central\AddressesCentral.aspx" />
+    <Content Include="Views\Configuration\AllowedLanguages.aspx" />
+    <Content Include="Views\Configuration\BuildingProjectInfo.aspx" />
+    <Content Include="Views\Central\BuildingProjects.aspx" />
+    <Content Include="Views\BuildingProjectsSelect.aspx" />
+    <Content Include="Views\Central\CompaniesCentral.aspx" />
+    <Content Include="Views\Central\CostLocations.aspx" />
+    <Content Include="Views\Configuration\Countries.aspx" />
+    <Content Include="Views\Configuration\DialogsFields.aspx" />
+    <Content Include="Views\Configuration\DocumentRules.aspx" />
+    <Content Include="Views\Configuration\EmploymentStatus.aspx" />
+    <Content Include="Views\Configuration\FirstAiders.aspx" />
+    <Content Include="Views\Costumization\Hasher.aspx" />
+    <Content Include="Views\Costumization\LogViewer.aspx" />
+    <Content Include="Views\Costumization\Password.aspx" />
+    <Content Include="Resources\Icons\applications-development-5.png" />
+    <Content Include="Resources\Icons\applications-internet-2.png" />
+    <Content Include="Resources\Icons\format-indent-more-3.png" />
+    <Content Include="Resources\Icons\go-home-5.png" />
+    <Content Include="Resources\Icons\personal.png" />
+    <Content Include="Resources\Icons\system-2.png" />
+    <Content Include="Resources\Icons\user-group-properties.png" />
+    <Content Include="Resources\Icons\Users.png" />
+    <Content Include="Resources\Images\Baulogistik.png" />
+    <Content Include="Resources\Images\Streif_Logo_Name.png" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="packages.config" />
+    <Content Include="App_Browsers\Default.browser" />
+    <Content Include="Styles\DefaultStyleSheet.css" />
+    <Content Include="Resources\Icons\Flags\flag-ad.png" />
+    <Content Include="Resources\Icons\Flags\flag-ae.png" />
+    <Content Include="Resources\Icons\Flags\flag-af.png" />
+    <Content Include="Resources\Icons\Flags\flag-ag.png" />
+    <Content Include="Resources\Icons\Flags\flag-ai.png" />
+    <Content Include="Resources\Icons\Flags\flag-al.png" />
+    <Content Include="Resources\Icons\Flags\flag-am.png" />
+    <Content Include="Resources\Icons\Flags\flag-an.png" />
+    <Content Include="Resources\Icons\Flags\flag-ao.png" />
+    <Content Include="Resources\Icons\Flags\flag-aq.png" />
+    <Content Include="Resources\Icons\Flags\flag-ar.png" />
+    <Content Include="Resources\Icons\Flags\flag-as.png" />
+    <Content Include="Resources\Icons\Flags\flag-at.png" />
+    <Content Include="Resources\Icons\Flags\flag-au.png" />
+    <Content Include="Resources\Icons\Flags\flag-aw.png" />
+    <Content Include="Resources\Icons\Flags\flag-ax.png" />
+    <Content Include="Resources\Icons\Flags\flag-az.png" />
+    <Content Include="Resources\Icons\Flags\flag-ba.png" />
+    <Content Include="Resources\Icons\Flags\flag-bb.png" />
+    <Content Include="Resources\Icons\Flags\flag-bd.png" />
+    <Content Include="Resources\Icons\Flags\flag-be.png" />
+    <Content Include="Resources\Icons\Flags\flag-bf.png" />
+    <Content Include="Resources\Icons\Flags\flag-bg.png" />
+    <Content Include="Resources\Icons\Flags\flag-bh.png" />
+    <Content Include="Resources\Icons\Flags\flag-bi.png" />
+    <Content Include="Resources\Icons\Flags\flag-bj.png" />
+    <Content Include="Resources\Icons\Flags\flag-bl.png" />
+    <Content Include="Resources\Icons\Flags\flag-bm.png" />
+    <Content Include="Resources\Icons\Flags\flag-bn.png" />
+    <Content Include="Resources\Icons\Flags\flag-bo.png" />
+    <Content Include="Resources\Icons\Flags\flag-br.png" />
+    <Content Include="Resources\Icons\Flags\flag-bs.png" />
+    <Content Include="Resources\Icons\Flags\flag-bt.png" />
+    <Content Include="Resources\Icons\Flags\flag-bv.png" />
+    <Content Include="Resources\Icons\Flags\flag-bw.png" />
+    <Content Include="Resources\Icons\Flags\flag-by.png" />
+    <Content Include="Resources\Icons\Flags\flag-bz.png" />
+    <Content Include="Resources\Icons\Flags\flag-ca.png" />
+    <Content Include="Resources\Icons\Flags\flag-cc.png" />
+    <Content Include="Resources\Icons\Flags\flag-cd.png" />
+    <Content Include="Resources\Icons\Flags\flag-cf.png" />
+    <Content Include="Resources\Icons\Flags\flag-cg.png" />
+    <Content Include="Resources\Icons\Flags\flag-ch.png" />
+    <Content Include="Resources\Icons\Flags\flag-ci.png" />
+    <Content Include="Resources\Icons\Flags\flag-ck.png" />
+    <Content Include="Resources\Icons\Flags\flag-cl.png" />
+    <Content Include="Resources\Icons\Flags\flag-cm.png" />
+    <Content Include="Resources\Icons\Flags\flag-cn.png" />
+    <Content Include="Resources\Icons\Flags\flag-co.png" />
+    <Content Include="Resources\Icons\Flags\flag-cr.png" />
+    <Content Include="Resources\Icons\Flags\flag-cu.png" />
+    <Content Include="Resources\Icons\Flags\flag-cv.png" />
+    <Content Include="Resources\Icons\Flags\flag-cx.png" />
+    <Content Include="Resources\Icons\Flags\flag-cy.png" />
+    <Content Include="Resources\Icons\Flags\flag-cz.png" />
+    <Content Include="Resources\Icons\Flags\flag-de.png" />
+    <Content Include="Resources\Icons\Flags\flag-dj.png" />
+    <Content Include="Resources\Icons\Flags\flag-dk.png" />
+    <Content Include="Resources\Icons\Flags\flag-dm.png" />
+    <Content Include="Resources\Icons\Flags\flag-do.png" />
+    <Content Include="Resources\Icons\Flags\flag-dz.png" />
+    <Content Include="Resources\Icons\Flags\flag-ec.png" />
+    <Content Include="Resources\Icons\Flags\flag-ee.png" />
+    <Content Include="Resources\Icons\Flags\flag-eg.png" />
+    <Content Include="Resources\Icons\Flags\flag-eh.png" />
+    <Content Include="Resources\Icons\Flags\flag-er.png" />
+    <Content Include="Resources\Icons\Flags\flag-es.png" />
+    <Content Include="Resources\Icons\Flags\flag-et.png" />
+    <Content Include="Resources\Icons\Flags\flag-fi.png" />
+    <Content Include="Resources\Icons\Flags\flag-fj.png" />
+    <Content Include="Resources\Icons\Flags\flag-fk.png" />
+    <Content Include="Resources\Icons\Flags\flag-fm.png" />
+    <Content Include="Resources\Icons\Flags\flag-fo.png" />
+    <Content Include="Resources\Icons\Flags\flag-fr.png" />
+    <Content Include="Resources\Icons\Flags\flag-ga.png" />
+    <Content Include="Resources\Icons\Flags\flag-gb.png" />
+    <Content Include="Resources\Icons\Flags\flag-gd.png" />
+    <Content Include="Resources\Icons\Flags\flag-ge.png" />
+    <Content Include="Resources\Icons\Flags\flag-gf.png" />
+    <Content Include="Resources\Icons\Flags\flag-gg.png" />
+    <Content Include="Resources\Icons\Flags\flag-gh.png" />
+    <Content Include="Resources\Icons\Flags\flag-gi.png" />
+    <Content Include="Resources\Icons\Flags\flag-gl.png" />
+    <Content Include="Resources\Icons\Flags\flag-gm.png" />
+    <Content Include="Resources\Icons\Flags\flag-gn.png" />
+    <Content Include="Resources\Icons\Flags\flag-gp.png" />
+    <Content Include="Resources\Icons\Flags\flag-gq.png" />
+    <Content Include="Resources\Icons\Flags\flag-gr.png" />
+    <Content Include="Resources\Icons\Flags\flag-gs.png" />
+    <Content Include="Resources\Icons\Flags\flag-gt.png" />
+    <Content Include="Resources\Icons\Flags\flag-gu.png" />
+    <Content Include="Resources\Icons\Flags\flag-gw.png" />
+    <Content Include="Resources\Icons\Flags\flag-gy.png" />
+    <Content Include="Resources\Icons\Flags\flag-hk.png" />
+    <Content Include="Resources\Icons\Flags\flag-hm.png" />
+    <Content Include="Resources\Icons\Flags\flag-hn.png" />
+    <Content Include="Resources\Icons\Flags\flag-hr.png" />
+    <Content Include="Resources\Icons\Flags\flag-ht.png" />
+    <Content Include="Resources\Icons\Flags\flag-hu.png" />
+    <Content Include="Resources\Icons\Flags\flag-id.png" />
+    <Content Include="Resources\Icons\Flags\flag-ie.png" />
+    <Content Include="Resources\Icons\Flags\flag-il.png" />
+    <Content Include="Resources\Icons\Flags\flag-im.png" />
+    <Content Include="Resources\Icons\Flags\flag-in.png" />
+    <Content Include="Resources\Icons\Flags\flag-io.png" />
+    <Content Include="Resources\Icons\Flags\flag-iq.png" />
+    <Content Include="Resources\Icons\Flags\flag-ir.png" />
+    <Content Include="Resources\Icons\Flags\flag-is.png" />
+    <Content Include="Resources\Icons\Flags\flag-it.png" />
+    <Content Include="Resources\Icons\Flags\flag-je.png" />
+    <Content Include="Resources\Icons\Flags\flag-jm.png" />
+    <Content Include="Resources\Icons\Flags\flag-jo.png" />
+    <Content Include="Resources\Icons\Flags\flag-jp.png" />
+    <Content Include="Resources\Icons\Flags\flag-ke.png" />
+    <Content Include="Resources\Icons\Flags\flag-kg.png" />
+    <Content Include="Resources\Icons\Flags\flag-kh.png" />
+    <Content Include="Resources\Icons\Flags\flag-ki.png" />
+    <Content Include="Resources\Icons\Flags\flag-km.png" />
+    <Content Include="Resources\Icons\Flags\flag-kn.png" />
+    <Content Include="Resources\Icons\Flags\flag-kp.png" />
+    <Content Include="Resources\Icons\Flags\flag-kr.png" />
+    <Content Include="Resources\Icons\Flags\flag-kw.png" />
+    <Content Include="Resources\Icons\Flags\flag-ky.png" />
+    <Content Include="Resources\Icons\Flags\flag-kz.png" />
+    <Content Include="Resources\Icons\Flags\flag-la.png" />
+    <Content Include="Resources\Icons\Flags\flag-lb.png" />
+    <Content Include="Resources\Icons\Flags\flag-lc.png" />
+    <Content Include="Resources\Icons\Flags\flag-li.png" />
+    <Content Include="Resources\Icons\Flags\flag-lk.png" />
+    <Content Include="Resources\Icons\Flags\flag-lr.png" />
+    <Content Include="Resources\Icons\Flags\flag-ls.png" />
+    <Content Include="Resources\Icons\Flags\flag-lt.png" />
+    <Content Include="Resources\Icons\Flags\flag-lu.png" />
+    <Content Include="Resources\Icons\Flags\flag-lv.png" />
+    <Content Include="Resources\Icons\Flags\flag-ly.png" />
+    <Content Include="Resources\Icons\Flags\flag-ma.png" />
+    <Content Include="Resources\Icons\Flags\flag-mc.png" />
+    <Content Include="Resources\Icons\Flags\flag-md.png" />
+    <Content Include="Resources\Icons\Flags\flag-me.png" />
+    <Content Include="Resources\Icons\Flags\flag-mf.png" />
+    <Content Include="Resources\Icons\Flags\flag-mg.png" />
+    <Content Include="Resources\Icons\Flags\flag-mh.png" />
+    <Content Include="Resources\Icons\Flags\flag-mk.png" />
+    <Content Include="Resources\Icons\Flags\flag-ml.png" />
+    <Content Include="Resources\Icons\Flags\flag-mm.png" />
+    <Content Include="Resources\Icons\Flags\flag-mn.png" />
+    <Content Include="Resources\Icons\Flags\flag-mo.png" />
+    <Content Include="Resources\Icons\Flags\flag-mp.png" />
+    <Content Include="Resources\Icons\Flags\flag-mq.png" />
+    <Content Include="Resources\Icons\Flags\flag-mr.png" />
+    <Content Include="Resources\Icons\Flags\flag-ms.png" />
+    <Content Include="Resources\Icons\Flags\flag-mt.png" />
+    <Content Include="Resources\Icons\Flags\flag-mu.png" />
+    <Content Include="Resources\Icons\Flags\flag-mv.png" />
+    <Content Include="Resources\Icons\Flags\flag-mw.png" />
+    <Content Include="Resources\Icons\Flags\flag-mx.png" />
+    <Content Include="Resources\Icons\Flags\flag-my.png" />
+    <Content Include="Resources\Icons\Flags\flag-mz.png" />
+    <Content Include="Resources\Icons\Flags\flag-na.png" />
+    <Content Include="Resources\Icons\Flags\flag-nc.png" />
+    <Content Include="Resources\Icons\Flags\flag-ne.png" />
+    <Content Include="Resources\Icons\Flags\flag-nf.png" />
+    <Content Include="Resources\Icons\Flags\flag-ng.png" />
+    <Content Include="Resources\Icons\Flags\flag-ni.png" />
+    <Content Include="Resources\Icons\Flags\flag-nl.png" />
+    <Content Include="Resources\Icons\Flags\flag-no.png" />
+    <Content Include="Resources\Icons\Flags\flag-np.png" />
+    <Content Include="Resources\Icons\Flags\flag-nr.png" />
+    <Content Include="Resources\Icons\Flags\flag-nu.png" />
+    <Content Include="Resources\Icons\Flags\flag-nz.png" />
+    <Content Include="Resources\Icons\Flags\flag-om.png" />
+    <Content Include="Resources\Icons\Flags\flag-pa.png" />
+    <Content Include="Resources\Icons\Flags\flag-pe.png" />
+    <Content Include="Resources\Icons\Flags\flag-pf.png" />
+    <Content Include="Resources\Icons\Flags\flag-pg.png" />
+    <Content Include="Resources\Icons\Flags\flag-ph.png" />
+    <Content Include="Resources\Icons\Flags\flag-pk.png" />
+    <Content Include="Resources\Icons\Flags\flag-pl.png" />
+    <Content Include="Resources\Icons\Flags\flag-pm.png" />
+    <Content Include="Resources\Icons\Flags\flag-pn.png" />
+    <Content Include="Resources\Icons\Flags\flag-pr.png" />
+    <Content Include="Resources\Icons\Flags\flag-ps.png" />
+    <Content Include="Resources\Icons\Flags\flag-pt.png" />
+    <Content Include="Resources\Icons\Flags\flag-pw.png" />
+    <Content Include="Resources\Icons\Flags\flag-py.png" />
+    <Content Include="Resources\Icons\Flags\flag-qa.png" />
+    <Content Include="Resources\Icons\Flags\flag-re.png" />
+    <Content Include="Resources\Icons\Flags\flag-ro.png" />
+    <Content Include="Resources\Icons\Flags\flag-rs.png" />
+    <Content Include="Resources\Icons\Flags\flag-ru.png" />
+    <Content Include="Resources\Icons\Flags\flag-rw.png" />
+    <Content Include="Resources\Icons\Flags\flag-sa.png" />
+    <Content Include="Resources\Icons\Flags\flag-sb.png" />
+    <Content Include="Resources\Icons\Flags\flag-sc.png" />
+    <Content Include="Resources\Icons\Flags\flag-sd.png" />
+    <Content Include="Resources\Icons\Flags\flag-se.png" />
+    <Content Include="Resources\Icons\Flags\flag-sg.png" />
+    <Content Include="Resources\Icons\Flags\flag-sh.png" />
+    <Content Include="Resources\Icons\Flags\flag-si.png" />
+    <Content Include="Resources\Icons\Flags\flag-sj.png" />
+    <Content Include="Resources\Icons\Flags\flag-sk.png" />
+    <Content Include="Resources\Icons\Flags\flag-sl.png" />
+    <Content Include="Resources\Icons\Flags\flag-sm.png" />
+    <Content Include="Resources\Icons\Flags\flag-sn.png" />
+    <Content Include="Resources\Icons\Flags\flag-so.png" />
+    <Content Include="Resources\Icons\Flags\flag-sr.png" />
+    <Content Include="Resources\Icons\Flags\flag-st.png" />
+    <Content Include="Resources\Icons\Flags\flag-sv.png" />
+    <Content Include="Resources\Icons\Flags\flag-sy.png" />
+    <Content Include="Resources\Icons\Flags\flag-sz.png" />
+    <Content Include="Resources\Icons\Flags\flag-tc.png" />
+    <Content Include="Resources\Icons\Flags\flag-td.png" />
+    <Content Include="Resources\Icons\Flags\flag-tf.png" />
+    <Content Include="Resources\Icons\Flags\flag-tg.png" />
+    <Content Include="Resources\Icons\Flags\flag-th.png" />
+    <Content Include="Resources\Icons\Flags\flag-tj.png" />
+    <Content Include="Resources\Icons\Flags\flag-tk.png" />
+    <Content Include="Resources\Icons\Flags\flag-tl.png" />
+    <Content Include="Resources\Icons\Flags\flag-tm.png" />
+    <Content Include="Resources\Icons\Flags\flag-tn.png" />
+    <Content Include="Resources\Icons\Flags\flag-to.png" />
+    <Content Include="Resources\Icons\Flags\flag-tr.png" />
+    <Content Include="Resources\Icons\Flags\flag-tt.png" />
+    <Content Include="Resources\Icons\Flags\flag-tv.png" />
+    <Content Include="Resources\Icons\Flags\flag-tw.png" />
+    <Content Include="Resources\Icons\Flags\flag-tz.png" />
+    <Content Include="Resources\Icons\Flags\flag-ua.png" />
+    <Content Include="Resources\Icons\Flags\flag-ug.png" />
+    <Content Include="Resources\Icons\Flags\flag-um.png" />
+    <Content Include="Resources\Icons\Flags\flag-us.png" />
+    <Content Include="Resources\Icons\Flags\flag-uy.png" />
+    <Content Include="Resources\Icons\Flags\flag-uz.png" />
+    <Content Include="Resources\Icons\Flags\flag-va.png" />
+    <Content Include="Resources\Icons\Flags\flag-vc.png" />
+    <Content Include="Resources\Icons\Flags\flag-ve.png" />
+    <Content Include="Resources\Icons\Flags\flag-vg.png" />
+    <Content Include="Resources\Icons\Flags\flag-vi.png" />
+    <Content Include="Resources\Icons\Flags\flag-vn.png" />
+    <Content Include="Resources\Icons\Flags\flag-vu.png" />
+    <Content Include="Resources\Icons\Flags\flag-wf.png" />
+    <Content Include="Resources\Icons\Flags\flag-ws.png" />
+    <Content Include="Resources\Icons\Flags\flag-ye.png" />
+    <Content Include="Resources\Icons\Flags\flag-za.png" />
+    <Content Include="Resources\Icons\Flags\flag-zm.png" />
+    <Content Include="Resources\Icons\Flags\flag-zw.png" />
+    <Content Include="Resources\Images\favicon.ico" />
+    <Content Include="Resources\Images\STREIF_Logo_transparent.png" />
+    <Content Include="Resources\Images\STREIF_Logo_weiss.png" />
+    <Content Include="Views\Main\Companies.aspx" />
+    <Content Include="Views\Dashboard.aspx" />
+    <Content Include="Views\Costumization\Languages.aspx" />
+    <Content Include="Views\Costumization\Layout.aspx" />
+    <Content Include="Views\Login.aspx" />
+    <None Include="web.Prod.config">
+      <DependentUpon>web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="web.Test.config">
+      <DependentUpon>web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Configuration\RelevantDocuments.aspx" />
+    <Content Include="Views\Configuration\ReplacementPassCases.aspx" />
+    <Content Include="Views\Configuration\RolesRights.aspx" />
+    <Content Include="Views\Configuration\ShortTermPassTypes.aspx" />
+    <Content Include="Views\Configuration\StaffRoles.aspx" />
+    <Content Include="Views\Central\StatisticTradeGroups.aspx" />
+    <Content Include="Views\Configuration\TariffContracts.aspx" />
+    <Content Include="Views\Configuration\Templates.aspx" />
+    <Content Include="Views\Configuration\TradeGroups.aspx" />
+    <Content Include="Views\Central\Users.aspx" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Site.Master" />
+    <None Include="Service References\ReportServices\reportservice2010.wsdl" />
+    <None Include="Service References\UserServices\UserService1.wsdl" />
+    <None Include="Service References\UserServices\UserService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserServices\UserService51.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserServices\UserService52.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserServices\UserService53.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserServices\UserService54.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_LocalResources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Resource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resource.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Resource.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource.de.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\RadTreeList.Main.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadTreeList.Main.de.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadTreeList.Main.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadTreeList.Main.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadFilter.Main.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadFilter.Main.de.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadFilter.Main.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadFilter.Main.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadAsyncUpload.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadAsyncUpload.de.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadAsyncUpload.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadAsyncUpload.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadListBox.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadListBox.de.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadListBox.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadListBox.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\AccessMessages.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>AccessMessages.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Dialogs.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Dialogs.de.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Dialogs.fr.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Dialogs.fr.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Dialogs.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Dialogs.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Main.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Main.de.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Main.fr.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Main.fr.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Main.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Main.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Modules.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Modules.de.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Modules.fr.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Modules.fr.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Modules.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Modules.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Tools.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Tools.de.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Tools.fr.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Tools.fr.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Tools.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Tools.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadWindow.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadWindow.Designer.cs</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="Properties\AppDefaults.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppDefaults.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AccessServices\" />
+    <WCFMetadataStorage Include="Service References\AdminServices\" />
+    <WCFMetadataStorage Include="Service References\CMServices\" />
+    <WCFMetadataStorage Include="Service References\ReportServices\" />
+    <WCFMetadataStorage Include="Service References\UserServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Images\favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <PublishDatabases>true</PublishDatabases>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prod|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <PublishDatabases>true</PublishDatabases>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49573</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54364/InSiteApp</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://tbsrv078/InSiteApp/</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>set textTemplatingPath="%25CommonProgramFiles(x86)%25\Microsoft Shared\TextTemplating\$(VisualStudioVersion)\texttransform.exe"
+if %25textTemplatingPath%25=="\Microsoft Shared\TextTemplating\$(VisualStudioVersion)\texttransform.exe" set textTemplatingPath="%25CommonProgramFiles%25\Microsoft Shared\TextTemplating\$(VisualStudioVersion)\texttransform.exe"
+%25textTemplatingPath%25 "$(ProjectDir)AssemblyFileVersion.tt"
+</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

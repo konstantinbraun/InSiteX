@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c263629b-a983-4bfe-9b94-1e7826d1b9af" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://zrd-sw-iri/InsiteServices/AdminService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AdminService3.xsd" MetadataType="Schema" ID="31dc1462-0fe6-44d3-b848-d2dd0165d806" SourceId="1" SourceUrl="http://zrd-sw-iri/InsiteServices/AdminService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AdminService1.wsdl" MetadataType="Wsdl" ID="855ca311-fbd7-4244-ab8b-88bc538a90bb" SourceId="1" SourceUrl="http://zrd-sw-iri/InsiteServices/AdminService.svc?wsdl" />
+    <MetadataFile FileName="AdminService31.xsd" MetadataType="Schema" ID="931f946c-3a07-404b-bef0-4f9de922742d" SourceId="1" SourceUrl="http://zrd-sw-iri/InsiteServices/AdminService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AdminService1.disco" MetadataType="Disco" ID="6c2bc590-4e65-4911-8836-ecb6344e283a" SourceId="1" SourceUrl="http://zrd-sw-iri/InsiteServices/AdminService.svc?disco" />
+    <MetadataFile FileName="AdminService32.xsd" MetadataType="Schema" ID="23a4d707-ef17-4072-bf72-f2a20fb2d478" SourceId="1" SourceUrl="http://zrd-sw-iri/InsiteServices/AdminService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer type="Flex" application="StiReport" version="1.02">
+  <Dictionary isKey="true" type="Dictionary" Ref="1">
+    <BusinessObjects count="0" isList="true"/>
+    <Databases count="1" isList="true">
+      <Connection1 isKey="true" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" Ref="2">
+        <Alias>Connection1</Alias>
+        <ConnectionStringEncrypted>9BrPoVZx+91qFf3M6lSiF9VqwYhFX5OZ4k25nGdcdy/RNK3P3UqThUVahJhqXLGPyXDVicVMa4Fh
+Wpz0aFzrD8pa0aHIXKv8TVw=</ConnectionStringEncrypted>
+        <Name>Connection1</Name>
+      </Connection1>
+    </Databases>
+    <DataSources count="1" isList="true">
+      <DataSource1 isKey="true" type="Stimulsoft.Report.Dictionary.StiSqlSource" Ref="3">
+        <Alias>DataSource1</Alias>
+        <Columns count="4" isList="true">
+          <value>WeekNumber,System.Int32</value>
+          <value>TotalSecond,System.Int64</value>
+          <value>Company,System.String</value>
+          <value>CompanyID,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1"/>
+        <Name>DataSource1</Name>
+        <NameInSource>Connection1</NameInSource>
+        <Parameters count="1" isList="true">
+          <value>_x0040_BpId,_x0035_7,0,0</value>
+        </Parameters>
+        <SqlCommand>Exec repGetTopFiveCompanies @BpId</SqlCommand>
+      </DataSource1>
+    </DataSources>
+    <Relations count="0" isList="true"/>
+    <Report isRef="0"/>
+    <Variables count="0" isList="true"/>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings count="0" isList="true"/>
+  <MetaTags count="0" isList="true"/>
+  <Pages count="1" isList="true">
+    <Page1 isKey="true" type="Page" Ref="4">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components count="5" isList="true">
+        <PageHeaderBand1 isKey="true" type="PageHeaderBand" Ref="5">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,1.2</ClientRectangle>
+          <Components count="1" isList="true">
+            <Image1 isKey="true" type="Image" Ref="6">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.4,0,3.6,1.2</ClientRectangle>
+              <Conditions count="0" isList="true"/>
+              <DataColumn isNull="true"/>
+              <Image>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</Image>
+              <Name>Image1</Name>
+              <Page isRef="4"/>
+              <Parent isRef="5"/>
+            </Image1>
+          </Components>
+          <Conditions count="0" isList="true"/>
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+        </PageHeaderBand1>
+        <PageFooterBand1 isKey="true" type="PageFooterBand" Ref="7">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,27.1,19,0.6</ClientRectangle>
+          <Components count="1" isList="true">
+            <Text2 isKey="true" type="Text" Ref="8">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.6,0,4.4,0.6</ClientRectangle>
+              <Conditions count="0" isList="true"/>
+              <Font>Arial,10</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4"/>
+              <Parent isRef="7"/>
+              <Text>{PageNofM}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text2>
+          </Components>
+          <Conditions count="0" isList="true"/>
+          <Name>PageFooterBand1</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+        </PageFooterBand1>
+        <Chart1 isKey="true" type="Stimulsoft.Report.Chart.StiChart" Ref="9">
+          <Area isKey="true" type="Stimulsoft.Report.Chart.StiClusteredColumnArea" Ref="10">
+            <BorderColor>171, 172, 173</BorderColor>
+            <Brush>[255:255:255]</Brush>
+            <Chart isRef="9"/>
+            <GridLinesHor isKey="true" type="Stimulsoft.Report.Chart.StiGridLinesHor" Ref="11">
+              <Area isRef="10"/>
+              <Color>100, 105, 105, 105</Color>
+              <MinorColor>100, 105, 105, 105</MinorColor>
+            </GridLinesHor>
+            <GridLinesHorRight isKey="true" type="Stimulsoft.Report.Chart.StiGridLinesHor" Ref="12">
+              <Area isRef="10"/>
+              <Color>Silver</Color>
+              <MinorColor>Gainsboro</MinorColor>
+              <Visible>False</Visible>
+            </GridLinesHorRight>
+            <GridLinesVert isKey="true" type="Stimulsoft.Report.Chart.StiGridLinesVert" Ref="13">
+              <Area isRef="10"/>
+              <Color>100, 105, 105, 105</Color>
+              <MinorColor>100, 105, 105, 105</MinorColor>
+            </GridLinesVert>
+            <InterlacingHor isKey="true" type="Stimulsoft.Report.Chart.StiInterlacingHor" Ref="14">
+              <Area isRef="10"/>
+              <InterlacedBrush>[10:155:155:155]</InterlacedBrush>
+            </InterlacingHor>
+            <InterlacingVert isKey="true" type="Stimulsoft.Report.Chart.StiInterlacingVert" Ref="15">
+              <Area isRef="10"/>
+              <InterlacedBrush>[10:155:155:155]</InterlacedBrush>
+            </InterlacingVert>
+            <XAxis isKey="true" type="Stimulsoft.Report.Chart.StiXBottomAxis" Ref="16">
+              <Area isRef="10"/>
+              <DateTimeStep isKey="true" type="Stimulsoft.Report.Chart.StiAxisDateTimeStep" Ref="17"/>
+              <Interaction isKey="true" type="Stimulsoft.Report.Chart.StiAxisInteraction" Ref="18"/>
+              <Labels isKey="true" type="Stimulsoft.Report.Chart.StiAxisLabels" Ref="19">
+                <Color>140, 140, 140</Color>
+                <Font>Tahoma,8</Font>
+              </Labels>
+              <LineColor>140, 140, 140</LineColor>
+              <Range isKey="true" type="Stimulsoft.Report.Chart.StiAxisRange" Ref="20"/>
+              <Ticks isKey="true" type="Stimulsoft.Report.Chart.StiAxisTicks" Ref="21"/>
+              <Title isKey="true" type="Stimulsoft.Report.Chart.StiAxisTitle" Ref="22">
+                <Color>140, 140, 140</Color>
+                <Direction>LeftToRight</Direction>
+                <Font>Tahoma,12,Bold</Font>
+              </Title>
+            </XAxis>
+            <XTopAxis isKey="true" type="Stimulsoft.Report.Chart.StiXTopAxis" Ref="23">
+              <Area isRef="10"/>
+              <Interaction isKey="true" type="Stimulsoft.Report.Chart.StiAxisInteraction" Ref="24"/>
+              <Labels isKey="true" type="Stimulsoft.Report.Chart.StiAxisLabels" Ref="25">
+                <Color>140, 140, 140</Color>
+                <Font>Tahoma,8</Font>
+              </Labels>
+              <LineColor>140, 140, 140</LineColor>
+              <Ticks isKey="true" type="Stimulsoft.Report.Chart.StiAxisTicks" Ref="26"/>
+              <Title isKey="true" type="Stimulsoft.Report.Chart.StiAxisTitle" Ref="27">
+                <Color>140, 140, 140</Color>
+                <Direction>LeftToRight</Direction>
+                <Font>Tahoma,12,Bold</Font>
+              </Title>
+            </XTopAxis>
+            <YAxis isKey="true" type="Stimulsoft.Report.Chart.StiYLeftAxis" Ref="28">
+              <Area isRef="10"/>
+              <Interaction isKey="true" type="Stimulsoft.Report.Chart.StiAxisInteraction" Ref="29"/>
+              <Labels isKey="true" type="Stimulsoft.Report.Chart.StiAxisLabels" Ref="30">
+                <Color>140, 140, 140</Color>
+                <Font>Tahoma,8</Font>
+              </Labels>
+              <LineColor>140, 140, 140</LineColor>
+              <Range isKey="true" type="Stimulsoft.Report.Chart.StiAxisRange" Ref="31"/>
+              <Ticks isKey="true" type="Stimulsoft.Report.Chart.StiAxisTicks" Ref="32"/>
+              <Title isKey="true" type="Stimulsoft.Report.Chart.StiAxisTitle" Ref="33">
+                <Color>140, 140, 140</Color>
+                <Direction>BottomToTop</Direction>
+                <Font>Tahoma,12,Bold</Font>
+              </Title>
+            </YAxis>
+            <YRightAxis isKey="true" type="Stimulsoft.Report.Chart.StiYRightAxis" Ref="34">
+              <Area isRef="10"/>
+              <Interaction isKey="true" type="Stimulsoft.Report.Chart.StiAxisInteraction" Ref="35"/>
+              <Labels isKey="true" type="Stimulsoft.Report.Chart.StiAxisLabels" Ref="36">
+                <Color>140, 140, 140</Color>
+                <Font>Tahoma,8</Font>
+                <TextAlignment>Left</TextAlignment>
+              </Labels>
+              <LineColor>140, 140, 140</LineColor>
+              <Range isKey="true" type="Stimulsoft.Report.Chart.StiAxisRange" Ref="37"/>
+              <Ticks isKey="true" type="Stimulsoft.Report.Chart.StiAxisTicks" Ref="38"/>
+              <Title isKey="true" type="Stimulsoft.Report.Chart.StiAxisTitle" Ref="39">
+                <Color>140, 140, 140</Color>
+                <Direction>TopToBottom</Direction>
+                <Font>Tahoma,12,Bold</Font>
+              </Title>
+            </YRightAxis>
+          </Area>
+          <Border>None;Black;0;Solid;False;4;Black</Border>
+          <Brush>[255:255:255]</Brush>
+          <ClientRectangle>1.6,8.2,15.6,12</ClientRectangle>
+          <Conditions count="0" isList="true"/>
+          <ConstantLines count="0" isList="true"/>
+          <CustomStyleName/>
+          <Filters count="0" isList="true"/>
+          <Legend isKey="true" type="Stimulsoft.Report.Chart.StiLegend" Ref="40">
+            <BorderColor>225, 225, 225</BorderColor>
+            <Brush>[255:255:255]</Brush>
+            <Chart isRef="9"/>
+            <Font>Arial,8</Font>
+            <LabelsColor>140, 140, 140</LabelsColor>
+            <MarkerSize>10, 10</MarkerSize>
+            <ShowShadow>False</ShowShadow>
+            <TitleColor>105, 105, 105</TitleColor>
+            <TitleFont>Arial,14,Bold</TitleFont>
+          </Legend>
+          <Name>Chart1</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <Series count="1" isList="true">
+            <Item34 isKey="true" type="Stimulsoft.Report.Chart.StiClusteredColumnSeries" Ref="41">
+              <ArgumentDataColumn>DataSource1.Company</ArgumentDataColumn>
+              <AutoSeriesKeyDataColumn>DataSource1.WeekNumber</AutoSeriesKeyDataColumn>
+              <BorderColor>255, 255, 255</BorderColor>
+              <Brush>[112:173:71]</Brush>
+              <BrushNegative>Firebrick</BrushNegative>
+              <Chart isRef="9"/>
+              <Conditions count="0" isList="true"/>
+              <Filters count="0" isList="true"/>
+              <SeriesLabels isKey="true" type="Stimulsoft.Report.Chart.StiCenterAxisLabels" Ref="42">
+                <BorderColor>Transparent</BorderColor>
+                <Brush>Transparent</Brush>
+                <Chart isRef="9"/>
+                <Font>Arial,10</Font>
+                <LabelColor>51, 71, 91</LabelColor>
+                <MarkerSize>8, 6</MarkerSize>
+                <ValueTypeSeparator>-</ValueTypeSeparator>
+              </SeriesLabels>
+              <ShowShadow>False</ShowShadow>
+              <Title>Series 1</Title>
+              <TopN isKey="true" type="Stimulsoft.Report.Chart.StiSeriesTopN" Ref="43"/>
+              <TrendLine isKey="true" type="Stimulsoft.Report.Chart.StiTrendLineNone" Ref="44">
+                <LineColor>105, 105, 105</LineColor>
+                <LineStyle>0</LineStyle>
+              </TrendLine>
+              <ValueDataColumn>DataSource1.TotalSecond</ValueDataColumn>
+            </Item34>
+          </Series>
+          <SeriesLabels isKey="true" type="Stimulsoft.Report.Chart.StiCenterAxisLabels" Ref="45">
+            <BorderColor>Transparent</BorderColor>
+            <Brush>Transparent</Brush>
+            <Chart isRef="9"/>
+            <Font>Arial,10</Font>
+            <LabelColor>51, 71, 91</LabelColor>
+            <MarkerSize>8, 6</MarkerSize>
+            <ValueTypeSeparator>-</ValueTypeSeparator>
+          </SeriesLabels>
+          <SeriesLabelsConditions count="0" isList="true"/>
+          <Sort count="0" isList="true"/>
+          <Strips count="0" isList="true"/>
+          <Style isKey="true" type="Stimulsoft.Report.Chart.StiStyle25" Ref="46"/>
+          <Table isKey="true" type="Stimulsoft.Report.Chart.StiChartTable" Ref="47">
+            <Font>Tahoma,8</Font>
+            <GridLineColor>225, 225, 225</GridLineColor>
+            <Header isKey="true" type="Stimulsoft.Report.Chart.StiChartTableHeader" Ref="48">
+              <Brush>White</Brush>
+              <Font>Arial,8</Font>
+              <TextColor>DarkGray</TextColor>
+            </Header>
+            <TextColor>140, 140, 140</TextColor>
+          </Table>
+          <Title isKey="true" type="Stimulsoft.Report.Chart.StiChartTitle" Ref="49">
+            <Brush>[140:140:140]</Brush>
+            <Font>Tahoma,12,Bold</Font>
+          </Title>
+        </Chart1>
+        <ReportTitleBand1 isKey="true" type="ReportTitleBand" Ref="50">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2.4,19,1.4</ClientRectangle>
+          <Components count="2" isList="true">
+            <Text3 isKey="true" type="Text" Ref="51">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,19,0.8</ClientRectangle>
+              <Conditions count="0" isList="true"/>
+              <Font>Arial,14</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="4"/>
+              <Parent isRef="50"/>
+              <Text>{ReportName}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+            <Text1 isKey="true" type="Text" Ref="52">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.8,19,0.6</ClientRectangle>
+              <Conditions count="0" isList="true"/>
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="4"/>
+              <Parent isRef="50"/>
+              <Text>{ReportDescription}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+          </Components>
+          <Conditions count="0" isList="true"/>
+          <Name>ReportTitleBand1</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+        </ReportTitleBand1>
+        <DataBand1 isKey="true" type="DataBand" Ref="53">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,4.6,19,2.8</ClientRectangle>
+          <Components count="1" isList="true">
+            <CrossTab1 isKey="true" type="Stimulsoft.Report.CrossTab.StiCrossTab" Ref="54">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.4,0.2,17.8,2.6</ClientRectangle>
+              <Components count="8" isList="true">
+                <CrossTab1_RowTotal1 isKey="true" type="CrossRowTotal" Ref="55">
+                  <Border>All;[35:106:135];1;Solid;False;4;Black</Border>
+                  <Brush>[185:255:255]</Brush>
+                  <ClientRectangle>0,1.9,2.2,0.6</ClientRectangle>
+                  <Conditions count="0" isList="true"/>
+                  <Font>Arial,10,Bold</Font>
+                  <Guid>5769dd4d9cf9e7e39981d4797b74c4b6</Guid>
+                  <HorAlignment>Left</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RowTotal1</Name>
+                  <Page isRef="4"/>
+                  <Parent isRef="54"/>
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                  <VertAlignment>Bottom</VertAlignment>
+                </CrossTab1_RowTotal1>
+                <CrossTab1_Row1_Title isKey="true" type="CrossTitle" Ref="56">
+                  <Border>All;[35:106:135];1;Solid;False;4;Black</Border>
+                  <Brush>SkyBlue</Brush>
+                  <ClientRectangle>0,0.65,2.2,0.6</ClientRectangle>
+                  <Font>Arial,10</Font>
+                  <Guid>98ff99cfe368b880c99dd4797b743cd9</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_Row1_Title</Name>
+                  <Page isRef="4"/>
+                  <Parent isRef="54"/>
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Firma</Text>
+                  <TextBrush>[0:56:85]</TextBrush>
+                  <TypeOfComponent>Row:CrossTab1_Row1</TypeOfComponent>
+                  <VertAlignment>Bottom</VertAlignment>
+                </CrossTab1_Row1_Title>
+                <CrossTab1_ColTotal1 isKey="true" type="CrossColumnTotal" Ref="57">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>4.45,0.65,1,0.6</ClientRectangle>
+                  <Conditions count="0" isList="true"/>
+                  <Font>Arial,10</Font>
+                  <Guid>1f398d0ad3a7ad5c405ed4a08e224ab6</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_ColTotal1</Name>
+                  <Page isRef="4"/>
+                  <Parent isRef="54"/>
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Total</Text>
+                  <TextBrush>Black</TextBrush>
+                </CrossTab1_ColTotal1>
+                <CrossTab1_LeftTitle isKey="true" type="CrossTitle" Ref="58">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>0,0,2.2,0.6</ClientRectangle>
+                  <Font>Arial,10</Font>
+                  <Guid>451d9b71247184f72fc0d4a08e2c1483</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_LeftTitle</Name>
+                  <Page isRef="4"/>
+                  <Parent isRef="54"/>
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>DataSource1</Text>
+                  <TextBrush>[105:105:105]</TextBrush>
+                  <TypeOfComponent>LeftTitle</TypeOfComponent>
+                </CrossTab1_LeftTitle>
+                <CrossTab1_Row1 isKey="true" type="CrossRow" Ref="59">
+                  <Alias>Company</Alias>
+                  <Border>All;[35:106:135];1;Solid;False;4;Black</Border>
+                  <Brush>SkyBlue</Brush>
+                  <ClientRectangle>0,1.3,2.2,0.6</ClientRectangle>
+                  <Conditions count="0" isList="true"/>
+                  <DisplayValue>{DataSource1.Company}</DisplayValue>
+                  <Font>Arial,10</Font>
+                  <Guid>35d1e3f2c05301c22288d4797b7484ee</Guid>
+                  <HorAlignment>Left</HorAlignment>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_Row1</Name>
+                  <Page isRef="4"/>
+                  <Parent isRef="54"/>
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>Company</Text>
+                  <TextBrush>[0:56:85]</TextBrush>
+                  <TotalGuid>5769dd4d9cf9e7e39981d4797b74c4b6</TotalGuid>
+                  <Value>{DataSource1.Company}</Value>
+                  <VertAlignment>Bottom</VertAlignment>
+                </CrossTab1_Row1>
+                <CrossTab1_Column1 isKey="true" type="CrossColumn" Ref="60">
+                  <Alias>WeekNumber</Alias>
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>2.25,0.65,2.2,0.6</ClientRectangle>
+                  <Conditions count="0" isList="true"/>
+                  <DisplayValue>{DataSource1.WeekNumber}</DisplayValue>
+                  <Font>Arial,10</Font>
+                  <Guid>e2842c188a1c1f07b694d4a08e22df9c</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_Column1</Name>
+                  <Page isRef="4"/>
+                  <Parent isRef="54"/>
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>WeekNumber</Text>
+                  <TextBrush>[105:105:105]</TextBrush>
+                  <TotalGuid>1f398d0ad3a7ad5c405ed4a08e224ab6</TotalGuid>
+                  <Value>{DataSource1.WeekNumber}</Value>
+                </CrossTab1_Column1>
+                <CrossTab1_Sum1 isKey="true" type="CrossSummary" Ref="61">
+                  <Alias>TotalSecond</Alias>
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>[255:255:255]</Brush>
+                  <ClientRectangle>2.25,1.3,2.2,0.6</ClientRectangle>
+                  <Conditions count="0" isList="true"/>
+                  <Font>Arial,10</Font>
+                  <Guid>1fc2d3a6f8eba90b7596d4a0958e03a6</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_Sum1</Name>
+                  <Page isRef="4"/>
+                  <Parent isRef="54"/>
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>0</Text>
+                  <TextBrush>Black</TextBrush>
+                  <Value>{DataSource1.TotalSecond}</Value>
+                </CrossTab1_Sum1>
+                <CrossTab1_RightTitle isKey="true" type="CrossTitle" Ref="62">
+                  <Border>All;[155:155:155];1;Solid;False;4;Black</Border>
+                  <Brush>White</Brush>
+                  <ClientRectangle>2.25,0,3.2,0.6</ClientRectangle>
+                  <Font>Arial,10</Font>
+                  <Guid>2e34c53cde58466a5c61d4a0958e5af9</Guid>
+                  <Margins>0,0,0,0</Margins>
+                  <Name>CrossTab1_RightTitle</Name>
+                  <Page isRef="4"/>
+                  <Parent isRef="54"/>
+                  <Restrictions>AllowMove, AllowResize, AllowSelect, AllowChange</Restrictions>
+                  <Text>WeekNumber</Text>
+                  <TextBrush>[105:105:105]</TextBrush>
+                  <TypeOfComponent>RightTitle</TypeOfComponent>
+                </CrossTab1_RightTitle>
+              </Components>
+              <Conditions count="0" isList="true"/>
+              <DataRelationName/>
+              <DataSourceName>DataSource1</DataSourceName>
+              <EmptyValue/>
+              <Filters count="0" isList="true"/>
+              <Name>CrossTab1</Name>
+              <Page isRef="4"/>
+              <Parent isRef="53"/>
+              <Sort count="0" isList="true"/>
+            </CrossTab1>
+          </Components>
+          <Conditions count="0" isList="true"/>
+          <DataSourceName>DataSource1</DataSourceName>
+          <Filters count="0" isList="true"/>
+          <Name>DataBand1</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <Sort count="0" isList="true"/>
+        </DataBand1>
+      </Components>
+      <Conditions count="0" isList="true"/>
+      <Guid>b5ae52645ea049d2bcbe0ef14103ae39</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0"/>
+      <Watermark isKey="true" type="Stimulsoft.Report.Components.StiWatermark" Ref="63">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings isKey="true" type="Stimulsoft.Report.Print.StiPrinterSettings" Ref="64"/>
+  <ReferencedAssemblies count="8" isList="true">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>12/06/2016 03:53:55 PM</ReportChanged>
+  <ReportCreated>11/30/2016 11:44:27 AM</ReportCreated>
+  <ReportFile>C:\Sources\trunk\InSiteApp\Reports\Top_5_Companies.mrt</ReportFile>
+  <ReportGuid>a2f1d35f3817e1c63889d49e585f0aa9</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2016.2</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles count="0" isList="true"/>
+</StiSerializer>

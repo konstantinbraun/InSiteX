@@ -1,0 +1,20 @@
+﻿CREATE TABLE [dbo].[History_ReplacementPassCases]
+(
+    [SystemID]         INT            NOT NULL,
+    [BpID]             INT            NOT NULL,
+    [ReplacementPassCaseID]           INT NOT NULL,
+    [NameVisible]      NVARCHAR (50)  NULL,
+    [DescriptionShort] NVARCHAR (200) NULL,
+    [WillBeCharged] BIT NOT NULL DEFAULT 1, 
+    [Cost] DECIMAL (19,4) DEFAULT 0 NOT NULL,
+    [Currency] CHAR(3) NOT NULL, 
+    [InvoiceTo] NVARCHAR(200) NULL , 
+    [OldPassInvalid] BIT NOT NULL DEFAULT 1, 
+    [CreditForOldPass] BIT NOT NULL DEFAULT 0, 
+    [IsInitialIssue] BIT NOT NULL DEFAULT 0, 
+    [CreatedFrom]      NVARCHAR (50)  NULL,
+    [CreatedOn]        DATETIME       DEFAULT (sysdatetime()) NOT NULL,
+    [EditFrom]         NVARCHAR (50)  NULL,
+    [EditOn]           DATETIME       DEFAULT (sysdatetime()) NOT NULL, 
+    CONSTRAINT [PK_History_ReplacementPassCases] PRIMARY KEY ([SystemID], [BpID], [ReplacementPassCaseID], [EditOn]), 
+)

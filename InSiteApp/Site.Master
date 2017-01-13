@@ -1,0 +1,659 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="InSite.App.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/tr/xhtml11/dtd/xhtml11.dtd">
+
+<html xmlns='http://www.w3.org/1999/xhtml' style="height: 100%;">
+
+<head runat="server" id="headMaster">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title></title>
+    <link href="Resources/Images/favicon.ico" rel="shortcut icon" />
+
+    <telerik:RadCodeBlock ID="RadCodeBlock1" runat="server">
+        <script id="cardStateScript" socket-uri="<%= ConfigurationManager.AppSettings["WebSocketUri"] %>" socket-ssl-uri="<%= ConfigurationManager.AppSettings["WebSocketSslUri"] %>" src="../../Scripts/CardSocket.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var hasChanges, inputs, dropdowns, editedRow, masterKeyPress, parentKeyPress;
+
+            function GridKeyPress(sender, args) {
+                var keyCode = args.get_keyCode();
+                if (keyCode === 13) {
+                    // Enter
+                    args.set_cancel(true);
+                    args.get_domEvent().stopPropagation();
+                    args.get_domEvent().preventDefault();
+
+                    masterKeyPress = $find(args.get_domEvent().target.firstElementChild.id);
+                    parentKeyPress = null;
+                    if (masterKeyPress === null) {
+                        masterKeyPress = sender.get_masterTableView();
+                    } else {
+                        parentKeyPress = sender.get_masterTableView();
+                    }
+
+                    if (masterKeyPress.get_isItemInserted()) {
+                        masterKeyPress.insertItem();
+                    } else {
+                        var items = masterKeyPress.get_editItems();
+                        if (items !== null) {
+                            masterKeyPress.updateItem(items[0].get_itemIndexHierarchical());
+                        }
+                    }
+
+                    if (parentKeyPress !== null) {
+                        parentKeyPress.focus();
+                    }
+                } else if (keyCode === 27) {
+                    // Escape
+                    args.set_cancel(true);
+                    args.get_domEvent().stopPropagation();
+                    args.get_domEvent().preventDefault();
+
+                    masterKeyPress = $find(args.get_domEvent().target.firstElementChild.id);
+                    parentKeyPress = null;
+                    if (masterKeyPress === null) {
+                        masterKeyPress = sender.get_masterTableView();
+                    } else {
+                        parentKeyPress = sender.get_masterTableView();
+                    }
+
+                    radconfirm('<%= Resources.Resource.qstLooseChanges %>', confirmCallBackEscape, 330, 180, null, '<%= Session["pageTitle"] %>');
+                    return false;
+                }
+        }
+
+        function confirmCallBackEscape(arg) {
+            if (arg) {
+                masterKeyPress.cancelAll();
+
+                if (parentKeyPress !== null) {
+                    parentKeyPress.focus();
+                }
+            }
+        }
+
+        function OnClientKeyPressing(sender, args) {
+            sender.showDropDown();
+        }
+
+        function OnClientUpdated(sender, args) {
+            var newMsgs = sender.get_value();
+            if (newMsgs !== 0) {
+                sender.show();
+            }
+        }
+
+        function OnRowClick(sender, args) {
+            sender.get_masterTableView().fireCommand("RowClick", args.get_itemIndexHierarchical());
+        }
+
+        function OnGridCreated(sender, eventArgs) {
+        }
+
+        function OnRequestStart(sender, args) {
+            //console.group("AJAX OnRequestStart");
+            var target = args.get_eventTarget();
+            //console.log("target: %s", target);
+            //console.log("argument: %s", args.get_eventArgument());
+            if (target.indexOf("ExportTo") >= 0 || target.indexOf("btnExportCsv") >= 0 || target.indexOf("btnExportPdf") >= 0 || target.indexOf("btnExportExcel") >= 0) {
+                document.body.style.cursor = "wait";
+                args.set_enableAjax(false);
+            }
+            //console.groupEnd();
+        }
+
+        function OnResponseEnd(sender, args) {
+            document.body.style.cursor = "default";
+            //console.group("OnResponseEnd");
+            //console.log("cardReader: " + typeof cardReader.onajaxresponse);
+            cardReader.onajaxresponse();
+            //console.groupEnd();
+        }
+
+        function confirmCallBackFn(arg) {
+            if (arg) {
+                var manager = $find('<%= RadAjaxManager.GetCurrent(Page).ClientID %>');
+                manager.set_enableAJAX(false);
+                PageMethods.CompleteTask(arg, OnSucceeded, OnFailed);
+                window.location.href = "/InSiteApp/Views/Login.aspx?Msg=Timeout";
+            }
+        }
+
+        function OnSucceeded() {
+            if ('<%= (Session["ConfirmAction"] == null) ? "" : Session["ConfirmAction"].ToString() %>' === "Logout") {
+                window.location.href = "/InSiteApp/Views/Login.aspx?Msg=Timeout";
+            }
+        }
+
+        function OnFailed(error) {
+            // radalert(error.get_message());
+        }
+
+        function ToggleCollapsePane() {
+            var pane = $find("<%=RadPaneTree.ClientID%>");
+
+            if (!pane)
+                return;
+
+            if (pane.get_collapsed()) {
+                pane.expand();
+            } else {
+                pane.collapse();
+            }
+        }
+
+        cardStateColors = function () {
+            var name = "cardStateColors";
+            var uuid = "CE716561-3800-4036-B52D-75E401F67B35";
+            var color = "Black";
+            var state = "Not available";
+            var styleElementId = "cardState";
+            var styleElement;
+            var onopen = function () {
+                this.color = "DarkGreen";
+                this.state = "Online";
+                if (this.styleElement) {
+                    this.styleElement.title = this.state;
+                    this.styleElement.style["backgroundColor"] = this.color;
+                }
+                //console.log("onopen:backgroundcolor=" + this.color);
+            }
+            var onmessage = function (cardState) {
+                if (this.styleElement) {
+                    if (cardState.online == true) {
+                        this.state = "Online";
+                        if (typeof cardState.cardId !== "undefined") {
+                            this.color = "Lime";
+                        } else {
+                            this.color = "DarkGreen";
+                        }
+                    } else {
+                        this.state = "Offline";
+                        this.color = "DarkRed";
+                    }
+                    this.styleElement.title = this.state;
+                    this.styleElement.style["backgroundColor"] = this.color;
+                }
+                //console.log("onmessage:backgroundcolor=" + this.color + " document=" + document.URL);
+            }
+            var onclose = function () {
+                this.state = "Not available";
+                this.color = "Black";
+                if (this.styleElement) {
+                    this.styleElement.title = this.state;
+                    this.styleElement.style["backgroundColor"] = this.color;
+                }
+                //console.log("onclose:backgroundcolor=" + this.color);
+            }
+            var onerror = function (error) {
+                this.state = "Error";
+                this.color = "Red";
+                if (this.styleElement) {
+                    this.styleElement.title = this.state;
+                    this.styleElement.style["backgroundColor"] = this.color;
+                }
+                //console.log("onerror:backgroundcolor=%s", this.color);
+            }
+            var onajaxresponse = function () {
+                //console.group('onajaxresponse');
+                //console.log("this.color: %s\nthis.styleElement: %s\nclassList: %s", this.color, this.styleElement, this.styleElement.classList);
+                var e = document.getElementById("cardState");
+                if (e) {
+                    //console.log("cardState\n\tclasses = %s\n\tstyle = %s\n\tequal %s", e.classList, e.style.cssText, this.styleElement == e);
+                    if (this.styleElement != e) {
+                        this.styleElement = e;
+                    }
+                }
+                if (this.styleElement) {
+                    //console.log("\tclasses = %s ### style = %s", this.styleElement.classList, this.styleElement.style.cssText);
+                    this.styleElement.title = this.state;
+                    this.styleElement.style['backgroundColor'] = this.color;
+                    //console.log("\tclasses = %s ### style = %s", this.styleElement.classList, this.styleElement.style.cssText);
+                }
+                //console.groupEnd();
+            }
+
+            var setStyleElement = function (newValue) {
+                if (this.styleElement) {
+                    this.styleElement.title = "Not available";
+                    this.styleElement.style["backgroundColor"] = "Black";
+                }
+                this.styleElement = newValue;
+                this.styleElement.title = this.state;
+                this.styleElement.style["backgroundColor"] = this.color;
+            }
+
+            var getStyleElement = function () {
+                return this.styleElement;
+            }
+
+            //console.log("cardStateColors\n\tcolor : " + color + "\n\tstyleElement : " + (typeof styleElement !== "undefined" ? styleElement.tagName : "undefined"));
+
+            return {
+                color: color,
+                getStyleElement: getStyleElement,
+                setStyleElement: setStyleElement,
+                onopen: onopen,
+                onmessage: onmessage,
+                onclose: onclose,
+                onerror: onerror,
+                onajaxresponse: onajaxresponse,
+                name: name,
+                uuid: uuid
+            }
+        }();
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var scriptElement = document.getElementById("cardStateScript");
+            var socketUri = "ws://localhost:8080/chipcard";
+            var socketSslUri = "wss://localhost:8443/chipcard";
+            if (scriptElement) {
+                if (scriptElement.hasAttribute("socket-uri")) {
+                    socketUri = scriptElement.getAttribute("socket-uri");
+                }
+                if (scriptElement.hasAttribute("socket-ssl-uri")) {
+                    socketSslUri = scriptElement.getAttribute("socket-ssl-uri");
+                }
+            }
+            cardReader.uri = socketUri;
+            cardReader.sslURI = socketSslUri;
+
+            var cardStateDiv = document.getElementById("cardState");
+            if (cardStateDiv) {
+                //console.group("Site.Master#DOMContentLoaded");
+                //console.log("cardState " + cardStateDiv.classList);
+                var h = cardStateDiv.clientHeight,
+                    w = cardStateDiv.clientWidth;
+
+                //console.log("cardStateDiv height=%d, width=%d", h, w);
+                cardStateColors.setStyleElement(cardStateDiv);
+                if (h > 0 && w > 0) {
+                    cardReader.useSocket(true);
+                }
+                cardReader.register(cardStateColors);
+            }
+        });
+
+        </script>
+    </telerik:RadCodeBlock>
+
+    <link href="/InSiteApp/Styles/DefaultStyleSheet.css" rel="Stylesheet" type="text/css" />
+
+    <asp:ContentPlaceHolder ID="HeaderContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body style="margin: 0px; padding: 0px; height: 100%;">
+    <form id="FormMain" runat="server" style="height: 100%; margin: 0px;">
+
+        <telerik:RadScriptManager ID="RadScriptManager2" runat="server" EnablePageMethods="true">
+        </telerik:RadScriptManager>
+
+        <telerik:RadPersistenceManager ID="RadPersistenceManager1" runat="server" EnablePersistence="true">
+        </telerik:RadPersistenceManager>
+
+        <telerik:RadSkinManager ID="RadSkinManager1" runat="server" ShowChooser="false" OnSkinChanged="RadSkinManager1_SkinChanged" OnPreRender="RadSkinManager1_PreRender">
+        </telerik:RadSkinManager>
+
+        <telerik:RadFormDecorator ID="FormDecorator1" runat="server" DecoratedControls="All" Skin='<%# Session["Skin"].ToString() %>' EnableRoundedCorners="true"></telerik:RadFormDecorator>
+
+        <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanelMaster" runat="server" Height="100px" Width="100px" Transparency="15" EnableTheming="true" InitialDelayTime="500">
+        </telerik:RadAjaxLoadingPanel>
+
+        <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server" EnableAJAX="true"  RequestQueueSize="0">
+            <ClientEvents OnRequestStart="OnRequestStart" OnResponseEnd="OnResponseEnd"></ClientEvents>
+            <AjaxSettings>
+                <telerik:AjaxSetting AjaxControlID="RadTreeView2">
+                    <UpdatedControls>
+                        <telerik:AjaxUpdatedControl ControlID="RadTreeView2" />
+                    </UpdatedControls>
+                </telerik:AjaxSetting>
+                <telerik:AjaxSetting AjaxControlID="TimerMaster">
+                    <UpdatedControls>
+                        <telerik:AjaxUpdatedControl ControlID="RadTreeView2" />
+                        <telerik:AjaxUpdatedControl ControlID="Mailbox" />
+                        <telerik:AjaxUpdatedControl ControlID="Processes" />
+                    </UpdatedControls>
+                </telerik:AjaxSetting>
+                <telerik:AjaxSetting AjaxControlID="RadScriptBlockReader">
+                    <UpdatedControls>
+                        <telerik:AjaxUpdatedControl ControlID="RadScriptBlockReader" />
+                    </UpdatedControls>
+                </telerik:AjaxSetting>
+                
+            </AjaxSettings>
+        </telerik:RadAjaxManager>
+
+        <asp:Panel ID="PanelTimerMaster" runat="server">
+            <asp:Timer ID="TimerMaster" runat="server" Interval="16000" OnTick="TimerMaster_Tick">
+            </asp:Timer>
+        </asp:Panel>
+
+        <telerik:RadMenu ID="RadMenu1" runat="server" OnItemClick="RadMenu1_ItemClick" Flow="Horizontal" ShowToggleHandle="true"
+                         EnableScreenBoundaryDetection="true" EnableShadows="false" ForeColor="#5D686D" CssClass="RadMenu_Fixed"></telerik:RadMenu>
+
+        <asp:Panel ID="RadScriptBlockReader" runat="server" Visible="false">
+            <div style="right: 6px; top: 6px; position: fixed; z-index: 1000; height: 20px; width: 20px;">
+                <applet id="ReaderState" width="20" height="20" archive="/InSiteApp/Controls/InSite3Reader.jar" name="myApplet" code="ChipReader.ChipReaderApp.class" 
+                        alt="n.a.">
+                    <%--  <param name="logger" value='<%= String.Concat(ConfigurationManager.AppSettings["LogRoot"].ToString(), "RFIDReader.log") %>' />--%>
+                    <param name="logger" value="off" />
+                    <param name="scripting" value="enabled" />
+                    <param name="scriptName" value="getValueFromApplet" />
+                    <param name="doSubmit" value= "false" />
+                    <param name="ReaderName" value='<%= ConfigurationManager.AppSettings["ReaderName"].ToString() %>' />
+                    <div id="cardState" style="width:100%; height:100%;">
+                    </div>
+                </applet>
+                <div id="idFromCard"></div>
+                <label id="TAGID"></label>
+            </div>
+        </asp:Panel>
+
+        <asp:UpdatePanel runat="server" ID="PanelNotification" UpdateMode="Conditional">
+            <ContentTemplate>
+                <telerik:RadNotification ID="Notification" runat="server" TitleIcon="~/Resources/Icons/TitleIcon.png" Animation="Fade" OffsetY="100"
+                    AutoCloseDelay="7000" EnableRoundedCorners="True" EnableShadow="True" Position="Center" VisibleOnPageLoad="False"
+                    CloseButtonToolTip="<%$ Resources:Resource, lblActionClose %>" ContentIcon="info" KeepOnMouseOver="true" Style="z-index: 100000">
+                </telerik:RadNotification>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+
+        <telerik:RadNotification ID="Mailbox" runat="server" TitleIcon="~/Resources/Icons/TitleIcon.png" Animation="Fade" OffsetY="-200" ShowSound="info"
+            AutoCloseDelay="10000" EnableRoundedCorners="True" EnableShadow="True" Position="Center" VisibleOnPageLoad="False"
+            ContentIcon="~/Resources/Icons/mail-unread-new.png" CloseButtonToolTip="<%$ Resources:Resource, lblActionClose %>"
+            KeepOnMouseOver="true" Title="<%$ Resources:Resource, lblMailBox %>" Style="z-index: 100000">
+        </telerik:RadNotification>
+
+        <telerik:RadNotification ID="Processes" runat="server" TitleIcon="~/Resources/Icons/TitleIcon.png" Animation="Fade" OffsetY="-100" ShowSound="ok"
+            AutoCloseDelay="10000" EnableRoundedCorners="True" EnableShadow="True" Position="Center" VisibleOnPageLoad="False"
+            ContentIcon="~/Resources/Icons/view-refresh-3.png" CloseButtonToolTip="<%$ Resources:Resource, lblActionClose %>"
+            KeepOnMouseOver="true" Title="<%$ Resources:Resource, lblProcessManagement %>" Style="z-index: 100000">
+        </telerik:RadNotification>
+
+        <telerik:RadWindowManager runat="server" ID="RadWindowManager1" IconUrl="~/Resources/Icons/TitleIcon.png" EnableShadow="true" VisibleStatusbar="false" Modal="true" AutoSize="true"
+            ReloadOnShow="true" AutoSizeBehaviors="Default" DestroyOnClose="false" InitialBehaviors="Resize,Reload,Move" Behaviors="Resize,Reload,Move"
+            KeepInScreenBounds="true">
+
+            <Localization Maximize="<%$ Resources:RadWindow, lblMaximize %>" Minimize="<%$ Resources:RadWindow, lblMinimize %>"
+                Close="<%$ Resources:RadWindow, lblClose %>" PinOff="<%$ Resources:RadWindow, lblPinOff %>"
+                PinOn="<%$ Resources:RadWindow, lblPinOn %>" Reload="<%$ Resources:RadWindow, lblReload %>"
+                Restore="<%$ Resources:RadWindow, lblRestore%>" Cancel="<%$ Resources:RadWindow, lblCancel %>"
+                OK="<%$ Resources:RadWindow, lblOK %>" No="<%$ Resources:RadWindow, lblNo %>" Yes="<%$ Resources:RadWindow, lblYes %>">
+            </Localization>
+
+            <Windows>
+                <telerik:RadWindow runat="server" ID="RadWindowPopUp" DestroyOnClose="false" InitialBehaviors="Resize,Close,Reload,Move" Behaviors="Resize,Close,Reload,Move"
+                    AutoSize="true" AutoSizeBehaviors="Height,Width" ReloadOnShow="true" ShowContentDuringLoad="false">
+                </telerik:RadWindow>
+            </Windows>
+        </telerik:RadWindowManager>
+
+        <telerik:RadSplitter ID="RadSplitterMain" runat="server" LiveResize="True" Orientation="Horizontal" Width="100%" Height="100%"
+            BorderStyle="None" BorderWidth="0" BorderColor="#EFEFEF" BorderSize="0" VisibleDuringInit="false">
+
+            <%-- Kopfbereich --%>
+            <telerik:RadPane ID="RadPaneHeader" runat="server" Width="100%" Height="32px" Collapsed="false" BackColor="#EFEFEF" BorderStyle="None" BorderWidth="0" BorderColor="#EFEFEF"
+                Scrolling="None" ShowContentDuringLoad="false">
+                <table class="Gradient" style="width: 100%; table-layout: fixed; margin-left: 0px;" cellspacing="0" cellpadding="0" border="0" rules="none">
+                    <tr>
+                        <td style="vertical-align: central; width: 320px; padding-left: 0px;">
+                            <table>
+                                <tr>
+                                    <td style="padding-right: 10px;">
+                                        <div style="padding-top: 2px; padding-left: 5px;">
+                                            <asp:Image runat="server" ImageUrl="~/Resources/Images/favicon.ico" Height="22px" Width="22px" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <telerik:RadButton ID="ToggleTree" ButtonType="LinkButton" runat="server" BorderStyle="None" BackColor="Transparent" CssClass="TogglePane"
+                                            Text="<%$ Resources:Resource, appName %>" OnClientClicked="ToggleCollapsePane" ForeColor="#5D686D" Font-Size="medium"
+                                            Font-Bold="true" AutoPostBack="false" ToolTip="<%$ Resources:Resource, ttShowHideMenuTree %>">
+                                        </telerik:RadButton>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="vertical-align: central; text-align: left;">
+                            <table>
+                                <tr>
+                                    <td style="vertical-align: central; text-align: left;">
+                                        <asp:Image runat="server" ID="PageIcon" ImageUrl="~/Resources/Icons/go-home-5.png" Height="22px" Width="22px" />
+                                    </td>
+                                    <td style="padding-left: 10px;">
+                                        <asp:Label runat="server" ID="PageTitle" ForeColor="#5D686D" Style="font-size: medium; font-weight: bold;">
+                                        </asp:Label>
+                                    </td>
+                                    <td style="vertical-align: bottom; text-align: left; padding-top: 2px;">
+                                        <telerik:RadButton ID="GetHelp" runat="server" BorderStyle="None" BackColor="Transparent" ButtonType="SkinnedButton"
+                                            OnClick="GetHelp_Click" AutoPostBack="true" ToolTip="<%$ Resources:Resource, lblDialogHelp %>">
+                                            <ContentTemplate>
+                                                <asp:Image runat="server" ID="HelpIcon" ImageUrl="~/Resources/Icons/Help_22.png" Height="22px" Width="22px" />
+                                            </ContentTemplate>
+                                        </telerik:RadButton>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="vertical-align: middle; text-align: right; padding-right: 15px;">
+                        </td>
+                    </tr>
+                </table>
+            </telerik:RadPane>
+
+            <%-- Mittlerer Bereich --%>
+            <telerik:RadPane ID="RadPaneCenter" runat="server" Width="100%" Height="100%" Collapsed="false" BackColor="#F6F6F6" Scrolling="None" ShowContentDuringLoad="false">
+                <telerik:RadSplitter ID="RadSplitterCenter" runat="server" LiveResize="True" Orientation="Vertical" VisibleDuringInit="false">
+
+                    <%-- Menübaum --%>
+                    <telerik:RadPane ID="RadPaneTree" runat="server" Width="310px" Height="100%" Collapsed="false" Scrolling="Both" PersistScrollPosition="true" BackColor="#F6F6F6"
+                        ShowContentDuringLoad="false">
+                        <div style="padding-top: 5px;">
+                            <telerik:RadTreeView ID="RadTreeView2" runat="server" DataFieldID="NodeID" DataFieldParentID="ParentID" DataTextField="NameVisible" DataValueField="NodeID"
+                                Font-Size="10px" CausesValidation="false" ShowLineImages="true"
+                                OnNodeDataBound="RadTreeView2_NodeDataBound" OnDataBound="RadTreeView2_DataBound" OnNodeClick="RadTreeView2_NodeClick"
+                                OnNodeCollapse="RadTreeView2_NodeCollapse" OnNodeExpand="RadTreeView2_NodeExpand" OnNodeCreated="RadTreeView2_NodeCreated">
+                                <NodeTemplate>
+                                    <asp:HyperLink runat="server" ID="NavigateUrl" Font-Underline="false" ForeColor="Black">
+                                        <table cellpadding="0px" cellspacing="0px" style="padding: 0px; margin: 0px; border: none;">
+                                            <tr>
+                                                <td style="padding: 0px; margin: 0px; border: none; vertical-align: text-top">
+                                                    <asp:Image runat="server" ID="NodeImage" Width="20px" Height="20px" />
+                                                </td>
+                                                <td style="padding: 0px; padding-left: 5px; margin: 0px; border: none; white-space: normal; vertical-align: middle;">
+                                                    <asp:Label runat="server" ID="NodeText"></asp:Label><br />
+                                                    <asp:Label runat="server" ID="NodeSubtext" Font-Size="Smaller" ForeColor="#5D686D" Visible="false"></asp:Label>
+                                                </td>
+                                                <td style="padding: 0px; margin: 0px; border: none; vertical-align: middle; text-align: center;">
+                                                    <asp:Panel runat="server" ID="BubbleContainer" Visible="false" Height="16px">
+                                                        <div class="Bubble">
+                                                            <asp:Label runat="server" ID="BubbleText"></asp:Label>
+                                                        </div>
+                                                    </asp:Panel>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </asp:HyperLink>
+                                </NodeTemplate>
+                            </telerik:RadTreeView>
+                        </div>
+                    </telerik:RadPane>
+
+                    <telerik:RadSplitBar ID="RadSplitBar1" runat="server" CollapseMode="Forward" BackColor="Transparent"
+                                         CollapseExpandPaneText="<%$ Resources:Resource, ttShowHideMenuTree %>"></telerik:RadSplitBar>
+
+                    <%-- Inhaltsseiten --%>
+                    <telerik:RadPane ID="RadPaneContent" runat="server" Scrolling="None" ShowContentDuringLoad="false">
+                        <telerik:RadSplitter ID="RadSplitterContent" runat="server" LiveResize="True" Orientation="Horizontal" VisibleDuringInit="false">
+
+                            <%-- Body --%>
+                            <telerik:RadPane ID="RadPaneBody" runat="server" Height="70%" Scrolling="Both" ShowContentDuringLoad="false">
+                                <asp:ContentPlaceHolder ID="BodyContent" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </telerik:RadPane>
+
+                            <telerik:RadSplitBar ID="RadSplitBar2" runat="server" CollapseMode="Backward" BackColor="Transparent" Visible="false"
+                                                 CollapseExpandPaneText="<%$ Resources:Resource, ttHistoryOfChanges %>"></telerik:RadSplitBar>
+
+                            <%-- Historie --%>
+                            <telerik:RadPane ID="RadPaneHistory" runat="server" Height="30%" Scrolling="Both" Collapsed="true" ShowContentDuringLoad="false">
+                                <div style="color: white; background-color: gray; font: bold 10pt Arial; text-align: left; padding: 3px;">
+                                    <asp:Label runat="server" Text="<%$ Resources:Resource, lblHistoryOfChanges %>"></asp:Label>
+                                </div>
+                                <telerik:RadGrid ID="RadGridHistory" runat="server" AllowPaging="True" AllowSorting="True" CellSpacing="0" GridLines="None" PageSize="5"
+                                    CssClass="MainGrid" GroupingEnabled="true" ShowGroupPanel="true" AllowFilteringByColumn="true" GroupPanelPosition="BeforeHeader"
+                                    OnNeedDataSource="RadGridHistory_NeedDataSource" OnItemCreated="RadGridHistory_ItemCreated"
+                                    OnGroupsChanging="RadGridHistory_GroupsChanging">
+
+                                    <GroupPanel Text="<%$ Resources:Resource, msgGroupPanel %>">
+                                    </GroupPanel>
+
+                                    <GroupingSettings ShowUnGroupButton="True" CaseSensitive="false" />
+
+                                    <ExportSettings ExportOnlyData="True" IgnorePaging="True">
+                                        <Pdf PaperSize="A4">
+                                        </Pdf>
+                                        <Excel Format="ExcelML" />
+                                    </ExportSettings>
+
+                                    <ClientSettings EnableRowHoverStyle="True" EnablePostBackOnRowClick="false" AllowDragToGroup="True">
+                                        <Resizing AllowColumnResize="true"></Resizing>
+                                        <Selecting AllowRowSelect="True" />
+                                        <ClientEvents OnRowClick="OnRowClick" />
+                                    </ClientSettings>
+
+                                    <SortingSettings SortedBackColor="Transparent" />
+
+                                    <MasterTableView EnableHierarchyExpandAll="true" AutoGenerateColumns="False" DataKeyNames="LoggingID" ShowHeader="true" CssClass="MasterClass"
+                                        CommandItemDisplay="None" HierarchyLoadMode="ServerOnDemand" AllowMultiColumnSorting="true" GroupLoadMode="Server">
+
+                                        <PagerStyle Mode="NextPrevAndNumeric" AlwaysVisible="true" PageSizes="5,10,20" />
+
+                                        <SortExpressions>
+                                            <telerik:GridSortExpression FieldName="LoggingDate" SortOrder="Descending"></telerik:GridSortExpression>
+                                        </SortExpressions>
+
+                                        <Columns>
+                                            <telerik:GridTemplateColumn DataField="LoggingID" DataType="System.Int32" InsertVisiblityMode="AlwaysHidden" FilterControlAltText="Filter LoggingID column"
+                                                HeaderText="<%$ Resources:Resource, lblID %>" SortExpression="LoggingID" UniqueName="LoggingID" Visible="False">
+                                                <ItemTemplate>
+                                                    <asp:Label ID="LoggingID" runat="server" Text='<%# Eval("LoggingID") %>'></asp:Label>
+                                                </ItemTemplate>
+                                            </telerik:GridTemplateColumn>
+
+                                            <telerik:GridDateTimeColumn FilterControlWidth="150px" DataField="LoggingDate" HeaderText='<%$Resources:Resource, lblLastChange %>' SortExpression="LoggingDate"
+                                                UniqueName="LoggingDate" PickerType="DateTimePicker" EnableRangeFiltering="true" ColumnGroupName="Header" AutoPostBackOnFilter="true" CurrentFilterFunction="Between">
+                                            </telerik:GridDateTimeColumn>
+
+                                            <telerik:GridTemplateColumn DataField="UserName" HeaderText="<%$ Resources:Resource, lblUserName %>" SortExpression="UserName" UniqueName="UserName"
+                                                GroupByExpression="UserName UserName GROUP BY UserName" ColumnGroupName="Header" CurrentFilterFunction="Contains" AutoPostBackOnFilter="true">
+                                                <ItemTemplate>
+                                                    <asp:Label runat="server" ID="UserName" Text='<%# String.Concat(Eval("LoginName"), " (", Eval("UserName"), ")") %>'></asp:Label>
+                                                </ItemTemplate>
+                                            </telerik:GridTemplateColumn>
+
+                                            <telerik:GridTemplateColumn DataField="ActionResourceID" HeaderText="<%$ Resources:Resource, lblAction %>" SortExpression="ActionResourceID" UniqueName="ActionResourceID"
+                                                GroupByExpression="ActionResourceID ActionResourceID GROUP BY ActionResourceID" ColumnGroupName="Header" CurrentFilterFunction="Contains" AutoPostBackOnFilter="true">
+                                                <ItemTemplate>
+                                                    <asp:Label runat="server" ID="ActionResourceID" Text='<%# GetResource(Eval("ActionResourceID").ToString())%>'></asp:Label>
+                                                </ItemTemplate>
+                                            </telerik:GridTemplateColumn>
+
+                                            <telerik:GridTemplateColumn DataField="RefID" HeaderText="<%$ Resources:Resource, lblChangedRecord %>" SortExpression="RefID" UniqueName="RefID"
+                                                GroupByExpression="ActionResourceID ActionResourceID GROUP BY ActionResourceID" ColumnGroupName="Header" CurrentFilterFunction="Contains" AutoPostBackOnFilter="true">
+                                                <ItemTemplate>
+                                                    <asp:Label runat="server" ID="RefID" Text='<%# Eval("RefID") %>'></asp:Label>
+                                                </ItemTemplate>
+                                            </telerik:GridTemplateColumn>
+
+                                            <telerik:GridTemplateColumn DataField="Message" HeaderText="<%$ Resources:Resource, lblMessage %>" SortExpression="Message" UniqueName="Message"
+                                                GroupByExpression="Message Message GROUP BY Message" ColumnGroupName="Header" CurrentFilterFunction="Contains" AutoPostBackOnFilter="true">
+                                                <ItemTemplate>
+                                                    <asp:Label runat="server" ID="Message" Text='<%# InSite.App.Helpers.Tail(Eval("Message").ToString(), 50) %>'></asp:Label>
+                                                </ItemTemplate>
+                                            </telerik:GridTemplateColumn>
+                                        </Columns>
+
+                                    </MasterTableView>
+
+                                </telerik:RadGrid>
+                            </telerik:RadPane>
+                        </telerik:RadSplitter>
+                    </telerik:RadPane>
+                </telerik:RadSplitter>
+            </telerik:RadPane>
+
+            <%-- Fussbereich --%>
+            <telerik:RadPane ID="RadPaneFooter" runat="server" Height="32px" BorderStyle="None" BorderWidth="0" BorderColor="#EFEFEF" ShowContentDuringLoad="false">
+                <table style="width: 100%; table-layout: fixed; height: 32px;" class="GradientFooter">
+                    <tr>
+                        <td align="left" style="vertical-align: middle; padding-left: 10px;">
+                            <asp:Label ID="leftStatus" runat="server" ForeColor="#5D686D" Font-Size="12px"></asp:Label>
+                        </td>
+                        <td align="center" style="vertical-align: middle;">
+                            <table style="vertical-align: middle; text-align: center;">
+                                <tr>
+                                    <td>
+                                        <asp:Label runat="server" ID="BpName" ForeColor="#5D686D" Font-Size="12px">
+                                        </asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:Label runat="server" ID="DoubleDot" ForeColor="#5D686D" Font-Size="12px">
+                                        </asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:Label ID="middleStatus" runat="server" ForeColor="#5D686D" Font-Size="12px"></asp:Label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="right" style="vertical-align: middle; padding-top: 3px; padding-right: 5px;">
+                            <asp:Panel runat="server" ID="PanelControlState" Visible="false">
+                                <table align="right">
+                                    <tr>
+                                        <td>
+                                            <telerik:RadButton runat="server" ID="ControlStateSave" OnClick="ControlStateSave_Click" Width="22px" BackColor="Transparent"
+                                                               CausesValidation="false" Icon-PrimaryIconCssClass="rbSave" ButtonType="ToggleButton" BorderStyle="None"
+                                                               ToolTip="<%$ Resources:Resource, ttControlStateSave %>"></telerik:RadButton>
+                                        </td>
+                                        <td>
+                                            <telerik:RadButton runat="server" ID="ControlStateLoad" OnClick="ControlStateLoad_Click" Width="22px" BackColor="Transparent"
+                                                               CausesValidation="false" Icon-PrimaryIconCssClass="rbOpen" ButtonType="ToggleButton" BorderStyle="None"
+                                                               ToolTip="<%$ Resources:Resource, ttControlStateLoad %>" Visible="false"></telerik:RadButton>
+                                        </td>
+                                        <td>
+                                            <telerik:RadButton runat="server" ID="ControlStateReset" OnClick="ControlStateReset_Click" Width="22px" BackColor="Transparent"
+                                                               CausesValidation="false" Icon-PrimaryIconCssClass="rbRemove" ButtonType="ToggleButton" BorderStyle="None"
+                                                               ToolTip="<%$ Resources:Resource, ttControlStateReset %>"></telerik:RadButton>
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            <telerik:RadButton runat="server" ID="HistoryOfChanges" OnClick="HistoryOfChanges_Click" Width="22px" BackColor="Transparent"
+                                                               CausesValidation="false" Icon-PrimaryIconCssClass="rbConfig" ButtonType="ToggleButton" BorderStyle="None"
+                                                               ToolTip="<%$ Resources:Resource, ttHistoryOfChanges %>"></telerik:RadButton>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </asp:Panel>
+                        </td>
+                    </tr>
+                </table>
+            </telerik:RadPane>
+        </telerik:RadSplitter>
+
+        <asp:SqlDataSource ID="SqlDataSource_TreeNodes" runat="server" ConnectionString="<%$ ConnectionStrings:Insite_Dev_ConnectionString %>"
+            SelectCommand="SELECT mt.SystemID, mt.NodeID, mt.ParentID, mt.NameVisible, mt.DescriptionShort, mt.NodeUrl, mt.ImageID, mt.RefID, mt.RefType, mt.IsVisible, mt.IsValid, System_Images.ImageName, System_Images.ImagePath, mt.ResourceID, mt.ContextMenuID, Master_Roles_Dialogs.RoleID, (SELECT COUNT(NodeID) AS Expr1 FROM Master_TreeNodes WHERE (ParentID = mt.NodeID) AND (IsValid = 1) AND (IsVisible = 1)) AS ChildCount FROM Master_TreeNodes AS mt LEFT OUTER JOIN Master_Roles_Dialogs ON mt.SystemID = Master_Roles_Dialogs.SystemID AND mt.DialogID = Master_Roles_Dialogs.DialogID LEFT OUTER JOIN System_Images ON mt.SystemID = System_Images.SystemID AND mt.ImageID = System_Images.ImageID WHERE (mt.IsValid = 1) AND (mt.IsVisible = 1) AND (Master_Roles_Dialogs.IsActive = 1 OR Master_Roles_Dialogs.IsActive IS NULL) AND (Master_Roles_Dialogs.RoleID = @RoleID OR Master_Roles_Dialogs.RoleID IS NULL) AND (Master_Roles_Dialogs.BpID = @BpID OR Master_Roles_Dialogs.BpID IS NULL) AND (mt.SystemID = @SystemID) ORDER BY mt.Rank">
+            <SelectParameters>
+                <asp:SessionParameter DefaultValue="0" Name="RoleID" SessionField="RoleID" />
+                <asp:SessionParameter SessionField="BpID" DefaultValue="0" Name="BpID"></asp:SessionParameter>
+                <asp:SessionParameter SessionField="SystemID" DefaultValue="0" Name="SystemID"></asp:SessionParameter>
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </form>
+</body>
+</html>
+

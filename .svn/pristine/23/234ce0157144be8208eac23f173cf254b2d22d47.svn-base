@@ -1,0 +1,70 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
+using InSiteX.Entity;
+using InSiteX.Repository.Interfaces;
+
+namespace InSiteX.Repository.Mocks
+{
+    public class DeviceRepositoryMock : IDeviceRepository
+    {
+        List<Device> devices = new List<Device>();
+        public Device Add(Device entity)
+        {
+            devices.Add(entity);
+            return entity;
+        }
+
+        public Task<Device> AddAsync(Device entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Device Delete(Device entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Device> DeleteAsync(Device entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Edit(Device entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Device> FindBy(Expression<Func<Device, bool>> predicate)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Device> GetAll()
+        {
+            return devices.ToList();
+        }
+
+        public Task<IEnumerable<Device>> GetAllAcync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IAsyncEnumerable<Device> GetAllAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Device GetById(int Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Save()
+        {
+            //save
+        }
+    }
+}

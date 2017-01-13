@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://zrd-sw-iri/InsiteServices/AccessService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/InsiteServices.Models" />
+  <xs:element name="PutSystemState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessSystemID" type="xs:int" />
+        <xs:element minOccurs="0" name="authID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="allTerminalsOnline" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PutSystemStateResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PutTerminalStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessSystemID" type="xs:int" />
+        <xs:element minOccurs="0" name="authID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/InsiteServices.Models" minOccurs="0" name="status" nillable="true" type="q1:ArrayOfTerminalStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PutTerminalStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccessRights">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessSystemID" type="xs:int" />
+        <xs:element minOccurs="0" name="authID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="initial" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccessRightsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/InsiteServices.Models" minOccurs="0" name="GetAccessRightsResult" nillable="true" type="q2:ArrayOfAccessRight" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PutAccessEvent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessSystemID" type="xs:int" />
+        <xs:element minOccurs="0" name="authID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/InsiteServices.Models" minOccurs="0" name="accessEvents" nillable="true" type="q3:ArrayOfAccessEvent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PutAccessEventResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PutAccessEventResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccessEvents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accessSystemID" type="xs:int" />
+        <xs:element minOccurs="0" name="authID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccessEventsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/InsiteServices.Models" minOccurs="0" name="GetAccessEventsResult" nillable="true" type="q4:ArrayOfAccessEvent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmployeeChanged">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmployeeChangedResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyChanged">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="withSubcontractors" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyChangedResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RelevantDocumentChanged">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="relevantDocumentID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RelevantDocumentChangedResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CountryChanged">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="countryID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CountryChangedResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocumentRuleChanged">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="countryGroupIDEmployer" type="xs:int" />
+        <xs:element minOccurs="0" name="countryGroupIDEmployee" type="xs:int" />
+        <xs:element minOccurs="0" name="employmentStatusID" type="xs:int" />
+        <xs:element minOccurs="0" name="relevantDocumentID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocumentRuleChangedResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocumentCheckingRuleChanged">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="countryGroupIDEmployer" type="xs:int" />
+        <xs:element minOccurs="0" name="countryGroupIDEmployee" type="xs:int" />
+        <xs:element minOccurs="0" name="employmentStatusID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocumentCheckingRuleChangedResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TimeSlotChanged">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="timeSlotID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TimeSlotChangedResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShortTermPassChanged">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="shortTermPassID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ShortTermPassChangedResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllRelevantDocumentsSubmitted">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllRelevantDocumentsSubmittedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AllRelevantDocumentsSubmittedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

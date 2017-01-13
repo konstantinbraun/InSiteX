@@ -1,0 +1,538 @@
+﻿* {
+    font-family: Arial, Helvetica, Sans-Serif;
+    font-size: 12px;
+}
+
+body {
+    font-family: Arial, Helvetica, Sans-Serif;
+    background-color: #FDFDFD;
+}
+
+span {
+    font-family: Arial, Helvetica, Sans-Serif;
+}
+
+a {
+    font-family: Arial, Helvetica, Sans-Serif;
+}
+
+input[type="select"] {
+    font-family: Arial, Helvetica, Sans-Serif;
+    border-radius: 5px;
+}
+
+input[type="text"] {
+    font-family: Arial, Helvetica, Sans-Serif;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    font-family: Arial, Helvetica, Sans-Serif;
+}
+
+input[type="checkbox"] {
+    text-align: left;
+    float: left;
+}
+
+    input[type="checkbox"]:focus {
+        border-color: #ffffcc;
+    }
+
+.cb {
+    float: left;
+    outline: none;
+}
+
+div.bgWhite {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+
+html.rfdButton a.rfdSkinnedButton {
+    vertical-align: middle;
+    margin: 0 0 0 5px;
+}
+
+.RadWModalImage {
+    background: black !important;
+    opacity: .3 !important;
+    -moz-opacity: .3 !important;
+}
+
+.TelerikModalOverlay {
+    background: black !important;
+    opacity: .3 !important;
+    -moz-opacity: .3 !important;
+}
+
+/*RadTreeView*/
+.RadTreeView .rtImg {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+div.RadTreeView .rtIn {
+    padding: 0px 1px 0px 1px !important;
+    border: none !important;
+}
+
+.RadTreeView .rtHover {
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #FDE66D;
+}
+
+.RadTreeView .rtUL div.rtSelected {
+    border-radius: 5px;
+}
+
+    .RadTreeView .rtUL div.rtSelected .rtIn {
+        border-radius: 5px;
+    }
+
+/*RadTabStrip*/
+.RadTabStrip .rtsImg {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+/*RadGrid*/
+.RadGrid {
+    border-radius: 5px;
+    overflow: hidden;
+    /*padding: 3px;*/
+    margin-right: 0px;
+}
+
+    .RadGrid .rgDataDiv {
+        position: relative;
+    }
+
+    .RadGrid .rgEditForm {
+        background-color: #F6F6F6 !important;
+        left: 10px !important;
+        top: 37px !important;
+        /*padding: 5px !important;*/
+        padding-bottom: 15px !important;
+        height: auto !important;
+        width: auto !important;
+        border-radius: 5px !important;
+        box-shadow: 3px 3px 6px gray;
+        padding-top: 5px;
+    }
+
+        .RadGrid .rgEditForm .rgHeader a {
+            display: none !important;
+            /*border-radius: 5px !important;*/
+        }
+
+    .RadGrid .rgGroupHeader {
+        background-color: ButtonFace !important;
+        font-weight: bold;
+    }
+
+    .RadGrid .rgEditForm > .rgHeader + div {
+        height: auto !important;
+    }
+
+.MainGrid {
+    border-radius: 0px !important;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    border-left-width: 0px !important;
+    border-right-width: 0px !important;
+}
+
+    .MainGrid .rgDataDiv {
+        position: relative;
+    }
+
+    .MainGrid .rgEditForm {
+        background-color: #F6F6F6 !important;
+        left: 10px !important;
+        top: 37px !important;
+        /*padding: 5px !important;*/
+        padding-bottom: 15px !important;
+        height: auto !important;
+        width: auto !important;
+        border-radius: 5px !important;
+        box-shadow: 3px 3px 6px gray;
+        padding-top: 5px;
+    }
+
+        .MainGrid .rgEditForm .rgHeader a {
+            display: none !important;
+            /*border-radius: 5px !important;*/
+        }
+
+.MasterClass {
+    border-radius: 0px !important;
+    margin: 0px;
+    padding: 0px;
+    border-left-width: 0px !important;
+    border-right-width: 0px !important;
+}
+
+    .MasterClass .rgCaption {
+        color: white;
+        background-color: gray;
+        font: bold 10pt Arial;
+        text-align: left;
+        padding: 3px;
+    }
+
+.DetailClass {
+    border-radius: 0px !important;
+}
+
+    .DetailClass .rgCaption {
+        color: white;
+        background-color: gray;
+        font: bold 10pt Arial;
+        text-align: left;
+        padding: 3px;
+    }
+
+.EditFormTable {
+    margin-left: 5px;
+    margin-top: 5px;
+    border-collapse: collapse;
+    vertical-align: top;
+}
+
+/*RadTreeList*/
+.RadTreeList {
+    border-radius: 0px !important;
+    margin: 0px;
+    padding: 0px;
+    border-left-width: 0px !important;
+    border-right-width: 0px !important;
+}
+
+    .RadTreeList .rtlCaption {
+        color: white;
+        background-color: gray;
+        font: bold 10pt Arial;
+        text-align: center;
+        padding: 3px;
+    }
+
+    .RadTreeList .rtlEditForm {
+        background-color: #F6F6F6 !important;
+        left: 10px !important;
+        top: 37px !important;
+        /*padding: 10px !important;*/
+        padding-bottom: 15px !important;
+        height: auto;
+        max-height: 800px;
+        width: auto !important;
+        border-radius: 5px !important;
+        box-shadow: 3px 3px 6px gray;
+        padding-top: 5px;
+    }
+
+    .RadTreeList .rtlEditForm > .rtlHeader + div {
+        height: auto !important;
+    }
+
+        .RadTreeList .rtlEditForm .rtlHeader a {
+            display: none !important;
+        }
+
+/*RadListBox*/
+.RadListBox {
+    border-radius: 5px;
+    overflow: auto;
+}
+
+div.RadListBox .rlbTemplateContainer {
+    border-width: 0px;
+}
+
+/*RadEditor*/
+.RadEditor {
+    border-radius: 5px !important;
+    border-color: silver;
+    padding: 3px;
+}
+
+div.qsf-ib {
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+.RadForm div.qsf-ib h4 {
+    margin-bottom: 15px;
+}
+
+.imageClass {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-color: ActiveBorder;
+    border-radius: 5px;
+}
+
+.hide .rtPlus, .hide .rtMinus {
+    display: none !important;
+}
+
+/*RadMenu*/
+div.RadMenu {
+    font-family: Arial, Helvetica, Sans-Serif;
+    float: right;
+    background-color: transparent;
+    border-style: none !important;
+    border-width: 0px !important;
+}
+
+.RadMenu_Fixed {
+    float: right !important;
+    position: absolute !important;
+    right: 30px;
+    margin-top: 5px !important;
+    font-family: Arial, Helvetica, Sans-Serif;
+    z-index: 2000;
+    border-style: none !important;
+    border-width: 0px !important;
+}
+
+.RadMenu .rmRootGroup {
+    background: transparent !important;
+    background-color: transparent !important;
+    border-left-style: none !important;
+    border-left-width: 0px !important;
+    border-right-style: none !important;
+    border-right-width: 0px !important;
+    border-top-style: none !important;
+    border-top-width: 0px !important;
+    border-bottom-style: none !important;
+    border-bottom-width: 0px !important;
+}
+
+.FloatRight {
+    float: right !important;
+}
+
+.NoBorder {
+    border-style: none;
+    border-color: transparent;
+    border-width: 0px;
+    border-radius: 0px !important;
+    margin: 0px;
+    padding: 0px;
+}
+
+.RoundedCorners {
+    border-radius: 5px;
+}
+
+.ThinBorder {
+    border-style: solid;
+    border-width: 1px;
+    border-color: ActiveBorder;
+}
+
+.Shadow {
+    box-shadow: 1px 1px 2px darkgray;
+    position: relative;
+    transition-property: left, top, box-shadow;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+
+    .Shadow:hover {
+        left: -2px !important;
+        top: -2px !important;
+        box-shadow: 2px 2px 4px darkgray;
+    }
+
+.PaddingSmall {
+    padding: 5px;
+}
+
+.MarginSmall {
+    margin: 5px !important;
+}
+
+.Clickable:hover {
+    cursor: pointer;
+}
+
+hr.vertical {
+    width: 0px;
+    height: 100%; /* or height in PX */
+}
+
+div.vertical-line {
+    width: 0px; /* Use only border style */
+    height: 18px;
+    float: right;
+    border: 1px groove; /* This is default border style for <hr> tag */
+    border-color: silver;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.GradientFooter {
+    background-image: -webkit-linear-gradient(#E1E1E1 0%, #EFEFEF 25%, silver 100%);
+    background-image: -moz-linear-gradient(#E1E1E1 0%, #EFEFEF 25%, silver 100%);
+    background-image: -o-linear-gradient(#E1E1E1 0%, #EFEFEF 25%, silver 100%);
+    background-image: linear-gradient(#E1E1E1 0%, #EFEFEF 25%, silver 100%);
+}
+
+.Gradient {
+    background-image: -webkit-linear-gradient(#E1E1E1 0%, white 25%, silver 100%);
+    background-image: -moz-linear-gradient(#E1E1E1 0%, white 25%, silver 100%);
+    background-image: -o-linear-gradient(#E1E1E1 0%, white 25%, silver 100%);
+    background-image: linear-gradient(#E1E1E1 0%, white 25%, silver 100%);
+}
+
+.PanelTable {
+    padding: 0px;
+    margin: 0px;
+}
+
+    .PanelTable td {
+        vertical-align: top;
+    }
+
+.TilePanelWide {
+    position: relative;
+    margin: 5px;
+    background-color: #EAEAEA;
+    width: 334px;
+    height: 160px;
+    border-radius: 5px;
+    overflow: auto;
+    box-shadow: 3px 3px 6px darkgray;
+}
+
+.TilePanelWide2 {
+    position: relative;
+    margin: 5px;
+    background-color: #EAEAEA;
+    width: 680px;
+    height: 160px;
+    border-radius: 5px;
+    overflow: auto;
+    box-shadow: 3px 3px 6px darkgray;
+}
+
+.LiftOnHover {
+    position: relative;
+    transition-property: left, top, box-shadow;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+}
+
+    .LiftOnHover:hover {
+        left: -3px !important;
+        top: -3px !important;
+        box-shadow: 5px 5px 8px darkgray;
+    }
+
+div.ResizeOnHover {
+    transition-property: width, height;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    transition-delay: 0.3s;
+}
+
+    div.ResizeOnHover.Wide:hover {
+        z-index: 100;
+        height: 320px;
+        width: 494px;
+    }
+
+    div.ResizeOnHover.Wide2:hover {
+        z-index: 100;
+        height: 320px;
+        width: 850px;
+    }
+
+.TilePanelSquare {
+    position: relative;
+    margin: 5px;
+    background-color: #EAEAEA;
+    width: 160px;
+    height: 160px;
+    border-radius: 5px;
+    overflow: auto;
+    box-shadow: 3px 3px 6px darkgray;
+}
+
+.TilePanelHigh {
+    position: relative;
+    margin: 5px;
+    background-color: #EAEAEA;
+    width: 334px;
+    height: 334px;
+    border-radius: 5px;
+    overflow: auto;
+    box-shadow: 3px 3px 6px darkgray;
+}
+
+.PanelShadow {
+    background-color: #F6F6F6;
+    border-radius: 5px;
+    overflow: auto;
+    box-shadow: 3px 3px 6px darkgray;
+}
+
+div.RadUpload .ruBrowse {
+    background-position: 0 -46px;
+    margin-left: 4px;
+    width: 115px;
+}
+
+div.RadUpload .ruFileWrap .ruButtonHover {
+    background-position: 100% -46px !important;
+}
+
+.TogglePane {
+    margin-left: -27px;
+}
+
+.Bubble {
+    position: relative;
+    top: -8px;
+    right: -4px;
+    padding: 2px 5px 1px 4px;
+    margin: 0px -5px 0px 0px;
+    background-color: red;
+    color: white;
+    font-family: Arial, Helvetica, Sans-Serif;
+    font-weight: bold;
+    font-size: smaller;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px darkgray;
+}
+
+.RadNotification {
+    border-style: none;
+    box-shadow: 3px 3px 6px darkgray;
+}
+
+.rbLinkButton .rbText {
+    padding-left: 15px !important;
+    text-align: left !important;
+}
+
+.AlphaButton {
+    text-align: left !important;
+    margin-left: 0px !important;
+    width: 10px !important;
+}
+
+    .AlphaButton .rbText {
+        padding: 0px !important;
+        margin: -5px !important;
+    }
+
+.ruError .ruErrorMessage {
+    color: #ef0000;
+    padding-bottom: 0;
+}

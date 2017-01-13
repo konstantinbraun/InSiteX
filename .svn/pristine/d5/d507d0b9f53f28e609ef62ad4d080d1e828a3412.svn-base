@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c6ef8c52-ccbe-47fc-bb10-9096befb8533" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://zrd-sw-iri/InsiteServices/ContainerManagement.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ContainerManagement2.xsd" MetadataType="Schema" ID="27fedfd9-8a92-42c0-83fe-b08cdb4d74ed" SourceId="1" SourceUrl="http://zrd-sw-iri/InsiteServices/ContainerManagement.svc?xsd=xsd1" />
+    <MetadataFile FileName="ContainerManagement21.xsd" MetadataType="Schema" ID="9068619f-dbfb-4ad3-b486-32ab1f31f750" SourceId="1" SourceUrl="http://zrd-sw-iri/InsiteServices/ContainerManagement.svc?xsd=xsd0" />
+    <MetadataFile FileName="ContainerManagement1.wsdl" MetadataType="Wsdl" ID="f7728da5-54ad-4d48-bcff-e220d4d2da08" SourceId="1" SourceUrl="http://zrd-sw-iri/InsiteServices/ContainerManagement.svc?wsdl" />
+    <MetadataFile FileName="ContainerManagement1.disco" MetadataType="Disco" ID="19f54a43-7ef8-47fc-889d-a9abd14b6ee1" SourceId="1" SourceUrl="http://zrd-sw-iri/InsiteServices/ContainerManagement.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

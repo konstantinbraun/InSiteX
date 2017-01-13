@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer type="Flex" application="StiReport" version="1.02">
+  <Dictionary isKey="true" type="Dictionary" Ref="1">
+    <BusinessObjects count="0" isList="true"/>
+    <Databases count="1" isList="true">
+      <MSSQL1 isKey="true" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" Ref="2">
+        <Alias>MSSQL1</Alias>
+        <ConnectionStringEncrypted>9BrPoVZx+91qFf3M6lSiF9VqwYhFX5OZ4k25nGdcdy/RNK3P3UqThUVahJhqXLGPyXDVicVMa4Fh
+Wpz0aFzrD8pa0aHIXKv8TVw=</ConnectionStringEncrypted>
+        <Name>MSSQL1</Name>
+      </MSSQL1>
+    </Databases>
+    <DataSources count="2" isList="true">
+      <Datenquelle1 isKey="true" type="Stimulsoft.Report.Dictionary.StiSqlSource" Ref="3">
+        <Alias>Datenquelle1</Alias>
+        <Columns count="5" isList="true">
+          <value>ReportId,System.Int32</value>
+          <value>Name,System.String</value>
+          <value>Description,System.String</value>
+          <value>ReportVisibility,System.Int32</value>
+          <value>ReportFile,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1"/>
+        <Name>Datenquelle1</Name>
+        <NameInSource>MSSQL1</NameInSource>
+        <Parameters count="1" isList="true">
+          <value>_x0040_BpId,_x0031_9,0,0</value>
+        </Parameters>
+        <SqlCommand>SELECT  Rep.ReportId, Rep.Name, Rep.[Description], Rep.ReportVisibility, Rep.ReportFile, RtP.BpID 
+    FROM System_Reports AS Rep LEFT OUTER JOIN 
+    System_ReportToProject AS RtP ON Rep.ReportId = RtP.ReportId 
+    WHERE  Rep.ReportVisibility != 0 AND RtP.BpID = @BpId</SqlCommand>
+      </Datenquelle1>
+      <DataSource1 isKey="true" type="Stimulsoft.Report.Dictionary.StiSqlSource" Ref="4">
+        <Alias>DataSource1</Alias>
+        <Columns count="2" isList="true">
+          <value>BpID,System.Int32</value>
+          <value>NameVisible,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1"/>
+        <Name>DataSource1</Name>
+        <NameInSource>MSSQL1</NameInSource>
+        <Parameters count="0" isList="true"/>
+        <SqlCommand>SELECT       BpID, NameVisible
+FROM            Master_BuildingProjects</SqlCommand>
+      </DataSource1>
+    </DataSources>
+    <Relations count="0" isList="true"/>
+    <Report isRef="0"/>
+    <Variables count="1" isList="true">
+      <value>,Variable1,Variable1,,System.String,,False,False,True,False,_x003C__x003F_xml_x0020_version_x003D__x0022_1_x002E_0_x0022__x0020_encoding_x003D__x0022_utf_x002D_8_x0022__x0020_standalone_x003D__x0022_yes_x0022__x003F__x003E__x003C_StiSerializer_x0020_type_x003D__x0022_Flex_x0022__x0020_application_x003D__x0022_State_x0022__x0020_version_x003D__x0022_1_x002E_02_x0022__x003E__x003C_AllowUserValues_x003E_False_x003C__x002F_AllowUserValues_x003E__x003C_Keys_x0020_count_x003D__x0022_2_x0022__x0020_isList_x003D__x0022_true_x0022__x003E__x003C_value_x003E_1_x003C__x002F_value_x003E__x003C_value_x003E_2_x003C__x002F_value_x003E__x003C__x002F_Keys_x003E__x003C_Values_x0020_count_x003D__x0022_2_x0022__x0020_isList_x003D__x0022_true_x0022__x003E__x003C_value_x003E_test1_x003C__x002F_value_x003E__x003C_value_x003E_Test2_x003C__x002F_value_x003E__x003C__x002F_Values_x003E__x003C__x002F_StiSerializer_x003E_</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings count="0" isList="true"/>
+  <MetaTags count="0" isList="true"/>
+  <Pages count="1" isList="true">
+    <Page1 isKey="true" type="Page" Ref="5">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components count="4" isList="true">
+        <ReportTitleBand1 isKey="true" type="ReportTitleBand" Ref="6">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,1</ClientRectangle>
+          <Components count="1" isList="true">
+            <Text1 isKey="true" type="Text" Ref="7">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,19,0.8</ClientRectangle>
+              <Conditions count="0" isList="true"/>
+              <Font>Arial,20</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="5"/>
+              <Parent isRef="6"/>
+              <Text>Reports</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+          </Components>
+          <Conditions count="0" isList="true"/>
+          <Name>ReportTitleBand1</Name>
+          <Page isRef="5"/>
+          <Parent isRef="5"/>
+        </ReportTitleBand1>
+        <HeaderBand1 isKey="true" type="HeaderBand" Ref="8">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2.2,19,0.6</ClientRectangle>
+          <Components count="1" isList="true">
+            <Text3 isKey="true" type="Text" Ref="9">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,7.4,0.6</ClientRectangle>
+              <Conditions count="0" isList="true"/>
+              <Font>Arial,11</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="5"/>
+              <Parent isRef="8"/>
+              <Text>Name</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+          </Components>
+          <Conditions count="0" isList="true"/>
+          <Name>HeaderBand1</Name>
+          <Page isRef="5"/>
+          <Parent isRef="5"/>
+        </HeaderBand1>
+        <DataBand1 isKey="true" type="DataBand" Ref="10">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true"/>
+          <ClientRectangle>0,3.6,19,0.6</ClientRectangle>
+          <Components count="1" isList="true">
+            <Text2 isKey="true" type="Text" Ref="11">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,7.4,0.6</ClientRectangle>
+              <Conditions count="0" isList="true"/>
+              <Font>Arial,11</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="5"/>
+              <Parent isRef="10"/>
+              <Text>{Datenquelle1.Name}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+          </Components>
+          <Conditions count="0" isList="true"/>
+          <DataRelationName isNull="true"/>
+          <DataSourceName>Datenquelle1</DataSourceName>
+          <Filters count="0" isList="true"/>
+          <Name>DataBand1</Name>
+          <Page isRef="5"/>
+          <Parent isRef="5"/>
+          <Sort count="0" isList="true"/>
+        </DataBand1>
+        <ReportSummaryBand1 isKey="true" type="ReportSummaryBand" Ref="12">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,5,19,0.8</ClientRectangle>
+          <Components count="0" isList="true"/>
+          <Conditions count="0" isList="true"/>
+          <Name>ReportSummaryBand1</Name>
+          <Page isRef="5"/>
+          <Parent isRef="5"/>
+        </ReportSummaryBand1>
+      </Components>
+      <Conditions count="0" isList="true"/>
+      <Guid>4e8076ad320c4ffebb71c959f616e2de</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0"/>
+      <Watermark isKey="true" type="Stimulsoft.Report.Components.StiWatermark" Ref="13">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings isKey="true" type="Stimulsoft.Report.Print.StiPrinterSettings" Ref="14"/>
+  <ReferencedAssemblies count="8" isList="true">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>12/06/2016 12:23:34 PM</ReportChanged>
+  <ReportCreated>11/30/2016 12:34:49 PM</ReportCreated>
+  <ReportFile>C:\Sources\trunk\InSiteApp\Reports\Report2.mrt</ReportFile>
+  <ReportGuid>b99deb0b0921cf7c2454d3dfe05f2aea</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2016.2</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles count="0" isList="true"/>
+</StiSerializer>

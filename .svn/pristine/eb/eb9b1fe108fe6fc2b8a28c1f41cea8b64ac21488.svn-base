@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="2560"
+   height="676"
+   viewBox="0 0 2560 676"
+   id="svg4460"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Zutrittskontrolle.svg">
+  <defs
+     id="defs4462">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4520">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0.58823532"
+         offset="0"
+         id="stop4504" />
+      <stop
+         id="stop4540"
+         offset="0.54038209"
+         style="stop-color:#ffffff;stop-opacity:0.23529412" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0"
+         offset="1"
+         id="stop4506" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4520"
+       id="radialGradient4508"
+       cx="1273.5"
+       cy="345"
+       fx="1273.5"
+       fy="345"
+       r="504.63455"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.97157706,0,0,0.97157719,36.196618,9.8058682)" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5217">
+      <rect
+         style="opacity:1;fill:#000000;fill-opacity:0.55944058;stroke:none;stroke-width:14;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5219"
+         width="980.58282"
+         height="675.99939"
+         x="783.20862"
+         y="0.001495258" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#575757"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35355339"
+     inkscape:cx="1784.9253"
+     inkscape:cy="-143.63681"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer5"
+     showgrid="false"
+     units="px"
+     width="2560px"
+     showguides="false"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1033"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1"
+     inkscape:showpageshadow="false"
+     showborder="true"
+     borderlayer="true">
+    <sodipodi:guide
+       position="1273.5,494.15625"
+       orientation="1,0"
+       id="guide4482" />
+    <sodipodi:guide
+       position="1110.6484,331"
+       orientation="0,1"
+       id="guide4484" />
+    <sodipodi:guide
+       position="1237.5,258.5"
+       orientation="0,1"
+       id="guide4529" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4465">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Hintergrund"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <rect
+       style="display:inline;fill:#0068ac;fill-opacity:1;stroke:none"
+       id="rect4512"
+       width="2560"
+       height="676"
+       x="0"
+       y="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Logo"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <g
+       id="g5233">
+      <circle
+         clip-path="url(#clipPath5217)"
+         r="490.29141"
+         mask="none"
+         cy="345"
+         cx="1273.5"
+         id="path4480"
+         style="opacity:1;fill:url(#radialGradient4508);fill-opacity:1;stroke:none"
+         inkscape:export-xdpi="13.313622"
+         inkscape:export-ydpi="13.313622" />
+      <g
+         id="g4531"
+         inkscape:export-xdpi="17.6"
+         inkscape:export-ydpi="17.6">
+        <circle
+           style="opacity:1;fill:none;fill-opacity:0.71428576;stroke:#ffffff;stroke-width:14;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path4522"
+           cx="1273.5"
+           cy="345"
+           r="156.65695" />
+        <path
+           style="opacity:1;fill:none;fill-opacity:0.71428576;stroke:#ffffff;stroke-width:13.99999905;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 1234.386,410.49998 -26.386,0 0,-126.05024 131,0 0,126.05024 -26.7396,0"
+           id="rect4524"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccc" />
+        <path
+           style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 1264,460.875 19.25,0 0,-43.3125 17.875,0 -27.625,-30.8125 -27.5625,30.75 18.3125,0 z"
+           id="path4527"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccccc" />
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:67.5px;line-height:100%;font-family:Calibri;-inkscape-font-specification:'Calibri, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="97.5"
+       y="615.5"
+       id="text4536"
+       sodipodi:linespacing="100%"
+       inkscape:export-xdpi="30.942398"
+       inkscape:export-ydpi="30.942398"><tspan
+         sodipodi:role="line"
+         id="tspan4538"
+         x="97.5"
+         y="615.5">Zutrittskontrolle</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Bounding Box">
+    <rect
+       style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4158"
+       width="327.314"
+       height="327.3139"
+       x="1109.843"
+       y="181.34305"
+       inkscape:export-xdpi="4.4000001"
+       inkscape:export-ydpi="4.4000001">
+      <title
+         id="title4203">BB16</title>
+    </rect>
+    <use
+       x="0"
+       y="0"
+       xlink:href="#rect4158"
+       id="use4201"
+       transform="matrix(2.0652927,0,0,2.0652927,-1356.599,-374.51851)"
+       width="100%"
+       height="100%"
+       inkscape:export-xdpi="4.2600002"
+       inkscape:export-ydpi="4.2600002">
+      <title
+         id="title4205">BB32</title>
+    </use>
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4201"
+       id="use4207"
+       transform="matrix(1.455623,0,0,1.4556234,-580.25891,-154.00251)"
+       width="100%"
+       height="100%"
+       inkscape:export-xdpi="23.41"
+       inkscape:export-ydpi="23.41">
+      <title
+         id="title4209">BB64</title>
+    </use>
+  </g>
+</svg>

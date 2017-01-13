@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4d28e09e-4470-45fa-a938-c6312867d1e6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://zrd-sw-iri/InsiteServices/UserService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UserService5.xsd" MetadataType="Schema" ID="5817f3e9-683f-4449-ba3c-08777a4246a8" SourceId="1" SourceUrl="http://zrd-sw-iri/InsiteServices/UserService.svc?xsd=xsd4" />
+    <MetadataFile FileName="UserService51.xsd" MetadataType="Schema" ID="6d3c8684-6197-40fa-99c5-783faa233537" SourceId="1" SourceUrl="http://zrd-sw-iri/InsiteServices/UserService.svc?xsd=xsd3" />
+    <MetadataFile FileName="UserService52.xsd" MetadataType="Schema" ID="b5030a5a-e027-42e7-b637-dae8877db39c" SourceId="1" SourceUrl="http://zrd-sw-iri/InsiteServices/UserService.svc?xsd=xsd2" />
+    <MetadataFile FileName="UserService1.disco" MetadataType="Disco" ID="01469ecc-d201-4193-8fed-f0c61f89096b" SourceId="1" SourceUrl="http://zrd-sw-iri/InsiteServices/UserService.svc?disco" />
+    <MetadataFile FileName="UserService53.xsd" MetadataType="Schema" ID="c49d23e5-9a5a-4a9d-a9e0-4501ef8c803e" SourceId="1" SourceUrl="http://zrd-sw-iri/InsiteServices/UserService.svc?xsd=xsd0" />
+    <MetadataFile FileName="UserService54.xsd" MetadataType="Schema" ID="13cd9a98-1fd9-445e-a238-e53fc81c825a" SourceId="1" SourceUrl="http://zrd-sw-iri/InsiteServices/UserService.svc?xsd=xsd1" />
+    <MetadataFile FileName="UserService1.wsdl" MetadataType="Wsdl" ID="e32529ac-7252-4ac0-b9e0-ee9073098c88" SourceId="1" SourceUrl="http://zrd-sw-iri/InsiteServices/UserService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

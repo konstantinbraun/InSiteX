@@ -1,0 +1,1120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{048BCA5F-D62F-4525-B731-F588747FBA3F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InsiteServices</RootNamespace>
+    <AssemblyName>InSiteServices</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabases>false</PublishDatabases>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.Smo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlClrProvider, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.SqlServer.SqlClrProvider\12.0.0.0__89845dcd8080cc91\Microsoft.SqlServer.SqlClrProvider.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="zxing">
+      <HintPath>..\packages\ZXing.Net.0.14.0.1\lib\net40\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation">
+      <HintPath>..\packages\ZXing.Net.0.14.0.1\lib\net40\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccessService.svc" />
+    <EntityDeploy Include="InSiteDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>InSiteDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="ContainerManagement.svc" />
+    <Content Include="InSiteDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>InSiteDataModel.edmx</DependentUpon>
+      <LastGenOutput>InSiteDataModel.Context.cs</LastGenOutput>
+    </Content>
+    <None Include="InSiteDataModel.edmx.diagram">
+      <DependentUpon>InSiteDataModel.edmx</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="InSiteDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>InSiteDataModel.edmx</DependentUpon>
+      <LastGenOutput>InSiteDataModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="AdminService.svc" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Properties\PublishProfiles\Prod.pubxml" />
+    <None Include="Properties\PublishProfiles\Test-ZRD-Datei-Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\Test.pubxml" />
+    <None Include="Properties\PublishProfiles\Test_Zeppelin.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.Extension1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.LogoffResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.LogonUserResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.ServerInfoHeader1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.Warning1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ReportExecutionService\configuration91.svcinfo" />
+    <None Include="Service References\ReportExecutionService\configuration.svcinfo" />
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.DocumentMapNode.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.ExecutionHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.ExecutionInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.ExecutionInfo2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.FindStringResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.GetDocumentMapResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.GetExecutionInfo2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.GetExecutionInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.GetRenderResourceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.ListRenderingExtensionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.ListSecureMethodsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.LoadDrillthroughTarget2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.LoadDrillthroughTargetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.LoadReport2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.LoadReportDefinition2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.LoadReportDefinitionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.LoadReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.NavigateBookmarkResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.NavigateDocumentMapResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.Render2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.RenderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.RenderStreamResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.ResetExecution2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.ResetExecutionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.SetExecutionCredentials2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.SetExecutionCredentialsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.SetExecutionParameters2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.SetExecutionParametersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.Sort2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.SortResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ReportExecutionService\InsiteServices.ReportExecutionService.ToggleItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ReportExecutionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="UserService.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Web.Prod.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Test.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessDataConsistency_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\AccessMessages.de.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccessMessages.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\AccessMessages.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccessMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Constants\AccessTypes.cs" />
+    <Compile Include="Constants\HttpMethods.cs" />
+    <Compile Include="Data_AccessAreaEvents.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data_AccessEvents.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data_AccessRightEvents.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data_EmployeeAccessLog.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data_EmployeeMinWage.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data_Logging.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data_MWAttestationRequest.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data_PassHistory.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data_PresenceAccessEvents.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data_PresenceCompany.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data_PresenceEmployee.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data_ProcessEvents.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data_ShortTermAccessAreas.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data_ShortTermPasses.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data_ShortTermPassesPrint.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data_ShortTermVisitors.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data_Statistics.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data_StatisticsAccessEvents.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data_StatisticsTerminals.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data_TerminalStatus.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data_UserControlStates.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAccessAreaEvents_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAccessEvents_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAccessHistoryEmployee_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAccessHistory_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAccessRightEventsExtended_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAccessRightEvents_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetBpCompaniesWithLevel_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCompaniesCentralNotAddedToBp_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCompaniesData_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCompaniesSelectionExcl_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCompaniesSelection_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCompaniesSubcontractors_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCompanyAdminUserWithBP_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCompanyAdminUser_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCompanyCentralDuplicates_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCompanyContainerManagement_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCompanyInfo_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCompanyStatistics_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCompanyTariff_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetEmployeeAccessAreas_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetEmployeeContainerManagement_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetEmployeeDuplicates_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetEmployeeRelevantDocumentsToAdd_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetEmployeeRelevantDocuments_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetEmployeesDropDown_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetEmployeesWithRelevantDocument_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetEmployeesWithTimeSlot_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetEmployees_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetEmployeeWageGroups_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetExpiringTariffs_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetFieldsConfig_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetLockedMainContractor_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMissingFirstAiders_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMWAttestationRequests_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMWLackTriggerOverdueEmployee_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetMWLackTriggerOverdue_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetParentContractors_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetParentCustomers_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPassBillings_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPassInfo_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPassPrintData_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPhoto_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPresenceDataNow_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPresenceData_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPresentFirstAiders_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPresentPersonsCount_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPresentPersonsPerAccessArea_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetProcessUsers_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetRelevantDocuments_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetReportMinWageData_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetReportMinWageEmployeeData_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetReportMWAttestationRequestDetails_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetReportMWAttestationRequestHeaders_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetReportTariffContractHistory_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetShortTermPasses_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetShortTermPassPrintData_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetShortTermVisitors_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetStatisticsAccessEvents_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetStatisticsTerminals_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetStatistics_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetSubContractors_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetTariffData_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetTemplates_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetTradeContainerManagement_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetTradeReportData_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUserDuplicates_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUserInfo_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUsersData_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetViewState_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetVisitorAccessAreas_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalErrorBehaviorAttribute.cs" />
+    <Compile Include="GlobalErrorHandler.cs" />
+    <Compile Include="HasValidDocumentRelevantFor_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_AccessAreas.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_Actions_Fields.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_Addresses.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_AllowedLanguages.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_BuildingProjects.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_Companies.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_Countries.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_CountryGroups.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_Dialogs_Actions.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_DocumentCheckingRules.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_DocumentRules.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_Employees.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_EmploymentStatus.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_FirstAiders.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_RelevantDocuments.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_ReplacementPassCases.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_Roles.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_Roles_Dialogs.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_ShortTermPassTypes.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_StaffRoles.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_S_Addresses.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_S_Companies.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_S_CostLocations.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_S_TariffContracts.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_S_Tariffs.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_S_TariffScopes.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_S_TariffWageGroups.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_S_TariffWages.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_S_TradeGroupsStatistical.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_S_TradesStatistical.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_TariffContracts.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_TariffData.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_TimeSlotGroups.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_TimeSlots.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_TradeGroups.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_Trades.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_Translations.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="History_Users.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_AccessAreas.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_AccessSystems.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_Actions_Fields.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_Addresses.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_AllowedLanguages.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_AttributesBuildingProject.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_AttributesCompany.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_Bp_Contact.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_BuildingProjects.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_Companies.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_CompanyAdditions.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_CompanyContacts.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_CompanyTariffs.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_CompanyTrades.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_ConcatActions.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_Countries.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_CountryGroups.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_Dialogs_Actions.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_DocumentCheckingRules.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_DocumentRules.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_EmployeeAccessAreas.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_EmployeeMinWageAttestation.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_EmployeeQualification.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_EmployeeRelevantDocuments.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_Employees.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_EmployeeWageGroupAssignment.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_EmploymentStatus.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_FirstAiders.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_Passes.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_RelevantDocuments.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_ReplacementPassCases.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_Rights.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_Roles.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_Roles_Dialogs.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_Roles_Users.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_ShortTermPassTypes.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_StaffRoles.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_States.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_TariffContracts.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_TariffData.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_Templates.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_Terminal.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_TimeSlotGroups.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_TimeSlots.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_TradeGroups.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_Trades.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_Translations.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_TreeNodes.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_UserBuildingProjects.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Master_Users.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccessArea.cs" />
+    <Compile Include="Models\AccessStructure.cs" />
+    <Compile Include="Models\AccessEvent.cs" />
+    <Compile Include="Models\AccessRight.cs" />
+    <Compile Include="Constants\Actions.cs" />
+    <Compile Include="App_GlobalResources\Resource.de.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ContainerManagement.svc.cs">
+      <DependentUpon>ContainerManagement.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Firma.cs" />
+    <Compile Include="Models\Gewerk.cs" />
+    <Compile Include="IContainerManagement.cs" />
+    <Compile Include="InSiteException.cs" />
+    <Compile Include="Constants\JobType.cs" />
+    <Compile Include="Models\Personal.cs" />
+    <Compile Include="Models\TerminalStatus.cs" />
+    <Compile Include="PrintPass_Result.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReportExporter.cs" />
+    <Compile Include="Reporting.cs" />
+    <Compile Include="AdminService.svc.cs">
+      <DependentUpon>AdminService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Barcoder.cs" />
+    <Compile Include="Models\Document.cs" />
+    <Compile Include="EmployeeRegistrationData.cs" />
+    <Compile Include="Helpers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IAdminService.cs" />
+    <Compile Include="IAccessService.cs" />
+    <Compile Include="InSiteDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InSiteDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InSiteDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InSiteDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InSiteDataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="IUserService.cs" />
+    <Compile Include="Models\Pass.cs" />
+    <Compile Include="Constants\PassStatus.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ReportExecutionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Constants\SessionState.cs" />
+    <Compile Include="Models\ShortTermPass.cs" />
+    <Compile Include="Models\ShortTermPassPrint.cs" />
+    <Compile Include="Constants\Status.cs" />
+    <Compile Include="Models\UserAssignments.cs" />
+    <Compile Include="AccessService.svc.cs">
+      <DependentUpon>AccessService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="System_Actions.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_Addresses.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_Companies.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_CompanyTariffs.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_CostLocations.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_Currencies.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_Dialogs.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_Documents.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_Fields.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_Help.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_Images.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_Jobs.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_JobTable.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_KeyTable.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_Languages.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_MailAttachment.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_Mailbox.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_RelevantFor.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_ReturnCodes.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_Salutations.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_SessionLog.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_StateDefaults.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_Status.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_Systems.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_Tables.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_Tables_Columns.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_TariffContracts.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_Tariffs.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_TariffScopes.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_TariffWageGroups.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_TariffWages.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_TradeGroupsStatistical.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_TradesStatistical.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System_Variables.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserService.svc.cs">
+      <DependentUpon>UserService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ViewStateData.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_Cultures.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_Languages.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_MasterCompanies_Data_PresenceCompany.cs">
+      <DependentUpon>InSiteDataModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\InSite_UserService_Deploy.pubxml" />
+    <None Include="Service References\ReportExecutionService\ReportExecution2005.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ReportExecutionService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_GlobalResources\Resource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_GlobalResources\Resource.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource.de.designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_GlobalResources\AccessMessages.de.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>AccessMessages.de.designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_GlobalResources\AccessMessages.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>AccessMessages.designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prod|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50565</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51860/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

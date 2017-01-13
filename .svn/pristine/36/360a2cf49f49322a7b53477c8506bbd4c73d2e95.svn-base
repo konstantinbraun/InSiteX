@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project com.zeppelin.insite.cardsocket">
+	<!--this file was created by Eclipse Runnable JAR Export Wizard-->
+	<!--ANT 1.7 is required                                        -->
+	<!--define folder properties-->
+	<property name="dir.buildfile" value="." />
+	<property name="dir.workspace" value="${dir.buildfile}/.." />
+	<property name="dir.jarfile" value="${dir.workspace}/CardServiceSetup/Source" />
+	<property name="project.name" value="CardServer" />
+	<property name="version.num" value="1.0.9.0" />
+	<tstamp>
+		<format property="NOW" pattern="yyyy-MM-dd HH:mm:ss z" />
+	</tstamp>
+
+	<target name="create_run_jar">
+		<copy todir="${dir.jarfile}">
+			<filelist dir="${dir.buildfile}/target">
+				<file name="CardServer.cmd" />
+				<file name="CardServer.lcf" />
+				<file name="config.properties" />
+				<file name="jetty-logging.properties" />
+			</filelist>
+		</copy>
+		<jar destfile="${dir.jarfile}/CardServer.jar" filesetmanifest="mergewithoutmain">
+			<manifest>
+				<attribute name="Main-Class" value="com.zeppelin.insite.chipcard.CardServer" />
+				<attribute name="Class-Path" value="." />
+				<attribute name="Implementation-Title" value="${project.name}" />
+				<attribute name="Implementation-Version" value="${version.num}" />
+				<attribute name="Bundle-Date" value="${NOW}" />
+			</manifest>
+			<fileset dir="${dir.buildfile}/target">
+				<exclude name="CardServer.cmd" />
+				<exclude name="CardServer.jar" />
+				<exclude name="CardServer.lcf" />
+				<exclude name="config.properties" />
+				<exclude name="jetty-logging.properties" />
+			</fileset>
+			<zipfileset excludes="META-INF/*.SF" src="C:/jetty/lib/servlet-api-3.1.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/jetty/lib/jetty-server-9.2.18.v20160721.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/jetty/lib/jetty-servlet-9.2.18.v20160721.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/jetty/lib/jetty-util-9.2.18.v20160721.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/jetty/lib/websocket/websocket-api-9.2.18.v20160721.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/jetty/lib/websocket/websocket-servlet-9.2.18.v20160721.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/Java/lib/commons-cli-1.3.1/commons-cli-1.3.1.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/Java/lib/javax.json-1.0.4.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/eclipse/plugins/org.eclipse.swt.win32.win32.x86_3.104.2.v20160212-1350.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/eclipse/plugins/org.eclipse.swt_3.104.2.v20160212-1350.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/eclipse/plugins/org.apache.log4j_1.2.15.v201012070815.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/jetty/lib/jetty-http-9.2.18.v20160721.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/jetty/lib/jetty-io-9.2.18.v20160721.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/jetty/lib/jetty-security-9.2.18.v20160721.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/jetty/lib/websocket/websocket-server-9.2.18.v20160721.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="C:/jetty/lib/websocket/websocket-common-9.2.18.v20160721.jar" />
+		</jar>
+	</target>
+</project>

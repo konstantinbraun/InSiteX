@@ -1,0 +1,22 @@
+﻿CREATE TABLE [dbo].[Master_EmployeeMinWageAttestation]
+(
+    [SystemID]         INT            NOT NULL,
+    [BpID]             INT            NOT NULL,
+    [EmployeeID]             INT            NOT NULL,
+    [MinWageAttestationID]           INT            NOT NULL IDENTITY, 
+    [AccumulatedHours] DECIMAL(9, 3) NOT NULL DEFAULT 0 , 
+    [ForMonth] DATE NOT NULL, 
+    [Amount] DECIMAL(19, 4) NOT NULL DEFAULT 0, 
+    [WageGroupID] INT NOT NULL DEFAULT 0, 
+    [Status] INT NOT NULL DEFAULT 0, 
+    [ReceivedBy] NVARCHAR(50) NULL, 
+    [ReceivedOn] DATETIME NULL, 
+    [RequestBy] NVARCHAR(50) NULL, 
+    [RequestOn] DATETIME NULL,
+    [DocumentID] NVARCHAR(50) NULL, 
+    [CreatedFrom]      NVARCHAR (50)  NULL,
+    [CreatedOn]        DATETIME       DEFAULT (sysdatetime()) NOT NULL,
+    [EditFrom]         NVARCHAR (50)  NULL,
+    [EditOn]           DATETIME       DEFAULT (sysdatetime()) NOT NULL, 
+    CONSTRAINT [PK_Master_EmployeeMinWageAttestation] PRIMARY KEY ([SystemID], [BpID], [EmployeeID], [MinWageAttestationID]), 
+)

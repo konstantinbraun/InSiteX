@@ -1,0 +1,1328 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Webdings;
+	panose-1:5 3 1 2 1 5 9 6 7 3;}
+@font-face
+	{font-family:"WP IconicSymbolsA";}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;}
+h1
+	{mso-style-link:"Überschrift 1 Zchn";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:-3.0cm;
+	text-align:justify;
+	text-indent:0cm;
+	page-break-before:always;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+h2
+	{mso-style-link:"Überschrift 2 Zchn";
+	margin-top:15.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:-3.0cm;
+	text-align:justify;
+	text-indent:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+h3
+	{mso-style-link:"Überschrift 3 Zchn";
+	margin-top:15.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	text-indent:-3.0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+h4
+	{mso-style-link:"Überschrift 4 Zchn";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:-3.0cm;
+	text-indent:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+h5
+	{mso-style-link:"Überschrift 5 Zchn";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:0cm;
+	font-size:13.0pt;
+	font-family:"Calibri",sans-serif;
+	font-weight:bold;
+	font-style:italic;}
+h6
+	{mso-style-link:"Überschrift 6 Zchn";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	text-indent:0cm;
+	font-size:10.0pt;
+	font-family:"Calibri",sans-serif;
+	font-weight:bold;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-link:"Überschrift 7 Zchn";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:0cm;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-link:"Überschrift 8 Zchn";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:288.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-link:"Überschrift 9 Zchn";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:79.2pt;
+	text-indent:-79.2pt;
+	font-size:10.0pt;
+	font-family:"Cambria",serif;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:2.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:-3.0cm;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:4.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-3.0cm;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-3.0cm;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	text-indent:-3.0cm;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-link:"Kommentartext Zchn";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Kopfzeile Zchn";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:-3.0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Fußzeile Zchn";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:-3.0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+span.MsoPageNumber
+	{font-family:"Times New Roman",serif;}
+a:link, span.MsoHyperlink
+	{font-family:"Times New Roman",serif;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+	{mso-style-link:"Kommentarthema Zchn";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Sprechblasentext Zchn";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma",sans-serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.Vorteil, li.Vorteil, div.Vorteil
+	{mso-style-name:Vorteil;
+	margin-top:4.0pt;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:0cm;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.Nachteil, li.Nachteil, div.Nachteil
+	{mso-style-name:Nachteil;
+	margin-top:4.0pt;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.Neutral, li.Neutral, div.Neutral
+	{mso-style-name:Neutral;
+	margin-top:4.0pt;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	text-align:justify;
+	text-indent:-18.0pt;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.berschrift1Zchn
+	{mso-style-name:"Überschrift 1 Zchn";
+	mso-style-link:"Überschrift 1";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.berschrift2Zchn
+	{mso-style-name:"Überschrift 2 Zchn";
+	mso-style-link:"Überschrift 2";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.berschrift3Zchn
+	{mso-style-name:"Überschrift 3 Zchn";
+	mso-style-link:"Überschrift 3";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.berschrift4Zchn
+	{mso-style-name:"Überschrift 4 Zchn";
+	mso-style-link:"Überschrift 4";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.berschrift5Zchn
+	{mso-style-name:"Überschrift 5 Zchn";
+	mso-style-link:"Überschrift 5";
+	font-family:"Calibri",sans-serif;
+	font-weight:bold;
+	font-style:italic;}
+span.berschrift6Zchn
+	{mso-style-name:"Überschrift 6 Zchn";
+	mso-style-link:"Überschrift 6";
+	font-family:"Calibri",sans-serif;
+	font-weight:bold;}
+span.berschrift7Zchn
+	{mso-style-name:"Überschrift 7 Zchn";
+	mso-style-link:"Überschrift 7";
+	font-family:"Calibri",sans-serif;}
+span.berschrift8Zchn
+	{mso-style-name:"Überschrift 8 Zchn";
+	mso-style-link:"Überschrift 8";
+	font-family:"Calibri",sans-serif;
+	font-style:italic;}
+span.berschrift9Zchn
+	{mso-style-name:"Überschrift 9 Zchn";
+	mso-style-link:"Überschrift 9";
+	font-family:"Cambria",serif;}
+span.FuzeileZchn
+	{mso-style-name:"Fußzeile Zchn";
+	mso-style-link:Fußzeile;
+	font-family:"Arial",sans-serif;}
+span.KopfzeileZchn
+	{mso-style-name:"Kopfzeile Zchn";
+	mso-style-link:Kopfzeile;
+	font-family:"Arial",sans-serif;}
+p.lfdTextChar, li.lfdTextChar, div.lfdTextChar
+	{mso-style-name:"lfdText Char";
+	mso-style-link:"lfdText Char Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.Einr1Char, li.Einr1Char, div.Einr1Char
+	{mso-style-name:"Einr1 Char";
+	mso-style-link:"Einr1 Char Char";
+	margin-top:4.0pt;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:21.2pt;
+	text-align:justify;
+	text-indent:-21.2pt;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.Einr2, li.Einr2, div.Einr2
+	{mso-style-name:Einr2;
+	mso-style-link:"Einr2 Char";
+	margin-top:4.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:42.5pt;
+	text-indent:-21.25pt;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+p.Einr3, li.Einr3, div.Einr3
+	{mso-style-name:Einr3;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:85.1pt;
+	text-indent:-42.55pt;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.lfdTextCharChar
+	{mso-style-name:"lfdText Char Char";
+	mso-style-link:"lfdText Char";
+	font-family:"Arial",sans-serif;}
+span.Einr1CharChar
+	{mso-style-name:"Einr1 Char Char";
+	mso-style-link:"Einr1 Char";
+	font-family:"Arial",sans-serif;}
+p.lfdText, li.lfdText, div.lfdText
+	{mso-style-name:lfdText;
+	mso-style-link:"lfdText Zchn";
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.lfdTextZchn
+	{mso-style-name:"lfdText Zchn";
+	mso-style-link:lfdText;
+	font-family:"Arial",sans-serif;}
+p.Einr1, li.Einr1, div.Einr1
+	{mso-style-name:Einr1;
+	mso-style-link:"Einr1 Zchn";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:17.85pt;
+	text-indent:-17.85pt;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.Einr1Zchn
+	{mso-style-name:"Einr1 Zchn";
+	mso-style-link:Einr1;
+	font-family:"Arial",sans-serif;}
+span.Einr2Char
+	{mso-style-name:"Einr2 Char";
+	mso-style-link:Einr2;
+	font-family:"Arial",sans-serif;}
+p.Default, li.Default, div.Default
+	{mso-style-name:Default;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.aufzhlung, li.aufzhlung, div.aufzhlung
+	{mso-style-name:aufzählung;
+	margin-top:4.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:21.25pt;
+	margin-bottom:.0001pt;
+	text-indent:-21.25pt;
+	line-height:115%;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+span.SprechblasentextZchn
+	{mso-style-name:"Sprechblasentext Zchn";
+	mso-style-link:Sprechblasentext;
+	font-family:"Tahoma",sans-serif;}
+p.Grafiknachlinks, li.Grafiknachlinks, div.Grafiknachlinks
+	{mso-style-name:"Grafik nach links";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:-3.0cm;
+	text-align:justify;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+span.KommentartextZchn
+	{mso-style-name:"Kommentartext Zchn";
+	mso-style-link:Kommentartext;
+	font-family:"Arial",sans-serif;}
+span.KommentarthemaZchn
+	{mso-style-name:"Kommentarthema Zchn";
+	mso-style-link:Kommentarthema;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:21.0cm 842.0pt;
+	margin:99.25pt 42.55pt 43.95pt 155.95pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=DE link=blue vlink=purple>
+
+<div class=WordSection1>
+
+<p class=lfdText style='margin-right:-.05pt'><a name="_Toc73191766"><b>Kapitel</b></a></p>
+
+<p class=MsoToc1 style='margin-left:3.0cm'><a name="_Ref375225875"></a><a
+name="_Ref375225696"></a><a name="_Ref352590904"></a><a name="_Ref349834400"></a><a href="#_Toc416178725">1<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
+color:windowtext;text-decoration:none'>                                   </span>Generelles<span
+style='color:windowtext;display:none;text-decoration:none'>  </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></p>
+
+<p class=MsoToc1 style='margin-left:3.0cm'><a href="#_Toc416178726">2<span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+text-decoration:none'>                                   </span>Login<span
+style='color:windowtext;display:none;text-decoration:none'>   </span><span
+style='color:windowtext;display:none;text-decoration:none'>4</span></a></p>
+
+<p class=MsoToc2 style='margin-left:3.0cm'><a href="#_Toc416178727">2.1<span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+text-decoration:none'>                              </span>Anmeldung<span
+style='color:windowtext;display:none;text-decoration:none'>  </span><span
+style='color:windowtext;display:none;text-decoration:none'>4</span></a></p>
+
+<p class=MsoToc2 style='margin-left:3.0cm'><a href="#_Toc416178728">2.2<span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+text-decoration:none'>                              </span>Registrierung<span
+style='color:windowtext;display:none;text-decoration:none'>  </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+
+<p class=MsoToc3 style='margin-left:3.0cm'><a href="#_Toc416178729">2.2.1<span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+text-decoration:none'>                          </span>Firma für zentralen
+Firmenstamm registrieren<span style='color:windowtext;display:none;text-decoration:
+none'>   </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+
+<p class=MsoToc3 style='margin-left:3.0cm'><a href="#_Toc416178730">2.2.2<span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+text-decoration:none'>                          </span>Firma an Bauvorhaben
+anmelden<span style='color:windowtext;display:none;text-decoration:none'>   </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+
+<p class=MsoToc3 style='margin-left:3.0cm'><a href="#_Toc416178731">2.2.3<span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+text-decoration:none'>                          </span>Mitarbeiter für
+Bauvorhaben registrieren<span style='color:windowtext;display:none;text-decoration:
+none'>   </span><span
+style='color:windowtext;display:none;text-decoration:none'>7</span></a></p>
+
+<p class=MsoToc1 style='margin-left:3.0cm'><a href="#_Toc416178732">3<span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+text-decoration:none'>                                   </span>Benutzer-Menü<span
+style='color:windowtext;display:none;text-decoration:none'>   </span><span
+style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
+
+<p class=MsoToc2 style='margin-left:3.0cm'><a href="#_Toc416178733">3.1<span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+text-decoration:none'>                              </span>Home<span
+style='color:windowtext;display:none;text-decoration:none'>  </span><span
+style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
+
+<p class=MsoToc2 style='margin-left:3.0cm'><a href="#_Toc416178734">3.2<span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+text-decoration:none'>                              </span>Benutzer<span
+style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
+
+<p class=MsoToc2 style='margin-left:3.0cm'><a href="#_Toc416178735">3.3<span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+text-decoration:none'>                              </span>Ansicht<span
+style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
+
+<p class=MsoToc2 style='margin-left:3.0cm'><a href="#_Toc416178736">3.4<span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+text-decoration:none'>                              </span>Administration<span
+style='color:windowtext;display:none;text-decoration:none'>   </span><span
+style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
+
+<p class=MsoToc2 style='margin-left:3.0cm'><a href="#_Toc416178737">3.5<span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+text-decoration:none'>                              </span>Hilfe<span
+style='color:windowtext;display:none;text-decoration:none'>  </span><span
+style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
+
+<p class=MsoToc1 style='margin-left:3.0cm'><a href="#_Toc416178738">4<span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+text-decoration:none'>                                   </span>Anwendungsmenü<span
+style='color:windowtext;display:none;text-decoration:none'>   </span><span
+style='color:windowtext;display:none;text-decoration:none'>10</span></a></p>
+
+<p class=MsoToc1 style='margin-left:3.0cm'><a href="#_Toc416178739">5<span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+text-decoration:none'>                                   </span>Anwendungsmasken<span
+style='color:windowtext;display:none;text-decoration:none'>   </span><span
+style='color:windowtext;display:none;text-decoration:none'>12</span></a></p>
+
+<p class=MsoToc2 style='margin-left:3.0cm'><a href="#_Toc416178740">5.1<span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+text-decoration:none'>                              </span>Auflistungen<span
+style='color:windowtext;display:none;text-decoration:none'>   </span><span
+style='color:windowtext;display:none;text-decoration:none'>12</span></a></p>
+
+<p class=MsoToc2 style='margin-left:3.0cm'><a href="#_Toc416178741">5.2<span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+text-decoration:none'>                              </span>Pflegemasken<span
+style='color:windowtext;display:none;text-decoration:none'>   </span><span
+style='color:windowtext;display:none;text-decoration:none'>14</span></a></p>
+
+<p class=MsoToc1 style='margin-left:3.0cm'><a href="#_Toc416178742">6<span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:windowtext;
+text-decoration:none'>                                   </span>Nachrichten<span
+style='color:windowtext;display:none;text-decoration:none'>   </span><span
+style='color:windowtext;display:none;text-decoration:none'>17</span></a></p>
+
+<p class=lfdTextChar>&nbsp;</p>
+
+<p class=lfdTextChar>&nbsp;</p>
+
+<h1 style='margin-left:0cm;text-indent:0cm'>1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><a name="_Toc416178725"><span lang=X-NONE>Generelles</span></a></h1>
+
+<p class=lfdTextChar>Das Dokument beschreibt </p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>die grundsätzlichen
+Bedienungselemente und</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>die benutzerbezogene
+Konfiguration </p>
+
+<p class=lfdTextChar>der Anwendung InSite 3</p>
+
+<p class=lfdTextChar>&nbsp;</p>
+
+<p class=lfdTextChar>&nbsp;</p>
+
+<h1 style='margin-left:0cm;text-indent:0cm'><a name="_Toc416178726">2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Login</a></h1>
+
+<p class=lfdTextChar><img width=529 height=266 id="Grafik 23"
+src="Bedienungsoberfläche-Dateien/image001.jpg"></p>
+
+<p class=lfdTextChar>InSite 3 kann mit einem Browser jeweils nur einmal
+aufgerufen werden. Es gelten jeweils die Parameter (Benutzer, Anwahl
+Bauvorhaben, usw.) des letzten Aufrufs. </p>
+
+<p class=lfdTextChar>Sollen von einem Arbeitsplatz gleichzeitig mehrere Aufrufe
+erfolgen, so müssen jeweils unterschiedliche Browser (Chrome, Firefox, usw.) benutzt
+werden.</p>
+
+<p class=lfdTextChar>Die Login-Maske ermöglicht folgende Varianten des Programmaufrufs:</p>
+
+<p class=lfdTextChar>&nbsp;</p>
+
+<p class=lfdTextChar>&nbsp;</p>
+
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc416178727">2.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Anmeldung</a></h2>
+
+<p class=lfdTextChar><img width=280 height=176 id="Grafik 11"
+src="Bedienungsoberfläche-Dateien/image002.png"></p>
+
+<p class=lfdTextChar>Für die normale Benutzeranmeldung gelten folgende Voraussetzungen:</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Für den
+Benutzer muss ein Stammdatensatz angelegt sein.</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Dieser
+Stammdatensatz muss freigegeben sein.</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Dem
+Benutzer muss mindestens ein Bauvorhaben und eine Rolle in diesem Bauvorhaben
+zugeordnet sein.</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>Ist dem Benutzer noch kein
+Bauvorhaben zugeordnet, fährt die Verarbeitung automatisch gem. <i>2.2.2</i><i> </i><i>Firma an Bauvorhaben anmelden</i><i> </i>fort.</p>
+
+<p class=lfdTextChar style='page-break-after:avoid'>Mit Eingabe des</p>
+
+<p class=Einr1 style='page-break-after:avoid'><span style='font-size:10.0pt;
+color:red'>►<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Benutzernamen,</p>
+
+<p class=Einr1 style='page-break-after:avoid'><span style='font-size:10.0pt;
+color:red'>►<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Kennwort
+und</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><img
+width=106 height=29 id="Grafik 7"
+src="Bedienungsoberfläche-Dateien/image003.png"></p>
+
+<p class=lfdTextChar>wird die Anmeldung durchgeführt.</p>
+
+<p class=lfdTextChar style='page-break-after:avoid'>Mit <img width=158
+height=28 id="Grafik 9" src="Bedienungsoberfläche-Dateien/image004.jpg">wird
+folgender Dialog aufgerufen:</p>
+
+<p class=lfdTextChar><img width=427 height=356 id="Grafik 8"
+src="Bedienungsoberfläche-Dateien/image005.jpg"></p>
+
+<p class=lfdTextChar>Der Benutzer erfasst</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>den
+Benutzernamen</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>einen
+Code gem. der Anzeige im blauen Rechteck und</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><img
+width=191 height=29 id="Grafik 10"
+src="Bedienungsoberfläche-Dateien/image006.png"> </p>
+
+<p class=lfdTextChar>Hiermit wird ausgelöst:</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Die
+Software vergibt für den Benutzer ein neues Kennwort</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>und
+verschickt dieses an die Email-Adresse gem. dem korrespondierenden Benutzerstammdatensatzes.</p>
+
+<p class=lfdText>&nbsp;</p>
+
+<p class=lfdText>&nbsp;</p>
+
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc416178728">2.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Registrierung</a></h2>
+
+<p class=lfdTextChar style='page-break-after:avoid'>Die Registrierfunktionen
+ermöglichen es, dass initiale Daten durch Personen, die noch nicht als Benutzer
+im System (Benutzerstamm) hinterlegt sind, erfasst werden können.</p>
+
+<p class=lfdTextChar style='page-break-after:avoid'>Folgende Fälle werden
+unterstützt:</p>
+
+<p class=lfdTextChar style='page-break-after:avoid'>&nbsp;</p>
+
+<p class=lfdTextChar style='page-break-after:avoid'>&nbsp;</p>
+
+<h3 style='margin-left:3.0cm'><a name="_Toc416178729">2.2.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span>Firma für zentralen
+Firmenstamm registrieren</a></h3>
+
+<p class=lfdTextChar><img width=296 height=72 id="Grafik 12"
+src="Bedienungsoberfläche-Dateien/image007.png"></p>
+
+<p class=lfdTextChar>Firmen, die bisher nicht in InSite 3 existieren, werden
+quasi per „do-it-yourself“ von qualifizierten Mitarbeitern dieser Firmen mit
+ihren Stammdaten im System hinterlegt.</p>
+
+<p class=lfdTextChar>Bei diesem Vorgang müssen auch die Stammdaten für einen
+„Firmen-Administrator“ erfasst werden. Dieser ist zukünftig berechtigt alle
+firmenbezogenen Daten (insbesondere Mitarbeiter-Stammdaten) zu pflegen.</p>
+
+<p class=lfdTextChar>Weitere Details siehe Dokument „Firmenstamm“.</p>
+
+<p class=lfdTextChar>&nbsp;</p>
+
+<p class=lfdTextChar>&nbsp;</p>
+
+<h3 style='margin-left:3.0cm'><a name="_Toc416178730"></a><a
+name="_Ref395619379"></a><a name="_Ref395619373">2.2.2<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span>Firma an Bauvorhaben anmelden</a></h3>
+
+<p class=lfdTextChar><img width=297 height=75 id="Grafik 13"
+src="Bedienungsoberfläche-Dateien/image008.png"></p>
+
+<p class=lfdTextChar>Unter der Voraussetzung, dass die Firma für den zentralen
+Firmenstamm und ihr zugehöriger Firmen-Administrator im zentralen Benutzerstamm
+freigegeben wurden (durch den System-Administrator), kann der Firmen-Administrator
+hierüber beantragen, dass seine Firma für ein bestimmtes Bauvorhaben
+freigegeben wird.</p>
+
+<p class=lfdTextChar>Zu diesem Zweck muss der Benutzer folgende Felder
+eingeben:</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><img
+width=285 height=129 id="Grafik 14"
+src="Bedienungsoberfläche-Dateien/image009.png"></p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=X-NONE>Mit </span><img width=200 height=30 id="Grafik 15"
+src="Bedienungsoberfläche-Dateien/image010.png"><span lang=X-NONE>ruft er
+folgenden Dialog auf:</span></p>
+
+<p class=lfdTextChar style='page-break-after:avoid'><img width=416 height=201
+id="Grafik 17" src="Bedienungsoberfläche-Dateien/image011.jpg"></p>
+
+<p class=lfdTextChar style='page-break-after:avoid'>Eingegeben wird:</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Bauvorhaben</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>Die Auswahlliste führt alle
+Bauvorhaben auf, bei denen die Firma noch nicht eingetragen ist.</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Auftraggeber</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>Die Firma ist in dem
+Bauvorhaben Subunternehmer dieses Auftraggebers. In der Auswahlliste werden
+alle freigegebenen Firmen des Bauvorhabens aufgeführt.</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>&nbsp;</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>&nbsp;</p>
+
+<h3 style='margin-left:3.0cm'><a name="_Toc416178731">2.2.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span>Mitarbeiter für Bauvorhaben
+registrieren</a></h3>
+
+<p class=lfdTextChar><img width=285 height=91 id="Grafik 16"
+src="Bedienungsoberfläche-Dateien/image012.png"></p>
+
+<p class=lfdTextChar>Mit dieser Funktion wird die Erfassung der
+Mitarbeiterstammdaten auf den einzelnen Mitarbeiter delegiert. Zu diesem Zweck
+generiert der Firmen-Administrator per Firmenstamm einen eindeutigen
+Anmeldecode, den er an die Mitarbeiter weitergibt. </p>
+
+<p class=lfdTextChar>Per Eingabe </p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>des
+Anmeldecodes und </p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><img
+width=182 height=27 id="Grafik 18"
+src="Bedienungsoberfläche-Dateien/image013.png"></p>
+
+<p class=lfdTextChar>ruft der Mitarbeiter die Eingabemaske für seine Daten auf.</p>
+
+<p class=lfdTextChar>Durch den Anmeldecode wird zum einen der Missbrauch
+ausgeschlossen und es erfolgt die Zuordnung der Mitarbeiterstammdaten zur
+jeweiligen Firma.</p>
+
+<p class=lfdTextChar>&nbsp;</p>
+
+<p class=lfdTextChar>&nbsp;</p>
+
+<h1 style='margin-left:0cm;text-indent:0cm'><a name="_Toc416178732">3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Benutzer-Menü</a></h1>
+
+<p class=lfdTextChar><img width=359 height=33 id="Grafik 19"
+src="Bedienungsoberfläche-Dateien/image014.png"></p>
+
+<p class=lfdTextChar>&nbsp;</p>
+
+<p class=lfdTextChar>&nbsp;</p>
+
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc416178733">3.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Home</a></h2>
+
+<p class=lfdTextChar>Mit diesem Button positioniert die Anwendung auf die
+Startseite von InSite 3.</p>
+
+<p class=lfdTextChar>&nbsp;</p>
+
+<p class=lfdTextChar>&nbsp;</p>
+
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc416178734">3.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Benutzer</a></h2>
+
+<p class=lfdTextChar><img width=205 height=116 id="Grafik 20"
+src="Bedienungsoberfläche-Dateien/image015.png"></p>
+
+<p class=lfdTextChar>Per Klick auf den Button „Benutzer“ öffnet ein Untermenü,
+mit dem folgende Funktionen aufgerufen werden können:</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=X-NONE>Sprache ändern</span></p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>Der Benutzer wählt für die
+InSite 3 Dialoge eine abweichende Sprach-Darstellung</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Kennwort
+ändern</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>Der Benutzer ändert sein
+persönliches Kennwort.</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Auswahl
+Bauvorhaben</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>Der Benutzer wechselt zu einem
+anderen Bauvorhaben. Er kann aus einer Liste der Bauvorhaben, für die er
+zugelassen ist, auswählen.  </p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Abmelden</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>Der Benutzer meldet sich von
+der InSite 3 Anwendung ab.</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>&nbsp;</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>&nbsp;</p>
+
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc416178735">3.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=X-NONE>An</span></a>sicht</h2>
+
+<p class=lfdTextChar><img width=146 height=65 id="Grafik 21"
+src="Bedienungsoberfläche-Dateien/image016.jpg"></p>
+
+<p class=lfdTextChar>Per Klick auf den Button „Ansicht“ öffnet ein Untermenü,
+mit dem folgende Funktionen aufgerufen werden können:</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Aktualisieren</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>Der Benutzer aktualisiert die angezeigte
+Seite.</p>
+
+<p class=Einr1 style='page-break-after:avoid'><span style='font-size:10.0pt;
+color:red'>►<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Layout
+ändern</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt;page-break-after:avoid'>Der
+Benutzer kann das Layout der Maskendarstellung in InSite 3 anpassen.</p>
+
+<p class=lfdTextChar><img width=215 height=282 id="Grafik 22"
+src="Bedienungsoberfläche-Dateien/image017.jpg"></p>
+
+<p class=lfdTextChar>Empfohlen wird das Layout „Windows7“.</p>
+
+<p class=lfdTextChar>&nbsp;</p>
+
+<p class=lfdTextChar>&nbsp;</p>
+
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc416178736">3.4<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Administration</a></h2>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>LogViewer</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>Ermöglicht die Analyse der
+Benutzeraktivitäten in InSite 3 bezogen auf die jeweiligen Verarbeitungen.</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>&nbsp;</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>&nbsp;</p>
+
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc416178737">3.5<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Hilfe</a></h2>
+
+<p class=lfdText>&nbsp;</p>
+
+<p class=lfdText>&nbsp;</p>
+
+<h1 style='margin-left:0cm;text-indent:0cm'><a name="_Toc416178738">4<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Anwendungsmenü</a></h1>
+
+<p class=lfdTextChar>Die Anzeige des Anwendungsmenüs erfolgt benutzerbezogen in
+Abhängigkeit von:</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Der Rolle
+des jeweiligen Benutzers.</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>D.h. Menüknoten und
+Funktionen, die für eine Rolle nicht freigeschaltet sind, werden nicht
+angezeigt.</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Der
+persönlichen Historie des Benutzers.</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>D.h. es wird das Menü in
+derselben Detaillierung dargestellt wie bei der letzten Session des Benutzers.</p>
+
+<p class=lfdTextChar><img width=525 height=210 id="Grafik 78"
+src="Bedienungsoberfläche-Dateien/image018.jpg"></p>
+
+<p class=lfdTextChar>Die Bedienung des Menüs ist wie folgt:</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=X-NONE>Per Klick auf</span> eine Kapitelüberschrift oder das führende
+Symbol (Darstellung ist abhängig vom Layout) <span lang=X-NONE>wird der
+jeweilige Menüknoten </span>erweitert (<span lang=X-NONE>aufge</span>k<span
+lang=X-NONE>lappt)</span> oder reduziert<span lang=X-NONE>.</span></p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Per Klick
+auf die Bezeichnung eines Menüpunktes wird die korrespondierende Verarbeitung
+aufgerufen.</p>
+
+<p class=lfdTextChar>Im minimalen Detaillierungsgrad ist  die Menüdarstellung
+wie folgt:</p>
+
+<p class=lfdTextChar><img width=308 height=44 id="Grafik 25"
+src="Bedienungsoberfläche-Dateien/image019.png"></p>
+
+<p class=lfdTextChar>Im maximalen Detaillierungsgrad ist die Menüdarstellung
+wie folgt:</p>
+
+<p class=MsoNormal><img width=300 height=886 id="Grafik 29"
+src="Bedienungsoberfläche-Dateien/image020.png"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h1 style='margin-left:0cm;text-indent:0cm'><a name="_Toc416178739">5<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Anwendungsmasken</a></h1>
+
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc416178740">5.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Auflistungen</a></h2>
+
+<p class=lfdTextChar><img width=529 height=451 id="Grafik 32"
+src="Bedienungsoberfläche-Dateien/image021.jpg"></p>
+
+<p class=lfdTextChar>In der Regel zeigt InSite 3 nach dem Aufruf einer
+Verarbeitung die Daten­sätze in einer Auflistung an.</p>
+
+<p class=lfdTextChar>Für die Bedienung der Liste gilt:</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=X-NONE>Ist diese Auflistung gruppiert (z.B. nach Alphabet), so lassen sich
+per </span><img width=21 height=16 id="Grafik 33"
+src="Bedienungsoberfläche-Dateien/image022.jpg"><span lang=X-NONE>die
+Einzelelemente der Gruppe ausblenden und per  </span><img width=11 height=15
+id="Grafik 34" src="Bedienungsoberfläche-Dateien/image023.jpg"><span
+lang=X-NONE> wieder einblenden.</span> (Die Darstellung des Symbols ist
+abhängig vom angewählten Layout)</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=X-NONE>Soll eine Gruppierung der Anzeige aufgehoben werden, erfolgt dies
+per Klick auf </span><img width=15 height=13 id="Grafik 37"
+src="Bedienungsoberfläche-Dateien/image024.jpg"><span lang=X-NONE>.</span></p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Für eine
+neue Gruppierung wird die Überschrift der korrespondierenden Spalte per
+Drag&amp;Drop in die linke obere Ecke der Maske geführt.</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>Sollen mehrere Gruppierungen
+angewendet werden (z.B. alphabetische Sortierung innerhalb der Arbeitgeber),
+entscheidet die Reihenfolge. <img width=175 height=32 id="Grafik 46"
+src="Bedienungsoberfläche-Dateien/image025.png"></p>
+
+<p class=Einr1 style='page-break-after:avoid'><span style='font-size:10.0pt;
+color:red'>►<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Die
+Aktionen für ein einzelnes Listelement werden wie folgt ausgelöst:</p>
+
+<p class=Einr2 style='page-break-after:avoid'><span style='font-family:Webdings;
+color:red'>8<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span>Anzeige
+per Klick auf <img width=11 height=16 id="Grafik 38"
+src="Bedienungsoberfläche-Dateien/image026.jpg"></p>
+
+<p class=Einr2 style='page-break-after:avoid'><span style='font-family:Webdings;
+color:red'>8<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span>Ändern
+per Klick auf <img width=23 height=17 id="Grafik 39"
+src="Bedienungsoberfläche-Dateien/image027.png"></p>
+
+<p class=Einr2 style='page-break-after:avoid'><span style='font-family:Webdings;
+color:red'>8<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span>Status-Änderung
+per Klick auf jeweiliges Symbol in der Statusspalte.</p>
+
+<p class=Einr2><span style='font-family:Webdings;color:red'>8<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span>Löschen per
+Klick auf <img width=22 height=20 id="Grafik 40"
+src="Bedienungsoberfläche-Dateien/image028.png"></p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Die
+Sortierung der Auflistung wird per Klick auf die Überschrift der Spalte, die
+als Sortierkriterium gelten soll, ausgelöst.</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>In Abhängigkeit davon, ob die
+Auflistung gruppiert ist oder nicht, wird wie folgt sortiert:</p>
+
+<p class=Einr2><span style='font-family:Webdings;color:red'>8<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span>Bei gruppierter
+Auflistung wird jeweils innerhalb einer Gruppe sortiert.</p>
+
+<p class=Einr2><span style='font-family:Webdings;color:red'>8<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span>Bei Auflistung
+ohne Gruppierung wird über die gesamte Liste sortiert.</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Die Suche
+in der Liste wird über Filter je Spalte unterstützt.</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'><img width=490 height=40
+id="Grafik 41" src="Bedienungsoberfläche-Dateien/image029.jpg"></p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>Per Klick auf <img width=23
+height=23 id="Grafik 43" src="Bedienungsoberfläche-Dateien/image030.png"> lässt
+sich der Filter je Spalte wie folgt konfigurieren:</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'><img width=201 height=374
+id="Grafik 42" src="Bedienungsoberfläche-Dateien/image031.jpg"></p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>Standardmäßig filtert InSite 3
+mit „Enthält“.</p>
+
+<p class=Einr1 style='page-break-after:avoid'><span style='font-size:10.0pt;
+color:red'>►<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Ausgabe
+der Listelemente</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt;page-break-after:avoid'>Per
+Klick auf eines der Symbole <img width=78 height=27 id="Grafik 44"
+src="Bedienungsoberfläche-Dateien/image032.png"> kann der Listinhalt alternativ
+im xls-, pdf- oder csv-Format ausgegeben werden.</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Konfiguration
+der Maskendarstellung</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>Der Benutzer kann mit
+folgenden Bedienungselementen persönliche Einstellungen hinterlegen für die
+Darstellung der jeweiligen Maske. Dies gilt insbesondere hinsichtlich der Gruppierungsmerkmale.</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'><img width=389 height=31
+id="Grafik 45" src="Bedienungsoberfläche-Dateien/image033.png"></p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>Somit lassen sich komplexe
+Definitionen für die jeweiligen Anwendungsfälle wieder abrufen. Der Benutzer
+kann bis zu 3 Einstellungen je Verarbeitung vornehmen.</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>&nbsp;</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>&nbsp;</p>
+
+<h2 style='margin-left:0cm;text-indent:0cm'><a name="_Toc416178741">5.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Pflegemasken</a></h2>
+
+<p class=lfdTextChar><img width=529 height=281 id="Grafik 50"
+src="Bedienungsoberfläche-Dateien/image034.jpg"></p>
+
+<p class=lfdTextChar>Die Pflegemasken haben folgende Systematik:</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>In
+Feldern, deren gültige Belegung sich aus einer Auflistung (Drop Down) ergibt,
+sollten die ersten Buchstaben des gewünschten Elementes eingegeben werden.
+Hiermit werden die möglichen Elemente, aus denen ausgewählt werden kann, stark
+reduziert.</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Felder,
+für die eine Zwangseingabe programmiert, bzw. konfiguriert ist, werden mit
+einem fetten Führungstext angezeigt.</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'><img width=432 height=24
+id="Grafik 58" src="Bedienungsoberfläche-Dateien/image035.png"></p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Wenn die
+Menge der Daten eine Aufteilung in mehrere Teilmasken erfordert, werden diese
+über die Kopfleiste in Form von Registern aufgerufen.</p>
+
+<p class=lfdText style='margin-left:17.85pt'><img width=498 height=15
+id="Grafik 52" src="Bedienungsoberfläche-Dateien/image036.jpg"></p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Eine Veränderung
+muss über die Tasten <img width=210 height=32 id="Grafik 59"
+src="Bedienungsoberfläche-Dateien/image037.png">abgeschlossen werden.</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Eine
+Neuanlage muss über die Tasten <img width=204 height=29 id="Grafik 79"
+src="Bedienungsoberfläche-Dateien/image038.png"><br>
+abgeschlossen werden.</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Mit <b><i>&lt;Enter&gt;</i></b>
+wird die Funktionalität gem. <img width=95 height=29 id="Grafik 80"
+src="Bedienungsoberfläche-Dateien/image039.png"> bzw. <img width=102 height=27
+id="Grafik 81" src="Bedienungsoberfläche-Dateien/image040.png"> ausgelöst.</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Mit <b><i>&lt;Esc&gt;</i></b>
+wird die Funktionalität gem. <img width=106 height=27 id="Grafik 82"
+src="Bedienungsoberfläche-Dateien/image041.png"> ausgelöst.</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Mit <img
+width=101 height=28 id="Grafik 60"
+src="Bedienungsoberfläche-Dateien/image042.png"> bzw. <b><i>&lt;Enter&gt;</i></b>
+wird die Fehlerprüfung ausgelöst.</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'><img width=417 height=88
+id="Grafik 51" src="Bedienungsoberfläche-Dateien/image043.jpg"></p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>Erst wenn alle Fehler behoben
+sind, kann der Datensatz gespeichert werden.</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Wenn in
+einer Pflegemaske einzelne Informationen in Unterdialogen eingegeben werden,
+gilt folgende Systematik:</p>
+
+<p class=lfdText style='margin-left:17.85pt'><img width=502 height=381
+src="Bedienungsoberfläche-Dateien/image044.png"></p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>Per <img width=87 height=18
+id="Grafik 61" src="Bedienungsoberfläche-Dateien/image045.jpg"> werden die
+Informationen des Unterdialogs bereits in die Datenbank geschrieben. d.h.
+selbst wenn der übergeordnete Dialog mit <img width=89 height=23 id="Grafik 83"
+src="Bedienungsoberfläche-Dateien/image046.jpg"> verlassen wird, sind die
+Informationen gespeichert.</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>&nbsp;</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt'>&nbsp;</p>
+
+<h1 style='margin-left:0cm;text-indent:0cm'><a name="_Toc416178742">6<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Nachrichten</a></h1>
+
+<p class=lfdTextChar>Die Nachrichtenverwaltung dient der Ausgabe von Dokumenten
+oder Informationen, die an den ausführenden Benutzer adressiert sind.</p>
+
+<p class=lfdTextChar>Beispiele hierfür sind:</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Auswertungen
+und Druckaufträge in InSite 3.</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Mitteilungen
+von anderen Insite-Benutzern.</p>
+
+<p class=lfdText>Die Nachrichtenverwaltung wird alternativ aufgerufen per Klick
+auf</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><img
+width=155 height=25 id="Grafik 24"
+src="Bedienungsoberfläche-Dateien/image047.png"> im Anwendungsmenü</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><img
+width=157 height=146 id="Grafik 26"
+src="Bedienungsoberfläche-Dateien/image048.png"> im Dashboard.</p>
+
+<p class=lfdText>Die Nachrichtenverwaltung listet die Nachrichten wie folgt:</p>
+
+<p class=lfdText><img width=529 height=146 id="Grafik 28"
+src="Bedienungsoberfläche-Dateien/image049.jpg"></p>
+
+<p class=Einr1 style='page-break-after:avoid'><span style='font-size:10.0pt;
+color:red'>►<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Zu
+1.</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt;page-break-after:avoid'>Mit <img
+width=182 height=25 id="Grafik 30"
+src="Bedienungsoberfläche-Dateien/image050.png"> wird eine neue Nachricht
+angelegt.</p>
+
+<p class=lfdTextChar style='margin-left:17.85pt;page-break-after:avoid'><img
+width=529 height=460 id="Grafik 31"
+src="Bedienungsoberfläche-Dateien/image051.jpg"></p>
+
+<p class=Einr2><span style='font-family:Webdings;color:red'>8<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span>An:</p>
+
+<p class=lfdTextChar style='margin-left:42.5pt'>Alternativ kann die Nachricht
+adressiert werden an </p>
+
+<p class=lfdTextChar style='margin-left:60.5pt;text-indent:-18.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>einen
+Insite-Benutzer (Benutzernamen eingeben) oder </p>
+
+<p class=lfdTextChar style='margin-left:60.5pt;text-indent:-18.0pt'>-<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>eine
+Mail-Adresse (Eingabe einer syntaktisch korrekten Adresse (<a
+href="mailto:xxx@yyyyyy.zz">xxx@yyyyyy.zz</a></p>
+
+<p class=Einr2><span style='font-family:Webdings;color:red'>8<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span>Betreff:</p>
+
+<p class=Einr2><span style='font-family:Webdings;color:red'>8<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span>Anhänge:</p>
+
+<p class=lfdTextChar style='margin-left:42.5pt'>Per &lt;Auswählen&gt; werden
+Dokumente aus dem lokalen Dateiverzeichnis zugeordnet.</p>
+
+<p class=Einr2><span style='font-family:Webdings;color:red'>8<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span>Text:</p>
+
+<p class=lfdTextChar style='margin-left:42.5pt'>Der Nachrichtentext wird
+erfasst und kann mit den Tools in der Kopfleiste entsprechend formatiert
+werden.</p>
+
+<p class=Einr1 style='page-break-after:avoid'><span style='font-size:10.0pt;
+color:red'>►<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Zu
+2.</p>
+
+<p class=Einr2 style='page-break-after:avoid'><span style='font-family:Webdings;
+color:red'>8<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span>Mit
+<img border=0 width=20 height=20 id="Grafik 35"
+src="Bedienungsoberfläche-Dateien/image052.png"> wird die Nachricht zur Ansicht
+geöffnet.</p>
+
+<p class=Einr2 style='page-break-after:avoid'><span style='font-family:Webdings;
+color:red'>8<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span>Mit
+<img border=0 width=29 height=26 id="Grafik 53"
+src="Bedienungsoberfläche-Dateien/image053.png"> wird eine Nachricht als
+gelesen markiert. Dies sollte vom Benutzer konsequent gemacht werden, so dass
+die Anzeige „xxx neue Nachrichten“ eine aussagefähige Information darstellt.</p>
+
+<p class=lfdTextChar style='margin-left:42.5pt'>Anschließend wird die Nachricht
+mit dem Icon <img border=0 width=28 height=26 id="Grafik 54"
+src="Bedienungsoberfläche-Dateien/image054.png"> dargestellt.</p>
+
+<p class=Einr2><span style='font-family:Webdings;color:red'>8<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span>Mit <img
+border=0 width=26 height=27 id="Grafik 62"
+src="Bedienungsoberfläche-Dateien/image055.png"> wird die Nachricht
+beantwortet.</p>
+
+<p class=Einr2><span style='font-family:Webdings;color:red'>8<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span>Mit <img
+border=0 width=31 height=26 id="Grafik 63"
+src="Bedienungsoberfläche-Dateien/image056.png"> wird die Nachricht
+weitergeleitet.</p>
+
+<p class=Einr1><span style='font-size:10.0pt;color:red'>►<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span>Zu 3.</p>
+
+<p class=lfdText style='margin-left:17.85pt'>Mit <img border=0 width=21
+height=22 id="Grafik 36" src="Bedienungsoberfläche-Dateien/image057.png"> wird
+die Nachricht aus der Liste gelöscht.</p>
+
+</div>
+
+</body>
+
+</html>

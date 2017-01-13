@@ -1,0 +1,21 @@
+﻿CREATE TABLE [dbo].[Master_CompanyContacts]
+(
+    [SystemID]         INT            NOT NULL,
+    [BpID]             INT            NOT NULL,
+    [CompanyID]        INT            NOT NULL,
+    [ContactID]        INT            IDENTITY (1, 1) NOT NULL,
+    [Salutation]       NVARCHAR (50)  NULL,
+    [FirstName]        NVARCHAR (50)  NULL,
+    [LastName]         NVARCHAR (50)  NULL,
+    [LanguageID]     NVARCHAR(10)       NULL,
+    [Phone]            NVARCHAR (50)  NULL,
+    [Mobile]           NVARCHAR (50)  NULL,
+    [Email]            NVARCHAR (200) NULL,
+    [DescriptionShort] NVARCHAR (200) NULL,
+    [IsMWRelevant] BIT NOT NULL DEFAULT 0, 
+    [CreatedFrom]      NVARCHAR (50)  NULL,
+    [CreatedOn]        DATETIME       DEFAULT (sysdatetime()) NOT NULL,
+    [EditFrom]         NVARCHAR (50)  NULL,
+    [EditOn]           DATETIME       DEFAULT (sysdatetime()) NOT NULL, 
+    CONSTRAINT [PK_Master_CompanyContacts] PRIMARY KEY ([SystemID], [BpID], [CompanyID], [ContactID]),
+)

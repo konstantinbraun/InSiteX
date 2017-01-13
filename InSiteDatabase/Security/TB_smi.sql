@@ -1,0 +1,2 @@
+﻿CREATE USER [TB\smi] FOR LOGIN [TB\smi];
+

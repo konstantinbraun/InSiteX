@@ -1,0 +1,24 @@
+﻿using InSiteX.Entity.Common;
+using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
+
+namespace InSiteX.Repository.Common
+{
+    public interface IGenericRepository<T> where T: BaseEntity
+    {
+        IEnumerable<T> GetAll();
+        Task<IEnumerable<T>> GetAllAcync();
+
+        IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate);
+
+        T Add(T entity);
+        Task<T> AddAsync(T entity);
+
+        T Delete(T entity);
+        void Edit(T entity);
+
+        void Save();
+    }
+}

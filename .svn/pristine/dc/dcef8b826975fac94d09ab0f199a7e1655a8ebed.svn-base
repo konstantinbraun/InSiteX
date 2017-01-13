@@ -1,0 +1,3023 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="appName" xml:space="preserve">
+    <value>Zeppelin InSite 3.0</value>
+  </data>
+  <data name="lblActionAdd" xml:space="preserve">
+    <value>Hinzufügen</value>
+  </data>
+  <data name="lblActionCancel" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="lblActionCopy" xml:space="preserve">
+    <value>Kopieren</value>
+  </data>
+  <data name="lblActionCreate" xml:space="preserve">
+    <value>Erstellen</value>
+  </data>
+  <data name="lblActionCut" xml:space="preserve">
+    <value>Ausschneiden</value>
+  </data>
+  <data name="lblActionDelete" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="lblActionEdit" xml:space="preserve">
+    <value>Ändern</value>
+  </data>
+  <data name="lblActionInsert" xml:space="preserve">
+    <value>Einfügen</value>
+  </data>
+  <data name="lblActionLock" xml:space="preserve">
+    <value>Sperren</value>
+  </data>
+  <data name="lblActionNew" xml:space="preserve">
+    <value>Neu</value>
+  </data>
+  <data name="lblActionPaste" xml:space="preserve">
+    <value>Einfügen</value>
+  </data>
+  <data name="lblActionRefresh" xml:space="preserve">
+    <value>Aktualisieren</value>
+  </data>
+  <data name="lblActionReject" xml:space="preserve">
+    <value>Abweisen</value>
+  </data>
+  <data name="lblActionRelease" xml:space="preserve">
+    <value>Freigeben</value>
+  </data>
+  <data name="lblActionSave" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="lblActionUpdate" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="lblActionView" xml:space="preserve">
+    <value>Anzeigen</value>
+  </data>
+  <data name="lblCancel" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="lblChangePwd" xml:space="preserve">
+    <value>Kennwort ändern</value>
+  </data>
+  <data name="lblCompanies" xml:space="preserve">
+    <value>Firmen</value>
+  </data>
+  <data name="lblCompany" xml:space="preserve">
+    <value>Firma</value>
+  </data>
+  <data name="lblConfiguration" xml:space="preserve">
+    <value>Konfiguration</value>
+  </data>
+  <data name="lblContinue" xml:space="preserve">
+    <value>Weiter</value>
+  </data>
+  <data name="lblDashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="lblDialogsAndFields" xml:space="preserve">
+    <value>Dialoge und Felder</value>
+  </data>
+  <data name="lblDocumentation" xml:space="preserve">
+    <value>Dokumentation</value>
+  </data>
+  <data name="lblEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="lblFirstName" xml:space="preserve">
+    <value>Vorname</value>
+  </data>
+  <data name="lblHelp" xml:space="preserve">
+    <value>Hilfe</value>
+  </data>
+  <data name="lblHome" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="lblInfo" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="lblLanguage" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
+  <data name="lblLanguages" xml:space="preserve">
+    <value>Sprachen</value>
+  </data>
+  <data name="lblLastName" xml:space="preserve">
+    <value>Nachname</value>
+  </data>
+  <data name="lblLayout" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="lblLoggedOnUser" xml:space="preserve">
+    <value>Angemeldeter Benutzer</value>
+  </data>
+  <data name="lblLogin" xml:space="preserve">
+    <value>Anmelden</value>
+  </data>
+  <data name="lblLogout" xml:space="preserve">
+    <value>Abmelden</value>
+  </data>
+  <data name="lblNewPwd" xml:space="preserve">
+    <value>Neues Kennwort</value>
+  </data>
+  <data name="lblNewPwdRepeat" xml:space="preserve">
+    <value>Neues Kennwort wiederholen</value>
+  </data>
+  <data name="lblOK" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="lblOldPwd" xml:space="preserve">
+    <value>Altes Kennwort</value>
+  </data>
+  <data name="lblOptions" xml:space="preserve">
+    <value>Optionen</value>
+  </data>
+  <data name="lblPassword" xml:space="preserve">
+    <value>Kennwort</value>
+  </data>
+  <data name="lblForgotPassword" xml:space="preserve">
+    <value>Kennwort vergessen</value>
+  </data>
+  <data name="lblRolesAndRights" xml:space="preserve">
+    <value>Rollen und Rechte</value>
+  </data>
+  <data name="lblSample" xml:space="preserve">
+    <value>Beispiel</value>
+  </data>
+  <data name="lblUser" xml:space="preserve">
+    <value>Benutzer</value>
+  </data>
+  <data name="lblUserID" xml:space="preserve">
+    <value>Benutzer ID</value>
+  </data>
+  <data name="lblUserName" xml:space="preserve">
+    <value>Benutzername</value>
+  </data>
+  <data name="lblUsers" xml:space="preserve">
+    <value>Benutzer</value>
+  </data>
+  <data name="lblUserType" xml:space="preserve">
+    <value>Benutzertyp</value>
+  </data>
+  <data name="lblView" xml:space="preserve">
+    <value>Ansicht</value>
+  </data>
+  <data name="lblVisible" xml:space="preserve">
+    <value>Sichtbar</value>
+  </data>
+  <data name="msgChooseLayout" xml:space="preserve">
+    <value>Wählen Sie ein Layout</value>
+  </data>
+  <data name="msgGroupPanel" xml:space="preserve">
+    <value>Ziehen Sie einen Spaltenkopf hierher um nach der Spalte zu gruppieren</value>
+  </data>
+  <data name="msgLoginFailed" xml:space="preserve">
+    <value>Login nicht erfolgreich!</value>
+  </data>
+  <data name="msgPleaseLogin" xml:space="preserve">
+    <value>Bitte melden Sie sich zuerst an!</value>
+  </data>
+  <data name="msgPwdChanged" xml:space="preserve">
+    <value>Kennwort geändert!</value>
+  </data>
+  <data name="msgPwdEmpty" xml:space="preserve">
+    <value>Altes und neues Kennwort müssen eingegeben werden!</value>
+  </data>
+  <data name="msgPwdEqualsOld" xml:space="preserve">
+    <value>Altes und neues Kennwort sind identisch!</value>
+  </data>
+  <data name="msgPwdLength" xml:space="preserve">
+    <value>Neues Kennwort muss mindestens {0} Zeichen lang sein!</value>
+  </data>
+  <data name="msgPwdNotEqual" xml:space="preserve">
+    <value>Kennwortwiederholung nicht korrekt!</value>
+  </data>
+  <data name="msgPwdOldPwdFalse" xml:space="preserve">
+    <value>Altes Kennwort falsch!</value>
+  </data>
+  <data name="msgTimeout" xml:space="preserve">
+    <value>Die Sitzung wurde beendet. Bitte melden Sie sich erneut an!</value>
+  </data>
+  <data name="msgWelcome" xml:space="preserve">
+    <value>Willkommen bei Zeppelin InSite 3.0!</value>
+  </data>
+  <data name="qstDeleteRow" xml:space="preserve">
+    <value>Zeile löschen?</value>
+  </data>
+  <data name="qstLogout" xml:space="preserve">
+    <value>Wollen Sie sich abmelden?</value>
+  </data>
+  <data name="lblCreatedFrom" xml:space="preserve">
+    <value>Angelegt von</value>
+  </data>
+  <data name="lblCreatedOn" xml:space="preserve">
+    <value>Angelegt am</value>
+  </data>
+  <data name="lblDetailsFor" xml:space="preserve">
+    <value>Details zu:</value>
+  </data>
+  <data name="lblEditFrom" xml:space="preserve">
+    <value>Geändert von</value>
+  </data>
+  <data name="lblEditOn" xml:space="preserve">
+    <value>Geändert am</value>
+  </data>
+  <data name="lblSkin" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="lblBuildingProjects" xml:space="preserve">
+    <value>Bauvorhaben und Vorlagen</value>
+  </data>
+  <data name="lblAddress" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="lblBasedOn" xml:space="preserve">
+    <value>Basiert auf</value>
+  </data>
+  <data name="lblBpID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="lblBuilderName" xml:space="preserve">
+    <value>Bauherr</value>
+  </data>
+  <data name="lblBuildingProject" xml:space="preserve">
+    <value>Bauvorhaben</value>
+  </data>
+  <data name="lblCountry" xml:space="preserve">
+    <value>Land</value>
+  </data>
+  <data name="lblDescriptionShort" xml:space="preserve">
+    <value>Beschreibung</value>
+  </data>
+  <data name="lblHourShort" xml:space="preserve">
+    <value>Std</value>
+  </data>
+  <data name="lblMWCheck" xml:space="preserve">
+    <value>Mindestlohnprüfung</value>
+  </data>
+  <data name="lblMWDeadline" xml:space="preserve">
+    <value>Vorlage
+ML-Bescheinigung ab</value>
+  </data>
+  <data name="lblMWHours" xml:space="preserve">
+    <value>Grenzwert
+mtl. Anwesenheit
+f. Mindestlohn</value>
+  </data>
+  <data name="lblNameVisible" xml:space="preserve">
+    <value>Bezeichnung</value>
+  </data>
+  <data name="lblNoTemplate" xml:space="preserve">
+    <value>Keine Vorlage</value>
+  </data>
+  <data name="lblSuffixOfMonth" xml:space="preserve">
+    <value>. des Monats</value>
+  </data>
+  <data name="lblTemplate" xml:space="preserve">
+    <value>Vorlage</value>
+  </data>
+  <data name="lblType" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="lblAccessAreas" xml:space="preserve">
+    <value>Zutrittsbereiche</value>
+  </data>
+  <data name="lblCostLocation" xml:space="preserve">
+    <value>Kostengruppe</value>
+  </data>
+  <data name="lblCostLocations" xml:space="preserve">
+    <value>Kostengruppen</value>
+  </data>
+  <data name="lblCountries" xml:space="preserve">
+    <value>Länder</value>
+  </data>
+  <data name="lblCountryGroups" xml:space="preserve">
+    <value>Ländergruppen</value>
+  </data>
+  <data name="lblDocumentRules" xml:space="preserve">
+    <value>Dokumentenregeln</value>
+  </data>
+  <data name="lblEmploymentStatus" xml:space="preserve">
+    <value>Beschäftigungsstatus</value>
+  </data>
+  <data name="lblFirstAiders" xml:space="preserve">
+    <value>Ersthelfer</value>
+  </data>
+  <data name="lblPresentType" xml:space="preserve">
+    <value>Anwesenheitsvariante</value>
+  </data>
+  <data name="lblRelevantDocuments" xml:space="preserve">
+    <value>Relevante Dokumente</value>
+  </data>
+  <data name="lblReplacementPasses" xml:space="preserve">
+    <value>Ersatzausweise</value>
+  </data>
+  <data name="lblShortTermPasses" xml:space="preserve">
+    <value>Kurzzeitausweise</value>
+  </data>
+  <data name="lblStaffRole" xml:space="preserve">
+    <value>Personalfunktion</value>
+  </data>
+  <data name="lblTariffContracts" xml:space="preserve">
+    <value>Tarifverträge</value>
+  </data>
+  <data name="lblTrade" xml:space="preserve">
+    <value>Gewerk</value>
+  </data>
+  <data name="lblTradeGroup" xml:space="preserve">
+    <value>Gewerkegruppe</value>
+  </data>
+  <data name="lblTradeGroups" xml:space="preserve">
+    <value>Gewerkegruppen</value>
+  </data>
+  <data name="lblTrades" xml:space="preserve">
+    <value>Gewerke</value>
+  </data>
+  <data name="msgDeleteFailed" xml:space="preserve">
+    <value>Löschen nicht erfolgreich! Grund: {0}</value>
+  </data>
+  <data name="msgDeleteOK" xml:space="preserve">
+    <value>Erfolgreich gelöscht!</value>
+  </data>
+  <data name="msgInsertFailed" xml:space="preserve">
+    <value>Hinzufügen nicht erfolgreich! Grund: {0}</value>
+  </data>
+  <data name="msgInsertOK" xml:space="preserve">
+    <value>Erfolgreich hinzugefügt!</value>
+  </data>
+  <data name="msgUpdateFailed" xml:space="preserve">
+    <value>Aktualisieren nicht erfolgreich! Grund: {0}</value>
+  </data>
+  <data name="msgUpdateOK" xml:space="preserve">
+    <value>Erfolgreich aktualisiert!</value>
+  </data>
+  <data name="selPresence1" xml:space="preserve">
+    <value>Firmen und Gewerke kumuliert</value>
+  </data>
+  <data name="selPresence2" xml:space="preserve">
+    <value>Anwesenheitsnachweis namentlich</value>
+  </data>
+  <data name="selPresence3" xml:space="preserve">
+    <value>Alle Kommt- / Geht-Zeiten erfassen</value>
+  </data>
+  <data name="lblActionSelect" xml:space="preserve">
+    <value>Auswählen</value>
+  </data>
+  <data name="msgPleaseSelect" xml:space="preserve">
+    <value>Bitte treffen Sie eine Auswahl!</value>
+  </data>
+  <data name="lblActionClose" xml:space="preserve">
+    <value>Schließen</value>
+  </data>
+  <data name="lblBpSelect" xml:space="preserve">
+    <value>Auswahl Bauvorhaben</value>
+  </data>
+  <data name="lblAdministration" xml:space="preserve">
+    <value>Administration</value>
+  </data>
+  <data name="lblActionClear" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="lblActionLoad" xml:space="preserve">
+    <value>Laden</value>
+  </data>
+  <data name="lblFormSettings" xml:space="preserve">
+    <value>Formulareinstellungen</value>
+  </data>
+  <data name="lblSetting" xml:space="preserve">
+    <value>Einstellung</value>
+  </data>
+  <data name="msgSettingsCleared" xml:space="preserve">
+    <value>{0} erfolgreich gelöscht! </value>
+  </data>
+  <data name="msgSettingsLoaded" xml:space="preserve">
+    <value>{0} erfolgreich geladen!</value>
+  </data>
+  <data name="msgSettingsNotFound" xml:space="preserve">
+    <value>{0} nicht gefunden!</value>
+  </data>
+  <data name="msgSettingsSaved" xml:space="preserve">
+    <value>{0} erfolgreich gespeichert!</value>
+  </data>
+  <data name="lblActive" xml:space="preserve">
+    <value>Aktiv</value>
+  </data>
+  <data name="lblDialogsFields" xml:space="preserve">
+    <value>Dialoge und Felder</value>
+  </data>
+  <data name="lblRoles" xml:space="preserve">
+    <value>Rollen</value>
+  </data>
+  <data name="lblRolesRights" xml:space="preserve">
+    <value>Rollen und Rechte</value>
+  </data>
+  <data name="lblAll" xml:space="preserve">
+    <value>Alle</value>
+  </data>
+  <data name="selPresence0" xml:space="preserve">
+    <value>Keine</value>
+  </data>
+  <data name="lblActions" xml:space="preserve">
+    <value>Aktionen</value>
+  </data>
+  <data name="lblDialogs" xml:space="preserve">
+    <value>Dialoge und Verarbeitungen</value>
+  </data>
+  <data name="lblEditable" xml:space="preserve">
+    <value>Änderbar</value>
+  </data>
+  <data name="lblFields" xml:space="preserve">
+    <value>Felder</value>
+  </data>
+  <data name="qstSaveChanges" xml:space="preserve">
+    <value>Änderungen speichern?</value>
+  </data>
+  <data name="lblID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="lblInternalName" xml:space="preserve">
+    <value>Interner Name</value>
+  </data>
+  <data name="lblStartsWith" xml:space="preserve">
+    <value>Beginnt mit</value>
+  </data>
+  <data name="lblTranslations" xml:space="preserve">
+    <value>Übersetzungen</value>
+  </data>
+  <data name="lblAllowedLanguages" xml:space="preserve">
+    <value>Erlaubte Sprachen</value>
+  </data>
+  <data name="lblDefault" xml:space="preserve">
+    <value>Standard</value>
+  </data>
+  <data name="lblMandatory" xml:space="preserve">
+    <value>Erforderlich</value>
+  </data>
+  <data name="lblRole" xml:space="preserve">
+    <value>Rolle</value>
+  </data>
+  <data name="lblPassColor" xml:space="preserve">
+    <value>Ausweisfarbe</value>
+  </data>
+  <data name="lblPosition" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="lblTradeNumber" xml:space="preserve">
+    <value>Nummer gem. DIN276</value>
+  </data>
+  <data name="lblTemplates" xml:space="preserve">
+    <value>Vorlagen</value>
+  </data>
+  <data name="lblAccessControl" xml:space="preserve">
+    <value>Zutrittskontrolle</value>
+  </data>
+  <data name="lblEmployee" xml:space="preserve">
+    <value>Mitarbeiter</value>
+  </data>
+  <data name="lblAccessRelevant" xml:space="preserve">
+    <value>Zutrittsrelevant</value>
+  </data>
+  <data name="lblFileName" xml:space="preserve">
+    <value>Dateiname</value>
+  </data>
+  <data name="lblRecExpirationDate" xml:space="preserve">
+    <value>Ablaufdatum erfassen</value>
+  </data>
+  <data name="lblRecIDNumber" xml:space="preserve">
+    <value>ID Nummer erfassen</value>
+  </data>
+  <data name="msgMaxFileLength" xml:space="preserve">
+    <value>Die maximal Größe für eine hochgeladene Datei ist {0} MB!</value>
+  </data>
+  <data name="msgSelectFile" xml:space="preserve">
+    <value>Bitte wählen Sie eine hochzuladende Datei aus!</value>
+  </data>
+  <data name="lblSampleDocImage" xml:space="preserve">
+    <value>Beispieldokument (jpg, jpeg, gif oder png)</value>
+  </data>
+  <data name="lblActionLoading" xml:space="preserve">
+    <value>Laden ...</value>
+  </data>
+  <data name="lblActionReady" xml:space="preserve">
+    <value>Bereit</value>
+  </data>
+  <data name="lblDetails" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="lblExpirationDateHints" xml:space="preserve">
+    <value>Hinweise zum Ablaufdatum</value>
+  </data>
+  <data name="lblHintsTo" xml:space="preserve">
+    <value>Hinweise dazu ...</value>
+  </data>
+  <data name="lblIDNumberHint" xml:space="preserve">
+    <value>Hinweise zur ID Nummer</value>
+  </data>
+  <data name="lblCostLocationNumber" xml:space="preserve">
+    <value>Kostengruppennummer</value>
+  </data>
+  <data name="lblCostLocationNameVisible" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="lblRelevantFor" xml:space="preserve">
+    <value>Relevant für</value>
+  </data>
+  <data name="selRDInsurance" xml:space="preserve">
+    <value>Versicherung</value>
+  </data>
+  <data name="selRDLaborRight" xml:space="preserve">
+    <value>Arbeitsrecht</value>
+  </data>
+  <data name="selRDLegitimation" xml:space="preserve">
+    <value>Legitimation</value>
+  </data>
+  <data name="selRDNone" xml:space="preserve">
+    <value>Keine Zuordnung</value>
+  </data>
+  <data name="selRDResidenceRight" xml:space="preserve">
+    <value>Aufenthaltsrecht</value>
+  </data>
+  <data name="lblCountryGroupsAndCountries" xml:space="preserve">
+    <value>Ländergruppen und Länder</value>
+  </data>
+  <data name="lblMWFrom" xml:space="preserve">
+    <value>Pflichtig von</value>
+  </data>
+  <data name="lblMWObligate" xml:space="preserve">
+    <value>Mindestlohnpflicht</value>
+  </data>
+  <data name="lblMWTo" xml:space="preserve">
+    <value>Pflichtig bis</value>
+  </data>
+  <data name="lblOpenCalendar" xml:space="preserve">
+    <value>Kalender anzeigen ...</value>
+  </data>
+  <data name="lblToday" xml:space="preserve">
+    <value>Heute</value>
+  </data>
+  <data name="lblEmployeeCountryGroup" xml:space="preserve">
+    <value>Ländergruppe Arbeitnehmer</value>
+  </data>
+  <data name="lblEmployerCountryGroup" xml:space="preserve">
+    <value>Ländergruppe Arbeitgeber</value>
+  </data>
+  <data name="lblRelevantDocument" xml:space="preserve">
+    <value>Relevantes Dokument</value>
+  </data>
+  <data name="lblMaxPresent" xml:space="preserve">
+    <value>Bis Anzahl Anwesende</value>
+  </data>
+  <data name="lblMinAiders" xml:space="preserve">
+    <value>Erforderliche Ersthelfer</value>
+  </data>
+  <data name="lblStaffRoles" xml:space="preserve">
+    <value>Personalfunktionen</value>
+  </data>
+  <data name="lblAccessTimeRelevant" xml:space="preserve">
+    <value>Relevant für Zeiterfassung</value>
+  </data>
+  <data name="lblCheckInCompelling" xml:space="preserve">
+    <value>Einchecken zwingend</value>
+  </data>
+  <data name="lblCheckOutCompelling" xml:space="preserve">
+    <value>Auschecken zwingend</value>
+  </data>
+  <data name="lblCompleteAccessTimes" xml:space="preserve">
+    <value>Kommt-/Gehtzeiten ergänzen</value>
+  </data>
+  <data name="lblMaxPresentTime" xml:space="preserve">
+    <value>Maximale Anwesenheitszeit pro Tag</value>
+  </data>
+  <data name="lblMinuteShort" xml:space="preserve">
+    <value>Min</value>
+  </data>
+  <data name="lblUniqueAccess" xml:space="preserve">
+    <value>Eindeutiger Zutritt</value>
+  </data>
+  <data name="lblActionRestore" xml:space="preserve">
+    <value>Wiederherstellen</value>
+  </data>
+  <data name="lblMaximize" xml:space="preserve">
+    <value>Maximieren</value>
+  </data>
+  <data name="lblMinimize" xml:space="preserve">
+    <value>Minimieren</value>
+  </data>
+  <data name="lblNo" xml:space="preserve">
+    <value>Nein</value>
+  </data>
+  <data name="lblShortTermPassTypes" xml:space="preserve">
+    <value>Kurzzeitausweistypen</value>
+  </data>
+  <data name="lblYes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="lblDays" xml:space="preserve">
+    <value>Tage</value>
+  </data>
+  <data name="lblPeriodOfValidity" xml:space="preserve">
+    <value>Gültigkeitsdauer</value>
+  </data>
+  <data name="lblValidFrom" xml:space="preserve">
+    <value>Gültig ab</value>
+  </data>
+  <data name="selSTPIssueDate" xml:space="preserve">
+    <value>Ausgabezeitpunkt</value>
+  </data>
+  <data name="selSTPVisitorAssign" xml:space="preserve">
+    <value>Zuordnung zum Besucher</value>
+  </data>
+  <data name="lblCost" xml:space="preserve">
+    <value>Kosten</value>
+  </data>
+  <data name="lblCreditForOldPass" xml:space="preserve">
+    <value>Gutschrift für Altausweis</value>
+  </data>
+  <data name="lblCurrency" xml:space="preserve">
+    <value>Währung</value>
+  </data>
+  <data name="lblInvoiceTo" xml:space="preserve">
+    <value>Rechnung an</value>
+  </data>
+  <data name="lblOldPassInvalid" xml:space="preserve">
+    <value>Altausweis ungültig</value>
+  </data>
+  <data name="lblReplacementPassCases" xml:space="preserve">
+    <value>Ersatzausweis-Fälle</value>
+  </data>
+  <data name="lblStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="lblTariffData" xml:space="preserve">
+    <value>Tarifdaten</value>
+  </data>
+  <data name="lblTariffXValueHeader" xml:space="preserve">
+    <value>Tarifwert {0} Überschrift</value>
+  </data>
+  <data name="lblWillBeCharged" xml:space="preserve">
+    <value>Wird berechnet</value>
+  </data>
+  <data name="msgPasswordObligate" xml:space="preserve">
+    <value>Kennwort ist erforderlich!</value>
+  </data>
+  <data name="msgResendPassword" xml:space="preserve">
+    <value>Das neue Kennwort wird an Ihre hinterlegte Email Adresse versendet. Bitte ändern Sie das Kennwort nach dem ersten Login!</value>
+  </data>
+  <data name="msgUserNameObligate" xml:space="preserve">
+    <value>Benutzername ist erforderlich!</value>
+  </data>
+  <data name="lblAuthorizationLevel" xml:space="preserve">
+    <value>Berechtigungsstufe</value>
+  </data>
+  <data name="lblCentralConfiguration" xml:space="preserve">
+    <value>Zentrale Konfiguration</value>
+  </data>
+  <data name="lblCompanyMaster" xml:space="preserve">
+    <value>Firmenstamm</value>
+  </data>
+  <data name="lblStatisticTrades" xml:space="preserve">
+    <value>Statistische Gewerke</value>
+  </data>
+  <data name="msgPleaseChangePwd" xml:space="preserve">
+    <value>Bitte ändern Sie Ihr vorläufiges Kennwort!</value>
+  </data>
+  <data name="lblChangeLanguage" xml:space="preserve">
+    <value>Sprache ändern</value>
+  </data>
+  <data name="lblChangeLayout" xml:space="preserve">
+    <value>Layout ändern</value>
+  </data>
+  <data name="lblAction" xml:space="preserve">
+    <value>Aktion</value>
+  </data>
+  <data name="lblAddresses" xml:space="preserve">
+    <value>Adressen</value>
+  </data>
+  <data name="lblChangedRecord" xml:space="preserve">
+    <value>Geänderter Datensatz</value>
+  </data>
+  <data name="lblDialog" xml:space="preserve">
+    <value>Dialog</value>
+  </data>
+  <data name="lblFrom" xml:space="preserve">
+    <value>Von</value>
+  </data>
+  <data name="lblLogViewer" xml:space="preserve">
+    <value>Journalisierung</value>
+  </data>
+  <data name="lblMessage" xml:space="preserve">
+    <value>Meldung</value>
+  </data>
+  <data name="lblRecordID" xml:space="preserve">
+    <value>Datensatz ID</value>
+  </data>
+  <data name="lblTimeStamp" xml:space="preserve">
+    <value>Zeitstempel</value>
+  </data>
+  <data name="lblTo" xml:space="preserve">
+    <value>Bis</value>
+  </data>
+  <data name="lblActionApplyFor" xml:space="preserve">
+    <value>Beantragen</value>
+  </data>
+  <data name="lblAddrCity" xml:space="preserve">
+    <value>Ort</value>
+  </data>
+  <data name="lblAddrEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="lblAddress1" xml:space="preserve">
+    <value>Adresse 1</value>
+  </data>
+  <data name="lblAddress2" xml:space="preserve">
+    <value>Adresse 2</value>
+  </data>
+  <data name="lblAddrPhone" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="lblAddrState" xml:space="preserve">
+    <value>Staat / Bundesland</value>
+  </data>
+  <data name="lblAddrWWW" xml:space="preserve">
+    <value>WWW</value>
+  </data>
+  <data name="lblAddrZip" xml:space="preserve">
+    <value>PLZ</value>
+  </data>
+  <data name="lblBlnSOKA" xml:space="preserve">
+    <value>Ermächtigung SOKA Bau liegt vor</value>
+  </data>
+  <data name="lblCMAppliedForTakeover" xml:space="preserve">
+    <value>Übernahme in Bauvorhaben beantragen</value>
+  </data>
+  <data name="lblCMAppliedForTakeoverCentral" xml:space="preserve">
+    <value>Aufnahme in zentralen Firmenstamm beantragen</value>
+  </data>
+  <data name="lblCMLockedForBP" xml:space="preserve">
+    <value>Für Bauvorhaben sperren</value>
+  </data>
+  <data name="lblCMReleasedForBP" xml:space="preserve">
+    <value>Für Bauvorhaben freigeben</value>
+  </data>
+  <data name="lblCMReleasedForCentral" xml:space="preserve">
+    <value>Für zentralen Firmenstamm freigeben</value>
+  </data>
+  <data name="lblCompanyMasterCentral" xml:space="preserve">
+    <value>Zentraler Firmenstamm</value>
+  </data>
+  <data name="lblIsValid" xml:space="preserve">
+    <value>Ist gültig</value>
+  </data>
+  <data name="lblTradeAssociation" xml:space="preserve">
+    <value>Berufsgenossenschaft</value>
+  </data>
+  <data name="lblAdvanced" xml:space="preserve">
+    <value>Erweitert</value>
+  </data>
+  <data name="lblGenerally" xml:space="preserve">
+    <value>Allgemein</value>
+  </data>
+  <data name="lblAssignedTrades" xml:space="preserve">
+    <value>Zugeordnete Gewerke</value>
+  </data>
+  <data name="lblAvailableTrades" xml:space="preserve">
+    <value>Verfügbare Gewerke</value>
+  </data>
+  <data name="lblDocumentsRules" xml:space="preserve">
+    <value>Dokumente und Regeln</value>
+  </data>
+  <data name="lblIsPartner" xml:space="preserve">
+    <value>Ist Mitglied der ARGE</value>
+  </data>
+  <data name="lblMinWageAttestation" xml:space="preserve">
+    <value>Mindestlohnbescheinigung erforderlich</value>
+  </data>
+  <data name="lblNameAdditional" xml:space="preserve">
+    <value>Zusatzbezeichnung</value>
+  </data>
+  <data name="lblRemarks" xml:space="preserve">
+    <value>Bemerkungen</value>
+  </data>
+  <data name="lblRolesRightsUsers" xml:space="preserve">
+    <value>Rollen, Rechte und Benutzer</value>
+  </data>
+  <data name="lblOtherCriterias" xml:space="preserve">
+    <value>Sonstige Merkmale</value>
+  </data>
+  <data name="lblBuildingProjectTrades" xml:space="preserve">
+    <value>Bauvorhaben Gewerke</value>
+  </data>
+  <data name="lblTariff" xml:space="preserve">
+    <value>Tarif</value>
+  </data>
+  <data name="lblTariffContract" xml:space="preserve">
+    <value>Tarifvertrag</value>
+  </data>
+  <data name="lblTariffs" xml:space="preserve">
+    <value>Tarife</value>
+  </data>
+  <data name="lblTariffScope" xml:space="preserve">
+    <value>Tarifgebiet</value>
+  </data>
+  <data name="lblTariffScopes" xml:space="preserve">
+    <value>Tarifgebiete</value>
+  </data>
+  <data name="lblTariffWage" xml:space="preserve">
+    <value>Lohn</value>
+  </data>
+  <data name="lblTariffWageGroup" xml:space="preserve">
+    <value>Lohngruppe</value>
+  </data>
+  <data name="lblTariffWageGroups" xml:space="preserve">
+    <value>Lohngruppen</value>
+  </data>
+  <data name="lblTariffWages" xml:space="preserve">
+    <value>Löhne</value>
+  </data>
+  <data name="lblValidTo" xml:space="preserve">
+    <value>Gültig bis</value>
+  </data>
+  <data name="lblAddition" xml:space="preserve">
+    <value>Zusatz</value>
+  </data>
+  <data name="lblClient" xml:space="preserve">
+    <value>Auftraggeber</value>
+  </data>
+  <data name="lblEmployeesDirect" xml:space="preserve">
+    <value>Mitarbeiter direkt</value>
+  </data>
+  <data name="lblEmployeesMaster" xml:space="preserve">
+    <value>Mitarbeiterstamm</value>
+  </data>
+  <data name="lblEmployeesTotal" xml:space="preserve">
+    <value>Mitarbeiter gesamt</value>
+  </data>
+  <data name="lblSubcontractorTotal" xml:space="preserve">
+    <value>Nachunternehmer gesamt</value>
+  </data>
+  <data name="lblSubcontratorDirect" xml:space="preserve">
+    <value>Nachunternehmer direkt</value>
+  </data>
+  <data name="lblTradesAndCostLocations" xml:space="preserve">
+    <value>Gewerke und Kostengruppen</value>
+  </data>
+  <data name="lblUserDefinedBit" xml:space="preserve">
+    <value>Benutzerdefinierter Schalter</value>
+  </data>
+  <data name="lblUserDefinedString" xml:space="preserve">
+    <value>Benutzerdefiniertes Feld</value>
+  </data>
+  <data name="lblActionMove" xml:space="preserve">
+    <value>Verschieben</value>
+  </data>
+  <data name="msgMoveFailed" xml:space="preserve">
+    <value>Verschieben nicht erfolgreich! Grund: {0}</value>
+  </data>
+  <data name="msgMoveOK" xml:space="preserve">
+    <value>Erfolgreich verschoben!</value>
+  </data>
+  <data name="qstMoveRow" xml:space="preserve">
+    <value>Zeile verschieben?</value>
+  </data>
+  <data name="lblActionReset" xml:space="preserve">
+    <value>Zurücksetzen</value>
+  </data>
+  <data name="lblActionSearch" xml:space="preserve">
+    <value>Suchen</value>
+  </data>
+  <data name="lblFilter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="lblSimpleSearch" xml:space="preserve">
+    <value>Einfache Suche</value>
+  </data>
+  <data name="msgFilter" xml:space="preserve">
+    <value>Hiermit filtern Sie die Daten über benutzerdefinierte Ausdrücke  </value>
+  </data>
+  <data name="msgSimpleSearch" xml:space="preserve">
+    <value>Hiermit filtern Sie die Daten über eine Volltextsuche</value>
+  </data>
+  <data name="lblLevel" xml:space="preserve">
+    <value>Ebene</value>
+  </data>
+  <data name="lblLevelAll" xml:space="preserve">
+    <value>Alle Ebenen</value>
+  </data>
+  <data name="lblLevelMain" xml:space="preserve">
+    <value>Nur Haupteinträge</value>
+  </data>
+  <data name="lblLevels" xml:space="preserve">
+    <value>Ebenen</value>
+  </data>
+  <data name="lblLevelsShow" xml:space="preserve">
+    <value>Ebenen anzeigen</value>
+  </data>
+  <data name="msgLevels" xml:space="preserve">
+    <value>Wählen Sie die Anzeigetiefe aus</value>
+  </data>
+  <data name="lblAddrFirstName" xml:space="preserve">
+    <value>Vorname</value>
+  </data>
+  <data name="lblAddrLastName" xml:space="preserve">
+    <value>Nachname</value>
+  </data>
+  <data name="lblAddrMobile" xml:space="preserve">
+    <value>Mobil</value>
+  </data>
+  <data name="lblAddrSalutation" xml:space="preserve">
+    <value>Anrede</value>
+  </data>
+  <data name="lblContact" xml:space="preserve">
+    <value>Ansprechpartner</value>
+  </data>
+  <data name="lblTopic" xml:space="preserve">
+    <value>Thema</value>
+  </data>
+  <data name="lblUserAdminCompanyData" xml:space="preserve">
+    <value>Benutzer für Administration der Firmendaten</value>
+  </data>
+  <data name="selNoTemplate" xml:space="preserve">
+    <value>Keine Vorlage</value>
+  </data>
+  <data name="lblCompaniesBP" xml:space="preserve">
+    <value>Bauvorhaben Firmen</value>
+  </data>
+  <data name="msgSelectFailed" xml:space="preserve">
+    <value>Selektieren nicht erfolgreich! Grund: {0}</value>
+  </data>
+  <data name="lblActionUnlock" xml:space="preserve">
+    <value>Entsperren</value>
+  </data>
+  <data name="lblLockedFrom" xml:space="preserve">
+    <value>Gesperrt von</value>
+  </data>
+  <data name="lblLockedOn" xml:space="preserve">
+    <value>Gesperrt am</value>
+  </data>
+  <data name="lblReleaseFrom" xml:space="preserve">
+    <value>Freigabe von</value>
+  </data>
+  <data name="lblReleaseOn" xml:space="preserve">
+    <value>Freigabe am</value>
+  </data>
+  <data name="lblRequestFrom" xml:space="preserve">
+    <value>Beantragt von</value>
+  </data>
+  <data name="lblRequestOn" xml:space="preserve">
+    <value>Beantragt am</value>
+  </data>
+  <data name="msgLocked" xml:space="preserve">
+    <value>Gesperrt</value>
+  </data>
+  <data name="msgLockFailed" xml:space="preserve">
+    <value>Sperren nicht erfolgreich! Grund: {0}</value>
+  </data>
+  <data name="msgLockOK" xml:space="preserve">
+    <value>Erfolgreich gesperrt</value>
+  </data>
+  <data name="msgNotYetReleased" xml:space="preserve">
+    <value>Noch nicht freigegeben</value>
+  </data>
+  <data name="msgReleased" xml:space="preserve">
+    <value>Freigegeben</value>
+  </data>
+  <data name="msgReleaseFailed" xml:space="preserve">
+    <value>Freigabe nicht erfolgreich! Grund: {0}</value>
+  </data>
+  <data name="msgReleaseOK" xml:space="preserve">
+    <value>Erfolgreich freigegeben</value>
+  </data>
+  <data name="msgUnlockFailed" xml:space="preserve">
+    <value>Entsperren nicht erfolgreich! Grund: {0}</value>
+  </data>
+  <data name="msgUnlockOK" xml:space="preserve">
+    <value>Erfolgreich entsperrt</value>
+  </data>
+  <data name="selNoSelection" xml:space="preserve">
+    <value>Keine Auswahl</value>
+  </data>
+  <data name="lblActionChange" xml:space="preserve">
+    <value>Ändern</value>
+  </data>
+  <data name="msgInputRequired" xml:space="preserve">
+    <value>Eingabe erforderlich!</value>
+  </data>
+  <data name="msgRecordAlreadyExists" xml:space="preserve">
+    <value>Datensatz existiert schon</value>
+  </data>
+  <data name="lblAccessFeature" xml:space="preserve">
+    <value>Merkmal Zutritt</value>
+  </data>
+  <data name="lblBy" xml:space="preserve">
+    <value>durch</value>
+  </data>
+  <data name="lblExternalID" xml:space="preserve">
+    <value>Externe ID</value>
+  </data>
+  <data name="lblFunction" xml:space="preserve">
+    <value>Funktion</value>
+  </data>
+  <data name="lblMaxHrsPerMonth" xml:space="preserve">
+    <value>max Stunden / Monat</value>
+  </data>
+  <data name="lblOn" xml:space="preserve">
+    <value>am</value>
+  </data>
+  <data name="lblQualification" xml:space="preserve">
+    <value>Qualifikation</value>
+  </data>
+  <data name="lblReleaseB" xml:space="preserve">
+    <value>Freigabe für Bauvorhaben</value>
+  </data>
+  <data name="lblReleaseC" xml:space="preserve">
+    <value>Freigabe für Firma</value>
+  </data>
+  <data name="lblAddrMiddleName" xml:space="preserve">
+    <value>Weitere Namen</value>
+  </data>
+  <data name="lblAddrTitle" xml:space="preserve">
+    <value>Titel</value>
+  </data>
+  <data name="lblAddrBirthDate" xml:space="preserve">
+    <value>Geburtstag</value>
+  </data>
+  <data name="lblAddrGender" xml:space="preserve">
+    <value>Geschlecht</value>
+  </data>
+  <data name="lblMinimumWage" xml:space="preserve">
+    <value>Mindestlohn</value>
+  </data>
+  <data name="lblNationality" xml:space="preserve">
+    <value>Nationalität</value>
+  </data>
+  <data name="lblPhoto" xml:space="preserve">
+    <value>Foto</value>
+  </data>
+  <data name="msgPleaseTypeHere" xml:space="preserve">
+    <value>Zum Suchen hier schreiben</value>
+  </data>
+  <data name="lblAssignedQualifications" xml:space="preserve">
+    <value>Zugeordnete Qualifikationen</value>
+  </data>
+  <data name="lblAvailableQualifications" xml:space="preserve">
+    <value>Verfügbare Qualifikationen</value>
+  </data>
+  <data name="lblEmployer" xml:space="preserve">
+    <value>Arbeitgeber</value>
+  </data>
+  <data name="lblEmplMinWage1" xml:space="preserve">
+    <value>Tarif- und Gebietszuordnung gem. Arbeitgeber</value>
+  </data>
+  <data name="lblEmplMinWage2" xml:space="preserve">
+    <value>Lohngruppenzuordnung Mitarbeiter</value>
+  </data>
+  <data name="lblEmplMinWage3" xml:space="preserve">
+    <value>Tarifvertragshistorie des Mitarbeiters während des Bauvorhabens</value>
+  </data>
+  <data name="lblEmplMinWage4" xml:space="preserve">
+    <value>Mindestlohn-Bescheinigungen</value>
+  </data>
+  <data name="lblDocumentID" xml:space="preserve">
+    <value>Dokument ID</value>
+  </data>
+  <data name="lblForMonth" xml:space="preserve">
+    <value>Für Monat</value>
+  </data>
+  <data name="lblReceivedFrom" xml:space="preserve">
+    <value>Empfangen von</value>
+  </data>
+  <data name="lblReceivedOn" xml:space="preserve">
+    <value>Empfangen am</value>
+  </data>
+  <data name="lblAppliedRule" xml:space="preserve">
+    <value>Angewendete Regel</value>
+  </data>
+  <data name="lblDocument" xml:space="preserve">
+    <value>Dokument</value>
+  </data>
+  <data name="lblExpirationDate" xml:space="preserve">
+    <value>Ablaufdatum</value>
+  </data>
+  <data name="lblExternalPassID" xml:space="preserve">
+    <value>Ausweis ID Fremdsystem</value>
+  </data>
+  <data name="lblIsPresent" xml:space="preserve">
+    <value>Liegt vor</value>
+  </data>
+  <data name="lblImageFor" xml:space="preserve">
+    <value>Foto für {0}</value>
+  </data>
+  <data name="lblAssignedAreas" xml:space="preserve">
+    <value>Zugeordnete Bereiche</value>
+  </data>
+  <data name="lblAvailableAreas" xml:space="preserve">
+    <value>Verfügbare Bereiche</value>
+  </data>
+  <data name="lblEmplAccess1" xml:space="preserve">
+    <value>Status Anwesenheit laufender Tag</value>
+  </data>
+  <data name="lblEmplAccess2" xml:space="preserve">
+    <value>Laufende Ausweisereignisse</value>
+  </data>
+  <data name="lblEmplAccess3" xml:space="preserve">
+    <value>Ausweishistorie</value>
+  </data>
+  <data name="lblEmplAccess4" xml:space="preserve">
+    <value>Zutritt aktuell nicht zulässig wegen</value>
+  </data>
+  <data name="lblIDExternal" xml:space="preserve">
+    <value>ID extern</value>
+  </data>
+  <data name="lblIDInternal" xml:space="preserve">
+    <value>ID intern</value>
+  </data>
+  <data name="lblResult" xml:space="preserve">
+    <value>Ergebnis</value>
+  </data>
+  <data name="lblAccessArea" xml:space="preserve">
+    <value>Zutrittsbereich</value>
+  </data>
+  <data name="lblAccessStateAbsent" xml:space="preserve">
+    <value>Nicht anwesend</value>
+  </data>
+  <data name="lblAccessStatePresent" xml:space="preserve">
+    <value>Anwesend</value>
+  </data>
+  <data name="lblAccessStateUndefined" xml:space="preserve">
+    <value>Undefiniert (bitte prüfen!)</value>
+  </data>
+  <data name="lblPassActivate" xml:space="preserve">
+    <value>Ausweis aktivieren</value>
+  </data>
+  <data name="lblPassDeactivate" xml:space="preserve">
+    <value>Ausweis deaktivieren und speichern</value>
+  </data>
+  <data name="lblPassLock" xml:space="preserve">
+    <value>Ausweis sperren</value>
+  </data>
+  <data name="lblPassPrint" xml:space="preserve">
+    <value>Ausweis drucken</value>
+  </data>
+  <data name="lblReason" xml:space="preserve">
+    <value>Grund</value>
+  </data>
+  <data name="lblFeatureForAccess" xml:space="preserve">
+    <value>Merkmal für Zutritt</value>
+  </data>
+  <data name="lblPrintPassDueTo" xml:space="preserve">
+    <value>Ausweisdruck wegen</value>
+  </data>
+  <data name="lblActionActivate" xml:space="preserve">
+    <value>Aktivieren</value>
+  </data>
+  <data name="lblActionDeactivate" xml:space="preserve">
+    <value>Deaktivieren</value>
+  </data>
+  <data name="lblActionPrint" xml:space="preserve">
+    <value>Drucken</value>
+  </data>
+  <data name="lblActionCapture" xml:space="preserve">
+    <value>Aufnehmen</value>
+  </data>
+  <data name="lblLiveImage" xml:space="preserve">
+    <value>Live Bild</value>
+  </data>
+  <data name="lblTakePicture" xml:space="preserve">
+    <value>Foto bearbeiten</value>
+  </data>
+  <data name="lblInputDeviceSelect" xml:space="preserve">
+    <value>Eingabequelle auswählen</value>
+  </data>
+  <data name="lblRequired" xml:space="preserve">
+    <value>erforderlich!</value>
+  </data>
+  <data name="msgPleaseNoteFollowing" xml:space="preserve">
+    <value>Bitte beachten Sie folgende Hinweise</value>
+  </data>
+  <data name="lblBPAssigned" xml:space="preserve">
+    <value>Zugeordnete Bauvorhaben</value>
+  </data>
+  <data name="lblBPAvailable" xml:space="preserve">
+    <value>Verfügbare Bauvorhaben</value>
+  </data>
+  <data name="lblReleaseForBP" xml:space="preserve">
+    <value>Freigabe für Bauvorhaben</value>
+  </data>
+  <data name="lblMailBox" xml:space="preserve">
+    <value>Briefkasten</value>
+  </data>
+  <data name="lblCreated" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="lblMailID" xml:space="preserve">
+    <value>MailId</value>
+  </data>
+  <data name="lblNoAttached" xml:space="preserve">
+    <value>#Anhänge</value>
+  </data>
+  <data name="lblSubject" xml:space="preserve">
+    <value>Betreff</value>
+  </data>
+  <data name="lblReaderState" xml:space="preserve">
+    <value>Status RFID Leser</value>
+  </data>
+  <data name="lblFirstEdition" xml:space="preserve">
+    <value>Erstausgabe</value>
+  </data>
+  <data name="msgSessionTimeout" xml:space="preserve">
+    <value>Achtung: In 3 Minuten ohne weitere Aktivitäten werden Sie automatisch abgemeldet. Geänderte Daten können verloren gehen.</value>
+  </data>
+  <data name="lblNewMessages" xml:space="preserve">
+    <value>neue Nachrichten</value>
+  </data>
+  <data name="lblAttachment" xml:space="preserve">
+    <value>Anhang</value>
+  </data>
+  <data name="lblAttachmentID" xml:space="preserve">
+    <value>Anhang ID</value>
+  </data>
+  <data name="lblAttachments" xml:space="preserve">
+    <value>Anhänge</value>
+  </data>
+  <data name="lblMessageID" xml:space="preserve">
+    <value>Nachricht ID</value>
+  </data>
+  <data name="msgClickToDownload" xml:space="preserve">
+    <value>Klicken zum Herunterladen</value>
+  </data>
+  <data name="msgMailBody" xml:space="preserve">
+    <value>Ihr angefordertes Dokument wurde erstellt. Klicken Sie auf den Anhang, um es abzurufen.</value>
+  </data>
+  <data name="msgMailSubject" xml:space="preserve">
+    <value>Dokument erstellt</value>
+  </data>
+  <data name="lblRegister" xml:space="preserve">
+    <value>Registrieren</value>
+  </data>
+  <data name="lblRegisterCompany" xml:space="preserve">
+    <value>Firma registrieren</value>
+  </data>
+  <data name="lblRegisterEmployee" xml:space="preserve">
+    <value>Mitarbeiter registrieren</value>
+  </data>
+  <data name="msgRegisterCompany" xml:space="preserve">
+    <value>Firma für zentralen Firmenstamm registrieren</value>
+  </data>
+  <data name="lblPleaseRepeat" xml:space="preserve">
+    <value>Bitte wiederholen</value>
+  </data>
+  <data name="lblUserAdminCompany" xml:space="preserve">
+    <value>Benutzer für die Verwaltung der Firmendaten</value>
+  </data>
+  <data name="msgAddress1Obligate" xml:space="preserve">
+    <value>Adresse 1 ist erforderlich!</value>
+  </data>
+  <data name="msgCityObligate" xml:space="preserve">
+    <value>Ort ist erforderlich!</value>
+  </data>
+  <data name="msgCountryObligate" xml:space="preserve">
+    <value>Land ist erforderlich!</value>
+  </data>
+  <data name="msgEmailObligate" xml:space="preserve">
+    <value>Gültige Email Adresse ist erforderlich!</value>
+  </data>
+  <data name="msgNameVisibleObligate" xml:space="preserve">
+    <value>Bezeichnung ist erforderlich!</value>
+  </data>
+  <data name="msgPhoneObligate" xml:space="preserve">
+    <value>Telefon ist erforderlich!</value>
+  </data>
+  <data name="msgZipObligate" xml:space="preserve">
+    <value>PLZ ist erforderlich!</value>
+  </data>
+  <data name="msgFirstNameObligate" xml:space="preserve">
+    <value>Vorname ist erforderlich!</value>
+  </data>
+  <data name="msgLastNameObligate" xml:space="preserve">
+    <value>Nachname ist erforderlich!</value>
+  </data>
+  <data name="lblNewCode" xml:space="preserve">
+    <value>Neuen Code generieren</value>
+  </data>
+  <data name="msgCodeWrong" xml:space="preserve">
+    <value>Code ist nicht korrekt!</value>
+  </data>
+  <data name="msgPleaseEnterCode" xml:space="preserve">
+    <value>Bitte geben Sie den Code ein</value>
+  </data>
+  <data name="msgEmailNotEqual" xml:space="preserve">
+    <value>Emailwiederholung nicht korrekt!</value>
+  </data>
+  <data name="lblCodeValidUntil" xml:space="preserve">
+    <value>Code gültig bis</value>
+  </data>
+  <data name="lblGenerateCode" xml:space="preserve">
+    <value>Anmeldecode erstellen</value>
+  </data>
+  <data name="lblRegistrationCode" xml:space="preserve">
+    <value>Anmeldecode</value>
+  </data>
+  <data name="msgCodeObligate" xml:space="preserve">
+    <value>Anmeldecode erforderlich!</value>
+  </data>
+  <data name="msgRegisterEmployee" xml:space="preserve">
+    <value>Mitarbeiter für Bauvorhaben registrieren</value>
+  </data>
+  <data name="msgBirthDateObligate" xml:space="preserve">
+    <value>Geburtsdatum ist erforderlich!</value>
+  </data>
+  <data name="msgCodeNoLongerValid" xml:space="preserve">
+    <value>Code ist nicht mehr gültig!</value>
+  </data>
+  <data name="msgGeneralFailure" xml:space="preserve">
+    <value>Allgemeiner Fehler!</value>
+  </data>
+  <data name="msgLanguageObligate" xml:space="preserve">
+    <value>Sprache ist erforderlich!</value>
+  </data>
+  <data name="msgNationalityObligate" xml:space="preserve">
+    <value>Nationalität ist erforderlich!</value>
+  </data>
+  <data name="lblPwdStrength" xml:space="preserve">
+    <value>Kennwort Sicherheit</value>
+  </data>
+  <data name="lblTextStrengthDescriptions" xml:space="preserve">
+    <value>Sehr schwach;Schwach;Mittel;Stark;Sehr stark</value>
+  </data>
+  <data name="msgEnterRegCode" xml:space="preserve">
+    <value>Bitte geben Sie den Anmeldecode ein, den Sie von Ihrer Firma bekommen haben</value>
+  </data>
+  <data name="msgLoginNameNotUnique" xml:space="preserve">
+    <value>Benutzername schon vorhanden!</value>
+  </data>
+  <data name="lblRequestBp" xml:space="preserve">
+    <value>An Bauvorhaben anmelden</value>
+  </data>
+  <data name="msgRequestCompanyForBp" xml:space="preserve">
+    <value>Der Benutzer {0} hat für die Firma {1} die Aufnahme in das Bauprojekt {2} beantragt. Bitte folgen Sie dem Link, um die Freigabe zu bestätigen:
+
+{3}</value>
+  </data>
+  <data name="lblNoCompanyAssigned" xml:space="preserve">
+    <value>Keiner Firma zugeordnet</value>
+  </data>
+  <data name="lblAttributeForPrintPass" xml:space="preserve">
+    <value>Merkmal für Ausweisdruck</value>
+  </data>
+  <data name="lblAssignedAttributes" xml:space="preserve">
+    <value>Zugeordnete Merkmale Ausweisdruck</value>
+  </data>
+  <data name="lblAvailableAttributes" xml:space="preserve">
+    <value>Verfügbare Merkmale Ausweisdruck</value>
+  </data>
+  <data name="lblDocumentCheckingRule" xml:space="preserve">
+    <value>Dokumentenprüfregel</value>
+  </data>
+  <data name="lblDocumentCheckingRules" xml:space="preserve">
+    <value>Dokumentenprüfregeln</value>
+  </data>
+  <data name="selRDRule1" xml:space="preserve">
+    <value>Legitimation *und* Versicherung</value>
+  </data>
+  <data name="selRDRule2" xml:space="preserve">
+    <value>Legitimation *und* Aufenthaltsrecht *und* Arbeitsrecht *und* Versicherung</value>
+  </data>
+  <data name="selRDRule3" xml:space="preserve">
+    <value>Legitimation *und* Arbeitsrecht *und* Versicherung</value>
+  </data>
+  <data name="selRDRuleNone" xml:space="preserve">
+    <value>Keine Regel</value>
+  </data>
+  <data name="msgCompanyRegToBp" xml:space="preserve">
+    <value>Zuordnung zum Bauvorhaben beantragt!</value>
+  </data>
+  <data name="msgBpObligate" xml:space="preserve">
+    <value>Auswahl Bauvorhaben ist erforderlich!</value>
+  </data>
+  <data name="msgClientObligate" xml:space="preserve">
+    <value>Auswahl Auftraggeber ist erforderlich!</value>
+  </data>
+  <data name="msgRegistrationFailed" xml:space="preserve">
+    <value>Registrierung fehlgeschlagen!</value>
+  </data>
+  <data name="msgRegistrationSuccess" xml:space="preserve">
+    <value>Registrierung erfolgreich! Sie erhalten eine Email an {0} als Bestätigung.</value>
+  </data>
+  <data name="msgRegistrationSuccessEmail" xml:space="preserve">
+    <value>Registrierung für {0} erfolgreich!</value>
+  </data>
+  <data name="msgRequestCompanyForCM" xml:space="preserve">
+    <value>Der Benutzer {0} hat für die Firma {1} die Aufnahme in den zentralen Firmenstamm beantragt. Bitte folgen Sie dem Link, um die Freigabe zu bestätigen:
+
+{2}</value>
+  </data>
+  <data name="msgRequestEmployeeForCM" xml:space="preserve">
+    <value>Der Mitarbeiter {0} von der Firma {1} hat für sich die Aufnahme in den zentralen Firmenstamm beantragt. Bitte folgen Sie dem Link, um die Freigabe zu bestätigen:
+
+{2}</value>
+  </data>
+  <data name="msgDataStored" xml:space="preserve">
+    <value>Folgende Daten wurden gespeichert:</value>
+  </data>
+  <data name="msgVerifyFailed" xml:space="preserve">
+    <value>Verifizierung nicht erfolgreich!</value>
+  </data>
+  <data name="msgVerifyFollowLink" xml:space="preserve">
+    <value>Zur Verifizierung Ihrer Email Adresse klicken Sie bitte auf folgenden Link:</value>
+  </data>
+  <data name="msgVerifyOK" xml:space="preserve">
+    <value>Verifizierung erfolgreich abgeschlossen!</value>
+  </data>
+  <data name="lblVersion" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="statCreated" xml:space="preserve">
+    <value>Angelegt</value>
+  </data>
+  <data name="statDeleted" xml:space="preserve">
+    <value>Gelöscht</value>
+  </data>
+  <data name="statLocked" xml:space="preserve">
+    <value>Gesperrt</value>
+  </data>
+  <data name="statRejected" xml:space="preserve">
+    <value>Zurückgewiesen</value>
+  </data>
+  <data name="statReleased" xml:space="preserve">
+    <value>Freigegeben</value>
+  </data>
+  <data name="statReleasedFor" xml:space="preserve">
+    <value>Freigegeben für</value>
+  </data>
+  <data name="statWaitRelease" xml:space="preserve">
+    <value>Wartet auf Freigabe</value>
+  </data>
+  <data name="statWaitReleaseFor" xml:space="preserve">
+    <value>Wartet auf Freigabe für</value>
+  </data>
+  <data name="lblList" xml:space="preserve">
+    <value>Liste</value>
+  </data>
+  <data name="lblRepresentation" xml:space="preserve">
+    <value>Darstellung</value>
+  </data>
+  <data name="lblTree" xml:space="preserve">
+    <value>Baum</value>
+  </data>
+  <data name="msgRepresentation" xml:space="preserve">
+    <value>Schalten Sie zwischen Baum- und Listendarstellung um</value>
+  </data>
+  <data name="lblSelectionRequired" xml:space="preserve">
+    <value>Auswahl erforderlich!</value>
+  </data>
+  <data name="statWaitReleaseForBp" xml:space="preserve">
+    <value>Wartet auf Freigabe für Bauvorhaben</value>
+  </data>
+  <data name="statWaitReleaseForCo" xml:space="preserve">
+    <value>Wartet auf Freigabe durch Firmenbeauftragten</value>
+  </data>
+  <data name="msgNoViewRight" xml:space="preserve">
+    <value>Sie besitzen keine Berechtigung für diese Funktion!</value>
+  </data>
+  <data name="msgRequestCompanyBp" xml:space="preserve">
+    <value>Firma an Bauvorhaben anmelden</value>
+  </data>
+  <data name="statCreatedNotConfirmed" xml:space="preserve">
+    <value>Noch nicht vom Benutzer bestätigt</value>
+  </data>
+  <data name="copyRight" xml:space="preserve">
+    <value>Copyright © 2013 - 2016 Zeppelin Streif Baulogistik</value>
+  </data>
+  <data name="lblRegisterUser" xml:space="preserve">
+    <value>Benutzer registrieren</value>
+  </data>
+  <data name="msgRequestUserForUM" xml:space="preserve">
+    <value>Der Benutzer {0} hat für sich die Aufnahme in den zentralen Benutzerstamm beantragt. Bitte folgen Sie dem Link, um die Freigabe zu bestätigen:
+
+{1}</value>
+  </data>
+  <data name="lblGetAudioCode" xml:space="preserve">
+    <value>Code anhören</value>
+  </data>
+  <data name="lblRequestNewPassword" xml:space="preserve">
+    <value>Neues Kennwort anfordern</value>
+  </data>
+  <data name="msgEnterNewPassword" xml:space="preserve">
+    <value>Ihr altes Kennwort wurde zurückgesetzt. Bitte vergeben Sie ein neues Kennwort!</value>
+  </data>
+  <data name="qstNewPassword" xml:space="preserve">
+    <value>Sie haben Ihr Kennwort vergessen und möchten ein neues anfordern?</value>
+  </data>
+  <data name="lblAccessUntil" xml:space="preserve">
+    <value>Zutritt bis</value>
+  </data>
+  <data name="lblPassID" xml:space="preserve">
+    <value>Ausweis ID</value>
+  </data>
+  <data name="lblVisitorID" xml:space="preserve">
+    <value>Besucher ID</value>
+  </data>
+  <data name="lblVisitorName" xml:space="preserve">
+    <value>Besucher</value>
+  </data>
+  <data name="lblAccessAllowedUntil" xml:space="preserve">
+    <value>Zutritt erlaubt bis</value>
+  </data>
+  <data name="lblAssignedToEmployee" xml:space="preserve">
+    <value>Zugeordnet zu Mitarbeiter</value>
+  </data>
+  <data name="lblIdentifiedWith" xml:space="preserve">
+    <value>Identifikation mit Dokument</value>
+  </data>
+  <data name="lblLastAccess" xml:space="preserve">
+    <value>Letzter Zutritt</value>
+  </data>
+  <data name="lblLastExit" xml:space="preserve">
+    <value>Letzter Austritt</value>
+  </data>
+  <data name="lblPassActivated" xml:space="preserve">
+    <value>Ausweis aktiviert durch / am</value>
+  </data>
+  <data name="lblPassDeactivated" xml:space="preserve">
+    <value>Ausweis deaktiviert durch /am</value>
+  </data>
+  <data name="lblVisitorCreated" xml:space="preserve">
+    <value>Besucher angelegt durch / am</value>
+  </data>
+  <data name="lblVisitorEdited" xml:space="preserve">
+    <value>Besucher geändert durch /am</value>
+  </data>
+  <data name="lblVisitsCompany" xml:space="preserve">
+    <value>Besucht Firma</value>
+  </data>
+  <data name="lblVisitsEmployee" xml:space="preserve">
+    <value>Besucht Mitarbeiter</value>
+  </data>
+  <data name="lblWorksAtCompany" xml:space="preserve">
+    <value>Arbeitet bei Firma</value>
+  </data>
+  <data name="lblAssignNewPasses" xml:space="preserve">
+    <value>Kurzzeitausweise - weitere Aktionen</value>
+  </data>
+  <data name="lblPrintShortTermPasses" xml:space="preserve">
+    <value>Kurzzeitausweise drucken</value>
+  </data>
+  <data name="statActivated" xml:space="preserve">
+    <value>Aktiviert</value>
+  </data>
+  <data name="statAssigned" xml:space="preserve">
+    <value>Zugeordnet</value>
+  </data>
+  <data name="statDeactivated" xml:space="preserve">
+    <value>Deaktiviert</value>
+  </data>
+  <data name="lblActionAssign" xml:space="preserve">
+    <value>Zuordnen</value>
+  </data>
+  <data name="lblCount" xml:space="preserve">
+    <value>Anzahl</value>
+  </data>
+  <data name="lblShortTermPassType" xml:space="preserve">
+    <value>Kurzzeitausweistyp</value>
+  </data>
+  <data name="statPrinted" xml:space="preserve">
+    <value>Gedruckt</value>
+  </data>
+  <data name="msgInternalIDAlreadyAssigned" xml:space="preserve">
+    <value>Chip ID bereits zugeordnet zu Ausweis {0}!</value>
+  </data>
+  <data name="msgInternalIDObligate" xml:space="preserve">
+    <value>Chip ID ist erforderlich!</value>
+  </data>
+  <data name="msgPassCountObligate" xml:space="preserve">
+    <value>Anzahl Ausweise ist erforderlich!</value>
+  </data>
+  <data name="msgShortTermPassTypeObligate" xml:space="preserve">
+    <value>Ausweistyp ist erforderlich!</value>
+  </data>
+  <data name="lblShortTermPassForVisitor" xml:space="preserve">
+    <value>Kurzzeitausweis für Besucher aktivieren</value>
+  </data>
+  <data name="lblCheckChipID" xml:space="preserve">
+    <value>Chip ID prüfen</value>
+  </data>
+  <data name="lblChipID" xml:space="preserve">
+    <value>Chip ID</value>
+  </data>
+  <data name="lblPassLocked" xml:space="preserve">
+    <value>Ausweis gesperrt durch / am</value>
+  </data>
+  <data name="msgPassAssigned" xml:space="preserve">
+    <value>Ausweis {0} zugeordnet zu Chip ID {1}</value>
+  </data>
+  <data name="msgPassesPrinted" xml:space="preserve">
+    <value>{0} Ausweis(e) gedruckt</value>
+  </data>
+  <data name="msgMWDeadline" xml:space="preserve">
+    <value>Der Wert für 'Vorlage ML-Bescheinigung ab' mussen zwischen 0 und 31 liegen!</value>
+  </data>
+  <data name="msgMWHours" xml:space="preserve">
+    <value>Der Wert für 'Grenzwert mtl. Anwesenheit f. Mindestlohn' ist erforderlich!</value>
+  </data>
+  <data name="msgNoEditOnDeactivatedPass" xml:space="preserve">
+    <value>Bearbeiten nicht mehr erlaubt, da Ausweis deaktiviert!</value>
+  </data>
+  <data name="lblExportToCsv" xml:space="preserve">
+    <value>Ausgabe als CSV Datei</value>
+  </data>
+  <data name="lblExportToExcel" xml:space="preserve">
+    <value>Ausgabe als Excel Arbeitsmappe</value>
+  </data>
+  <data name="lblExportToPdf" xml:space="preserve">
+    <value>Ausgabe als PDF Dokument</value>
+  </data>
+  <data name="lblTimeSlot" xml:space="preserve">
+    <value>Zeitfenster</value>
+  </data>
+  <data name="lblTimeSlotGroup" xml:space="preserve">
+    <value>Zeitfenstergruppe</value>
+  </data>
+  <data name="lblTimeSlotGroups" xml:space="preserve">
+    <value>Zeitfenstergruppen</value>
+  </data>
+  <data name="lblTimeSlots" xml:space="preserve">
+    <value>Zeitfenster</value>
+  </data>
+  <data name="dayFr" xml:space="preserve">
+    <value>Fr</value>
+  </data>
+  <data name="dayMo" xml:space="preserve">
+    <value>Mo</value>
+  </data>
+  <data name="daySa" xml:space="preserve">
+    <value>Sa</value>
+  </data>
+  <data name="daySu" xml:space="preserve">
+    <value>So</value>
+  </data>
+  <data name="dayTh" xml:space="preserve">
+    <value>Do</value>
+  </data>
+  <data name="dayTu" xml:space="preserve">
+    <value>Di</value>
+  </data>
+  <data name="dayWe" xml:space="preserve">
+    <value>Mi</value>
+  </data>
+  <data name="lblHint" xml:space="preserve">
+    <value>Hinweis</value>
+  </data>
+  <data name="lblTimeFrom" xml:space="preserve">
+    <value>Von Uhrzeit</value>
+  </data>
+  <data name="lblTimeUntil" xml:space="preserve">
+    <value>Bis Uhrzeit</value>
+  </data>
+  <data name="lblValidDays" xml:space="preserve">
+    <value>Gültige Tage</value>
+  </data>
+  <data name="msgDateFromLargerDateUntil" xml:space="preserve">
+    <value>Das Bis Datum muss größer als das Von Datum sein!</value>
+  </data>
+  <data name="msgTimeFromLargerTimeUntil" xml:space="preserve">
+    <value>Die Bis Zeit muss größer als die Von Zeit sein!</value>
+  </data>
+  <data name="lblEmployeeRelatedParameters" xml:space="preserve">
+    <value>Mitarbeiterbezogene Parameter</value>
+  </data>
+  <data name="lblAccessAllowed" xml:space="preserve">
+    <value>Zutritt erlaubt</value>
+  </data>
+  <data name="lblAccessRightsInfo" xml:space="preserve">
+    <value>Zutrittsrechte Info</value>
+  </data>
+  <data name="lblDeliveredToAccessControl" xml:space="preserve">
+    <value>Übergeben an Zutrittskontrolle</value>
+  </data>
+  <data name="lblDeliveryMessage" xml:space="preserve">
+    <value>Meldung von Übergabe</value>
+  </data>
+  <data name="lblDenialReasons" xml:space="preserve">
+    <value>Ablehnungsgründe</value>
+  </data>
+  <data name="lblInternalPassID" xml:space="preserve">
+    <value>Chip ID</value>
+  </data>
+  <data name="lblPassActive" xml:space="preserve">
+    <value>Ausweis aktiv</value>
+  </data>
+  <data name="lblPrintedPassID" xml:space="preserve">
+    <value>Ausweis ID</value>
+  </data>
+  <data name="lblUntil" xml:space="preserve">
+    <value>bis</value>
+  </data>
+  <data name="lblAccess" xml:space="preserve">
+    <value>Zutritt</value>
+  </data>
+  <data name="lblNoPassAssigned" xml:space="preserve">
+    <value>Kein Ausweis zugeordnet</value>
+  </data>
+  <data name="msgReasonObligate" xml:space="preserve">
+    <value>Grund ist erforderlich!</value>
+  </data>
+  <data name="msgReplacementPassCaseObligate" xml:space="preserve">
+    <value>Ausweisdruck wegen erforderlich!</value>
+  </data>
+  <data name="lblLimitView" xml:space="preserve">
+    <value>Anzeige eingrenzen</value>
+  </data>
+  <data name="lblShowInLists" xml:space="preserve">
+    <value>In Listen anzeigen</value>
+  </data>
+  <data name="lblUserRelease" xml:space="preserve">
+    <value>Benutzerfreigabe</value>
+  </data>
+  <data name="msgLimitView" xml:space="preserve">
+    <value>Wählen Sie einen Eintrag aus der Liste, um die Anzeige einzugrenzen</value>
+  </data>
+  <data name="msgSalutationObligate" xml:space="preserve">
+    <value>Anrede ist erforderlich!</value>
+  </data>
+  <data name="msgUserRelease" xml:space="preserve">
+    <value>Ihr Benutzername {0} wurde freigegeben. Sie können sich ab sofort mit den bekannten Zugangsdaten auf {1} anmelden.</value>
+  </data>
+  <data name="selAllBuildingProjects" xml:space="preserve">
+    <value>Alle Bauvorhaben</value>
+  </data>
+  <data name="lblLockSubContractors" xml:space="preserve">
+    <value>Nachunternehmer sperren</value>
+  </data>
+  <data name="lblMinWageAccessRelevance" xml:space="preserve">
+    <value>Fehlende ML-Bescheinigung ist zutrittsrelevant</value>
+  </data>
+  <data name="lblPrivacyStatement" xml:space="preserve">
+    <value>Datenschutzerklärung</value>
+  </data>
+  <data name="msgAcceptPrivacyStatement" xml:space="preserve">
+    <value>Bitte lesen und akzeptieren Sie die Datenschutzerklärung!</value>
+  </data>
+  <data name="msgPrivacyStatementOptIn" xml:space="preserve">
+    <value>Ich habe die Datenschutzerklärung gelesen und akzeptiere sie.</value>
+  </data>
+  <data name="msgUserRelease1" xml:space="preserve">
+    <value>Der Benutzername {0} wurde freigegeben. Sie können die Benutzerdaten auf {1} kontrollieren.</value>
+  </data>
+  <data name="selNoBPAssigned" xml:space="preserve">
+    <value>Kein Bauvorhaben zugeordnet</value>
+  </data>
+  <data name="selShowAll" xml:space="preserve">
+    <value>Alles anzeigen</value>
+  </data>
+  <data name="lblEmployeeRelease" xml:space="preserve">
+    <value>Freigabe Mitarbeiter</value>
+  </data>
+  <data name="msgEmployeeRelease" xml:space="preserve">
+    <value>Sie wurden als Mitarbeiter für das Bauvorhaben {0} freigegeben.</value>
+  </data>
+  <data name="msgEmployeeRelease1" xml:space="preserve">
+    <value>Der Mitarbeiter {0} von der Firma {1} wurde für das Bauvorhaben {2} freigegeben.</value>
+  </data>
+  <data name="lblEvent" xml:space="preserve">
+    <value>Ereignis</value>
+  </data>
+  <data name="lblPassActions" xml:space="preserve">
+    <value>Ausweis Aktionen</value>
+  </data>
+  <data name="lblAccessRightTimeStamp" xml:space="preserve">
+    <value>Zutrittsrecht Zeitstempel</value>
+  </data>
+  <data name="lblSupport" xml:space="preserve">
+    <value>Support</value>
+  </data>
+  <data name="ttControlStateLoad" xml:space="preserve">
+    <value>Zuvor gespeicherte Einstellungen des Formulars laden</value>
+  </data>
+  <data name="ttControlStateReset" xml:space="preserve">
+    <value>Gespeicherte Einstellungen des Formulars auf Standard zurücksetzen</value>
+  </data>
+  <data name="ttControlStateSave" xml:space="preserve">
+    <value>Aktuelle Einstellungen des Formulars speichern</value>
+  </data>
+  <data name="lblLastSaved" xml:space="preserve">
+    <value>Zuletzt gespeichert</value>
+  </data>
+  <data name="lblInsertAndClose" xml:space="preserve">
+    <value>Einfügen und Schließen</value>
+  </data>
+  <data name="lblHistoryOfChanges" xml:space="preserve">
+    <value>Änderungshistorie</value>
+  </data>
+  <data name="lblLastChange" xml:space="preserve">
+    <value>Letzte Änderung</value>
+  </data>
+  <data name="ttHistoryOfChanges" xml:space="preserve">
+    <value>Änderungshistorie ein- / ausblenden</value>
+  </data>
+  <data name="lblUpdateAndClose" xml:space="preserve">
+    <value>Speichern und Schließen</value>
+  </data>
+  <data name="msgPleaseSave" xml:space="preserve">
+    <value>Bitte speichern Sie Ihre Änderungen, damit die weiteren Bearbeitungsschritte aktualisierte Daten erhalten!</value>
+  </data>
+  <data name="lblProcessManagement" xml:space="preserve">
+    <value>Vorgangsverwaltung</value>
+  </data>
+  <data name="statDone" xml:space="preserve">
+    <value>Erledigt</value>
+  </data>
+  <data name="statNone" xml:space="preserve">
+    <value>Kein Status</value>
+  </data>
+  <data name="lblCreated1" xml:space="preserve">
+    <value>Angelegt durch / am</value>
+  </data>
+  <data name="lblDone1" xml:space="preserve">
+    <value>Erledigt durch / am</value>
+  </data>
+  <data name="lblEdited1" xml:space="preserve">
+    <value>Geändert durch /am</value>
+  </data>
+  <data name="statOverdue" xml:space="preserve">
+    <value>Überfällig</value>
+  </data>
+  <data name="lblProcess" xml:space="preserve">
+    <value>Vorgang</value>
+  </data>
+  <data name="lblActionReleaseBp" xml:space="preserve">
+    <value>Freigabe für BV</value>
+  </data>
+  <data name="lblActivateProcess" xml:space="preserve">
+    <value>Vorgang beginnen</value>
+  </data>
+  <data name="lblNewProcess" xml:space="preserve">
+    <value>Neuer Vorgang</value>
+  </data>
+  <data name="lblRecord" xml:space="preserve">
+    <value>Datensatz</value>
+  </data>
+  <data name="statWaitExecute" xml:space="preserve">
+    <value>Wartet auf Ausführung</value>
+  </data>
+  <data name="msgAssignedCompanyWaitsForRelease" xml:space="preserve">
+    <value>Zugeordnete Firma wartet auf Freigabe</value>
+  </data>
+  <data name="lblOpenProcesses" xml:space="preserve">
+    <value>offene Vorgänge</value>
+  </data>
+  <data name="lblDefaultRole" xml:space="preserve">
+    <value>Standard Rolle für neue Benutzer</value>
+  </data>
+  <data name="lblDoneFrom" xml:space="preserve">
+    <value>Erledigt durch</value>
+  </data>
+  <data name="lblDoneOn" xml:space="preserve">
+    <value>Erledigt am</value>
+  </data>
+  <data name="lblDefaultAccessArea" xml:space="preserve">
+    <value>Standard Zutrittsbereich für neue Mitarbeiter</value>
+  </data>
+  <data name="lblDefaultTimeSlotGroup" xml:space="preserve">
+    <value>Standard Zeitgruppe für neue Mitarbeiter</value>
+  </data>
+  <data name="lblSearchEmployee" xml:space="preserve">
+    <value>Mitarbeiter suchen</value>
+  </data>
+  <data name="msgSearchEmployeeNotFound" xml:space="preserve">
+    <value>Mitarbeiter nicht gefunden!</value>
+  </data>
+  <data name="lblLocked" xml:space="preserve">
+    <value>Sperre</value>
+  </data>
+  <data name="lblShowHideDetails" xml:space="preserve">
+    <value>Detailinformationen anzeigen / verbergen</value>
+  </data>
+  <data name="statLockedByMainContractor" xml:space="preserve">
+    <value>Firma gesperrt wegen Sperrung eines übergeordneten Auftraggebers</value>
+  </data>
+  <data name="statLockedIncludingSubContractors" xml:space="preserve">
+    <value>Firma gesperrt inklusive Subunternehmen</value>
+  </data>
+  <data name="lblAccessTypeComing" xml:space="preserve">
+    <value>Kommen</value>
+  </data>
+  <data name="lblAccessTypeLeaving" xml:space="preserve">
+    <value>Gehen</value>
+  </data>
+  <data name="lblAccessTypeUnknown" xml:space="preserve">
+    <value>Unbekannt</value>
+  </data>
+  <data name="lblExpirationDateIsAccessRelevant" xml:space="preserve">
+    <value>Ablaufdatum ist zutrittsrelevant</value>
+  </data>
+  <data name="lblNoNewMessage" xml:space="preserve">
+    <value>Keine neue Nachricht</value>
+  </data>
+  <data name="lblPrintPassOnCompleteDocs" xml:space="preserve">
+    <value>Ausweisdruck erst nach vollständiger Vorlage aller relevanten Dokumente</value>
+  </data>
+  <data name="lblConfirmationEmails" xml:space="preserve">
+    <value>Bestätigungs-Emails</value>
+  </data>
+  <data name="lblConfirmationEmail_VerifyEmailAddress" xml:space="preserve">
+    <value>Verifikation der Email Adresse</value>
+  </data>
+  <data name="lblHtmlText" xml:space="preserve">
+    <value>HTML Text</value>
+  </data>
+  <data name="lblCompanyID" xml:space="preserve">
+    <value>Firmen ID</value>
+  </data>
+  <data name="lblEmailUser" xml:space="preserve">
+    <value>Email Adresse Benutzer</value>
+  </data>
+  <data name="lblEmployeeID" xml:space="preserve">
+    <value>Mitarbeiternummer</value>
+  </data>
+  <data name="lblHeadline" xml:space="preserve">
+    <value>Kopfzeile</value>
+  </data>
+  <data name="lblVerificationUrl" xml:space="preserve">
+    <value>Verifizierungs-Url</value>
+  </data>
+  <data name="lblConfirmationEmail_RegisterCompanyAdmin" xml:space="preserve">
+    <value>Admin über Firmenregistrierung informieren</value>
+  </data>
+  <data name="lblConfirmationEmail_RegisterEmployee" xml:space="preserve">
+    <value>Mitarbeiterregistrierung bestätigen</value>
+  </data>
+  <data name="lblConfirmationEmail_RegisterEmployeeAdmin" xml:space="preserve">
+    <value>Admin über Mitarbeiterregistrierung informieren</value>
+  </data>
+  <data name="lblPMHints_RegisterCompany" xml:space="preserve">
+    <value>Hinweis zur Firmenregistrierung</value>
+  </data>
+  <data name="lblPMHints_RegisterEmployee" xml:space="preserve">
+    <value>Hinweis zur Mitarbeiterregistrierung</value>
+  </data>
+  <data name="lblPMHints_RegisterUser" xml:space="preserve">
+    <value>Hinweis zur Benutzerregistrierung</value>
+  </data>
+  <data name="lblPrivacyPolicy" xml:space="preserve">
+    <value>Datenschutzvereinbarung</value>
+  </data>
+  <data name="lblProcessManagementHints" xml:space="preserve">
+    <value>Vorgangsverwaltung Hinweise</value>
+  </data>
+  <data name="lblUrlCompany" xml:space="preserve">
+    <value>Url zur Bearbeitung der Firma</value>
+  </data>
+  <data name="lblUrlUser" xml:space="preserve">
+    <value>Url zur Bearbeitung des Benutzers</value>
+  </data>
+  <data name="msgCodeDateMissing" xml:space="preserve">
+    <value>Gültigkeitsdatum für Code nicht vorhanden</value>
+  </data>
+  <data name="msgTariffScopeIDObligate" xml:space="preserve">
+    <value>Tarifauswahl erforderlich</value>
+  </data>
+  <data name="msgValidFromObligate" xml:space="preserve">
+    <value>Gültig ab Datum erforderlich</value>
+  </data>
+  <data name="lblFieldName" xml:space="preserve">
+    <value>Feldname</value>
+  </data>
+  <data name="lblValue" xml:space="preserve">
+    <value>Wert</value>
+  </data>
+  <data name="lblAndToLower" xml:space="preserve">
+    <value>und</value>
+  </data>
+  <data name="lblBetweenToLower" xml:space="preserve">
+    <value>zwischen</value>
+  </data>
+  <data name="lblHistoryTables" xml:space="preserve">
+    <value>Historisierung</value>
+  </data>
+  <data name="lblLastEdit" xml:space="preserve">
+    <value>Letzte Änderung</value>
+  </data>
+  <data name="lblTableName" xml:space="preserve">
+    <value>Tabellenname</value>
+  </data>
+  <data name="lblTableNameRequired" xml:space="preserve">
+    <value>Tabellenname erforderlich!</value>
+  </data>
+  <data name="lblData" xml:space="preserve">
+    <value>Daten</value>
+  </data>
+  <data name="lblLastEditBy" xml:space="preserve">
+    <value>Letzte Änderung durch</value>
+  </data>
+  <data name="lblParameters" xml:space="preserve">
+    <value>Parameter</value>
+  </data>
+  <data name="lblState" xml:space="preserve">
+    <value>Stand</value>
+  </data>
+  <data name="lblUserNameRequired" xml:space="preserve">
+    <value>Benutzername erforderlich!</value>
+  </data>
+  <data name="msgNoDataFound" xml:space="preserve">
+    <value>Keine Daten gefunden!</value>
+  </data>
+  <data name="lblEmailForward" xml:space="preserve">
+    <value>Weiterleiten</value>
+  </data>
+  <data name="lblEmailMarkRead" xml:space="preserve">
+    <value>Als gelesen markieren</value>
+  </data>
+  <data name="lblEmailMarkUnread" xml:space="preserve">
+    <value>Als ungelesen markieren</value>
+  </data>
+  <data name="lblEmailNew" xml:space="preserve">
+    <value>Neue Nachricht erstellen</value>
+  </data>
+  <data name="lblEmailReply" xml:space="preserve">
+    <value>Antworten</value>
+  </data>
+  <data name="lblActivatedOn" xml:space="preserve">
+    <value>Aktiviert am</value>
+  </data>
+  <data name="lblDeactivatedOn" xml:space="preserve">
+    <value>Deaktiviert am</value>
+  </data>
+  <data name="lblMessages" xml:space="preserve">
+    <value>Nachrichten</value>
+  </data>
+  <data name="lblProcesses" xml:space="preserve">
+    <value>Vorgänge</value>
+  </data>
+  <data name="msgEmployeesPresent" xml:space="preserve">
+    <value>{0} Mitarbeiter anwesend</value>
+  </data>
+  <data name="msgVisitorsPresent" xml:space="preserve">
+    <value>{0} Besucher anwesend</value>
+  </data>
+  <data name="lblEmployees" xml:space="preserve">
+    <value>Mitarbeiter</value>
+  </data>
+  <data name="lblReportPassBilling" xml:space="preserve">
+    <value>Ausweisauswertung</value>
+  </data>
+  <data name="lblReports" xml:space="preserve">
+    <value>Auswertungen</value>
+  </data>
+  <data name="lblConsideredLevels" xml:space="preserve">
+    <value>Berücksichtigte Ebenen</value>
+  </data>
+  <data name="lblLevelAllSubcontractors" xml:space="preserve">
+    <value>Firma und alle Subunternehmer</value>
+  </data>
+  <data name="lblLevelCompanyOnly" xml:space="preserve">
+    <value>Nur ausgewählte Firma</value>
+  </data>
+  <data name="lblLevelFirstSubcontractors" xml:space="preserve">
+    <value>Firma und direkte Subunternehmer</value>
+  </data>
+  <data name="lblGrandTotal" xml:space="preserve">
+    <value>Gesamtsumme</value>
+  </data>
+  <data name="lblMainContractor" xml:space="preserve">
+    <value>Hauptunternehmer</value>
+  </data>
+  <data name="lblPassType" xml:space="preserve">
+    <value>Ausweistyp</value>
+  </data>
+  <data name="lblReportTariffData" xml:space="preserve">
+    <value>Tarifdatenauswertung</value>
+  </data>
+  <data name="lblSubContractor" xml:space="preserve">
+    <value>Nachunternehmer</value>
+  </data>
+  <data name="lblSubContractors" xml:space="preserve">
+    <value>Nachunternehmer</value>
+  </data>
+  <data name="lblSum" xml:space="preserve">
+    <value>Summe</value>
+  </data>
+  <data name="lblSums" xml:space="preserve">
+    <value>Summen</value>
+  </data>
+  <data name="msgCompanyRequired" xml:space="preserve">
+    <value>Firma erforderlich!</value>
+  </data>
+  <data name="lblValid" xml:space="preserve">
+    <value>Gültig</value>
+  </data>
+  <data name="lblAmount" xml:space="preserve">
+    <value>Betrag</value>
+  </data>
+  <data name="lblIsInitialIssue" xml:space="preserve">
+    <value>Ist Erstausstellung</value>
+  </data>
+  <data name="lblPass" xml:space="preserve">
+    <value>Ausweis</value>
+  </data>
+  <data name="msgTreeDamage" xml:space="preserve">
+    <value>Definition der Baumstruktur fehlerhaft! Bitte wenden Sie sich an die Administration.</value>
+  </data>
+  <data name="lblIsFirstAider" xml:space="preserve">
+    <value>Zählt als Ersthelfer</value>
+  </data>
+  <data name="msgMaxPresenceTimeRequired" xml:space="preserve">
+    <value>Maximale Anwesenheitszeit erforderlich!</value>
+  </data>
+  <data name="lblPresenceReport" xml:space="preserve">
+    <value>Anwesenheitsauswertung</value>
+  </data>
+  <data name="lblEmployeesShowName" xml:space="preserve">
+    <value>Mitarbeiter namentlich</value>
+  </data>
+  <data name="lblHoursShowName" xml:space="preserve">
+    <value>Anzahl Stunden namentlich</value>
+  </data>
+  <data name="selAllBpCompanies" xml:space="preserve">
+    <value>Alle Firmen des Bauvorhabens</value>
+  </data>
+  <data name="lblParentIsActive" xml:space="preserve">
+    <value>Eltern Knoten aktiv</value>
+  </data>
+  <data name="lblParentName" xml:space="preserve">
+    <value>Eltern Knoten</value>
+  </data>
+  <data name="lblDate" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="lblEntrance" xml:space="preserve">
+    <value>Kommen</value>
+  </data>
+  <data name="lblHours" xml:space="preserve">
+    <value>Stunden</value>
+  </data>
+  <data name="lblLeaving" xml:space="preserve">
+    <value>Gehen</value>
+  </data>
+  <data name="lblRowType" xml:space="preserve">
+    <value>Zeilentyp</value>
+  </data>
+  <data name="rowTypeCompanyHours" xml:space="preserve">
+    <value>Anwesenheit Firma</value>
+  </data>
+  <data name="rowTypeCompanyHoursWithSubcontractors" xml:space="preserve">
+    <value>Anwesenheit Firma und Nachunternehmer</value>
+  </data>
+  <data name="rowTypeEmployeeDays" xml:space="preserve">
+    <value>Anwesenheit Mitarbeiter</value>
+  </data>
+  <data name="rowTypeEmployeePresenceTimes" xml:space="preserve">
+    <value>Details Mitarbeiter</value>
+  </data>
+  <data name="lblReportPresenceCount" xml:space="preserve">
+    <value>Anwesende Mitarbeiter</value>
+  </data>
+  <data name="lblReportsCentral" xml:space="preserve">
+    <value>Zentrale Auswertungen</value>
+  </data>
+  <data name="lblReportTariffCompany" xml:space="preserve">
+    <value>Tarifdaten pro Firma</value>
+  </data>
+  <data name="lblAccessOn" xml:space="preserve">
+    <value>Zutritt am</value>
+  </data>
+  <data name="lblPresentOnly" xml:space="preserve">
+    <value>Nur Anwesende</value>
+  </data>
+  <data name="lblIndentLevel" xml:space="preserve">
+    <value>Einrückung</value>
+  </data>
+  <data name="lblIndex" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="lblIsPresent1" xml:space="preserve">
+    <value>Ist anwesend</value>
+  </data>
+  <data name="lblReportTrades" xml:space="preserve">
+    <value>Gewerkeauswertung</value>
+  </data>
+  <data name="lblSystem" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="lblIsDefault" xml:space="preserve">
+    <value>Ist Standard</value>
+  </data>
+  <data name="lblExcelFiles" xml:space="preserve">
+    <value>Excel Dateien (*.xls; *.xlsx)</value>
+  </data>
+  <data name="lblImageFiles" xml:space="preserve">
+    <value>Bild Dateien (*.jpg; *.jpeg; *.png; *.gif)</value>
+  </data>
+  <data name="lblRDLFiles" xml:space="preserve">
+    <value>Report Definition Language Dateien (*.rdl)</value>
+  </data>
+  <data name="lblDownloadTemplate" xml:space="preserve">
+    <value>Vorlage herunterladen</value>
+  </data>
+  <data name="lblEditTemplate" xml:space="preserve">
+    <value>Vorlage bearbeiten</value>
+  </data>
+  <data name="lblUploadTemplate" xml:space="preserve">
+    <value>Vorlage hochladen</value>
+  </data>
+  <data name="lblCardReaderStatus" xml:space="preserve">
+    <value>Kartenleser Status</value>
+  </data>
+  <data name="lblPassBudget" xml:space="preserve">
+    <value>Ausweis Budget</value>
+  </data>
+  <data name="lblInternalMessageTemplates" xml:space="preserve">
+    <value>Vorlagen für interne Nachrichten</value>
+  </data>
+  <data name="lblInternalMessageTemplates_CompanyTariffs" xml:space="preserve">
+    <value>Benachrichtigung über geänderte Tarife im zentralen Firmenstamm</value>
+  </data>
+  <data name="lblMinWageDataEntry" xml:space="preserve">
+    <value>ML-Bescheinigungen erfassen</value>
+  </data>
+  <data name="lblMonth" xml:space="preserve">
+    <value>Monat</value>
+  </data>
+  <data name="msgSelectCompany" xml:space="preserve">
+    <value>Bitte wählen Sie eine Firma aus.</value>
+  </data>
+  <data name="selStatusCode0" xml:space="preserve">
+    <value>Initialisiert</value>
+  </data>
+  <data name="selStatusCode1" xml:space="preserve">
+    <value>Offen</value>
+  </data>
+  <data name="selStatusCode2" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="selStatusCode3" xml:space="preserve">
+    <value>Fehlerhaft</value>
+  </data>
+  <data name="selStatusCode4" xml:space="preserve">
+    <value>Zu niedrig</value>
+  </data>
+  <data name="selStatusCode5" xml:space="preserve">
+    <value>Falsch</value>
+  </data>
+  <data name="msgShowDetails" xml:space="preserve">
+    <value>Details anzeigen</value>
+  </data>
+  <data name="qstLooseChanges" xml:space="preserve">
+    <value>Alle ungespeicherten Änderungen gehen verloren! Weiter?</value>
+  </data>
+  <data name="lblMinWageReport" xml:space="preserve">
+    <value>Mindestlohnauswertung</value>
+  </data>
+  <data name="lblTimeInterval" xml:space="preserve">
+    <value>Zeitintervall</value>
+  </data>
+  <data name="msgTimeInterval" xml:space="preserve">
+    <value>Bitte wählen Sie ein Zeitintervall für die Auswertung</value>
+  </data>
+  <data name="ttShowHideMenuTree" xml:space="preserve">
+    <value>Menübaum ein- / ausblenden</value>
+  </data>
+  <data name="lblMWAttestationMCExisting" xml:space="preserve">
+    <value>Vorliegende ohne NU</value>
+  </data>
+  <data name="lblMWAttestationMCFaulty" xml:space="preserve">
+    <value>Fehlerhafte ohne NU</value>
+  </data>
+  <data name="lblMWAttestationMCOpen" xml:space="preserve">
+    <value>Offene ohne NU</value>
+  </data>
+  <data name="lblMWAttestationMCRequired" xml:space="preserve">
+    <value>Notwendige ohne NU</value>
+  </data>
+  <data name="lblMWAttestationMCToLow" xml:space="preserve">
+    <value>Zu niedrige ohne NU</value>
+  </data>
+  <data name="lblMWAttestationMCWrong" xml:space="preserve">
+    <value>Falsche ohne NU</value>
+  </data>
+  <data name="lblMWAttestations" xml:space="preserve">
+    <value>Mindestlohnbescheinigungen</value>
+  </data>
+  <data name="lblMWAttestationSCExisting" xml:space="preserve">
+    <value>Vorliegende mit NU</value>
+  </data>
+  <data name="lblMWAttestationSCFaulty" xml:space="preserve">
+    <value>Fehlerhafte mit NU</value>
+  </data>
+  <data name="lblMWAttestationSCOpen" xml:space="preserve">
+    <value>Offene mit NU</value>
+  </data>
+  <data name="lblMWAttestationSCRequired" xml:space="preserve">
+    <value>Notwendige mit NU</value>
+  </data>
+  <data name="lblMWAttestationSCToLow" xml:space="preserve">
+    <value>Zu niedrige mit NU</value>
+  </data>
+  <data name="lblMWAttestationSCWrong" xml:space="preserve">
+    <value>Falsche mit NU</value>
+  </data>
+  <data name="lblExportToWord" xml:space="preserve">
+    <value>Ausgabe als Word Dokument</value>
+  </data>
+  <data name="lblMinWageReportCompany" xml:space="preserve">
+    <value>ML-Auswertung Firma</value>
+  </data>
+  <data name="lblMinWageReportEmployee" xml:space="preserve">
+    <value>ML-Auswertung Mitarbeiter</value>
+  </data>
+  <data name="lblShowCorrectMonths" xml:space="preserve">
+    <value>Korrekt bescheinigte Monate anzeigen</value>
+  </data>
+  <data name="lblClientID" xml:space="preserve">
+    <value>Auftraggeber ID</value>
+  </data>
+  <data name="lblCompanyInfo" xml:space="preserve">
+    <value>Firmeninfo</value>
+  </data>
+  <data name="lblMainContractorID" xml:space="preserve">
+    <value>Hauptunternehmer ID</value>
+  </data>
+  <data name="lblShowTariffHistory" xml:space="preserve">
+    <value>Tarifvertragshistorie anzeigen</value>
+  </data>
+  <data name="lblTariffContractHistory" xml:space="preserve">
+    <value>Tarifvertragshistorie</value>
+  </data>
+  <data name="lblMWContact" xml:space="preserve">
+    <value>Kontakt für Mindestlohn</value>
+  </data>
+  <data name="msgEmployeesFaulty" xml:space="preserve">
+    <value>{0} Mitarbeiter mit inkonsistenten Zutrittsereignissen</value>
+  </data>
+  <data name="msgVisitorsFaulty" xml:space="preserve">
+    <value>{0} Besucher mit inkonsistenten Zutrittsereignissen</value>
+  </data>
+  <data name="lblCreateRequest" xml:space="preserve">
+    <value>Anforderung erstellen</value>
+  </data>
+  <data name="lblError" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="lblMWAttestationRequest" xml:space="preserve">
+    <value>ML-Bescheinigungen anfordern</value>
+  </data>
+  <data name="lblMWAttestationRequests" xml:space="preserve">
+    <value>ML-Bescheinigungs-Anforderungen</value>
+  </data>
+  <data name="lblRequestID" xml:space="preserve">
+    <value>Anforderungs ID</value>
+  </data>
+  <data name="msgDateUntilRequired" xml:space="preserve">
+    <value>Bis Datum ist erforderlich!</value>
+  </data>
+  <data name="msgAccessDateRequired" xml:space="preserve">
+    <value>Zutrittsdatum erforderlich!</value>
+  </data>
+  <data name="msgDateFromRequired" xml:space="preserve">
+    <value>Von Datum ist erforderlich!</value>
+  </data>
+  <data name="lblClientName" xml:space="preserve">
+    <value>Auftraggeber Name</value>
+  </data>
+  <data name="lblClientNameAdditional" xml:space="preserve">
+    <value>Auftraggeber Name Zusatz</value>
+  </data>
+  <data name="lblConfirmationEmail_CompanyReleased" xml:space="preserve">
+    <value>Den Benutzer über die Freigabe seiner Firma zum zentralen Firmenstamm informieren</value>
+  </data>
+  <data name="lblConfirmationEmail_CompanyReleasedBp" xml:space="preserve">
+    <value>Den Benutzer über die Freigabe seiner Firma zum Bauvorhaben informieren</value>
+  </data>
+  <data name="lblPMHints_RegisterCompanyBp" xml:space="preserve">
+    <value>Hinweis zur Firmenregistrierung für Bauvorhaben</value>
+  </data>
+  <data name="lblPMHints_ReleaseEmployeeBp" xml:space="preserve">
+    <value>Hinweis zur Mitarbeiterregistrierung für Bauvorhaben</value>
+  </data>
+  <data name="lblTemplateType" xml:space="preserve">
+    <value>Vorlagentyp</value>
+  </data>
+  <data name="lblTemplateTypeRDL" xml:space="preserve">
+    <value>SQL Server Reporting Vorlage</value>
+  </data>
+  <data name="lblTemplateTypeXLSX" xml:space="preserve">
+    <value>Excel xlsx Vorlage</value>
+  </data>
+  <data name="lblPresentEmployees" xml:space="preserve">
+    <value>Anwesende Mitarbeiter</value>
+  </data>
+  <data name="lblMissingFirstAiders" xml:space="preserve">
+    <value>Fehlende Ersthelfer</value>
+  </data>
+  <data name="lblPresentPerAccessArea" xml:space="preserve">
+    <value>Anwesend pro Zutrittsbereich</value>
+  </data>
+  <data name="lblVisitors" xml:space="preserve">
+    <value>Besucher</value>
+  </data>
+  <data name="lblExistingTemplates" xml:space="preserve">
+    <value>Vorhandene Vorlagen</value>
+  </data>
+  <data name="lblLastUpdate" xml:space="preserve">
+    <value>Letzte Aktualisierung</value>
+  </data>
+  <data name="lblAccessControlSystem" xml:space="preserve">
+    <value>Zutrittskontrollsystem</value>
+  </data>
+  <data name="msgAccessControlSystemOffline" xml:space="preserve">
+    <value>Das Zutrittskontrollsystem ist offline</value>
+  </data>
+  <data name="msgAccessControlSystemOnline" xml:space="preserve">
+    <value>Das Zutrittskontrollsystem ist online</value>
+  </data>
+  <data name="lblEmployeesPresent" xml:space="preserve">
+    <value>Mitarbeiter anwesend</value>
+  </data>
+  <data name="lblNoOpenProcess" xml:space="preserve">
+    <value>Kein offener Vorgang</value>
+  </data>
+  <data name="lblVisitorsPresent" xml:space="preserve">
+    <value>Besucher anwesend</value>
+  </data>
+  <data name="lblEmployeesFaulty" xml:space="preserve">
+    <value>Mitarbeiter mit inkonsistenten Zutrittsereignissen</value>
+  </data>
+  <data name="lblVisitorsFaulty" xml:space="preserve">
+    <value>Besucher mit inkonsistenten Zutrittsereignissen</value>
+  </data>
+  <data name="lblTimeGroupsTimeSlots" xml:space="preserve">
+    <value>Zeitgruppen / Zeitfenster</value>
+  </data>
+  <data name="ttFilterByFirstLetter" xml:space="preserve">
+    <value>Filtern nach Anfangsbuchstabe</value>
+  </data>
+  <data name="ttFilterNoFirstLetter" xml:space="preserve">
+    <value>Keine Filterung nach Anfangsbuchstabe</value>
+  </data>
+  <data name="lblAbsent" xml:space="preserve">
+    <value>Abwesend</value>
+  </data>
+  <data name="lblPresent" xml:space="preserve">
+    <value>Anwesend</value>
+  </data>
+  <data name="lblSince" xml:space="preserve">
+    <value>Seit</value>
+  </data>
+  <data name="lblContinueSession" xml:space="preserve">
+    <value>Sitzung fortsetzen</value>
+  </data>
+  <data name="lblRemainingSeconds" xml:space="preserve">
+    <value>Verbleibende Sekunden</value>
+  </data>
+  <data name="lblSessionWillBeClosed" xml:space="preserve">
+    <value>Sitzung wird beendet</value>
+  </data>
+  <data name="lblFault" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="lblManual" xml:space="preserve">
+    <value>Manuell</value>
+  </data>
+  <data name="lblRemark" xml:space="preserve">
+    <value>Bemerkung</value>
+  </data>
+  <data name="lblOffline" xml:space="preserve">
+    <value>Offline</value>
+  </data>
+  <data name="lblOnline" xml:space="preserve">
+    <value>Online</value>
+  </data>
+  <data name="lblLastBackup" xml:space="preserve">
+    <value>Letzte Datenbanksicherung</value>
+  </data>
+  <data name="lblLastCompress" xml:space="preserve">
+    <value>Letzte Verdichtung der Anwesenheitsdaten</value>
+  </data>
+  <data name="msgEmployeePass" xml:space="preserve">
+    <value>Das ist ein Mitarbeiterausweis!</value>
+  </data>
+  <data name="msgPassDuplicate" xml:space="preserve">
+    <value>Ausweis ist nicht eindeutig! Administration informieren!</value>
+  </data>
+  <data name="msgShortTermPass" xml:space="preserve">
+    <value>Das ist ein Kurzzeitausweis!</value>
+  </data>
+  <data name="lblProcessManagementCentral" xml:space="preserve">
+    <value>Zentrale Vorgangsverwaltung</value>
+  </data>
+  <data name="lblActualStatus" xml:space="preserve">
+    <value>Aktueller Status</value>
+  </data>
+  <data name="lblNoOpenProcessCentral" xml:space="preserve">
+    <value>Kein offener zentraler Vorgang</value>
+  </data>
+  <data name="lblOpenProcessesCentral" xml:space="preserve">
+    <value>offene zentrale Vorgänge</value>
+  </data>
+  <data name="lblActionSend" xml:space="preserve">
+    <value>Senden</value>
+  </data>
+  <data name="lblEmailTo" xml:space="preserve">
+    <value>An</value>
+  </data>
+  <data name="lblText" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="msgMWAttestationRequest" xml:space="preserve">
+    <value>Im Anhang finden Sie die Anforderung von Mindestlohnbescheinigungen für Ihre Auftragnehmer.</value>
+  </data>
+  <data name="msgMWContactMissing" xml:space="preserve">
+    <value>Der Ansprechpartner für Mindestlohn fehlt beim Hauptunternehmer!</value>
+  </data>
+  <data name="lblConfirmationEmail_ReleaseEmployee" xml:space="preserve">
+    <value>Den Mitarbeiter über die Freigabe zum Bauvorhaben informieren</value>
+  </data>
+  <data name="lblConfirmationEmail_ReleaseEmployeeAdmin" xml:space="preserve">
+    <value>Den Firmenadministrator über die Freigabe des Mitarbeiters zum Bauvorhaben informieren</value>
+  </data>
+  <data name="lblActionAccept" xml:space="preserve">
+    <value>Übernehmen</value>
+  </data>
+  <data name="lblLoadPhoto" xml:space="preserve">
+    <value>Foto öffnen</value>
+  </data>
+  <data name="lblDaily" xml:space="preserve">
+    <value>Täglich</value>
+  </data>
+  <data name="lblDOM" xml:space="preserve">
+    <value>Tag des Monats</value>
+  </data>
+  <data name="lblEndDate" xml:space="preserve">
+    <value>Enddatum</value>
+  </data>
+  <data name="lblEvaluationPeriod" xml:space="preserve">
+    <value>Auswertungszeitraum</value>
+  </data>
+  <data name="lblExecutionInterval" xml:space="preserve">
+    <value>Ausführungsintervall</value>
+  </data>
+  <data name="lblExecutionTime" xml:space="preserve">
+    <value>Ausführungszeitpunkt</value>
+  </data>
+  <data name="lblImmediately" xml:space="preserve">
+    <value>Sofort</value>
+  </data>
+  <data name="lblMonthly" xml:space="preserve">
+    <value>Monatlich</value>
+  </data>
+  <data name="lblScheduling" xml:space="preserve">
+    <value>Terminierung</value>
+  </data>
+  <data name="lblStartDate" xml:space="preserve">
+    <value>Startdatum</value>
+  </data>
+  <data name="lblWeekly" xml:space="preserve">
+    <value>Wöchentlich</value>
+  </data>
+  <data name="selAccumulatedUpUntilEOLM" xml:space="preserve">
+    <value>Aufgelaufen bis Ende letzter Monat</value>
+  </data>
+  <data name="selAccumulatedUpUntilEOLW" xml:space="preserve">
+    <value>Aufgelaufen bis Ende letzter Woche</value>
+  </data>
+  <data name="selAccumulatedUpUntilYesterday" xml:space="preserve">
+    <value>Aufgelaufen bis gestern</value>
+  </data>
+  <data name="selCurrentMonthAccumulatedUpUntilYesterday" xml:space="preserve">
+    <value>Aktueller Monat aufgelaufen bis gestern</value>
+  </data>
+  <data name="selCurrentWeekAccumulatedUpUntilYesterday" xml:space="preserve">
+    <value>Aktuelle Woche aufgelaufen bis gestern</value>
+  </data>
+  <data name="selLastMonthOnly" xml:space="preserve">
+    <value>Nur letzter Monat</value>
+  </data>
+  <data name="selLastWeekOnly" xml:space="preserve">
+    <value>Nur letzte Woche</value>
+  </data>
+  <data name="selUserDefined" xml:space="preserve">
+    <value>Benutzerdefiniert</value>
+  </data>
+  <data name="selYesterdayOnly" xml:space="preserve">
+    <value>Nur gestern</value>
+  </data>
+  <data name="lblOnceOnly" xml:space="preserve">
+    <value>Einmalig</value>
+  </data>
+  <data name="lblReceiver" xml:space="preserve">
+    <value>Empfänger</value>
+  </data>
+  <data name="msgStartReport" xml:space="preserve">
+    <value>Auswertung erstellen oder terminieren</value>
+  </data>
+  <data name="lblExportFormat" xml:space="preserve">
+    <value>Ausgabeformat</value>
+  </data>
+  <data name="lblTimeGroups" xml:space="preserve">
+    <value>Zeitgruppen</value>
+  </data>
+  <data name="errExecutionTimeRequired" xml:space="preserve">
+    <value>Ausführungszeitpunkt erforderlich!</value>
+  </data>
+  <data name="errReceiverRequired" xml:space="preserve">
+    <value>Empfänger erforderlich!</value>
+  </data>
+  <data name="msgJobCreated" xml:space="preserve">
+    <value>Auftrag {0} wurde angelegt. Nächste Ausführung: {1} </value>
+  </data>
+  <data name="lblExportToXml" xml:space="preserve">
+    <value>Ausgabe als XML Struktur</value>
+  </data>
+  <data name="lblJobManagement" xml:space="preserve">
+    <value>Auftragsverwaltung</value>
+  </data>
+  <data name="lblUnknown" xml:space="preserve">
+    <value>Unbekannt</value>
+  </data>
+  <data name="statExecuting" xml:space="preserve">
+    <value>Ausführung</value>
+  </data>
+  <data name="lblNextExecution" xml:space="preserve">
+    <value>Nächste Ausführung</value>
+  </data>
+  <data name="lblDialogHelp" xml:space="preserve">
+    <value>Hilfe zum Dialog</value>
+  </data>
+  <data name="lblNever" xml:space="preserve">
+    <value>Nie</value>
+  </data>
+  <data name="msgAccessTerminalsOffline" xml:space="preserve">
+    <value>Einige oder alle Zutrittsterminals sind offline</value>
+  </data>
+  <data name="msgAccessTerminalsOnline" xml:space="preserve">
+    <value>Alle Zutrittsterminals sind online</value>
+  </data>
+  <data name="lblAddrFax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="lblRemoteSupport" xml:space="preserve">
+    <value>Fernunterstützung</value>
+  </data>
+  <data name="lblRequestNow" xml:space="preserve">
+    <value>Jetzt anfordern</value>
+  </data>
+  <data name="lblRequestRemoteSupport" xml:space="preserve">
+    <value>Fernunterstützung anfordern</value>
+  </data>
+  <data name="msgRequestRemoteSupport" xml:space="preserve">
+    <value>Bitte fordern Sie die Fernunterstützung nur nach vorheriger telefonischer Vereinbarung an!</value>
+  </data>
+  <data name="msgFAGreen" xml:space="preserve">
+    <value>Alle Firmen sind ausreichend besetzt</value>
+  </data>
+  <data name="msgFARed" xml:space="preserve">
+    <value>Einzelne Firmen sind unterbesetzt und kumuliert über alle Anwesenden und alle Firmen sind zu wenig Ersthelfer auf dem Bauvorhaben</value>
+  </data>
+  <data name="msgFAYellow" xml:space="preserve">
+    <value>Einzelne Firmen sind unterbesetzt, aber kumuliert über alle Anwesenden und alle Firmen sind ausreichend Ersthelfer auf dem Bauvorhaben</value>
+  </data>
+  <data name="lblExpiringTariffs" xml:space="preserve">
+    <value>Auslaufende Tarife</value>
+  </data>
+  <data name="selRDInsuranceAdditional" xml:space="preserve">
+    <value>Versicherung zusätzlich</value>
+  </data>
+  <data name="selRDRule4" xml:space="preserve">
+    <value>Legitimation *und* Aufenthaltsrecht *und* Arbeitsrecht *und* Versicherung *und* Versicherung zusätzlich (A)</value>
+  </data>
+  <data name="lblRead" xml:space="preserve">
+    <value>Gelesen</value>
+  </data>
+  <data name="lblUnread" xml:space="preserve">
+    <value>Ungelesen</value>
+  </data>
+  <data name="msgAfterEditPhoto" xml:space="preserve">
+    <value>Um das Foto hier zu sehen, klicken Sie nach der Bearbeitung auf Speichern.</value>
+  </data>
+  <data name="lblResetPassword" xml:space="preserve">
+    <value>Kennwort zurücksetzen</value>
+  </data>
+  <data name="msgResendPassword1" xml:space="preserve">
+    <value>Das temporäre Kennwort wird an die Email Adresse des Benutzers gesendet. Er muss das Kennwort während der ersten Anmeldung ändern!</value>
+  </data>
+  <data name="selRDRule5" xml:space="preserve">
+    <value>Legitimation *und* Arbeitsrecht</value>
+  </data>
+  <data name="selRDRule6" xml:space="preserve">
+    <value>Legitimation *und* Aufenthaltsrecht</value>
+  </data>
+  <data name="lblAccessStateNoAccess" xml:space="preserve">
+    <value>Kein Zutritt</value>
+  </data>
+  <data name="lblDisposalEntitled" xml:space="preserve">
+    <value>Entsorgungsberechtigt</value>
+  </data>
+  <data name="lblContainerManagementName" xml:space="preserve">
+    <value>Name für Behältermanagement</value>
+  </data>
+  <data name="msgFileExtensionIncorrect" xml:space="preserve">
+    <value>Dateinamenerweiterung inkorrekt!</value>
+  </data>
+  <data name="msgFileTypeNotSupported" xml:space="preserve">
+    <value>Dateityp nicht unterstützt!</value>
+  </data>
+  <data name="selRDRule10" xml:space="preserve">
+    <value>Legitimation *und* (Aufenthaltsrecht *oder* Arbeitsrecht) *und* Versicherung (CH)</value>
+  </data>
+  <data name="selRDRule7" xml:space="preserve">
+    <value>Legitimation *und* Aufenthaltsrecht *und* Arbeitsrecht (D)</value>
+  </data>
+  <data name="selRDRule8" xml:space="preserve">
+    <value>Legitimation (D)</value>
+  </data>
+  <data name="selRDRule9" xml:space="preserve">
+    <value>Legitimation *und* Versicherung *und* Versicherung zusätzlich (A)</value>
+  </data>
+  <data name="lblEmailOnProcessEvent" xml:space="preserve">
+    <value>Emailbenachrichtigung bei Vorgangsereignis</value>
+  </data>
+  <data name="lblAccessRightValidDays" xml:space="preserve">
+    <value>Gültigkeit Zutrittsrecht</value>
+  </data>
+  <data name="lblAccessRightValidUntil" xml:space="preserve">
+    <value>Zutrittsrecht gültig bis</value>
+  </data>
+  <data name="lblSuffixDays" xml:space="preserve">
+    <value>Tag(e)</value>
+  </data>
+  <data name="msgAccessRightValidDays" xml:space="preserve">
+    <value>Die Anzahl Tage muss zwischen 1 und 1825 (5 Jahre) liegen!</value>
+  </data>
+  <data name="msgAccessRightValidUntilObligate" xml:space="preserve">
+    <value>Datum für Gültigkeit Zutrittsrecht ist erforderlich!</value>
+  </data>
+  <data name="lblShortTermPass" xml:space="preserve">
+    <value>Kurzzeitausweis</value>
+  </data>
+  <data name="lblLastEvent" xml:space="preserve">
+    <value>Letztes Ereignis</value>
+  </data>
+  <data name="lblVisitor" xml:space="preserve">
+    <value>Besucher</value>
+  </data>
+  <data name="lblContainerManagement" xml:space="preserve">
+    <value>Behältermanagement</value>
+  </data>
+  <data name="lblLastResult" xml:space="preserve">
+    <value>Letztes Ergebnis</value>
+  </data>
+  <data name="lblPassHolder" xml:space="preserve">
+    <value>Ausweisinhaber</value>
+  </data>
+  <data name="lblAdditionalRight" xml:space="preserve">
+    <value>Zusätzliches Recht</value>
+  </data>
+  <data name="selAdditionalRightCar" xml:space="preserve">
+    <value>Zutritt mit Auto</value>
+  </data>
+  <data name="selAdditionalRightNone" xml:space="preserve">
+    <value>Kein zusätzliches Recht</value>
+  </data>
+  <data name="qstDeleteBp" xml:space="preserve">
+    <value>Achtung! Sie wollen ein Bauvorhaben löschen. Diese Aktion kann nicht rückgängig gemacht werden! Sind Sie absolut sicher, dass Sie das wollen?</value>
+  </data>
+  <data name="statExpired" xml:space="preserve">
+    <value>Abgelaufen</value>
+  </data>
+  <data name="statInvalid" xml:space="preserve">
+    <value>Ungültig</value>
+  </data>
+  <data name="lblDirection" xml:space="preserve">
+    <value>Richtung</value>
+  </data>
+  <data name="lblDefaultSTAccessArea" xml:space="preserve">
+    <value>Standard Zutrittsbereich für neue Kurzzeitausweise</value>
+  </data>
+  <data name="lblDefaultSTTimeSlotGroup" xml:space="preserve">
+    <value>Standard Zeitgruppe für neue Kurzzeitausweise</value>
+  </data>
+  <data name="lblEntry" xml:space="preserve">
+    <value>Eingang</value>
+  </data>
+  <data name="lblTerminal" xml:space="preserve">
+    <value>Terminal</value>
+  </data>
+  <data name="lblInitContainerManagement" xml:space="preserve">
+    <value>Behältermanagement Daten initialisieren</value>
+  </data>
+  <data name="msgInitContainerManagement" xml:space="preserve">
+    <value>Behältermanagement Daten erfolgreich initialisiert</value>
+  </data>
+  <data name="lblSelfAndSubcontractors" xml:space="preserve">
+    <value>Eigene Firma und Nachunternehmer</value>
+  </data>
+  <data name="qstDeleteRow1" xml:space="preserve">
+    <value>Zeile ({0}, {1}, {2}) löschen?</value>
+  </data>
+  <data name="lblAllowSubcontractorEdit" xml:space="preserve">
+    <value>MA-Stammdaten Subunternehmen </value>
+  </data>
+  <data name="ttAllowSubcontractorEdit" xml:space="preserve">
+    <value>Benutzern das Editieren von Mitarbeitern aus Subunternehmen dieser Firma erlauben</value>
+  </data>
+  <data name="lblDuplicates" xml:space="preserve">
+    <value>Duplikate</value>
+  </data>
+  <data name="lblInitial" xml:space="preserve">
+    <value>Initiale</value>
+  </data>
+  <data name="msgCompanyNotReleased" xml:space="preserve">
+    <value>Firma noch nicht freigegeben!</value>
+  </data>
+  <data name="lblDenialReason" xml:space="preserve">
+    <value>Ablehnungsgrund</value>
+  </data>
+  <data name="ttRemoveFilter" xml:space="preserve">
+    <value>Filter entfernen</value>
+  </data>
+  <data name="lblLastCorrectionAccessEvents" xml:space="preserve">
+    <value>Letzte Korrektur der Zutrittsdaten</value>
+  </data>
+  <data name="lblCountsAs" xml:space="preserve">
+    <value>Zählt als</value>
+  </data>
+  <data name="lblLinkedWith" xml:space="preserve">
+    <value>Verknüpft mit</value>
+  </data>
+  <data name="msgNoEditIfNotReleased" xml:space="preserve">
+    <value>Bearbeiten oder Verschieben von nicht freigegebenen Einträgen nicht möglich!</value>
+  </data>
+  <data name="msgNoMoveIfNotReleasedParent" xml:space="preserve">
+    <value>Verschieben auf nicht freigegebene übergeordnete Einträgen nicht möglich!</value>
+  </data>
+  <data name="msgQuestions" xml:space="preserve">
+    <value>Sollten Sie Fragen haben oder eine Hilfestellung bei Problemen benötigen, senden Sie Ihr Anliegen bitte an &lt;a href='mailto:support@zbl-insite.com&amp;subject=Fragen%20oder%20Hilfestellung%20anfordern'&gt;support@zbl-insite.com&lt;/a&gt;.</value>
+  </data>
+  <data name="lblInconsistentOnly" xml:space="preserve">
+    <value>Nur Ausweise mit inkonsistenten Zutrittsereignissen</value>
+  </data>
+  <data name="lblUpdateThumbnails" xml:space="preserve">
+    <value>Thumbnails aktualisieren</value>
+  </data>
+  <data name="lblUseCompanyAssignment" xml:space="preserve">
+    <value>Firmenzuordnung berücksichtigen</value>
+  </data>
+  <data name="lblOwnerID" xml:space="preserve">
+    <value>Inhaber ID</value>
+  </data>
+  <data name="lblAutoRefresh" xml:space="preserve">
+    <value>Automatisch aktualisieren</value>
+  </data>
+  <data name="lblPresentState" xml:space="preserve">
+    <value>Anwesenheitsstatus</value>
+  </data>
+  <data name="lblMWLackTrigger" xml:space="preserve">
+    <value>Maximale Überschreitung der Fälligkeit</value>
+  </data>
+  <data name="msgMWLackTrigger" xml:space="preserve">
+    <value>Der Wert für 'Maximale Überschreitung der Fälligkeit' ist erforderlich!</value>
+  </data>
+  <data name="ttMWLackTrigger" xml:space="preserve">
+    <value>Kein Zutritt, wenn die Fälligkeit der ML-Bescheinigung um diese Anzahl Tage überschritten wurde</value>
+  </data>
+  <data name="msgNotSelfClient" xml:space="preserve">
+    <value>Firma darf nicht ihr eigener Auftraggeber sein!</value>
+  </data>
+  <data name="lblMissingFirstAidersTitle" xml:space="preserve">
+    <value>Firmen mit fehlenden Ersthelfern</value>
+  </data>
+  <data name="lblPMHints_LockedEmployee" xml:space="preserve">
+    <value>Hinweis zur Deaktivierung eines Mitarbeiters</value>
+  </data>
+  <data name="lblSystemOverview" xml:space="preserve">
+    <value>Systemübersicht</value>
+  </data>
+  <data name="lblUpdateStatus" xml:space="preserve">
+    <value>Status aktualisiseren</value>
+  </data>
+  <data name="lblReportConfiguration" xml:space="preserve">
+    <value>Berichtsverwaltung</value>
+  </data>
+  <data name="msgNoneReport" xml:space="preserve">
+    <value>Sie haben keine Berichte in der Liste.</value>
+  </data>
+  <data name="msgSelectReport" xml:space="preserve">
+    <value>Um einen Bericht zu erstellen wählen Sie den aus der Liste aus und geben Sie die Parameter ein.</value>
+  </data>
+</root>

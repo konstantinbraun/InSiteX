@@ -1,0 +1,1 @@
+keytool -genkey -alias localhost -keyalg RSA -keystore keystore.jks -keysize 2048 -storepass aGxGsVQP -dname "CN=localhost, OU=InSite, O=Zeppelin Rental, C=DE" -validity 3650

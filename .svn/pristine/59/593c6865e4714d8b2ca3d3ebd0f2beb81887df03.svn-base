@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AccessService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://zrd-sw-iri/InsiteServices/AccessService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://zrd-sw-iri/InsiteServices/AccessService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://zrd-sw-iri/InsiteServices/AccessService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/InsiteServices.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAccessService_PutSystemState_InputMessage">
+    <wsdl:part name="parameters" element="tns:PutSystemState" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_PutSystemState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PutSystemStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_PutTerminalStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:PutTerminalStatus" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_PutTerminalStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PutTerminalStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_GetAccessRights_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccessRights" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_GetAccessRights_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccessRightsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_PutAccessEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:PutAccessEvent" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_PutAccessEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PutAccessEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_GetAccessEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccessEvents" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_GetAccessEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccessEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_EmployeeChanged_InputMessage">
+    <wsdl:part name="parameters" element="tns:EmployeeChanged" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_EmployeeChanged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmployeeChangedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_CompanyChanged_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyChanged" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_CompanyChanged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyChangedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_RelevantDocumentChanged_InputMessage">
+    <wsdl:part name="parameters" element="tns:RelevantDocumentChanged" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_RelevantDocumentChanged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RelevantDocumentChangedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_CountryChanged_InputMessage">
+    <wsdl:part name="parameters" element="tns:CountryChanged" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_CountryChanged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CountryChangedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_DocumentRuleChanged_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentRuleChanged" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_DocumentRuleChanged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentRuleChangedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_DocumentCheckingRuleChanged_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentCheckingRuleChanged" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_DocumentCheckingRuleChanged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentCheckingRuleChangedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_TimeSlotChanged_InputMessage">
+    <wsdl:part name="parameters" element="tns:TimeSlotChanged" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_TimeSlotChanged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TimeSlotChangedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_ShortTermPassChanged_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShortTermPassChanged" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_ShortTermPassChanged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShortTermPassChangedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_AllRelevantDocumentsSubmitted_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllRelevantDocumentsSubmitted" />
+  </wsdl:message>
+  <wsdl:message name="IAccessService_AllRelevantDocumentsSubmitted_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllRelevantDocumentsSubmittedResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAccessService">
+    <wsdl:operation name="PutSystemState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccessService/PutSystemState" message="tns:IAccessService_PutSystemState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccessService/PutSystemStateResponse" message="tns:IAccessService_PutSystemState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PutTerminalStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccessService/PutTerminalStatus" message="tns:IAccessService_PutTerminalStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccessService/PutTerminalStatusResponse" message="tns:IAccessService_PutTerminalStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessRights">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccessService/GetAccessRights" message="tns:IAccessService_GetAccessRights_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccessService/GetAccessRightsResponse" message="tns:IAccessService_GetAccessRights_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PutAccessEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccessService/PutAccessEvent" message="tns:IAccessService_PutAccessEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccessService/PutAccessEventResponse" message="tns:IAccessService_PutAccessEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccessService/GetAccessEvents" message="tns:IAccessService_GetAccessEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccessService/GetAccessEventsResponse" message="tns:IAccessService_GetAccessEvents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeChanged">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccessService/EmployeeChanged" message="tns:IAccessService_EmployeeChanged_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccessService/EmployeeChangedResponse" message="tns:IAccessService_EmployeeChanged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyChanged">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccessService/CompanyChanged" message="tns:IAccessService_CompanyChanged_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccessService/CompanyChangedResponse" message="tns:IAccessService_CompanyChanged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RelevantDocumentChanged">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccessService/RelevantDocumentChanged" message="tns:IAccessService_RelevantDocumentChanged_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccessService/RelevantDocumentChangedResponse" message="tns:IAccessService_RelevantDocumentChanged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CountryChanged">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccessService/CountryChanged" message="tns:IAccessService_CountryChanged_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccessService/CountryChangedResponse" message="tns:IAccessService_CountryChanged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentRuleChanged">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccessService/DocumentRuleChanged" message="tns:IAccessService_DocumentRuleChanged_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccessService/DocumentRuleChangedResponse" message="tns:IAccessService_DocumentRuleChanged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentCheckingRuleChanged">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccessService/DocumentCheckingRuleChanged" message="tns:IAccessService_DocumentCheckingRuleChanged_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccessService/DocumentCheckingRuleChangedResponse" message="tns:IAccessService_DocumentCheckingRuleChanged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TimeSlotChanged">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccessService/TimeSlotChanged" message="tns:IAccessService_TimeSlotChanged_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccessService/TimeSlotChangedResponse" message="tns:IAccessService_TimeSlotChanged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShortTermPassChanged">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccessService/ShortTermPassChanged" message="tns:IAccessService_ShortTermPassChanged_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccessService/ShortTermPassChangedResponse" message="tns:IAccessService_ShortTermPassChanged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllRelevantDocumentsSubmitted">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccessService/AllRelevantDocumentsSubmitted" message="tns:IAccessService_AllRelevantDocumentsSubmitted_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccessService/AllRelevantDocumentsSubmittedResponse" message="tns:IAccessService_AllRelevantDocumentsSubmitted_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAccessService" type="tns:IAccessService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PutSystemState">
+      <soap:operation soapAction="http://tempuri.org/IAccessService/PutSystemState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutTerminalStatus">
+      <soap:operation soapAction="http://tempuri.org/IAccessService/PutTerminalStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessRights">
+      <soap:operation soapAction="http://tempuri.org/IAccessService/GetAccessRights" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutAccessEvent">
+      <soap:operation soapAction="http://tempuri.org/IAccessService/PutAccessEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessEvents">
+      <soap:operation soapAction="http://tempuri.org/IAccessService/GetAccessEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeChanged">
+      <soap:operation soapAction="http://tempuri.org/IAccessService/EmployeeChanged" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyChanged">
+      <soap:operation soapAction="http://tempuri.org/IAccessService/CompanyChanged" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RelevantDocumentChanged">
+      <soap:operation soapAction="http://tempuri.org/IAccessService/RelevantDocumentChanged" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountryChanged">
+      <soap:operation soapAction="http://tempuri.org/IAccessService/CountryChanged" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentRuleChanged">
+      <soap:operation soapAction="http://tempuri.org/IAccessService/DocumentRuleChanged" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentCheckingRuleChanged">
+      <soap:operation soapAction="http://tempuri.org/IAccessService/DocumentCheckingRuleChanged" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TimeSlotChanged">
+      <soap:operation soapAction="http://tempuri.org/IAccessService/TimeSlotChanged" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShortTermPassChanged">
+      <soap:operation soapAction="http://tempuri.org/IAccessService/ShortTermPassChanged" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllRelevantDocumentsSubmitted">
+      <soap:operation soapAction="http://tempuri.org/IAccessService/AllRelevantDocumentsSubmitted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AccessService">
+    <wsdl:port name="BasicHttpBinding_IAccessService" binding="tns:BasicHttpBinding_IAccessService">
+      <soap:address location="http://zrd-sw-iri/InsiteServices/AccessService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="InsiteServices.ContainerManagement" CodeBehind="ContainerManagement.svc.cs" %>

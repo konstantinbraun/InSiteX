@@ -1,0 +1,79 @@
+﻿using InSiteX.Entity.Common;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
+
+namespace InSiteX.Repository.Common
+{
+    public abstract class GenericRepository<T> : IGenericRepository<T>
+        where T:Entity<int>
+    {
+        protected DbContext _context;
+        protected readonly DbSet<T> _dbset;
+
+        public GenericRepository(DbContext context)
+        {
+            _context = context;
+            _dbset = context.Set<T>();
+        }
+
+
+        public IEnumerable<T> GetAll()
+        {
+            return _dbset.AsEnumerable<T>();
+        }
+
+        public IAsyncEnumerable<T> GetAllAsync()
+        {
+            return _dbset.ToAsyncEnumerable<T>();
+        }
+
+        public virtual T Add(T entity)
+        {
+            return _dbset.Add(entity).Entity;
+        }
+
+        public async virtual Task<T> AddAsync(T entity)
+        {
+            _dbset.Add(entity);
+            await _context.SaveChangesAsync();
+            return entity;
+        }
+
+        public T Delete(T entity)
+        {
+            return _dbset.Remove(entity).Entity;
+        }
+
+        public async Task<T> DeleteAsync(T entity)
+        {
+            var item = _dbset.Remove(entity).Entity;
+            await _context.SaveChangesAsync();
+            return item;
+        }
+
+        public void Edit(T entity)
+        {
+            _context.Entry(entity).State = EntityState.Modified;
+        }
+
+        public IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate)
+        {
+            return  _dbset.Where(predicate).AsEnumerable<T>();
+        }
+
+        public async Task<int> Save()
+        {
+            return await _context.SaveChangesAsync();
+        }
+
+        void IGenericRepository<T>.Save()
+        {
+            throw new NotImplementedException();
+        }
+
+    }
+}

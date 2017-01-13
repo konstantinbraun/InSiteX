@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <Connection1 Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>Connection1</Alias>
+        <ConnectionStringEncrypted>9BrPoVZx+91qFf3M6lSiF9VqwYhFX5OZ4k25nGdcdy/RNK3P3UqThUVahJhqXLGPyXDVicVMa4FhWpz0aFzrD8pa0aHIXKv8TVw=</ConnectionStringEncrypted>
+        <Name>Connection1</Name>
+      </Connection1>
+    </Databases>
+    <DataSources isList="true" count="0" />
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="3" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="2">
+        <PageFooterBand1 Ref="4" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,27.1,19,0.6</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text2 Ref="5" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,19,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>{PageNofM}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+        </PageFooterBand1>
+        <ReportTitleBand1 Ref="6" type="ReportTitleBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,2.6</ClientRectangle>
+          <Components isList="true" count="10">
+            <Text3 Ref="7" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,12.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>{ReportName}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+            <Text1 Ref="8" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.8,12.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>{ReportDescription}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Image1 Ref="9" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.8,0,6.2,1.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <DataColumn isNull="true" />
+              <HorAlignment>Right</HorAlignment>
+              <Image>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</Image>
+              <Margins>0,0,0,0</Margins>
+              <Name>Image1</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+            </Image1>
+            <Text6 Ref="10" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.8,1.4,6.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>{Time}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text7 Ref="11" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.4,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>Stand</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text4 Ref="12" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.8,2,6.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>{ReportAuthor}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text5 Ref="13" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>Benutzer</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text8 Ref="14" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.8,1.4,6.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>{ReportAlias}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text9 Ref="15" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.2,1.4,3.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>Bauvorhaben</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+            <HorizontalLinePrimitive1 Ref="16" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0,1.4,19,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="17" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>HorizontalLinePrimitive1</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <StartCap Ref="18" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportTitleBand1</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+        </ReportTitleBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>b5ae52645ea049d2bcbe0ef14103ae39</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="19" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="20" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>12/15/2016 3:13:05 PM</ReportChanged>
+  <ReportCreated>11/30/2016 11:44:27 AM</ReportCreated>
+  <ReportFile>C:\Sources\INSITE-1108\InSiteApp\Reports\ReportTemplate.mrt</ReportFile>
+  <ReportGuid>d665339c661c4c7bb66b49567e9e5727</ReportGuid>
+  <ReportImage isNull="true" />
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2016.2.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="3">
+    <Header Ref="21" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>All;Black;1;Solid;False;4;Black</Border>
+      <Brush>Maroon</Brush>
+      <Conditions isList="true" count="0" />
+      <Font>Arial,11,Bold</Font>
+      <HorAlignment>Center</HorAlignment>
+      <Name>Header</Name>
+      <TextBrush>White</TextBrush>
+      <VertAlignment>Center</VertAlignment>
+    </Header>
+    <Odd_x0020_row Ref="22" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>All;Black;1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Conditions isList="true" count="0" />
+      <Font>Arial,10</Font>
+      <Name>Odd row</Name>
+      <TextBrush>Black</TextBrush>
+      <VertAlignment>Center</VertAlignment>
+    </Odd_x0020_row>
+    <Even_x0020_row Ref="23" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>All;Black;1;Solid;False;4;Black</Border>
+      <Brush>RosyBrown</Brush>
+      <Conditions isList="true" count="0" />
+      <Font>Arial,10</Font>
+      <Name>Even row</Name>
+      <TextBrush>Black</TextBrush>
+      <VertAlignment>Center</VertAlignment>
+    </Even_x0020_row>
+  </Styles>
+</StiSerializer>

@@ -1,0 +1,20 @@
+﻿using System;
+using InSiteX.Entity;
+using InSiteX.Repository.Common;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
+
+namespace InSiteX.Repository
+{
+    public class DeviceRepository : GenericRepository<Device>, IDeviceRepository
+    {
+        public DeviceRepository(DbContext context) : base(context)
+        {
+        }
+
+        public Device GetById(int Id)
+        {
+            return FindBy(x => x.Id == Id).SingleOrDefault();
+        }
+    }
+}

@@ -1,0 +1,794 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+h1
+	{mso-style-link:"Überschrift 1 Zchn";
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria",serif;
+	color:#365F91;}
+h2
+	{mso-style-link:"Überschrift 2 Zchn";
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Cambria",serif;
+	color:#4F81BD;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:11.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Kopfzeile Zchn";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Fußzeile Zchn";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Sprechblasentext Zchn";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma",sans-serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:36.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:36.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria",serif;
+	color:#365F91;
+	font-weight:bold;}
+span.SprechblasentextZchn
+	{mso-style-name:"Sprechblasentext Zchn";
+	mso-style-link:Sprechblasentext;
+	font-family:"Tahoma",sans-serif;}
+span.berschrift1Zchn
+	{mso-style-name:"Überschrift 1 Zchn";
+	mso-style-link:"Überschrift 1";
+	font-family:"Cambria",serif;
+	color:#365F91;
+	font-weight:bold;}
+span.berschrift2Zchn
+	{mso-style-name:"Überschrift 2 Zchn";
+	mso-style-link:"Überschrift 2";
+	font-family:"Cambria",serif;
+	color:#4F81BD;
+	font-weight:bold;}
+span.KopfzeileZchn
+	{mso-style-name:"Kopfzeile Zchn";
+	mso-style-link:Kopfzeile;}
+span.FuzeileZchn
+	{mso-style-name:"Fußzeile Zchn";
+	mso-style-link:Fußzeile;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:5.0cm 70.85pt 2.0cm 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=DE link=blue vlink=purple>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:16.0pt;line-height:115%;font-family:"Arial",sans-serif'>Zutrittskontrollsystem
+– Zeppelin InSite 3.0<br>
+Anleitung zur Selbstregistrierung</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:16.0pt;line-height:115%;font-family:"Arial",sans-serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:16.0pt;line-height:115%;font-family:"Arial",sans-serif'>&nbsp;</span></b></p>
+
+<p class=MsoTocHeading><span style='font-size:11.0pt;line-height:115%;
+font-family:"Arial",sans-serif;color:windowtext'>Inhalt</span></p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><a href="#_Toc444451251"><span style='font-family:"Arial",sans-serif'>1.</span><span
+style='color:windowtext;text-decoration:none'>      </span><span
+style='font-family:"Arial",sans-serif'>Voraussetzungen zur Nutzung von Zeppelin
+InSite 3.0</span><span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>1</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="#_Toc444451252"><span
+style='font-family:"Arial",sans-serif'>2.</span><span style='color:windowtext;
+text-decoration:none'>      </span><span style='font-family:"Arial",sans-serif'>Start
+der Anwendung</span><span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>1</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="#_Toc444451253"><span
+style='font-family:"Arial",sans-serif'>3.</span><span style='color:windowtext;
+text-decoration:none'>      </span><span style='font-family:"Arial",sans-serif'>Firma
+registrieren</span><span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>1</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc444451254"><span
+style='font-family:"Arial",sans-serif'>3.1.</span><span style='color:windowtext;
+text-decoration:none'>       </span><span style='font-family:"Arial",sans-serif'>Firma
+war noch nicht auf einem Bauvorhaben mit der Zutrittskontrolle der Zeppelin
+Streif Baulogistik tätig</span><span style='color:windowtext;display:none;
+text-decoration:none'>   </span><span
+style='color:windowtext;display:none;text-decoration:none'>1</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc444451255"><span
+style='font-family:"Arial",sans-serif'>3.2.</span><span style='color:windowtext;
+text-decoration:none'>       </span><span style='font-family:"Arial",sans-serif'>Firma
+war bereits auf einem Bauvorhaben mit der Zutrittskontrolle der Zeppelin Streif
+Baulogistik tätig</span><span style='color:windowtext;display:none;text-decoration:
+none'>   </span><span
+style='color:windowtext;display:none;text-decoration:none'>1</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="#_Toc444451256"><span
+style='font-family:"Arial",sans-serif'>4.</span><span style='color:windowtext;
+text-decoration:none'>      </span><span style='font-family:"Arial",sans-serif'>Registrierung
+von Mitarbeitern</span><span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>1</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc444451257"><span
+style='font-family:"Arial",sans-serif'>4.1.</span><span style='color:windowtext;
+text-decoration:none'>       </span><span style='font-family:"Arial",sans-serif'>Über
+Benutzer der Firma (Verantwortlicher für Firmendaten)</span><span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>1</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc444451258"><span
+style='font-family:"Arial",sans-serif'>4.2.</span><span style='color:windowtext;
+text-decoration:none'>       </span><span style='font-family:"Arial",sans-serif'>Über
+Selbstregistrierung durch Mitarbeiter</span><span style='color:windowtext;
+display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>1</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="#_Toc444451259"><span
+style='font-family:"Arial",sans-serif'>5.</span><span style='color:windowtext;
+text-decoration:none'>      </span><span style='font-family:"Arial",sans-serif'>Freigabe
+von Mitarbeitern</span><span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>1</span></a></span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<span style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h1 style='margin-left:36.0pt;text-indent:-18.0pt'><a name="_Toc444451251"><span
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:windowtext'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:windowtext'>Voraussetzungen zur Nutzung von Zeppelin InSite 3.0</span></a></h1>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:72.0pt;text-indent:-18.0pt'><span
+style='font-family:"Arial",sans-serif'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>mind. Windows 7</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:72.0pt;text-indent:-18.0pt'><span
+style='font-family:"Arial",sans-serif'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Browser mit
+Unterstützung von HTML 5, vorzugsweise Firefox</span></p>
+
+<h1 style='margin-left:36.0pt;text-indent:-18.0pt'><a name="_Toc444451252"><span
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:windowtext'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:windowtext'>Start der Anwendung</span></a></h1>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:72.0pt;text-indent:-18.0pt'><span
+style='font-family:"Arial",sans-serif'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a href="https://zbl-insite.com"><span style='font-family:"Arial",sans-serif'>https://zbl-insite.com</span></a></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:72.0pt;text-indent:-18.0pt'><span
+style='font-family:"Arial",sans-serif'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Folgendes
+Startfenster erscheint<br>
+</span><img border=0 width=569 height=292
+src="Beschreibung_Selbstregistrierung-Dateien/image001.jpg"></p>
+
+<span style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h1 style='margin-left:36.0pt;text-indent:-18.0pt'><a name="_Toc444451253"><span
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:windowtext'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:windowtext'>Firma registrieren</span></a></h1>
+
+<h2 style='margin-left:54.0pt;text-indent:-36.0pt'><a name="_Toc444451254"><span
+style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:windowtext'>3.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:windowtext'>Firma war noch nicht auf einem Bauvorhaben mit der
+Zutrittskontrolle der Zeppelin Streif Baulogistik tätig</span></a></h2>
+
+<p class=MsoNormal style='margin-left:70.8pt'><span style='font-family:"Arial",sans-serif'>Hat
+sich eine Firma noch nicht im Zutrittskontrollsystem der Firma Zeppelin Streif
+Baulogistik für ein Bauvorhaben registriert, so ist eine Anmeldung über den
+zentralen Firmenstamm notwendig.</span></p>
+
+<p class=MsoNormal style='margin-left:70.8pt'><span style='font-family:"Arial",sans-serif'>Bei
+weiteren Einsätzen auf anderen Baustellen ist eine erneute Registrierung nicht
+notwendig, es sei denn eine andere Niederlassung wird tätig.</span></p>
+
+<p class=MsoNormal style='margin-left:70.8pt'><span style='font-family:"Arial",sans-serif'>Folgendermaßen
+kann die Registrierung durchgeführt werden:</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:108.0pt;text-indent:-9.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Auf der Startmaske „Firma
+für zentralen Firmenstamm registrieren“ </span><span style='font-family:Wingdings'>à</span><span
+style='font-family:"Arial",sans-serif'> </span><span style='font-family:"Arial",sans-serif'><img
+border=0 width=135 height=25 id="Bild 4"
+src="Beschreibung_Selbstregistrierung-Dateien/image002.jpg"></span><span
+style='font-family:"Arial",sans-serif'> wählen</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt'><span
+style='position:absolute;z-index:251658240;left:0px;margin-left:323px;
+margin-top:43px;width:173px;height:87px'><img width=173 height=87
+src="Beschreibung_Selbstregistrierung-Dateien/image003.gif"></span><span
+style='font-family:"Arial",sans-serif'><img border=0 width=543 height=279
+src="Beschreibung_Selbstregistrierung-Dateien/image004.jpg"></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-9.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Folgender Dialog
+öffnet sich:</span><span style='font-family:"Arial",sans-serif'><img border=0
+width=485 height=396 id="Bild 7"
+src="Beschreibung_Selbstregistrierung-Dateien/image005.jpg"></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt'><span
+style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt'><b><span
+style='font-family:"Arial",sans-serif'>Fett markierte Felder = Pflichtfeld</span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt'><span
+style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt'><span
+style='font-family:"Arial",sans-serif'>Bei der Registrierung ist das Anlegen
+eines Benutzers notwendig. Dieser ist verantwortlich für die kompletten Firmendaten.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt'><span
+style='font-family:"Arial",sans-serif'>Im Nachgang können weitere Benutzer,
+welche für die eigenen Firmendaten verantwortlich sind, angelegt werden.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt'><span
+style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt'><b><span
+style='font-family:"Arial",sans-serif'>Mindestlohn ist ein Pflichtfeld!</span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt'><b><span
+style='font-family:"Arial",sans-serif'>&nbsp;</span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt'><b><span
+style='font-family:"Arial",sans-serif'>Folgende Auswahl sollte vorgenommen
+werden</span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:180.0pt;text-indent:
+-18.0pt'><span style='font-family:"Arial",sans-serif'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Bauvorhaben
+außerhalb Deutschlands<br>
+</span><span style='font-family:Wingdings'>à</span><span style='font-family:
+"Arial",sans-serif'> Tarifgebiet: „Kein Tarif“ wählen<br>
+</span><span style='font-family:Wingdings'>à</span><span style='font-family:
+"Arial",sans-serif'> gültig ab: „aktuelles Datum“</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:180.0pt;text-indent:
+-18.0pt'><span style='font-family:"Arial",sans-serif'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Bauvorhaben in
+Deutschland<br>
+</span><span style='font-family:Wingdings'>à</span><span style='font-family:
+"Arial",sans-serif'>Tarifgebiet: entweder tariflicher Mindestlohn oder gesetzlicher
+Mindestlohn inkl. des Tarifgebietes, welches sich nach dem Firmensitz richtet<br>
+</span><span style='font-family:Wingdings'>à</span><span style='font-family:
+"Arial",sans-serif'> gültig ab: „aktuelles Datum“</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-9.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><u><span style='font-family:"Arial",sans-serif'>Verifizierungsmail</span></u><span
+style='font-family:"Arial",sans-serif'><br>
+Im Anschluss an die Registrierung erhalten Sie eine E-Mail zur Verifizierung
+Ihrer Firmendaten. Erst wenn Sie den beigefügten Link bestätigen, sind Ihre
+Daten bestätigt und werden zur Freigabe weitergeleitet!</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-9.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><u><span style='font-family:"Arial",sans-serif'>Freigabe für dezentralen
+Firmenstamm</span></u><span style='font-family:"Arial",sans-serif'><br>
+Nach erfolgter Bestätigung folgt Freigabe zum zentralen Firmenstamm. Es wird
+lediglich die Stimmigkeit Ihrer angegeben Daten überprüft. <b>Diese Freigabe erlaubt
+nicht den Zutritt zum Bauvorhaben!</b><br>
+Sobald die Freigabe erteilt wurde, erhalten Sie per E-Mail eine Bestätigung,
+dass sowohl Ihre Firma als auch der eingetragene Benutzer freigeben wurde.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-9.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><u><span style='font-family:"Arial",sans-serif'>Am Bauvorhaben
+anmelden</span></u></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:148.85pt;text-indent:
+-21.25pt'><span style='font-family:"Arial",sans-serif'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Die in der Firmenregistrierung
+angegeben Benutzerdaten eingeben, jedoch <b>nicht</b> anmelden!</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:148.85pt;text-indent:-21.25pt'><span
+style='font-family:"Arial",sans-serif'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>„Firma an
+Bauvorhaben anmelden“ wählen</span></p>
+
+<p class=MsoNormal style='margin-left:207.0pt;text-indent:-58.15pt'><span
+style='position:absolute;z-index:251660288;left:0px;margin-left:199px;
+margin-top:91px;width:175px;height:42px'><img width=175 height=42
+src="Beschreibung_Selbstregistrierung-Dateien/image006.gif"></span><span
+style='position:absolute;z-index:251659264;left:0px;margin-left:388px;
+margin-top:150px;width:139px;height:37px'><img width=139 height=37
+src="Beschreibung_Selbstregistrierung-Dateien/image007.gif"></span><img
+border=0 width=375 height=288
+src="Beschreibung_Selbstregistrierung-Dateien/image008.jpg"></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:148.85pt;text-indent:
+-21.25pt'><span style='font-family:"Arial",sans-serif'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>entsprechendes
+Bauvorhaben und Auftraggeber auswählen und anschließend registrieren<br>
+</span><span style='font-family:"Arial",sans-serif'><img border=0 width=372
+height=238 src="Beschreibung_Selbstregistrierung-Dateien/image009.jpg"></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:148.85pt;text-indent:
+-21.25pt'><span style='font-family:"Arial",sans-serif'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>nach erfolgter
+Registrierung werden die Berechtigten zur Freigabe einer Firma am Bauvorhaben über
+die Anmeldung benachrichtigt. Erfolgt die Freigabe am Bauvorhaben durch den
+Berechtigten, erhält der/die Benutzer, welcher/welche für die eingetragenen Firmendaten
+verantwortlich ist/sind, eine Rückmeldung, ob die Freigabe für das Bauvorhaben
+erteilt wurde.</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:108.0pt'><span
+style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2 style='margin-left:54.0pt;text-indent:-36.0pt'><a name="_Toc444451255"><span
+style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:windowtext'>3.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:windowtext'>Firma war bereits auf einem Bauvorhaben mit der
+Zutrittskontrolle der Zeppelin Streif Baulogistik tätig</span></a></h2>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:108.0pt;text-indent:-9.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><u><span style='font-family:"Arial",sans-serif'>Am Bauvorhaben
+anmelden</span></u></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:148.85pt;text-indent:
+-21.25pt'><span style='font-family:"Arial",sans-serif'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>die angegeben
+Benutzerdaten eingeben, jedoch <b>nicht</b> anmelden!</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:148.85pt;text-indent:-21.25pt'><span
+style='font-family:"Arial",sans-serif'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>„Firma an
+Bauvorhaben anmelden“ wählen</span></p>
+
+<p class=MsoNormal style='margin-left:207.0pt;text-indent:-58.15pt'><span
+style='position:absolute;z-index:251661312;left:0px;margin-left:390px;
+margin-top:129px;width:132px;height:51px'><img width=132 height=51
+src="Beschreibung_Selbstregistrierung-Dateien/image010.gif"></span><span
+style='position:absolute;z-index:251662336;left:0px;margin-left:199px;
+margin-top:91px;width:175px;height:42px'><img width=175 height=42
+src="Beschreibung_Selbstregistrierung-Dateien/image011.gif"></span><img
+border=0 width=375 height=288 id="Bild 10"
+src="Beschreibung_Selbstregistrierung-Dateien/image012.jpg"></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:148.85pt;text-indent:
+-21.25pt'><span style='font-family:"Arial",sans-serif'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>entsprechendes
+Bauvorhaben und Auftraggeber auswählen und anschließend registrieren<br>
+</span><span style='font-family:"Arial",sans-serif'><img border=0 width=372
+height=238 id="Bild 16"
+src="Beschreibung_Selbstregistrierung-Dateien/image013.jpg"></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:148.85pt;text-indent:
+-21.25pt'><span style='font-family:"Arial",sans-serif'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>nach erfolgter
+Registrierung werden die Berechtigten zur Freigabe einer Firma am Bauvorhaben über
+die Anmeldung benachrichtigt. Erfolgt die Freigabe am Bauvorhaben durch den
+Berechtigten, erhält der/die Benutzer, welcher/welche für Firmendaten
+verantwortlich ist/sind, eine Rückmeldung, ob die Freigabe für das Bauvorhaben
+erteilt wurde.</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:148.85pt'><span
+style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h1 style='margin-left:18.0pt;text-indent:-18.0pt'><a name="_Toc444451256"><span
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:windowtext'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:windowtext'>Registrierung von Mitarbeitern</span></a></h1>
+
+<h2 style='margin-left:54.0pt;text-indent:-36.0pt'><a name="_Toc444451257"><span
+style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:windowtext'>4.1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:windowtext'>Über Benutzer der Firma (Verantwortlicher für Firmendaten)</span></a></h2>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:108.0pt;text-indent:-9.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Nach Anmeldung ist
+folgender Verzeichnisbaum sichtbar:<br>
+</span><img border=0 width=327 height=328
+src="Beschreibung_Selbstregistrierung-Dateien/image014.jpg"><span
+style='font-family:"Arial",sans-serif'><br>
+wählen Sie </span><span style='font-family:Wingdings'>à</span><span
+style='font-family:"Arial",sans-serif'> Home </span><span style='font-family:
+Wingdings'>à</span><span style='font-family:"Arial",sans-serif'> Bauvorhaben xy
+</span><span style='font-family:Wingdings'>à</span><span style='font-family:
+"Arial",sans-serif'> Mitarbeiterstamm</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-9.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Sind bereits
+Mitarbeiter Ihres Unternehmens angemeldet, sehen Sie diese in einer Übersicht
+im Mitarbeiterstamm</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-9.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='position:absolute;z-index:251663360;left:0px;
+margin-left:359px;margin-top:39px;width:48px;height:23px'><img width=48
+height=23 src="Beschreibung_Selbstregistrierung-Dateien/image015.gif"></span><span
+style='font-family:"Arial",sans-serif'>Wählen Sie „neu“<br>
+</span><span style='font-family:"Arial",sans-serif'><img border=0 width=514
+height=187 id="Bild 22"
+src="Beschreibung_Selbstregistrierung-Dateien/image016.jpg"></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-9.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='position:absolute;z-index:251664384;left:0px;
+margin-left:197px;margin-top:287px;width:105px;height:23px'><img width=105
+height=23 src="Beschreibung_Selbstregistrierung-Dateien/image017.gif"></span><span
+style='font-family:"Arial",sans-serif'>Es öffnet sich der Mitarbeiterstamm für
+einen Mitarbeiter<br>
+</span><span style='font-family:"Arial",sans-serif'><img border=0 width=531
+height=297 src="Beschreibung_Selbstregistrierung-Dateien/image018.jpg"></span><span
+style='font-family:"Arial",sans-serif'><br>
+in jedem Reiter sind alle fett markierten Zeilen auszufüllen</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-9.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Sie können bereits
+ein Foto vorab von Ihnen hochladen oder beim ersten Baustelleneinsatz ein Foto
+vor Ort machen lassen. </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt'><span
+style='font-family:"Arial",sans-serif'>Bitte beachten Sie, dass Ihr Foto
+folgende Voraussetzungen erfüllt:</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt'><span
+style='font-family:"Arial",sans-serif'><img border=0 width=472 height=149
+id="Bild 25" src="Beschreibung_Selbstregistrierung-Dateien/image019.jpg"
+alt="Personal Dialog: Passbild Tab"></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt'><span
+style='font-family:"Arial",sans-serif'><img border=0 width=472 height=147
+id="Bild 26" src="Beschreibung_Selbstregistrierung-Dateien/image020.jpg"
+alt="Personal Dialog: Passbild Tab"></span><span style='font-family:"Arial",sans-serif'> </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-9.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Im Reiter „Dokumente
+und Regeln“ werden die Dokumente wie Legitimation oder Versicherung hinterlegt.
+Die „angewendete Regel“ gibt Aufschluss darüber, welche Dokumente hinterlegt
+werden müssen. Es müssen das Ablaufdatum und die jeweilige Dokumenten ID
+hinterlegt werden. Der Haken für „liegt vor“ wird erst vor Ort vom Wachpersonal
+nach Vorlage der Originaldokumente gesetzt. </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt'><span
+style='font-family:"Arial",sans-serif'><img border=0 width=523 height=151
+src="Beschreibung_Selbstregistrierung-Dateien/image021.jpg"></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-9.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial",sans-serif'>Nach der Eingabe
+aller Daten, den Dialog mit „Einfügen und Schließen“ beenden</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:108.0pt'><span
+style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<h2 style='margin-left:54.0pt;text-indent:-36.0pt'><a name="_Toc444451258"><span
+style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:windowtext'>4.2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:11.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:windowtext'>Über Selbstregistrierung durch Mitarbeiter</span></a></h2>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:72.0pt'><span
+style='font-family:"Arial",sans-serif'>Der verantwortliche Benutzer einer Firma
+kann einen „Anmeldecode“ generieren, welchen er an die Mitarbeiter seiner Firma
+weitergeben kann. Dieser Anmeldecode in nur in einem definierten Zeitraum
+gültig. Die Mitarbeiter haben mit dem Anmeldecode die Möglichkeit ihre eigenen personenbezogenen
+Daten einzugeben. Der Umfang dieser Eingabe ist jedoch  geringer als unter a)
+beschrieben.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-9.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><u><span style='font-family:"Arial",sans-serif'>Erstellung des
+Anmeldecodes</span></u><span style='font-family:"Arial",sans-serif'><br>
+</span><span style='font-family:"Arial",sans-serif'><img border=0 width=327
+height=328 id="Bild 19"
+src="Beschreibung_Selbstregistrierung-Dateien/image014.jpg"></span><span
+style='font-family:"Arial",sans-serif'><br>
+wählen Sie </span><span style='font-family:Wingdings'>à</span><span
+style='font-family:"Arial",sans-serif'> Home </span><span style='font-family:
+Wingdings'>à</span><span style='font-family:"Arial",sans-serif'> Bauvorhaben xy
+</span><span style='font-family:Wingdings'>à</span><span style='font-family:
+"Arial",sans-serif'> Bauvorhaben Firmen<br>
+<br>
+Ihnen wird Ihre Firma angezeigt<br>
+</span><span style='position:absolute;z-index:251665408;left:0px;margin-left:
+338px;margin-top:73px;width:37px;height:23px'><img width=37 height=23
+src="Beschreibung_Selbstregistrierung-Dateien/image022.gif"></span><span
+style='font-family:"Arial",sans-serif'><img border=0 width=396 height=165
+id="Bild 28" src="Beschreibung_Selbstregistrierung-Dateien/image023.jpg"></span><span
+style='font-family:"Arial",sans-serif'><br>
+<br>
+wählen Sie über den Stift den „Bearbeiten-Modus“ aus. Sie gelangen in die
+Stammdaten Ihrer Firma.<br>
+<br>
+</span><span style='position:absolute;z-index:251667456;left:0px;margin-left:
+211px;margin-top:680px;width:143px;height:32px'><img width=143 height=32
+src="Beschreibung_Selbstregistrierung-Dateien/image024.gif"></span><span
+style='font-family:"Arial",sans-serif'><img border=0 width=331 height=470
+id="Bild 31" src="Beschreibung_Selbstregistrierung-Dateien/image025.jpg"></span><span
+style='font-family:"Arial",sans-serif'><br>
+Wählen Sie im Reiter „Erweitert“ </span><span style='font-family:Wingdings'>à</span><span
+style='font-family:"Arial",sans-serif'> „Anmeldecode erstellen“ und wählen das
+gewünschte Datum für die Gültigkeit aus.<br>
+Schließen Sie den Dialog mit „Speichern und Schließen“.<br>
+Ohne „Speichern und Schließen“, kann der Code nicht verwendet werden!<br>
+</span><span style='position:relative;z-index:251666432'><span
+style='left:0px;position:absolute;left:146px;top:-506px;width:312px;height:
+78px'><img width=312 height=78
+src="Beschreibung_Selbstregistrierung-Dateien/image026.gif"></span></span><span
+style='font-family:"Arial",sans-serif'><br clear=all style='page-break-before:
+always'>
+</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt;text-indent:
+-9.0pt'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><u><span style='font-family:"Arial",sans-serif'>Nutzung des
+Anmeldecodes</span></u><span style='font-family:"Arial",sans-serif'><br>
+Verteilen Sie den erstellten Anmeldecode an Ihre Mitarbeiter. Sie sind
+automatisch als Arbeitgeber voreingestellt und nicht änderbar.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt'><span
+style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt'><span
+style='position:absolute;z-index:251668480;left:0px;margin-left:296px;
+margin-top:152px;width:149px;height:76px'><img width=149 height=76
+src="Beschreibung_Selbstregistrierung-Dateien/image027.gif"></span><span
+style='font-family:"Arial",sans-serif'><img border=0 width=460 height=236
+id="Bild 1" src="Beschreibung_Selbstregistrierung-Dateien/image028.jpg"></span><span
+style='font-family:"Arial",sans-serif'>Über den Startdialog den Anmeldecode
+eintragen und mit „Mitarbeiter registrieren“ bestätigen</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt'><span
+style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt'><span
+style='font-family:"Arial",sans-serif'>Folgenden Dialog ausfüllen. <b>Pflichtfelder
+= fett</b><br>
+</span><span style='font-family:"Arial",sans-serif'><img border=0 width=515
+height=317 id="Bild 34"
+src="Beschreibung_Selbstregistrierung-Dateien/image029.jpg"></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt'><span
+style='font-family:"Arial",sans-serif'>Es besteht die Möglichkeit, bereits ein
+Foto in Dateiformat zu hinterlegen.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:108.0pt'><span
+style='font-family:"Arial",sans-serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:108.0pt'><span
+style='font-family:"Arial",sans-serif'>Nach Eingabe der Daten und Bestätigung
+durch „Speichern“ wird der Firmenverantwortliche darüber informiert, dass sich
+Mitarbeiter registriert haben und eine Freigabe erteilt werden muss.<br>
+<br>
+</span></p>
+
+<h1 style='margin-left:18.0pt;text-indent:-18.0pt'><a name="_Toc444451259"><span
+style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:windowtext'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt;line-height:115%;font-family:"Arial",sans-serif;
+color:windowtext'>Freigabe von Mitarbeitern</span></a></h1>
+
+<p class=MsoNormal style='margin-left:35.4pt'><span style='font-family:"Arial",sans-serif'>Nach
+Prüfung der Daten durch die Selbstregistrierung eines Mitarbeiters muss die
+Zugehörigkeit des Mitarbeiters zur Firma vom Firmenverantwortlichen bestätigt
+werden. Dazu ist die Eingabe aller weiteren notwendigen Daten, welche durch den
+Mitarbeiter selbst nicht eingetragen werden können, notwendig. Erst wenn alle
+Daten gepflegt sind, kann die Zugehörigkeit bestätigt werden.</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt'><span style='font-family:"Arial",sans-serif'>Bitte
+beachten Sie, dass Mitarbeiter eines Nachunternehmers nicht unter der eigenen
+Firma geführt werden dürfen. Die entsprechende Firma muss zusätzlich
+registriert werden!</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt'><span style='font-family:"Arial",sans-serif'>Gehen
+Sie, wie unter 3. beschrieben in den Mitarbeiterstamm</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt'><span style='position:absolute;
+z-index:251669504;left:0px;margin-left:87px;margin-top:38px;width:48px;
+height:211px'><img width=48 height=211
+src="Beschreibung_Selbstregistrierung-Dateien/image030.gif"></span><span
+style='font-family:"Arial",sans-serif'><img border=0 width=605 height=253
+id="Bild 37" src="Beschreibung_Selbstregistrierung-Dateien/image031.jpg"></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt'><span style='font-family:"Arial",sans-serif'>In
+der Spalte „Status“ befindet sich der Freigabestatus. Folgende Möglichkeiten
+bestehen:</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt'><span style='font-family:"Arial",sans-serif'><img
+border=0 width=37 height=34 id="Bild 40"
+src="Beschreibung_Selbstregistrierung-Dateien/image032.jpg"></span><span
+style='font-family:"Arial",sans-serif'>   Der Mitarbeiter ist freigeben<br>
+</span><span style='font-family:"Arial",sans-serif'><img border=0 width=33
+height=32 id="Bild 43"
+src="Beschreibung_Selbstregistrierung-Dateien/image033.jpg"></span><span
+style='font-family:"Arial",sans-serif'>    Der Mitarbeiter muss vom
+Firmenverantwortlichen freigegeben werden<br>
+</span><span style='font-family:"Arial",sans-serif'><img border=0 width=33
+height=29 id="Bild 46"
+src="Beschreibung_Selbstregistrierung-Dateien/image034.jpg"></span><span
+style='font-family:"Arial",sans-serif'>    Der Mitarbeiter muss zum Bauvorhaben
+freigegeben werden<br>
+</span><span style='font-family:"Arial",sans-serif'><img border=0 width=31
+height=34 id="Bild 49"
+src="Beschreibung_Selbstregistrierung-Dateien/image035.jpg"></span><span
+style='font-family:"Arial",sans-serif'>    Der Mitarbeiter ist gesperrt</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt'><span style='font-family:"Arial",sans-serif'>Gehen
+Sie im entsprechenden Mitarbeiter in der Spalte Status auf die Uhr zur Bestätigung
+der Zugehörigkeit zur Firma.</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt'><span style='font-family:"Arial",sans-serif'>Sie
+gelangen im Mitarbeiterstamm in den Reiter „Info“<br>
+</span><span style='font-family:"Arial",sans-serif'><img border=0 width=413
+height=351 id="Bild 52"
+src="Beschreibung_Selbstregistrierung-Dateien/image036.jpg"></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt'><span style='font-family:"Arial",sans-serif'>Nach
+Prüfung der eingegebenen Daten und ggfs. Korrektur, können Sie den Mitarbeiter  über
+den Button „Freigabe“ freigeben. Zum Beenden Ihre Eingabe mit „Speichern und
+Schließen“ aschließen.</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt'><span style='font-family:"Arial",sans-serif'>Automatisch
+erhält ein Verantwortlicher zur Freigabe für das Bauvorhaben eine Information über
+die Registrierung und wird den Mitarbeiter bei Vorlage aller notwendigen
+Unterlagen am Bauvorhaben freigeben.</span></p>
+
+</div>
+
+</body>
+
+</html>

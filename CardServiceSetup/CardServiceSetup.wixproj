@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>3.10</ProductVersion>
+    <ProjectGuid>2a7149ae-cc00-4df6-9761-9ed1c5cf8c58</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>CardService</OutputName>
+    <OutputType>Package</OutputType>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <Name>CardServiceSetup</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug</DefineConstants>
+    <CompilerAdditionalOptions>
+    </CompilerAdditionalOptions>
+    <LinkerAdditionalOptions>-ext WixUtilExtension.dll</LinkerAdditionalOptions>
+    <SuppressValidation>True</SuppressValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <LinkerAdditionalOptions>-ext WixUtilExtension.dll</LinkerAdditionalOptions>
+    <WixVariables>
+    </WixVariables>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Product.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Source" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\CardServer.cmd" />
+    <None Include="Source\CardServer.jar" />
+    <None Include="Source\CardServer.lcf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\config.properties" />
+    <None Include="Source\jetty-logging.properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\Icon.ico" />
+    <None Include="Source\Zutrittskontrolle.svg" />
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" />
+  <PropertyGroup>
+    <PreBuildEvent>cd $(SolutionDir)
+java -jar C:\eclipse\plugins\org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar -application org.eclipse.jdt.apt.core.aptBuild -data $(SolutionDir)..
+java -jar C:\eclipse\plugins\org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar -application org.eclipse.ant.core.antRunner -buildfile com.zeppelin.insite.cardsocket\CardServiceSetup.xml</PreBuildEvent>
+  </PropertyGroup>
+  <!--
+	To modify your build process, add your task inside one of the targets below and uncomment it.
+	Other similar extension points exist, see Wix.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

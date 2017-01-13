@@ -1,0 +1,18 @@
+﻿CREATE TABLE [dbo].[System_Documents](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[SystemID] [int] NOT NULL,
+	[JobId] [int] NOT NULL,
+	[UserID] [int] NOT NULL,
+	[Document] [varbinary](max) FILESTREAM  NULL,
+	[DocumentRef] [uniqueidentifier] ROWGUIDCOL  NOT NULL,
+	[DocCreated] [datetime2](7) NOT NULL,
+	[DocumentName] [nvarchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+UNIQUE NONCLUSTERED 
+(
+	[DocumentRef] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Echo Test</title>
+</head>
+<body>
+	<script type="text/javascript">
+		cardReader = function() {
+			var socket;
+			var sendEcho;
+			var listener = new Array;
+			sendEcho = function() {
+				console.log("init:echo")
+			};
+
+			var open = function() {
+				socket = new WebSocket("ws://localhost:8080/chipcard");
+				socket.onmessage = function(event) {
+					console.log("onmessage()");
+					var cardState = JSON.parse(event.data);
+					listener.forEach(function(v, i, a) {
+						console.log("Message for " + i);
+						if (typeof v.onmessage !== "undefined") {
+							v.onmessage(cardState);
+						}
+					});
+				};
+
+				socket.onopen = function(event) {
+					console.log("onopen()");
+					listener.forEach(function(v, i, a) {
+						console.log("Message for " + i);
+						if (typeof v.onopen !== "undefined") {
+							v.onopen();
+						}
+					});
+				};
+				socket.onclose = function(event) {
+					console.log("onclose()");
+					listener.forEach(function(v, i, a) {
+						console.log("Message for " + i);
+						if (typeof v.onclose !== "undefined") {
+							v.onclose();
+						}
+					});
+				};
+				socket.onerror = function(error) {
+					console.log("onerror()");
+					listener.forEach(function(v, i, a) {
+						console.log("Message for " + i);
+						if (typeof v.onerror !== "undefined") {
+							v.onerror(error);
+						}
+					});
+				};
+			}
+			var close = function() {
+				socket.close();
+			}
+
+			var register = function(callback) {
+				console.log("Register: " + callback);
+				if (!listener.includes(callback)) {
+					listener.push(callback);
+				}
+			}
+
+			var unregister = function(callback) {
+				var idx = listener.indexOf(callback);
+				if (idx != -1) {
+					listener.splice(idx, 1);
+				}
+			}
+
+			return {
+				sendEcho : sendEcho,
+				open : open,
+				close : close,
+				register : register,
+				unregister : unregister
+			}
+		}();
+
+		//var getValueFromApplet = function(myParam, myParam2) {};
+
+		cardReader
+				.register({
+					onmessage : function(json) {
+						var echoResult = document.getElementById("echo");
+						if (echoResult) {
+							var node;
+							while (node = echoResult.firstChild) {
+								echoResult.removeChild(node);
+							}
+							var dl, dt, dd;
+							dl = document.createElement("dl");
+							echoResult.appendChild(dl);
+							dt = document.createElement("dt");
+							dt.appendChild(document.createTextNode("Online"));
+							dd = document.createElement("dd");
+							dd
+									.appendChild(document
+											.createTextNode(json.online));
+							dl.appendChild(dt);
+							dl.appendChild(dd);
+
+							if (typeof json.cardPresent !== "undefined") {
+								dt = document.createElement("dt");
+								dt.appendChild(document
+										.createTextNode("Card Present"));
+								dd = document.createElement("dd");
+								dd.appendChild(document
+										.createTextNode(json.cardPresent));
+								dl.appendChild(dt);
+								dl.appendChild(dd);
+
+								if (typeof json.cardId !== "undefined") {
+									dt = document.createElement("dt");
+									dt.appendChild(document
+											.createTextNode("Card ID"));
+									dd = document.createElement("dd");
+									dd.appendChild(document
+											.createTextNode(json.cardId));
+									dl.appendChild(dt);
+									dl.appendChild(dd);
+									if (typeof getValueFromApplet == 'function') {
+										getValueFromApplet(json.cardId, null);
+									}
+								}
+							}
+						}
+					}
+				});
+		/*var bgChange = {
+			activeColor : "",
+			inactiveColor : "",
+			onmessage : function(json) {
+				document.body.style["backgroundColor"] = json.cardPresent ? this.activeColor
+						: this.inactiveColor;
+			}
+		}
+		
+		bgChange.activeColor = "lime";
+		bgChange.inactiveColor = "darkgreen";*/
+		bgChange = function () {
+			var activeColor = "yellow";
+			var inactiveColor = "brown";
+			var onmessage = function(json) {
+				document.body.style["backgroundColor"] = json.cardPresent ? this.activeColor
+						: this.inactiveColor;
+			}
+			var onerror = function(error) {
+				document.body.style["backgroundColor"] = "red";
+			}
+			
+			console.log("bgChange");
+			
+			return {
+				activeColor : activeColor,
+				inactiveColor : inactiveColor,
+				onmessage : onmessage,
+				onerror : onerror
+			}
+		}();
+		
+		bgChange.activeColor = "lime";
+		bgChange.inactiveColor = "darkgreen";
+
+		//console.log(typeof cardReader.sendEcho);
+	</script>
+	<form>
+		<div>
+			<input type="text" id="echoText" />
+			<button onclick="cardReader.sendEcho(); return false;">Senden</button>
+		</div>
+		<div>
+			<button onclick="cardReader.open(); return false;">Open
+				Socket</button>
+			<button onclick="cardReader.close(); return false;">Close
+				Socket</button>
+		</div>
+		<div>
+			<button onclick="cardReader.register(bgChange); return false;">Register</button>
+			<button
+				onclick="cardReader.unregister(bgChange); document.body.style['backgroundColor'] = 'inherit'; return false;">Unregister</button>
+		</div>
+		<div id="echo"></div>
+		<applet code="foobar.class" width="100" height="100">
+			<!--<img src="bild.jpg">-->
+			<script type="text/javascript">alert("Java-Applets not supported");</script>
+		</applet>
+	</form>
+</body>
+</html>

@@ -1,0 +1,2045 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://zrd-sw-iri/InsiteServices/UserService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/InsiteServices.Models" />
+  <xs:import schemaLocation="http://zrd-sw-iri/InsiteServices/UserService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/InsiteServices" />
+  <xs:import schemaLocation="http://zrd-sw-iri/InsiteServices/UserService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="passWord" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/InsiteServices.Models" minOccurs="0" name="LoginResult" nillable="true" type="q1:ArrayOfUserAssignments" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="columnName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="columnValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUserResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePwd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="oldPwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newPwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ignore" type="xs:boolean" />
+        <xs:element minOccurs="0" name="needsPwdChange" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePwdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePwdResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBpInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBpInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetBpInfoResult" nillable="true" type="q2:Master_BuildingProjects" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBpsInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBpsInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetAllBpsInfoResult" nillable="true" type="q3:ArrayOfMaster_BuildingProjects" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFieldsConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="roleID" type="xs:int" />
+        <xs:element minOccurs="0" name="dialogID" type="xs:int" />
+        <xs:element minOccurs="0" name="actionID" type="xs:int" />
+        <xs:element minOccurs="0" name="languageID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFieldsConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetFieldsConfigResult" nillable="true" type="q4:ArrayOfGetFieldsConfig_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrintPass">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+        <xs:element minOccurs="0" name="replacementPassCaseID" type="xs:int" />
+        <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deactivationMessage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrintPassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="PrintPassResult" nillable="true" type="q5:PrintPass_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActivatePass">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+        <xs:element minOccurs="0" name="internalID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActivatePassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ActivatePassResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeactivatePass">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+        <xs:element minOccurs="0" name="internalID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeactivatePassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeactivatePassResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LockPass">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+        <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LockPassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LockPassResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsFirstPass">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsFirstPassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsFirstPassResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateRegistrationCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateRegistrationCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="ValidateRegistrationCodeResult" nillable="true" type="q6:EmployeeRegistrationData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginNameIsUnique">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loginName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginNameIsUniqueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginNameIsUniqueResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersWithRole">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="typeID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersWithRoleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/InsiteServices.Models" minOccurs="0" name="GetUsersWithRoleResult" nillable="true" type="q7:ArrayOfUserAssignments" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppliedRule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppliedRuleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAppliedRuleResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserWithLoginName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loginName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserWithLoginNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/InsiteServices.Models" minOccurs="0" name="GetUserWithLoginNameResult" nillable="true" type="q8:UserAssignments" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNextID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="idName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNextIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNextIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrintShortTermPasses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="shortTermPassTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="passCount" type="xs:int" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PrintShortTermPassesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PrintShortTermPassesResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateShortTermPass">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="shortTermPassID" type="xs:int" />
+        <xs:element minOccurs="0" name="internalID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateShortTermPassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateShortTermPassResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShortTermPass">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="internalID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShortTermPassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/InsiteServices.Models" minOccurs="0" name="GetShortTermPassResult" nillable="true" type="q9:ShortTermPass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTreeNodeID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="dialogName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTreeNodeIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTreeNodeIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDialogID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="dialogName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDialogIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDialogIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RowCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tableName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="whereInt" nillable="true" type="q10:ArrayOfTupleOfstringint" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="whereString" nillable="true" type="q11:ArrayOfTupleOfstringstring" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RowCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RowCountResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyStatistics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyStatisticsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetCompanyStatisticsResult" nillable="true" type="q12:GetCompanyStatistics_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployees">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyCentralID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+        <xs:element minOccurs="0" name="externalPassID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="employmentStatusID" type="xs:int" />
+        <xs:element minOccurs="0" name="tradeID" type="xs:int" />
+        <xs:element minOccurs="0" name="userID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetEmployeesResult" nillable="true" type="q13:ArrayOfGetEmployees_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAccessRightEvent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="rightEvent" nillable="true" type="q14:Data_AccessRightEvents" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="areaEvents" nillable="true" type="q15:ArrayOfData_AccessAreaEvents" />
+        <xs:element minOccurs="0" name="deactivationMessage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAccessRightEventResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeAccessAreas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeAccessAreasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetEmployeeAccessAreasResult" nillable="true" type="q16:ArrayOfGetEmployeeAccessAreas_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HasValidDocumentRelevantFor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HasValidDocumentRelevantForResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="HasValidDocumentRelevantForResult" nillable="true" type="q17:ArrayOfHasValidDocumentRelevantFor_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccessRightEvents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+        <xs:element minOccurs="0" name="newestOnly" type="xs:boolean" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccessRightEventsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetAccessRightEventsResult" nillable="true" type="q18:ArrayOfGetAccessRightEvents_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccessAreaEvents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="accessRightEventID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccessAreaEventsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetAccessAreaEventsResult" nillable="true" type="q19:ArrayOfGetAccessAreaEvents_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelevantDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="relevantDocumentID" type="xs:int" />
+        <xs:element minOccurs="0" name="languageID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelevantDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetRelevantDocumentsResult" nillable="true" type="q20:ArrayOfGetRelevantDocuments_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeRelevantDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+        <xs:element minOccurs="0" name="languageID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeRelevantDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetEmployeeRelevantDocumentsResult" nillable="true" type="q21:ArrayOfGetEmployeeRelevantDocuments_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeesWithTimeSlot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="timeSlotID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeesWithTimeSlotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetEmployeesWithTimeSlotResult" nillable="true" type="q22:ArrayOfGetEmployeesWithTimeSlot_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeesWithRelevantDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="relevantDocumentID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeesWithRelevantDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetEmployeesWithRelevantDocumentResult" nillable="true" type="q23:ArrayOfGetEmployeesWithRelevantDocument_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeesWithCountry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="countryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeesWithCountryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="GetEmployeesWithCountryResult" nillable="true" type="q24:ArrayOfNullableOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeesWithEmploymentStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="countryGroupIDEmployer" type="xs:int" />
+        <xs:element minOccurs="0" name="countryGroupIDEmployee" type="xs:int" />
+        <xs:element minOccurs="0" name="employmentStatusID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeesWithEmploymentStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="GetEmployeesWithEmploymentStatusResult" nillable="true" type="q25:ArrayOfNullableOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShortTermPasses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="shortTermPassID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShortTermPassesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetShortTermPassesResult" nillable="true" type="q26:ArrayOfGetShortTermPasses_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVisitorAccessAreas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="shortTermVisitorID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVisitorAccessAreasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetVisitorAccessAreasResult" nillable="true" type="q27:ArrayOfGetVisitorAccessAreas_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeRelevantDocumentsToAdd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+        <xs:element minOccurs="0" name="relevantFor" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeRelevantDocumentsToAddResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetEmployeeRelevantDocumentsToAddResult" nillable="true" type="q28:ArrayOfGetEmployeeRelevantDocumentsToAdd_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyAdminUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyCentralID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyAdminUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetCompanyAdminUserResult" nillable="true" type="q29:ArrayOfGetCompanyAdminUser_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyAdminUserWithBP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyAdminUserWithBPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetCompanyAdminUserWithBPResult" nillable="true" type="q30:ArrayOfGetCompanyAdminUserWithBP_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLockedMainContractor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLockedMainContractorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetLockedMainContractorResult" nillable="true" type="q31:ArrayOfGetLockedMainContractor_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubContractors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubContractorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetSubContractorsResult" nillable="true" type="q32:ArrayOfGetSubContractors_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeePassStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeePassStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEmployeePassStatusResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetProcessEvent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="eventData" nillable="true" type="q33:Data_ProcessEvents" />
+        <xs:element minOccurs="0" name="fieldName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="values" nillable="true" type="q34:ArrayOfTupleOfstringstring" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetProcessEventResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetProcessEventResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessEventDone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="eventData" nillable="true" type="q35:Data_ProcessEvents" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessEventDoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessEventDoneResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDialogResID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="dialogID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDialogResIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDialogResIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBpName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBpNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBpNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCompanyNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBpCompanyName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBpCompanyNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBpCompanyNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUnreadMailCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="userID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUnreadMailCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUnreadMailCountResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpenProcessCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="userID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpenProcessCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOpenProcessCountResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="typeID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetRolesResult" nillable="true" type="q36:ArrayOfMaster_Roles" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDefaultRoleID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDefaultRoleIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDefaultRoleIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccessAreas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccessAreasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetAccessAreasResult" nillable="true" type="q37:ArrayOfMaster_AccessAreas" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDefaultAccessAreaID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDefaultAccessAreaIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDefaultAccessAreaIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTimeSlotGroups">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTimeSlotGroupsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetTimeSlotGroupsResult" nillable="true" type="q38:ArrayOfMaster_TimeSlotGroups" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDefaultTimeSlotGroupID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDefaultTimeSlotGroupIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDefaultTimeSlotGroupIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDefaultSTAccessAreaID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDefaultSTAccessAreaIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDefaultSTAccessAreaIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDefaultSTTimeSlotGroupID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDefaultSTTimeSlotGroupIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDefaultSTTimeSlotGroupIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDefaultAccessAreaForUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="accessArea" nillable="true" type="q39:Master_EmployeeAccessAreas" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDefaultAccessAreaForUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetDefaultAccessAreaForUserResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDefaultAccessAreaForVisitor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="accessArea" nillable="true" type="q40:Data_ShortTermAccessAreas" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDefaultAccessAreaForVisitorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetDefaultAccessAreaForVisitorResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPassData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="chipID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPassDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetPassDataResult" nillable="true" type="q41:Master_Passes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVariables">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="fieldID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVariablesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetVariablesResult" nillable="true" type="q42:ArrayOfSystem_Variables" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFieldID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="fieldName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFieldIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFieldIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVariablesByFieldName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="fieldName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVariablesByFieldNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetVariablesByFieldNameResult" nillable="true" type="q43:ArrayOfSystem_Variables" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTranslation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="fieldName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="languageIDUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="languageIDClient" nillable="true" type="xs:string" />
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="values" nillable="true" type="q44:ArrayOfTupleOfstringstring" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTranslationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetTranslationResult" nillable="true" type="q45:Master_Translations" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShortTermVisitors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShortTermVisitorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetShortTermVisitorsResult" nillable="true" type="q46:ArrayOfGetShortTermVisitors_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoryTables">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoryTablesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetHistoryTablesResult" nillable="true" type="q47:ArrayOfSystem_Tables" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetUsersResult" nillable="true" type="q48:ArrayOfMaster_Users" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPresentPersonsCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPresentPersonsCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetPresentPersonsCountResult" nillable="true" type="q49:GetPresentPersonsCount_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPassBillings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="evaluationPeriod" type="xs:int" />
+        <xs:element minOccurs="0" name="dateFrom" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dateUntil" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="level" type="xs:int" />
+        <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPassBillingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetPassBillingsResult" nillable="true" type="q50:ArrayOfGetPassBillings_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTariffData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="tariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="tariffContractID" type="xs:int" />
+        <xs:element minOccurs="0" name="tariffScopeID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="dateFrom" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dateUntil" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="reportType" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTariffDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetTariffDataResult" nillable="true" type="q51:ArrayOfGetTariffData_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPresenceData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="dateFrom" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dateUntil" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="nameIsVisible" type="xs:boolean" />
+        <xs:element minOccurs="0" name="companyLevel" type="xs:int" />
+        <xs:element minOccurs="0" name="compressLevel" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPresenceDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetPresenceDataResult" nillable="true" type="q52:ArrayOfGetPresenceData_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPresenceDataNow">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyLevel" type="xs:int" />
+        <xs:element minOccurs="0" name="accessAreaID" type="xs:int" />
+        <xs:element minOccurs="0" name="presenceDay" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="presentOnly" type="xs:boolean" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPresenceDataNowResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetPresenceDataNowResult" nillable="true" type="q53:ArrayOfGetPresenceDataNow_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTradeReportData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="dateFrom" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dateUntil" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTradeReportDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetTradeReportDataResult" nillable="true" type="q54:ArrayOfGetTradeReportData_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTemplates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="dialogName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="withFileData" type="xs:boolean" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTemplatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetTemplatesResult" nillable="true" type="q55:ArrayOfGetTemplates_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="templateID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetTemplateResult" nillable="true" type="q56:Master_Templates" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="jobID" type="xs:int" />
+        <xs:element minOccurs="0" name="receiverID" type="xs:int" />
+        <xs:element minOccurs="0" name="subject" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="body" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMessageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendMessageResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMessageToUsersWithRight">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="jobID" type="xs:int" />
+        <xs:element minOccurs="0" name="dialogID" type="xs:int" />
+        <xs:element minOccurs="0" name="actionID" type="xs:int" />
+        <xs:element minOccurs="0" name="subject" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="body" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMessageToUsersWithRightResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendMessageToUsersWithRightResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyTariff">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="tariffScopeID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyTariffResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetCompanyTariffResult" nillable="true" type="q57:GetCompanyTariff_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportMinWageData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="monthFrom" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="monthUntil" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportMinWageDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetReportMinWageDataResult" nillable="true" type="q58:ArrayOfGetReportMinWageData_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetCompanyInfoResult" nillable="true" type="q59:ArrayOfGetCompanyInfo_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMWAttestationRequests">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="requestID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMWAttestationRequestsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetMWAttestationRequestsResult" nillable="true" type="q60:ArrayOfGetMWAttestationRequests_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDialog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="dialogID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDialogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetDialogResult" nillable="true" type="q61:System_Dialogs" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPass">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+        <xs:element minOccurs="0" name="withFileData" type="xs:boolean" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/InsiteServices.Models" minOccurs="0" name="GetPassResult" nillable="true" type="q62:Pass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShortTermPassPrint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="printID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShortTermPassPrintResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/InsiteServices.Models" minOccurs="0" name="GetShortTermPassPrintResult" nillable="true" type="q63:ShortTermPassPrint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="userID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetUserResult" nillable="true" type="q64:Master_Users" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShortTermPassTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="shortTermPassTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShortTermPassTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetShortTermPassTemplateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeePassTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+        <xs:element minOccurs="0" name="dialogID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeePassTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEmployeePassTemplateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPresentPersonsPerAccessArea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPresentPersonsPerAccessAreaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetPresentPersonsPerAccessAreaResult" nillable="true" type="q65:ArrayOfGetPresentPersonsPerAccessArea_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMissingFirstAiders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMissingFirstAidersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetMissingFirstAidersResult" nillable="true" type="q66:ArrayOfGetMissingFirstAiders_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastUpdateAccessControl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastUpdateAccessControlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetLastUpdateAccessControlResult" nillable="true" type="q67:Master_AccessSystems" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastBackupDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastBackupDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLastBackupDateResult" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastCompressDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastCompressDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLastCompressDateResult" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPassInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="internalID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPassInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetPassInfoResult" nillable="true" type="q68:ArrayOfGetPassInfo_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyMWContact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyMWContactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetCompanyMWContactResult" nillable="true" type="q69:Master_CompanyContacts" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyAdmin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyAdminResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetCompanyAdminResult" nillable="true" type="q70:Master_Users" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HasRightForDialog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="dialogID" type="xs:int" />
+        <xs:element minOccurs="0" name="roleID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HasRightForDialogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HasRightForDialogResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelevantDocumentImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="relevantDocumentID" type="xs:int" />
+        <xs:element minOccurs="0" name="maxWidth" type="xs:int" />
+        <xs:element minOccurs="0" name="maxHeight" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelevantDocumentImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRelevantDocumentImageResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMailRead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="mailID" type="xs:int" />
+        <xs:element minOccurs="0" name="mailRead" type="xs:boolean" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetMailReadResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="documentID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/InsiteServices.Models" minOccurs="0" name="GetDocumentResult" nillable="true" type="q71:Document" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenderReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reportParameter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenderReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/InsiteServices.Models" minOccurs="0" name="RenderReportResult" nillable="true" type="q72:Document" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAttachmentToMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="jobID" type="xs:int" />
+        <xs:element minOccurs="0" name="messageID" type="xs:int" />
+        <xs:element minOccurs="0" name="fileData" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="fileName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAttachmentToMessageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetAttachmentToMessageResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHelp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="dialogID" type="xs:int" />
+        <xs:element minOccurs="0" name="fieldID" type="xs:int" />
+        <xs:element minOccurs="0" name="languageID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHelpResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetHelpResult" nillable="true" type="q73:System_Help" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExpiringTariffs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExpiringTariffsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetExpiringTariffsResult" nillable="true" type="q74:ArrayOfGetExpiringTariffs_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SessionLogger">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sessionState" type="xs:int" />
+        <xs:element minOccurs="0" name="systemID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SessionLoggerResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsPassCaseFirstIssue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="replacementPassCaseID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsPassCaseFirstIssueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsPassCaseFirstIssueResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllTerminalsOnline">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllTerminalsOnlineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AllTerminalsOnlineResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeDuplicates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeDuplicatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetEmployeeDuplicatesResult" nillable="true" type="q75:ArrayOfGetEmployeeDuplicates_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyCentralDuplicates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyCentralDuplicatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetCompanyCentralDuplicatesResult" nillable="true" type="q76:ArrayOfGetCompanyCentralDuplicates_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserDuplicates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="userID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserDuplicatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetUserDuplicatesResult" nillable="true" type="q77:ArrayOfGetUserDuplicates_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyCentralInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyCentralInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetCompanyCentralInfoResult" nillable="true" type="q78:System_Companies" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastCorrectionDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastCorrectionDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLastCorrectionDateResult" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMainContractorStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMainContractorStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMainContractorStatusResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateThumbnails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateThumbnailsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeePhotoData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeePhotoDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEmployeePhotoDataResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmploymentStatusMWObligate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+        <xs:element minOccurs="0" name="employmentStatusID" type="xs:int" />
+        <xs:element minOccurs="0" name="sessionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EmploymentStatusMWObligateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EmploymentStatusMWObligateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableFirstAiders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemID" type="xs:int" />
+        <xs:element minOccurs="0" name="bpID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableFirstAidersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetAvailableFirstAidersResult" nillable="true" type="q79:ArrayOfGetPresentFirstAiders_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccessHistoryForShortTermPasses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="systemId" type="xs:int" />
+        <xs:element minOccurs="0" name="bpId" type="xs:int" />
+        <xs:element minOccurs="0" name="internalId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccessHistoryForShortTermPassesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/InsiteServices" minOccurs="0" name="GetAccessHistoryForShortTermPassesResult" nillable="true" type="q80:ArrayOfData_AccessEvents" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,15 @@
+﻿.dropClue {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+}
+
+.dropEnabled {
+    background-image: url('/InSiteApp/Resources/Icons/Green.png');
+}
+
+.dropDisabled {
+    background-image: url('/InSiteApp/Resources/Icons/Red.png');
+}

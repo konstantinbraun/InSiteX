@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
+<eclipse-userlibraries version="2">
+    <library name="Commons-CLI" systemlibrary="false">
+        <archive javadoc="file:/C:/Java/lib/commons-cli-1.3.1/apidocs/" path="C:/Java/lib/commons-cli-1.3.1/commons-cli-1.3.1.jar"/>
+    </library>
+    <library name="Jetty" systemlibrary="false">
+        <archive path="C:/jetty/lib/servlet-api-3.1.jar"/>
+        <archive path="C:/jetty/lib/jetty-server-9.2.18.v20160721.jar"/>
+        <archive path="C:/jetty/lib/jetty-servlet-9.2.18.v20160721.jar"/>
+        <archive path="C:/jetty/lib/jetty-util-9.2.18.v20160721.jar"/>
+    </library>
+    <library name="Jetty Runtime" systemlibrary="false">
+        <archive path="C:/jetty/lib/jetty-http-9.2.18.v20160721.jar"/>
+        <archive path="C:/jetty/lib/jetty-io-9.2.18.v20160721.jar"/>
+        <archive path="C:/jetty/lib/jetty-security-9.2.18.v20160721.jar"/>
+        <archive path="C:/jetty/lib/websocket/websocket-server-9.2.18.v20160721.jar"/>
+        <archive path="C:/jetty/lib/websocket/websocket-common-9.2.18.v20160721.jar"/>
+    </library>
+    <library name="Jetty WebSockets" systemlibrary="false">
+        <archive path="C:/jetty/lib/websocket/websocket-api-9.2.18.v20160721.jar"/>
+        <archive path="C:/jetty/lib/websocket/websocket-servlet-9.2.18.v20160721.jar"/>
+    </library>
+    <library name="JSON" systemlibrary="false">
+        <archive path="C:/Java/lib/javax.json-1.0.4.jar"/>
+    </library>
+    <library name="Log4j" systemlibrary="false">
+        <archive path="C:/eclipse/plugins/org.apache.log4j_1.2.15.v201012070815.jar"/>
+    </library>
+    <library name="SWT" systemlibrary="false">
+        <archive path="C:/eclipse/plugins/org.eclipse.swt.win32.win32.x86_3.104.2.v20160212-1350.jar"/>
+        <archive path="C:/eclipse/plugins/org.eclipse.swt_3.104.2.v20160212-1350.jar"/>
+    </library>
+</eclipse-userlibraries>

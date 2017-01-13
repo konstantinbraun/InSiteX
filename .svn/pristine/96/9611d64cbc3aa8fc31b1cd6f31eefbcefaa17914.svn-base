@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, log4net" />
+  </configSections>
+  <connectionStrings>
+    <add name="Insite_Dev_ConnectionString" connectionString="Data Source=10.10.15.29;Initial Catalog=Insite_Dev;Integrated Security=true" providerName="System.Data.SqlClient" />
+    <add name="Insite_DevEntities" connectionString="metadata=res://*/InSiteDataModel.csdl|res://*/InSiteDataModel.ssdl|res://*/InSiteDataModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=10.10.15.29;initial catalog=Insite_Dev;integrated security=true;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+  </connectionStrings>
+  <appSettings>
+    <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />
+    <add key="UseEmail" value="true" />
+    <add key="MailServer" value="localhost" />
+    <add key="SMTPPort" value="25" />
+    <add key="SMTPUser" value="InSite@InSite3" />
+    <add key="SMTPPwd" value="haribo" />
+    <add key="SMTPFrom" value="InSite@InSite3.de" />
+    <add key="AppServer" value="http://localhost:54364/" />
+    <add key="log4net.Internal.Debug" value="false" />
+    <add key="LogRoot" value="e:\Projekte\Streiff\Logging\" />
+    <add key="CompressPresenceDataOn" value="01:00:00" />
+    <add key="UpdateAccessRightsOn" value="02:00:00" />
+    <add key="SchedulerID" value="569678" />
+    <add key="DBName" value="Insite_Dev" />
+    <add key="ReportServerUser" value="InSite" />
+    <add key="ReportServerPwd" value="InSite3" />
+    <add key="ReportServerDomain" value="zeppelin_hv" />
+    <add key="CMServer" value="https://sbl-waste.com/api/" />
+    <add key="CMUser" value="dschmidt" />
+    <add key="CMPassword" value="LajMiric9grifadFuIfyuo" />
+    <add key="ASMinOnline" value="15" />
+    <add key="AdditionEveryMin" value="15"/>
+    <add key="Serialize" value="Serialize\\"/>
+    <add key="UseSerialization" value="true" />
+    <add key="SerializePutAccessEvent" value="true" />
+    <add key="SerializeGetAccessEvent" value="true" />
+    <add key="SerializePutTerminalStatus" value="true" />
+    <add key="SerializeGetAccessRights" value="true" />
+    <add key="CommandTimeout" value="240" />
+    <add key="PutTerminalStatus" value="true" />
+    <add key="DoBackup" value="false"/>
+  </appSettings>
+  <system.web>
+    <compilation debug="true" targetFramework="4.5.1">
+      <assemblies>
+        <add assembly="System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      </assemblies>
+    </compilation>
+    <httpRuntime targetFramework="4.5.1" />
+  </system.web>
+  <system.serviceModel>
+    <serviceHostingEnvironment aspNetCompatibilityEnabled="true" multipleSiteBindingsEnabled="true" />
+    <bindings>
+      <basicHttpBinding>
+        <binding name="ReportExecutionServiceSoap">
+          <!--<security mode="TransportCredentialOnly">
+            <transport clientCredentialType="InheritedFromHost" proxyCredentialType="None" realm="" />
+            <message clientCredentialType="UserName" algorithmSuite="Default" />
+          </security>-->
+        </binding>
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://10.10.15.29/ReportServer/ReportExecution2005.asmx"
+        binding="basicHttpBinding" bindingConfiguration="ReportExecutionServiceSoap"
+        contract="ReportExecutionService.ReportExecutionServiceSoap"
+        name="ReportExecutionServiceSoap" />
+    </client>
+    <behaviors>
+      <endpointBehaviors>
+        <behavior name="InsiteServices.ReportingServiceAspNetAjaxBehavior">
+          <enableWebScript />
+        </behavior>
+      </endpointBehaviors>
+      <serviceBehaviors>
+        <behavior name="UserServiceBehavior">
+          <serviceDebug includeExceptionDetailInFaults="true" />
+          <serviceMetadata httpGetEnabled="true" />
+        </behavior>
+        <behavior name="">
+          <serviceMetadata httpGetEnabled="true" httpsGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <services>
+      <service behaviorConfiguration="UserServiceBehavior" name="InsiteServices.UserService">
+        <endpoint address="" binding="basicHttpBinding" contract="InsiteServices.IUserService" />
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+      </service>
+      <service behaviorConfiguration="UserServiceBehavior" name="InsiteServices.AccessService">
+        <endpoint address="" binding="basicHttpBinding" contract="InsiteServices.IAccessService" />
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+      </service>
+      <service behaviorConfiguration="UserServiceBehavior" name="InsiteServices.AdminService">
+        <endpoint address="" binding="basicHttpBinding" contract="InsiteServices.IAdminService" />
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+      </service>
+      <service behaviorConfiguration="UserServiceBehavior" name="InsiteServices.ContainerManagement">
+        <endpoint address="" binding="basicHttpBinding" contract="InsiteServices.IContainerManagement" />
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+      </service>
+    </services>
+  </system.serviceModel>
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true" />
+    <!--
+    Um das Stammverzeichnis der Webanwendung beim Debuggen auszuwählen, legen Sie den Wert unten auf "true" fest.
+    Legen Sie ihn vor der Bereitstellung auf "false" fest, um die Veröffentlichung von Informationen über den Webanwendungsordner zu vermeiden.
+    -->
+    <directoryBrowse enabled="true" />
+  </system.webServer>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework" />
+    <providers>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
+    </providers>
+  </entityFramework>
+  <log4net>
+      <appender name="UserServiceAppender" type="log4net.Appender.RollingFileAppender">
+      <file type="log4net.Util.PatternString" value="..\Logging\UserService.log" />
+      <appendToFile value="true" />
+      <param name="DatePattern" value="yyyyMMdd" />
+      <rollingStyle value="DATE" />
+      <maximumFileSize value="2MB" />
+      <countDirection value="-1" />
+      <LockingModel value="log4net.Appender.FileAppender+MinimalLock" />
+      <staticLogFileName value="true" />
+      <immediateFlush value="true" />
+      <preserveLogFileNameExtension value="true" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%d [%thread] [%property{SessionID}] %-5p %c %m%n" />
+      </layout>
+    </appender>
+    <appender name="AccessServiceAppender" type="log4net.Appender.RollingFileAppender">
+      <file type="log4net.Util.PatternString" value="..\Logging\AccessService.log" />
+      <param name="AppendToFile" value="true" />
+      <param name="DatePattern" value="yyyyMMdd" />
+      <rollingStyle value="DATE" />
+      <maximumFileSize value="2MB" />
+      <countDirection value="-1" />
+      <LockingModel value="log4net.Appender.FileAppender+MinimalLock" />
+      <staticLogFileName value="true" />
+      <immediateFlush value="true" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%d [%thread] [%property{SessionID}] %-5p %c %m%n" />
+      </layout>
+    </appender>
+    <root>
+      <level value="ALL" />
+      <appender-ref ref="UserServiceAppender" />
+    </root>
+  </log4net>
+</configuration>

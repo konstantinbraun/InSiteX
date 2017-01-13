@@ -1,0 +1,21 @@
+﻿using InSiteX.Repository.Mocks;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace InsiteX.Repository.Tests
+{
+    [TestClass]
+    public class Test
+    {
+        [TestMethod]
+        public void CheckIfThowlinesAreEqual()
+        {
+            DeviceRepositoryMock repo = new DeviceRepositoryMock();
+            repo.Add(new InSiteX.Entity.Device() { });
+            Assert.AreEqual("tese", "test");
+        }
+    }
+}

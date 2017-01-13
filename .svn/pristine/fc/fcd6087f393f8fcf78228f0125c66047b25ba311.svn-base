@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" Name="InSite-CardService 1.0.9" Language="1033" Version="1.0.9.0" Manufacturer="Zeppelin Rental GmbH &amp; Co. KG" UpgradeCode="43f610e1-d3cc-4bb9-8285-bbdaff939ac2">
+    <Package Id="*" InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    <Icon Id="icon.ico" SourceFile="Source\Icon.ico"/>
+    <Property Id="ARPPRODUCTICON" Value="icon.ico" />
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+
+    <Feature Id="ProductFeature" Title="InSite-CardService" Level="1">
+      <ComponentGroupRef Id="CardService" />
+    </Feature>
+
+    <Property Id="ARPNOREPAIR" Value="yes" Secure="yes" />
+    <Property Id="ARPNOMODIFY" Value="yes" Secure="yes" />
+
+    <CustomAction Id="RegServiceAssign" Property="RegService" Value="&quot;[INSTALLFOLDER]nssm.exe&quot; install InSite-CardService &quot;[INSTALLFOLDER]CardServer.cmd&quot;" Execute="immediate" />
+    <CustomAction Id="RegService" BinaryKey="WixCA" DllEntry="WixQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="StartServiceAssign" Property="StartService" Value="&quot;[INSTALLFOLDER]nssm.exe&quot; start InSite-CardService" Execute="immediate" />
+    <CustomAction Id="StartService" BinaryKey="WixCA" DllEntry="WixQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    
+    <CustomAction Id="StopServiceAssign" Property="StopService" Value="&quot;[INSTALLFOLDER]nssm.exe&quot; stop InSite-CardService" Execute="immediate" />
+    <CustomAction Id="StopService" BinaryKey="WixCA" DllEntry="WixQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    <CustomAction Id="UnregServiceAssign" Property="UnregService" Value="&quot;[INSTALLFOLDER]nssm.exe&quot; remove InSite-CardService confirm" Execute="immediate" />
+    <CustomAction Id="UnregService" BinaryKey="WixCA" DllEntry="WixQuietExec" Execute="deferred" Return="check" Impersonate="no"/>
+    
+    <CustomAction Id="BlindStopServiceAssign" Property="BlindStopService" Value="&quot;[INSTALLFOLDER]nssm.exe&quot; stop InSite-CardService" Execute="immediate" />
+    <CustomAction Id="BlindStopService" BinaryKey="WixCA" DllEntry="WixQuietExec" Execute="deferred" Return="ignore" Impersonate="no"/>
+    <CustomAction Id="BlindUnregServiceAssign" Property="BlindUnregService" Value="&quot;[INSTALLFOLDER]nssm.exe&quot; remove InSite-CardService confirm" Execute="immediate" />
+    <CustomAction Id="BlindUnregService" BinaryKey="WixCA" DllEntry="WixQuietExec" Execute="deferred" Return="ignore" Impersonate="no"/>
+    
+    <InstallExecuteSequence>
+      <Custom Action="BlindStopServiceAssign" Before="BlindStopService">(NOT Installed) OR (REINSTALL="ALL")</Custom>
+      <Custom Action="BlindStopService" Before="BlindUnregServiceAssign">(NOT Installed) OR (REINSTALL="ALL")</Custom>
+      <Custom Action="BlindUnregServiceAssign" Before="BlindUnregService">(NOT Installed) OR (REINSTALL="ALL")</Custom>
+      <Custom Action="BlindUnregService" Before="InstallFiles">(NOT Installed) OR (REINSTALL="ALL")</Custom>
+
+      <Custom Action="RegServiceAssign" After="InstallFiles">(NOT REMOVE) OR UPGRADINGPRODUCTCODE</Custom>
+      <Custom Action="RegService" After="RegServiceAssign">(NOT REMOVE) OR UPGRADINGPRODUCTCODE</Custom>
+      <Custom Action="StartServiceAssign" After="RegService">(NOT REMOVE) OR UPGRADINGPRODUCTCODE</Custom>
+      <Custom Action="StartService" After="StartServiceAssign">(NOT REMOVE) OR UPGRADINGPRODUCTCODE</Custom>
+      
+      <Custom Action="StopServiceAssign" Before="StopService">Installed AND (NOT REINSTALL)</Custom>
+      <Custom Action="StopService" Before="UnregServiceAssign">Installed AND (NOT REINSTALL)</Custom>
+      <Custom Action="UnregServiceAssign" Before="UnregService">Installed AND (NOT REINSTALL)</Custom>
+      <Custom Action="UnregService" Before="RemoveFiles">Installed AND (NOT REINSTALL)</Custom>
+    </InstallExecuteSequence>
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="InSite-CardService" />
+      </Directory>
+    </Directory>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="CardService" Directory="INSTALLFOLDER">
+      <Component Id="CardServerCmd" Guid="*">
+        <File Id="CardServerCmd" Source="Source\CardServer.cmd" KeyPath="yes" />
+      </Component>
+      <Component Id="CardServerJar" Guid="*">
+        <File Id="CardServerJar" Source="Source\CardServer.jar" KeyPath="yes" />
+      </Component>
+      <Component Id="CardServerLcf" Guid="*">
+        <File Id="CardServerLcf" Source="Source\CardServer.lcf" KeyPath="yes" />
+      </Component>
+      <Component Id="nssm" Guid="*">
+        <File Id="nssm" Source="Source\nssm.exe" KeyPath="yes" Checksum="yes" />
+      </Component>
+      <Component Id="Config" Guid="*">
+        <File Id="Config" Source="Source\config.properties" KeyPath="yes" />
+      </Component>
+      <Component Id="Jetty" Guid="*">
+        <File Id="Jetty" Source="Source\jetty-logging.properties" KeyPath="yes" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>
